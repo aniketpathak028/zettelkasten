@@ -1,8 +1,9 @@
 # Zettelkasten
 
-Hosted at https://zet.aniketpathak.me
+This is a public zettelkasten which contains all my obsidian notes
 
-All of the source code and content lives in this repo.
+hosted at https://zet.aniketpathak.me
+
 
 Made possible by Quartz:
 
