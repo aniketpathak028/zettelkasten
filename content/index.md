@@ -10,6 +10,6 @@ Hello and welcome to my Zettelkasten! 👋
 
 Here, I share everything I’m learning—whether it’s tech insights, language adventures (I’m currently learning German 🇩🇪), or late-night philosophical musings.
 
-If you enjoy exploring new ideas and making connections, feel free to bookmark this page or add it to your favorite RSS reader ([index.xml](index.xml)) to stay updated.
+If you enjoy exploring new ideas and making connections, feel free to bookmark this page or add it to your favorite [RSS](index.xml) reader to stay updated.
 
 Peace ✌️
