@@ -1,5 +1,5 @@
 ---
-title: home
+title: zettelkasten
 ---
 
 Hello and Welcome to my Zettellkasten! 👋 
