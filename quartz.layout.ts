@@ -8,8 +8,10 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/aniketpathak028",
+      Linkedin: "https://www.linkedin.com/in/aniketpathak028/",
+      Twitter: "https://x.com/aniketpathak028",
+      Portfolio: "https://aniketpathak.me",
     },
   }),
 }
@@ -18,12 +20,12 @@ export const sharedPageComponents: SharedLayout = {
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
+      component: Component.Breadcrumbs({showCurrentPage: false}),
       condition: (page) => page.fileData.slug !== "index",
     }),
-    Component.ArticleTitle(),
+    // Component.ArticleTitle(),
     Component.ContentMeta(),
-    Component.TagList(),
+    // Component.TagList(),
   ],
   left: [
     Component.PageTitle(),
@@ -33,12 +35,12 @@ export const defaultContentPageLayout: PageLayout = {
         {
           Component: Component.Search(),
           grow: true,
-        },
-        { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
+        }
       ],
     }),
-    Component.Explorer(),
+    Component.Darkmode(),
+    // Component.Explorer(),
+    Component.DesktopOnly(Component.RecentNotes({ limit: 50, showTags: false })),
   ],
   right: [
     Component.Graph(),
