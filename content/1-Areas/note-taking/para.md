@@ -39,3 +39,10 @@ date: 2025-08-19
 ## A - Archive
 
 - notes which are not useful currently or in the near future, but which you don't want to throw away either
+
+~aniket
+## Links:
+
+[[note-taking]]
+
+202508202232

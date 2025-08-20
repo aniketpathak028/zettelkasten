@@ -10,7 +10,7 @@ date: 2025-08-19
 # [fastapi](https://fastapi.tiangolo.com/)
 
 - a minimalist and fast backend framework based on [[starlette]] and [[pydantic]]
-- should be used to build hightly performant api's for production use
+- should be used to build highly performant apis for production use
 
 ### creating an api
 
@@ -37,3 +37,10 @@ fastapi run dev
 ```
 
 
+~aniket
+## Links:
+
+[[python]]
+[[fastapi vs django vs flask]]
+
+202508202229

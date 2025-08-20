@@ -7,6 +7,7 @@ tags:
   - django
 date: 2025-08-19
 ---
+---
 # When to use what?
 
 ### Django
@@ -19,3 +20,11 @@ date: 2025-08-19
 ### Fastapi
 - when building lightweight, fast and simple api
 - high performance (async)
+
+~aniket
+
+## Links:
+
+[[fastapi]]
+
+202508202228

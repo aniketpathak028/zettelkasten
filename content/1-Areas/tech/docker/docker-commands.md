@@ -1,5 +1,5 @@
 ---
-title: docker 101
+title: docker-commands
 draft: false
 tags:
   - docker
@@ -7,7 +7,7 @@ tags:
   - VM
 date: 2025-08-10
 ---
-commands i keep forgetting 😅
+commands I keep forgetting 😅
 
 ```
 
@@ -35,3 +35,8 @@ docker build -t {name}:tag .
 docker exec -it <container_id or name> /bin/bash
 # enter docker container
 ```
+
+high time I start remembering them!
+
+~aniket
+
