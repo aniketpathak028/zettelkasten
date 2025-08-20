@@ -20,12 +20,12 @@ export const sharedPageComponents: SharedLayout = {
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
-      component: Component.Breadcrumbs({showCurrentPage: false}),
+      component: Component.Breadcrumbs({spacerSymbol: "👉", showCurrentPage: false, rootName: "🏠"}),
       condition: (page) => page.fileData.slug !== "index",
     }),
     // Component.ArticleTitle(),
     Component.ContentMeta(),
-    // Component.TagList(),
+    Component.TagList(),
   ],
   left: [
     Component.PageTitle(),
@@ -42,11 +42,11 @@ export const defaultContentPageLayout: PageLayout = {
         }
       ],
     }),
-    // Component.Explorer(),
+    Component.MobileOnly(Component.Explorer()),
     Component.DesktopOnly(Component.RecentNotes({ limit: 50, showTags: false })),
   ],
   right: [
-    Component.Graph(),
+    Component.DesktopOnly(Component.Graph()),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -67,7 +67,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.MobileOnly(Component.Explorer())
   ],
   right: [],
 }
