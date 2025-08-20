@@ -4,6 +4,7 @@ draft: false
 tags:
   - tech
   - mental-health
+date: 2025-08-18
 ---
 # tech is overwhelming! 🤯
 

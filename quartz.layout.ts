@@ -35,10 +35,13 @@ export const defaultContentPageLayout: PageLayout = {
         {
           Component: Component.Search(),
           grow: true,
+        },
+        {
+          Component: Component.Darkmode(),
+          grow: true
         }
       ],
     }),
-    Component.Darkmode(),
     // Component.Explorer(),
     Component.DesktopOnly(Component.RecentNotes({ limit: 50, showTags: false })),
   ],
