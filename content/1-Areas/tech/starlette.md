@@ -6,7 +6,7 @@ tags:
   - asgi
 date: 2025-08-19
 ---
-# Starlette
+# [Starlette](https://www.starlette.io/)
 
 - lightweight ASGI toolkit
 - can be used for building async web apps
