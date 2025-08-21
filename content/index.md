@@ -1,9 +1,11 @@
 ---
 title: Zettelkasten
-tags:
+date: 2025-08-10
 ---
 
 Hello and welcome to my Zettelkasten! 👋
+
+![[zettelkasten.png]]
 
 [Zettelkasten](https://zettelkasten.de/overview/) is a German term meaning "slip box"—a powerful note-taking system designed to help you connect ideas and deepen your understanding.
 ### So what's the deal?
