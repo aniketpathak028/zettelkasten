@@ -11,7 +11,6 @@ date: 2025-08-19
 - lightweight ASGI toolkit
 - can be used for building async web apps
 
-~aniket
 ## Links:
 
 [[python]]

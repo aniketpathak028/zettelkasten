@@ -38,5 +38,3 @@ docker exec -it <container_id or name> /bin/bash
 
 high time I start remembering them!
 
-~aniket
-

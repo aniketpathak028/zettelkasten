@@ -21,7 +21,6 @@ date: 2025-08-19
 - when building lightweight, fast and simple api
 - high performance (async)
 
-~aniket
 
 ## Links:
 

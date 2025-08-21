@@ -3,8 +3,8 @@ title: containerd
 draft: false
 tags:
   - containerd
-  - docker
   - k8s
+  - docker
 date: 2025-08-21
 ---
 # Containerd
@@ -19,15 +19,9 @@ date: 2025-08-21
 - but how do we run containers without docker with just containerd?
 - containerd comes with a tool called ctr
 
-## ctr
-- ctr comes with containerD
-- not very user friendly
-- only supports limited features
-- solely made for debugging not for pro
-
-## alternative: nerdctl
-
-
 ## Links:
+[[docker]]
+
+
 
 202508212013

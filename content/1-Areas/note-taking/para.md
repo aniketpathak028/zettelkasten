@@ -40,7 +40,6 @@ date: 2025-08-19
 
 - notes which are not useful currently or in the near future, but which you don't want to throw away either
 
-~aniket
 ## Links:
 
 [[note-taking]]

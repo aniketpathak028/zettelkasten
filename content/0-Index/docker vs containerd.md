@@ -17,12 +17,12 @@ History of docker and k8s:
 - Docker too contains several tools put together ex-
 	- cli, api, build, volumes, auth, security and containerd
 	- containerd is CRI compatible and thus docker could be run by containerd instead of dockershim now and its support by k8s was remved in v1.24!
-
-
-
-
+- now containerd contains [[cli-nerdctl]] and [[cli-ctr]] to manage runtimes
+- while k8s has its own tool called [[cli-crictrl]]
 
 
 ## Links:
+
+[[containerd]]
 
 202508211938

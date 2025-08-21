@@ -37,7 +37,6 @@ fastapi run dev
 ```
 
 
-~aniket
 ## Links:
 
 [[python]]
