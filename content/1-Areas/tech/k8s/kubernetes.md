@@ -8,6 +8,8 @@ date: 2025-08-21
 ---
 # [Kubernetes](https://kubernetes.io/)
 
+`the k8s docs are your bible to learn anything about k8s`
+
 what is k8s?
 - after containerization came into picture, people started containerizing apps inside VMs and to scale it, multiple VM copies were created.
 - Bottleneck?
@@ -31,5 +33,7 @@ what is k8s?
 
 
 ## Links:
+
+
 
 202508202239

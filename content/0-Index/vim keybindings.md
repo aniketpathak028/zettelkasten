@@ -18,11 +18,12 @@ By far the most useful key bindings i have been able to learn till now:
 8. $ -> last ch of the line
 9. yy -> cp the line (yank in vim terminology 🙂)
 10. {x}yy -> cp x lines from curr line
-11. p -> pastes copied lines after the cursor
-12. u -> undo (v imp)
-13. G -> go to last line
-14. gg -> go to first line
-15. ctrl + r -> redo changes
+11. :%y+ -> cp entire file in VIM to clipboard
+12. p -> pastes copied lines after the cursor
+13. u -> undo (v imp)
+14. G -> go to last line
+15. gg -> go to first line
+16. ctrl + r -> redo changes
 
 
 
