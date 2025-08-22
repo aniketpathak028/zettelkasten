@@ -1,11 +1,11 @@
 ---
 title: Harihara Betta Trek
-draft: false
+draft: true
 tags:
   - trekking
 date: 2024-08-22
 ---
-	`this is an old note I found on my personal journal app`
+	`this is an old note that I found on my personal journal app`
 
 
 Today I went for this wonderful trek called [`Harihara Betta Trek`](https://indiahikes.com/documented-trek/harihara-betta-trek#gref) situated in the North of Bangalore!

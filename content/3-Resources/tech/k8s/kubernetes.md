@@ -10,6 +10,9 @@ date: 2025-08-21
 
 `the k8s docs are your bible to learn anything about k8s`
 
+rule of thumb:
+`to learn about any command always use the cli with --help subcommand if it is present (most linux cli tools have it!) only if it doesn't explain very well go to the docs 🙂`
+
 what is k8s?
 - after containerization came into picture, people started containerizing apps inside VMs and to scale it, multiple VM copies were created.
 - Bottleneck?
@@ -34,6 +37,8 @@ what is k8s?
 
 ## Links:
 
+[[kubectl]]
+[[rancher-desktop]]
 
 
 202508202239
