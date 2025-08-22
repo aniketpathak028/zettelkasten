@@ -33,4 +33,6 @@ By far the most useful key bindings i have been able to learn till now:
 
 ## Links:
 
+[[neovim]]
+
 202508212317

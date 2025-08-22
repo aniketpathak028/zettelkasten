@@ -6,7 +6,7 @@ tags:
   - config-mgmt
 date: 2025-08-21
 ---
-# Neovim
+# neovim
 
 Neovim is tough and gives me terrible headaches and sleepless nights!! 🤯
 
@@ -29,5 +29,7 @@ nvim plugins I am currently using:
 
 
 ## Links:
+
+[[vim]]
 
 202508212300
