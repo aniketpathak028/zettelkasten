@@ -7,6 +7,7 @@ tags:
   - VM
 date: 2025-08-10
 ---
+git
 commands I keep forgetting 😅
 
 ```shell
