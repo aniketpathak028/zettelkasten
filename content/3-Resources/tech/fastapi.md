@@ -16,12 +16,12 @@ date: 2025-08-19
 
 1. install fastapi
 
-```
+```python
 pip install fastapi
 ```
 
 2. create a simple hello world api
-```
+```python
 from fastapi import FastAPI
 app = FastAPI()
 
@@ -32,7 +32,7 @@ return {"message": "Hello, World!!"}
 ```
 
 3. run the app on local
-```
+```python
 fastapi run dev
 ```
 

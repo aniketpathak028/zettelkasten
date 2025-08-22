@@ -9,7 +9,7 @@ date: 2025-08-10
 ---
 commands I keep forgetting 😅
 
-```
+```shell
 
 docker ps # list running containers
 

@@ -24,8 +24,14 @@ By far the most useful key bindings i have been able to learn till now:
 14. G -> go to last line
 15. gg -> go to first line
 16. ctrl + r -> redo changes
+17. ctrl + B + left bracket + ctrl U -> move up in terminal
+18. ctrl + B + left bracket + ctrl D -> move down in terminal
 
-
+vim tips:
+1. when you use the --h or help commands on cli or any command that prints a lot of ouput on the screen, pipe it with the less command to use the ouput in the reader and navigate using hjkl 
+```bash
+k run -h | less
+```
 
 
 
