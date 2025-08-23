@@ -32,7 +32,7 @@ what is k8s?
 	- k8s also has the ability to automatically scale up or down based on metrics like cpu usage, number of requests, mem usage, time of the day, or any other metric! - no manual scaling
 	- if a container crashes, it respawns another one, takes care of all the networking and traffic (basically it maintains the desired state of the application without hampering business) - amazing piece of tech 😍
 
-![[k8s.png]]
+
 
 
 ## Links:
