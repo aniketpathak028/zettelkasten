@@ -34,7 +34,8 @@ kubectl get pods
 # list all the namespaces
 kubectl get namespaces
 
-# 
+# create and run an image in a pod
+kubectl run <podname> --image=<image>
 ```
 
 
