@@ -13,7 +13,10 @@ date: 2025-08-24
 
 - we can create a deployment just like we create pods using the cli or using yaml
 - deployment contains info about the type of pod, replicas etc.
-- deployment 
+- deployments create a replica-set that actually creates the replicas of the pods
+- k8s manages replica-sets for you, and it is not advised to manage it yourself! 
+Note:
+`k8s tends to keep old replicasets around, so you might see multiple replicasets for the same deployment`
 
 ```bash
 # learn about deployment
@@ -23,18 +26,22 @@ kubectl create deployment -h | less
 kubectl create deployment test --image=httpd
 
 # get more info about the deployment
-kubectl describe deplpyment.app test
+kubectl describe deployment.apps test
 
 # edit a deployment (not recommended)
-kubectl edit depoyments.app test
+kubectl edit depoyments.apps test
 
 # delete a deployment
-kubectl delete deployments.app test
+kubectl delete deployments.apps test
+
+# fetch deployments
+kubectl get deployments.apps
 
 # generate yaml for deployment
 kubectl create depoyment test --image=httpd --replicas=10 --dry-run=client -o yaml
 
-#
+# get replica set
+kubectl get replicasets.apps
 ```
 
 
