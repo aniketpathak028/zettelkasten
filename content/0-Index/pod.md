@@ -42,7 +42,6 @@ kubectl get pods --all-namespaces
 ```
 
 
-![[k8s architecture.png]]
 
 
 
