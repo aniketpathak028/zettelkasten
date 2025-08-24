@@ -7,7 +7,7 @@ tags:
   - kubectl
 date: 2025-08-24
 ---
-# deployments
+# deployment
 
 `in prod we never run individual pods, we use something called deployment to orchestrate the creation of pods! Deployments are a way to express your desired state for an app to k8s`
 
@@ -16,7 +16,6 @@ date: 2025-08-24
 - deployment 
 
 ```bash
-
 # learn about deployment
 kubectl create deployment -h | less
 
@@ -35,8 +34,7 @@ kubectl delete deployments.app test
 # generate yaml for deployment
 kubectl create depoyment test --image=httpd --replicas=10 --dry-run=client -o yaml
 
-
-
+#
 ```
 
 
