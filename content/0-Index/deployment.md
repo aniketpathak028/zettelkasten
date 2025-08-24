@@ -23,7 +23,8 @@ kubectl create deployment -h | less
 # create a deployment (creates something like deployment.apps)
 kubectl create deployment test --image=httpd
 
-# get more info about the deplp
+# get more info about the deployment
+kubectl describe deplpyment.app test
 
 # edit a deployment (not recommended)
 kubectl edit depoyments.app test
@@ -32,13 +33,11 @@ kubectl edit depoyments.app test
 kubectl delete deployments.app test
 
 # generate yaml for deployment
-kubectl create depoyment test --image=httpd --dry-run=client -o yaml
+kubectl create depoyment test --image=httpd --replicas=10 --dry-run=client -o yaml
 
 
 
 ```
-
-
 
 
 
