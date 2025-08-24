@@ -5,6 +5,8 @@ date: 2025-08-10
 
 Welcome to my Zettelkasten! 👋
 
+Here I share everything I’m learning—whether it’s tech insights, language adventures, or late-night philosophical musings.
+
 
 [Zettelkasten](https://zettelkasten.de/overview/) is a German term meaning "slip box"—a powerful note-taking system designed to help you connect ideas and deepen your understanding.
 

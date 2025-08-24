@@ -34,7 +34,6 @@ what is k8s?
 
 
 
-
 ## Links:
 
 [[kubectl]]

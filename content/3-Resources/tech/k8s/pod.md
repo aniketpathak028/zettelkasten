@@ -7,7 +7,6 @@ tags:
   - kubectl
 date: 2025-08-23
 ---
-
 # pod
 
 `fun fact: the name pod comes from the saying pod of whales!`
@@ -42,12 +41,11 @@ kubectl get pods --all-namespaces
 ```
 
 
-
-
-
-
-
+![[k8s-architecture.png]]
 
 ## Links:
+
+[[kubernetes]]
+[[kubectl]]
 
 202508231258
