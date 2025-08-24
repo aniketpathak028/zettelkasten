@@ -5,7 +5,7 @@ tags:
   - k8s
 date: 2025-08-21
 ---
-# CLI - crictl
+# crictl
 
 - crictl provides a cli for CRI compatible container runtimes
 - installed separately

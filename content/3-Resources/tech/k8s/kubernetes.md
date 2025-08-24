@@ -22,7 +22,7 @@ what is k8s?
 		- if containers crash it had to be respawned manually
 		- a container was unaware about its own replicas in other VMs
 - enter k8s!
-	- a container orchaestration system
+	- a container orchaestration tool
 	- sort of an OS for the cloud/VMs
 	- manages the VMs using control plane (which is a VM in itself), the VMs are called worker nodes (they can also be physical machines)
 	- the control plane takes the desired state of the containers from the user and achieves it through its worker nodes
@@ -31,8 +31,6 @@ what is k8s?
 	- just state your desired state of containers in a YAML file and k8s achieves it!
 	- k8s also has the ability to automatically scale up or down based on metrics like cpu usage, number of requests, mem usage, time of the day, or any other metric! - no manual scaling
 	- if a container crashes, it respawns another one, takes care of all the networking and traffic (basically it maintains the desired state of the application without hampering business) - amazing piece of tech 😍
-
-
 
 ## Links:
 

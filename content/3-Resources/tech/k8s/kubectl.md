@@ -40,7 +40,6 @@ kubectl run <podname> --image=<image>
 
 
  
-
 ## Links:
 
 [[kubernetes]]
