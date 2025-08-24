@@ -30,7 +30,9 @@ kubectl edit depoyments.app test
 kubectl delete deployments.app test
 
 # generate yaml for deployment
-kubectl create depoyment test --image=httpd --dry-run=client -o yam
+kubectl create depoyment test --image=httpd --dry-run=client -o yaml
+
+
 
 ```
 
