@@ -23,6 +23,8 @@ kubectl create deployment -h | less
 # create a deployment (creates something like deployment.apps)
 kubectl create deployment test --image=httpd
 
+# 
+
 # edit a deployment (not recommended)
 kubectl edit depoyments.app test
 
