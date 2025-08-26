@@ -43,7 +43,7 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
       }
 
       return (
-        <p show-comma={options.showComma} class={classNames(displayClass, "content-meta")}>
+        <p show-comma={options.showComma} class={classNames(displayClass, "content-meta")} style={"color: #6c6a6aff"}>
           {segments}
         </p>
       )
