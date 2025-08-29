@@ -9,13 +9,17 @@ date: 2025-08-22
 ---
 # kubectl
 
+- cli tool to interact with the k8s cluster.
 - controls the kubernetes cluster manager
-- use the --help for learning about any command in kubectl
 
-kubectl commands
+The format of kubectl command is:-
+`kubectl [action] [resource] [name] [flags]`
+- action - operation to perform - get, create, apply, delete, describe, logs, exec
+- resource - type of k8s object - pod, node, namespace, service, deployment
+- name - optional
+- flags - optional - (-n) or (-o)
+
 ```shell
-######### context ################
-
 # check current context
 kubectl config current-context
 
@@ -25,11 +29,9 @@ kubectl config get-contexts
 # set context
 kubectl config use-context rancher-desktop
 
-
-############ pods ###############
-
 # get pods in the default namespace
 kubectl get pods
+kubectl get pods -n <namespace>
 
 # list all the namespaces
 kubectl get namespaces
@@ -37,7 +39,6 @@ kubectl get namespaces
 # create and run an image in a pod
 kubectl run <podname> --image=<image>
 ```
-
 
  
 ## Links:

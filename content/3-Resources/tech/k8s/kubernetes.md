@@ -13,7 +13,7 @@ date: 2025-08-21
 rule of thumb:
 `to learn about any command always use the cli with --help subcommand if it is present (most linux cli tools have it!) only if it doesn't explain very well go to the docs 🙂`
 
-what is k8s?
+what is k8s (my POV)?
 - after containerization came into picture, people started containerizing apps inside VMs and to scale it, multiple VM copies were created.
 - Bottleneck?
 	- what if I need to create several 100 of these replicas?
@@ -22,16 +22,22 @@ what is k8s?
 		- if containers crash it had to be respawned manually
 		- a container was unaware about its own replicas in other VMs
 - enter k8s!
-	- a container orchaestration tool
-	- sort of an OS for the cloud/VMs
+	- a container orchestration tool
+	- consider it as an OS for the cloud/VMs
 	- manages the VMs using control plane (which is a VM in itself), the VMs are called worker nodes (they can also be physical machines)
 	- the control plane takes the desired state of the containers from the user and achieves it through its worker nodes
 - benefits
 	- no manual work
 	- just state your desired state of containers in a YAML file and k8s achieves it!
 	- k8s also has the ability to automatically scale up or down based on metrics like cpu usage, number of requests, mem usage, time of the day, or any other metric! - no manual scaling
-	- if a container crashes, it respawns another one, takes care of all the networking and traffic (basically it maintains the desired state of the application without hampering business) - amazing piece of tech 😍
+	- if a container crashes, it respawns another one, takes care of all the networking and traffic (basically it maintains the desired state of the application without hampering business) - amazing piece of tech right? 😍
 
+A wonderful picture to explain how k8s works!
+
+- [[kubectl]] - a terminal tool to manage the k8s cluster
+- control plane - manages the worker nodes and takes instructions from api server which exposes k8s apis, it also has a scehduler and etcd to schedule pods and preserve the state of the app so that no data gets lost!
+
+![[k8s architecture.png]]
 ## Links:
 
 [[kubectl]]
