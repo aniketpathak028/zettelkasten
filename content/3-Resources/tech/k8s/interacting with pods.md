@@ -9,9 +9,8 @@ date: 2025-08-24
 ---
 # interacting with pods
 
-- everything in k8s is a yaml file
-- so are pods
-- we can use several commands to interact with pods like creating, deleting and editing pods
+- everything in k8s is a yaml file, so are pods
+- we can use several commands to interact with pods like - creating, deleting and editing pods
 - we can also get inside a pod and do stuff - like ping other pods, checkout the file system of the pod, checkout the activity of the os and more!
 
 ```bash
@@ -43,7 +42,14 @@ kubectl exec -it nginx-aniket -- /bin/bash
 ```
 
 Note:
-`dry-run: none, client-> only generates yaml, server-> generates yaml and runs`
+dry-run
+--------------
+none-> default
+client-> only generates yaml!
+server-> generates yaml and also runs it!
 ## Links:
+
+[[pod]]
+[[kubectl]]
 
 202508241224
