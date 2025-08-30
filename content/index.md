@@ -1,8 +1,8 @@
 ---
 title: Zettelkasten
 date: 2025-08-10
+description: my second brain 🧠
 ---
-
 Welcome to my Zettelkasten! 👋
 
 Here I share everything I’m learning—whether it’s tech insights, language adventures, or late-night philosophical musings.
