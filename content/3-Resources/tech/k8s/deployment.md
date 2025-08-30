@@ -56,6 +56,39 @@ Note:
 - deployments have a default spec.strategy of RollingUpdate which means the deployment updates pods in a rolling update fashion (gradually scale down the old ReplicaSets and scale up the new one)
 - while the Recreate strategy means all existing Pods are killed before new ones are created
 
+this is how a deployment yaml file looks 👇
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx-depl
+  name: nginx-depl
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: nginx-depl
+  template:
+    metadata:
+      labels:
+        app: nginx-depl
+    spec:
+      containers:
+        - image: nginx
+          name: ngingx
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1 # the max no of pods that can be deleted
+      maxSurge: 1 # the max number of extra pods that can be created
+```
+
+
+Note:
+this basically means telling k8s to achieve the desired state of 10 pod replicase given it can have 1 pod unavailable and 1 extra pod running at any point in time! so, the state can be 9 pods fully available and 1 extra pod at any point in time!
+
 To see the magic of RollingUpdate do the following:
 
 - change the deployment config (maybe use an old image version)
