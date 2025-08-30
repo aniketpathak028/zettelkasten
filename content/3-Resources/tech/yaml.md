@@ -6,6 +6,7 @@ tags:
   - data-serialization
   - devops
 date: 2025-08-25
+description: yaml is easy
 ---
 # yaml
 

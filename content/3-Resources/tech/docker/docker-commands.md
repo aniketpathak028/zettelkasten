@@ -6,9 +6,9 @@ tags:
   - containerization
   - VM
 date: 2025-08-10
-description: important git commands
+description: docker commands that are handy everyday!
 ---
-git commands I keep forgetting 😅
+commands I keep forgetting 😅
 
 ```shell
 

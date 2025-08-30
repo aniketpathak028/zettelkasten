@@ -6,6 +6,7 @@ tags:
   - k8s
   - docker
 date: 2025-08-21
+description: what is containerd and why is it needed?
 ---
 # Containerd
 

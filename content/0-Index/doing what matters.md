@@ -1,10 +1,11 @@
 ---
 title: doing what matters
-draft: true
+draft: false
 tags:
   - productivity
   - focus
 date: 2025-08-24
+description: what makes us truly productive?
 ---
 # doing what matters
 
