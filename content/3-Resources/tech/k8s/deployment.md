@@ -57,6 +57,7 @@ Note:
 - RollingUpdate means the deployment updates pods in a rolling update fashion (gradually scale down the old ReplicaSets and scale up the new one)
 - while the Recreate strategy means all existing Pods are killed before new ones are created
 
+
 this is how a deployment yaml file looks 👇
 
 ```yaml
