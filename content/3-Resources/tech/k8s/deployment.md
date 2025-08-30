@@ -46,10 +46,23 @@ kubectl create depoyment test --image=httpd --replicas=10 --dry-run=client -o ya
 
 # get replica set
 kubectl get replicasets.apps
+
+# more info on replica-sets
+kubectl describe replicasets.apps
 ```
 
+Note:
+- when there is any issue in the k8s cluster always check the deployment Events to get info
+- deployments have a default spec.strategy of RollingUpdate which means the deployment updates pods in a rolling update fashion (gradually scale down the old ReplicaSets and scale up the new one)
+- while the Recreate strategy means all existing Pods are killed before new ones are created
 
+To see the magic of RollingUpdate do the following:
 
+- change the deployment config (maybe use an old image version)
+- run the command `watch -n 1 kubectl get pods`
+- apply the changed deployment in a window side by side
+
+![[/content/assets/rolling-update.png]]
 ## Links:
 
 [[pods]]
