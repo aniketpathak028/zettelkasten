@@ -6,6 +6,7 @@ tags:
   - python
   - async
 date: 2025-08-19
+description: learn how asyncio works
 ---
 # asyncio
 

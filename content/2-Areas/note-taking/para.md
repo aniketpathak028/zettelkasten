@@ -5,6 +5,7 @@ tags:
   - note-taking
   - para-method
 date: 2025-08-19
+description: learn the para method of note taking by Tiago Forte
 ---
 
 # PARA Method

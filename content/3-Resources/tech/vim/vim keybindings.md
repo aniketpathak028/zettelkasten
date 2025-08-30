@@ -3,6 +3,7 @@ title: vim keybindings
 draft: false
 tags:
 date: 2025-08-21
+description: the most useful vim bindings
 ---
 # vim keybindings
 

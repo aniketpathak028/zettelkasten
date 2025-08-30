@@ -5,6 +5,7 @@ tags:
   - neovim
   - config-mgmt
 date: 2025-08-21
+description: neovim is tough!
 ---
 # neovim
 

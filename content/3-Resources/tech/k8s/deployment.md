@@ -6,6 +6,7 @@ tags:
   - pods
   - kubectl
 date: 2025-08-24
+description: all to know of k8s deployments
 ---
 # deployment
 

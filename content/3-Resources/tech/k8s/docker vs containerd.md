@@ -6,6 +6,7 @@ tags:
   - containerd
   - k8s
 date:
+description: docker vs containerd
 ---
 # docker vs containerd
 

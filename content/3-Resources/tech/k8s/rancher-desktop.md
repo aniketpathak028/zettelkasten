@@ -4,6 +4,7 @@ draft: false
 tags:
   - k8s
 date: 2025-08-21
+description: run k8s on your local machine today!
 ---
 # rancher desktop
 

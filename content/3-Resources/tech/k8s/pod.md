@@ -6,6 +6,7 @@ tags:
   - k8s
   - kubectl
 date: 2025-08-23
+description: learn about k8s pods and how they work?
 ---
 # [pod](https://kubernetes.io/docs/concepts/workloads/pods/)
 

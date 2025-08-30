@@ -6,6 +6,7 @@ tags:
   - fastapi
   - backend
 date: 2025-08-19
+description: fastapi and why it you should know it?
 ---
 # [fastapi](https://fastapi.tiangolo.com/)
 

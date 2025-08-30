@@ -6,6 +6,7 @@ tags:
   - k8s
   - yaml
 date: 2025-08-24
+description: learn to interact with pods
 ---
 # interacting with pods
 

@@ -6,6 +6,7 @@ tags:
   - k8s
   - cli
 date: 2025-08-22
+description: what is kubectl?
 ---
 # kubectl
 

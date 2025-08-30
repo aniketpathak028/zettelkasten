@@ -1,8 +1,11 @@
 ---
-title:
+title: how k8s saves our app from breaking?
 draft: false
 tags:
-date:
+  - k8s
+  - deployment
+date: 2025-08-30
+description: understand how k8s saves businesses
 ---
 # how k8s saves our app from breaking?
 

@@ -6,9 +6,9 @@ tags:
   - containerization
   - VM
 date: 2025-08-10
+description: important git commands
 ---
-git
-commands I keep forgetting 😅
+git commands I keep forgetting 😅
 
 ```shell
 

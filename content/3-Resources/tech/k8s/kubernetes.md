@@ -5,6 +5,7 @@ tags:
   - k8s
   - container-orchaestration
 date: 2025-08-21
+description: the most amazing piece of tech every dev should know!
 ---
 # [Kubernetes](https://kubernetes.io/)
 
