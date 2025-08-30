@@ -12,7 +12,7 @@ description: learn about k8s pods and how they work?
 
 `fun fact: the name pod comes from the saying pod of whales, and the entire k8s ecosystem is based on nautical terms. Even Kubernetes is a greek word which means a helmsman who orchestrates the ship, analogous to how k8s orchestrates pods!`
 
-![[/content/assets/pod-of-whales.png]]
+![[content/assets/pod-of-whales.png]]
 
 ## things to know
 
