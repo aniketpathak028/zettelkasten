@@ -17,15 +17,21 @@ description: what are k8s namespaces?
 ```bash
 k get namespaces # list all namespaces
 
-k delete namespaces <namespace>
+k delete namespaces <namespace> # delete a ns
 
+k run aniket --image=nginx -n mealie # create a pod in a specific namespace
 
+k config set-context --current --namespace=mealie # set the default namespace for a context 
 ```
 
+namespace.yaml
 
-
-
-
+```yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: mealie
+```
 
 
 ## Links:

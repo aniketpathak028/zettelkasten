@@ -28,7 +28,6 @@ nvim plugins I am currently using:
 - vim-commentary
 - lazygit
 
-
 ## Links:
 
 [[vim]]

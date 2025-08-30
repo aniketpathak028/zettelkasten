@@ -98,7 +98,7 @@ To see the magic of RollingUpdate do the following:
 - run the command `watch -n 1 kubectl get pods`
 - apply the changed deployment in a window side by side
 
-![[/content/assets/rolling-update.png]]
+![[rolling-update.png]]
 
 ## Links:
 

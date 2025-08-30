@@ -48,10 +48,6 @@ then as the docs open press / and the term you want to search for! ex- /dry-run 
 :set paste
 ```
 
-
-
-
-
 ## Links:
 
 [[neovim]]

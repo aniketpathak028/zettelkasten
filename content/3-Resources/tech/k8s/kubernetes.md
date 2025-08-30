@@ -38,7 +38,7 @@ A wonderful picture to explain how k8s works!
 - [[kubectl]] - a terminal tool to manage the k8s cluster
 - control plane - manages the worker nodes and takes instructions from api server which exposes k8s apis, it also has a scehduler and etcd to schedule pods and preserve the state of the app so that no data gets lost!
 
-![[content/assets/k8s-architecture.png]]
+![[k8s-architecture.png]]
 ## Links:
 
 [[kubectl]]
