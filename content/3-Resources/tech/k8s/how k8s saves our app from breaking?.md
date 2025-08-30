@@ -49,4 +49,9 @@ k8s is smart enough to handle this efficiently instead of rolling out the change
 
 how amazing piece 😇 of tech ain't it? 
 
+## Links
+
+[[deployment]]
+[[kubernetes]]
+
 202508302258
