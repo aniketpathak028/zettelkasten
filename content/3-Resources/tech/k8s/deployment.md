@@ -98,6 +98,7 @@ To see the magic of RollingUpdate do the following:
 - apply the changed deployment in a window side by side
 
 ![[/content/assets/rolling-update.png]]
+
 ## Links:
 
 [[pods]]
