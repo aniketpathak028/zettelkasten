@@ -6,7 +6,7 @@ date:
 ---
 # how k8s saves our app from breaking?
 
-today I learned a wonderful feature about k8s, which is that it saves our app from crashing when we have a container error.
+today I learned a wonderful feature about k8s, which is how it saves our app from crashing when we have a container error.
 
 for example if we have the below deployment 👇
 ```yaml
