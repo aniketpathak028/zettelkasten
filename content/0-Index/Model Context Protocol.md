@@ -10,10 +10,8 @@ description: what is mcp?
 # Model Context Protocol
 
 #### What is MCP?
-
-
-
 - Language Model Optimization
+- 
 
 
 

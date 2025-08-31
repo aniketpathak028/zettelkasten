@@ -3,6 +3,7 @@ title: how to control your mind
 draft: false
 tags:
   - mind
+  - buddhism
 date: 2025-08-31
 description: learning to control our minds and be in the present!
 ---
@@ -20,7 +21,7 @@ description: learning to control our minds and be in the present!
 4. What is the best thing to do instead of staying in the current state? ex- forgive someone if you're angry, let go!
 5. What are the benefits of the solution you came up with? ex- if you let go of your anger and forgive someone you will be at piece with yourself.
 
-m
+
 ## Links:
 
 202508311914
