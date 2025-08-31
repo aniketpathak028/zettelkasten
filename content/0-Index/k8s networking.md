@@ -31,9 +31,15 @@ to checkout we can use the `rdctl shell` command to enter into the rancher deskt
 
 ### services
 
-why do we need service?
-- pods are ephemeral, we should not expect a pods to have a long lifespan
-- 
+- think of services are grouping of pods! ex- frontend svc, backend svc
+- we can define a frontend svc for ex and k8s figures out the pod level stuff like ip address, scaling up and down the pods based on metrics etc.
+
+#### why do we need services?
+- pods are ephemeral, we should not expect a pods to have a long lifespan.
+- Pods are constantly changing and being moved across nodes.
+- How will the system keep track of the constantly changing IP addresses?
+
+
 ## Links:
 
 202508311241

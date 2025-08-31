@@ -22,6 +22,8 @@ k delete namespaces <namespace> # delete a ns
 k run aniket --image=nginx -n mealie # create a pod in a specific namespace
 
 k config set-context --current --namespace=mealie # set the default namespace for a context 
+
+k config view | grep namespace # get the current namespace
 ```
 
 namespace.yaml
