@@ -25,10 +25,10 @@ description: what are k8s services?
 kubectl expose deployment frontend --port 8080
 
 # fetch services
-kubectl get service
+kubectl get svc
 
 # forward the service port
-kubectl forward service/mealie 9000
+kubectl forward svc/mealie 9000
 ```
 
 - a service has a cluster ip and a name that can be used for internal dns resolution in k8s!
@@ -38,6 +38,34 @@ kubectl forward service/mealie 9000
 - NodePort - exposes a port on each node allowing direct access to the service through any node's ip address, try avoiding this approach.
 - LoadBalancer - mostly used for cloud providers, creates an Azure LoadBalancer to route traffic into the cluster. (can also be used in k3s/Rancher desktop)
 
+```bash
+# generate yaml for service
+kubectl get svc mealie -o yaml > service.yaml
+
+# delete a service
+kubectl delete svc/mealie
+```
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: mealie
+  name: mealie
+  namespace: mealie
+spec:
+  ports:
+  - port: 9000
+    protocol: TCP
+    targetPort: 9000
+  selector:
+    app: mealie
+  type: LoadBalancer
+```
 ## Links:
+
+[[k8s networking]]
+[[k8s ingress]]
 
 202508312348
