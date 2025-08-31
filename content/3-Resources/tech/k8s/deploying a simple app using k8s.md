@@ -56,12 +56,27 @@ mealie   1/1     1            1           119s
 step-4: forward local port to pod for accessing the app
 
 ```bash
-❯ k port-forward pods/mealie-5479dbb894-8v5wd 9000
+❯ kubectl port-forward pods/mealie-5479dbb894-8v5wd 9000
 Forwarding from 127.0.0.1:9000 -> 9000
 Forwarding from [::1]:9000 -> 9000
 ```
 
 step-5: go to `localhost:9000` on your browser and your app would be up and running! 🎉
+
+step-6: incase we want to update the application using a new image (ex- say the latest one), we can change the image in the deployment.yaml file and apply it using the RollingUpdate strategy to avoid any downtimes.
+
+```bash
+kubectl apply -f deployment.yaml
+```
+
+Note:
+there are better ways to host an app without port forwarding and with persistence
+
+
+
 ## Links:
+
+[[deployment]]
+[[kubernetes]]
 
 202508311055
