@@ -15,7 +15,12 @@ description: how k8s manages its networking?
 - each pod gets its own ip address on the cluster, run `k get pods --all-namespaces -o wide`, k8s has a pool of IPs from which it allocated IPs!
 - by default pods can connect to all pods on all nodes, but there are ways of limiting this using the networking policies which are very granular
 - containers in pods can communicate with each other through localhost
-- 
+
+#### cni plugin
+- container networking infrastructure plugin
+- provides n/w connectivity to containers
+- configures network interfaces in containers
+- assigns ip addresses and sets up routes -> iptables on nodes
 
 
 
