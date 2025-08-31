@@ -16,7 +16,7 @@ description: how k8s manages its networking?
 - by default pods can connect to all pods on all nodes, but there are ways of limiting this using the networking policies which can get very granular
 - containers in pods can communicate with each other through localhost, as a pod can have multiple containers running at the same time!
 
-#### cni plugin - the tool to help k8s do all n/w ing
+#### cni plugin - the tool to help k8s do all the n/w ing
 - container networking interface plugin
 - provides n/w connectivity to containers in the cluster
 - configures network interfaces in containers
@@ -27,19 +27,13 @@ description: how k8s manages its networking?
 	- Flannel - rancher desktop uses this as its CNI plugin!
 
 Note:
-to checkout we can use the `rdctl shell` command to enter into the rancher desktop VM that runs the cluster and we can navigate to /etc/cni to checkout the CNI plugin
+to checkout we can use the `rdctl shell` command to enter into the rancher desktop VM that runs the cluster and we can navigate to /etc/cni to checkout the CNI plugin.
 
-### services
 
-- think of services are grouping of pods! ex- frontend svc, backend svc
-- we can define a frontend svc for ex and k8s figures out the pod level stuff like ip address, scaling up and down the pods based on metrics etc.
-
-#### why do we need services?
-- pods are ephemeral, we should not expect a pods to have a long lifespan.
-- Pods are constantly changing and being moved across nodes.
-- How will the system keep track of the constantly changing IP addresses?
-
+checkout [[k8s services]]
 
 ## Links:
+
+[[k8s services]]
 
 202508311241
