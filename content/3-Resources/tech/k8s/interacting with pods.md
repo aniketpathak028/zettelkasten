@@ -18,6 +18,9 @@ description: learn to interact with pods
 # list pods with more info
 kubectl get pods -o wide
 
+# get all pods with all namespaces - shorter
+kubectl get pods -o wide -A
+
 # type this to get lots of yaml! 
 # it is the pod definition that lives in the cluster
 kubectl get pods nginx-aniket -o yaml
