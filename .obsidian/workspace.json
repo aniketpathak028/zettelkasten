@@ -1,24 +1,20 @@
 {
   "main": {
-    "id": "cfb8f023e261f327",
+    "id": "147b512f6860864d",
     "type": "split",
     "children": [
       {
-        "id": "151fdbc5487c2120",
+        "id": "23711601178d0985",
         "type": "tabs",
         "children": [
           {
-            "id": "5cdccd9f225116a6",
+            "id": "83ec8beab1a30971",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/3-Resources/tech/k8s/deploying a simple app using k8s.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "deploying a simple app using k8s"
+              "title": "New tab"
             }
           }
         ]
@@ -27,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "135b3c576015db4a",
+    "id": "be1fccc18fa2fbff",
     "type": "split",
     "children": [
       {
-        "id": "39be7764a48d816d",
+        "id": "c617f9778ff329d1",
         "type": "tabs",
         "children": [
           {
-            "id": "91da6d355622476a",
+            "id": "62f51b1f22cbc104",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +44,7 @@
             }
           },
           {
-            "id": "a5783b764dd17bfa",
+            "id": "97b1adf949634e30",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +61,7 @@
             }
           },
           {
-            "id": "2bb159247047fa4c",
+            "id": "f5e4b8229bd2f175",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -78,23 +74,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 259.5
+    "width": 300
   },
   "right": {
-    "id": "7d24a31d29b9d0b6",
+    "id": "586c159f94759b28",
     "type": "split",
     "children": [
       {
-        "id": "94d0441bd9843800",
+        "id": "527ad7c129620625",
         "type": "tabs",
         "children": [
           {
-            "id": "8bde9750bbbdea14",
+            "id": "1c5818ce4f8d4299",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "templates/temp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +99,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for temp"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "9acc1f69731acc33",
+            "id": "b52cc970e0992afa",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "templates/temp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from temp"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "d934722114e128ec",
+            "id": "e5b56dbca3981515",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,18 +131,17 @@
             }
           },
           {
-            "id": "a017f5e204b08e7f",
+            "id": "598fd6721650ac33",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "templates/temp.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of temp"
+              "title": "Outline"
             }
           }
         ]
@@ -160,66 +153,21 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
+      "templater-obsidian:Templater": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "templater-obsidian:Templater": false,
+      "bases:Create new base": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5cdccd9f225116a6",
+  "active": "83ec8beab1a30971",
   "lastOpenFiles": [
-    "content/3-Resources/tech/k8s/deployment.md",
+    "Untitled.md",
     "content/3-Resources/tech/k8s/k8s services.md",
-    "content/3-Resources/tech/k8s/k8s networking.md",
-    "content/3-Resources/tech/k8s/kubernetes.md",
-    "content/3-Resources/tech/k8s/deploying a simple app using k8s.md",
-    "content/3-Resources/tech/k8s/namespaces.md",
-    "content/0-Index/namespace.md",
-    "content/3-Resources/tech/k8s/kubectl.md",
-    "content/3-Resources/tech/k8s/pod.md",
-    "content/3-Resources/tech/k8s/interacting with pods.md",
-    "content/3-Resources/tech/k8s/rancher-desktop.md",
-    "content/3-Resources/tech/k8s/rancher-desktop vs docker-desktop.md",
-    "content/3-Resources/tech/k8s/containerd.md",
-    "content/3-Resources/tech/k8s/docker vs containerd.md",
-    "content/3-Resources/tech/k8s/how k8s saves our app from breaking?.md",
-    "content/3-Resources/tech/k8s/cli-crictrl.md",
-    "content/3-Resources/tech/k8s/cli-ctr.md",
-    "content/3-Resources/tech/k8s/cli-nerdctl.md",
-    "content/0-Index/k8s ingress.md",
-    "content/2-Areas/trekking/trekking.md",
-    "content/2-Areas/note-taking/para.md",
-    "content/2-Areas/stoicism/stoicism and why I got attracted to it?.md",
-    "content/2-Areas/buddhism/how to control your mind 🧠.md",
-    "content/0-Index/model context protocol.md",
-    "content/0-Index/services.md",
-    "content/3-Resources/tech/starlette.md",
-    "content/assets/k8s-services.png",
-    "Pasted image 20250831233818.png",
-    "content/3-Resources/tech/ai",
-    "content/2-Areas/stoicism",
-    "content/2-Areas/buddhism",
-    "content/assets/k8s-architecture.png",
-    "content/assets/container-error.png",
-    "public/static/icon.png",
-    "public/static/og-image.png",
-    "public/index-og-image.webp",
-    "content/assets/pod-of-whales.png",
-    "content/assets/rolling-update.png",
-    "public/3-Resources/tech/k8s/deployment-og-image.webp",
-    "content/assets",
-    "public/tags/index.html",
-    "public/tags/mental-health.html",
-    "public/index.html",
-    "public/tags/tech.html",
-    "public/tags/ocd.html",
-    "public/tags/productivity.html",
-    "content/0-Index/Untitled.canvas",
-    "Untitled.canvas"
+    "content/3-Resources/tech/k8s/k8s networking.md"
   ]
 }
