@@ -53,6 +53,7 @@ client-> only generates yaml!
 server-> generates yaml and also runs it!
 ## Links:
 
+[[kubernetes]]
 [[pod]]
 [[kubectl]]
 

@@ -9,9 +9,9 @@ description: how to deploy an app in k8s?
 ---
 # deploying a simple app on k8s
 
-in this tutorial I share what is my understanding on deploying a simple application like mealie using k8s
+in this tutorial I share my understanding on deploying a simple application like [mealie](https://github.com/mealie-recipes/mealie) using k8s
 
-step-1: create a [[namespace]] for the app
+step-1: create a namespace for the app - [[namespaces]]
 
 step-2: create a deployment in the namespace
 
@@ -70,7 +70,7 @@ kubectl apply -f deployment.yaml
 ```
 
 Note:
-there are better ways to host an app without port forwarding and with persistence
+there are better ways to host an app without port forwarding and with persistence - [[k8s services]]
 
 
 
@@ -78,5 +78,6 @@ there are better ways to host an app without port forwarding and with persistenc
 
 [[deployment]]
 [[kubernetes]]
+[[k8s services]]
 
 202508311055

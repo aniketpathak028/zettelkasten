@@ -33,4 +33,6 @@ docker context use rancher-desktop # switch context to rancher desktop
 
 ## Links:
 
+[[kubernetes]]
+
 202508311811

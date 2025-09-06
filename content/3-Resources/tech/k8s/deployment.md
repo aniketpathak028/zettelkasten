@@ -18,7 +18,7 @@ Note:
 - we can create a deployment just like we create pods using the cli or using yaml
 - deployment contains info about the type of pod, replicas etc.
 - deployments create a replica-set that actually creates the replicas of the pods
-- k8s manages replica-sets for you, and it is not advised to manage it yourself! 
+- k8s manages replica-sets for you, and it is not advised to manage it yourself!
 
 Note:
 `k8s tends to keep old replicasets around, so you might see multiple replicasets for the same deployment`
@@ -27,7 +27,7 @@ Note:
 # learn about deployment
 kubectl create deployment -h | less
 
-# create a deployment (creates something like deployment.apps)
+# create a deployment (creates deployment.apps)
 kubectl create deployment test --image=httpd
 
 # get more info about the deployment
@@ -53,11 +53,10 @@ kubectl describe replicasets.apps
 ```
 
 Note:
-- when there is any issue in the k8s cluster always check the deployment Events to get info
-- deployments have a default spec.strategy of RollingUpdate and Recreate
+- when there is any issue in the k8s cluster always check the deployment events with the describe command to get info
+- deployments have a default spec.strategy of RollingUpdate
 - RollingUpdate means the deployment updates pods in a rolling update fashion (gradually scale down the old ReplicaSets and scale up the new one)
 - while the Recreate strategy means all existing Pods are killed before new ones are created
-
 
 this is how a deployment yaml file looks 👇
 
@@ -104,5 +103,7 @@ To see the magic of RollingUpdate do the following:
 
 [[pods]]
 [[kubectl]]
+[[kubernetes]]
+[[deploying a simple app using k8s]]
 
 202508242011

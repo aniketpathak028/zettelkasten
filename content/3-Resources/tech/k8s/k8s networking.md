@@ -34,6 +34,7 @@ checkout [[k8s services]]
 
 ## Links:
 
+[[kubernetes]]
 [[k8s services]]
 
 202508311241

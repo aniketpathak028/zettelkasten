@@ -12,7 +12,7 @@ description: run k8s on your local machine today!
 - provides container mgmt + k8s on local machine
 - allows devs to build, push, and pull container images
 - run container using containerd or dockerd(moby)
-- uses k3s
+- uses [[k3s]]
 
 ### things to know
 - There is a .kube folder in home dir containing a config file which rancher configures in order for us to access the k8s cluster run by rancher!
@@ -55,5 +55,8 @@ When running multiple clusters check this file to make sure which cluster is bei
 ## Links:
 
 [[kubernetes]]
+[[containerd]]
+[[docker vs containerd]]
+[[rancher-desktop vs docker-desktop]]
 
 202508212225

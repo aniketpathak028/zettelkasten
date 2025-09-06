@@ -15,10 +15,21 @@ description: what is kubectl?
 
 The format of kubectl command is:-
 `kubectl [action] [resource] [name] [flags]`
-- action - operation to perform - get, create, apply, delete, describe, logs, exec
-- resource - type of k8s object - pod, node, namespace, service, deployment
+- action - operation to perform
+	- get
+	- create
+	- apply
+	- delete
+	- edit
+	- describe
+- resource - type of k8s object
+	- pods
+	- nodes
+	- svc
+	- deployments
+	- namespaces
 - name - optional
-- flags - optional - (-n) or (-o)
+- flags - optional (-n) or (-o)
 
 ```shell
 # view the current config
@@ -35,7 +46,12 @@ kubectl config use-context rancher-desktop
 
 # get pods in the default namespace
 kubectl get pods
+
+# get pods in a specific namespace
 kubectl get pods -n <namespace>
+
+# get nodes
+kubectl get nodes
 
 # list all the namespaces
 kubectl get namespaces
@@ -44,7 +60,6 @@ kubectl get namespaces
 kubectl run <podname> --image=<image>
 ```
 
- 
 ## Links:
 
 [[kubernetes]]

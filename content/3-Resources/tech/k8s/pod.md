@@ -27,7 +27,7 @@ description: learn about k8s pods and how they work?
 	- Storage
 
 Note:
-`even though a pods is not a container but the most common pods are single container pods!`
+`even though a pod is not a container but the most common pods are single container pods!`
 
 Pod related commands:
 ```bash
@@ -38,7 +38,7 @@ kubectl run nginx-aniket --image=nginx
 kubectl describe pod nginx-aniket
 
 # gets pods in the current namespace
-kubectl get pods 
+kubectl get pods
 
 # gets pods in all namespaces
 kubectl get pods --all-namespaces
@@ -50,5 +50,6 @@ more on [[interacting with pods]]
 [[interacting with pods]]
 [[kubernetes]]
 [[kubectl]]
+[[deployment]]
 
 202508231258

@@ -11,11 +11,15 @@ description: what are k8s services?
 # Services
 
 - think of services are grouping of pods! ex- frontend svc, backend svc
-- we can define a frontend svc for ex and the svc figures out the pod level stuff like ip address, scaling up and down the pods based on metrics etc.
+- we can define a frontend svc and the svc figures out the pod level stuff like ip address, scaling up and down the pods based on metrics etc.
 ![[k8s-services.png]]
+#### depl vs svc
+
+Kubernetes service enables network access to a set of Pods while **Kubernetes deployment is in charge of keeping a set of pods running**. Kubernetes services and deployments can't be compared as they perform different functions, but they complement each other nicely. When a deployment is exposed it becomes a service!
+
 #### why do we need services?
 
-- pods are ephemeral, we should not expect a pods to have a long lifespan.
+- pods are ephemeral, we should not expect a pod to have a long lifespan.
 - pods are constantly changing and being moved across nodes.
 - how will the system keep track of the constantly changing IP addresses?
 
