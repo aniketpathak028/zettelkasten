@@ -1,0 +1,11 @@
+{
+  "vimMode": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "content/0-Index",
+  "trashOption": "none",
+  "userIgnoreFilters": [
+    "public/*",
+    "public/"
+  ]
+}
