@@ -21,6 +21,9 @@ The format of kubectl command is:-
 - flags - optional - (-n) or (-o)
 
 ```shell
+# view the current config
+kubectl config view
+
 # check current context
 kubectl config current-context
 

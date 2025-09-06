@@ -7,7 +7,7 @@ tags:
 date: 2025-08-31
 description: how k8s manages its networking?
 ---
-# k8s networking
+# networking
 
 ### things to know:
 #### pods
