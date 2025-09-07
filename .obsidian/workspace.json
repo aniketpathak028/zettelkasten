@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "91bb9e09d6d397d0",
+        "id": "bf2a29c03443512f",
         "type": "tabs",
         "children": [
           {
-            "id": "4c0766433efd48c6",
+            "id": "786bf96ffa560e16",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -168,12 +168,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4c0766433efd48c6",
+  "active": "786bf96ffa560e16",
   "lastOpenFiles": [
+    "content/3-Resources/tech/k8s/deploying a simple app using k8s.md",
+    "content/3-Resources/tech/k8s/how k8s saves our app from breaking?.md",
+    "content/3-Resources/tech/k8s/docker vs containerd.md",
+    "content/3-Resources/tech/k8s/k8s networking.md",
+    "content/3-Resources/tech/k8s/interacting with pods.md",
+    "content/3-Resources/tech/k8s/cli-ctr.md",
+    "content/0-Index/k8s ingress.md",
     "content/0-Index/Model Context Protocol.md",
     "content/0-Index/Untitled.md",
     "Untitled.md",
-    "content/3-Resources/tech/k8s/k8s services.md",
-    "content/3-Resources/tech/k8s/k8s networking.md"
+    "content/3-Resources/tech/k8s/k8s services.md"
   ]
 }
