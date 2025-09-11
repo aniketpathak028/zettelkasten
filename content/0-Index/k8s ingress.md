@@ -9,7 +9,10 @@ description: how does k8s ingress work?
 ---
 # ingress
 
-
+### things to know
+- a resource on the cluster
+- exposes http and https routes from outside the cluster
+- 
 
 
 
