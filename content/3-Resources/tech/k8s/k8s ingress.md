@@ -25,5 +25,6 @@ Ingress is the way to route URLs or FQDNs to ip addresses in a k8s cluster!
 ## Links:
 
 [[kubernetes]]
+[[k8s storage]]
 
 202509010120
