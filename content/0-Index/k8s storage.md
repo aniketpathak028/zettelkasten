@@ -15,7 +15,7 @@ Note:
 - the volume is just a piece of the file system where the container is hosted, ex- a piece of the local storage, or it can be provisioned in the cloud.
 
 ### things to know
-
+- read https://kubernetes.io/docs/concepts/storage/volumes/
 
 
 
