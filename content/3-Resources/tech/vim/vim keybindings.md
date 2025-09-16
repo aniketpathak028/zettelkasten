@@ -38,6 +38,14 @@ By far the most useful key bindings i have been able to learn till now:
 2. / -> search in the file
 3. :%s/{word to be replaced}/{replacement word} -> find and replace in the file
 
+### indentation
+1. shift + > - shift right
+2. shift + < - shift left
+
+### select lines in VIM
+- V to select the current line
+- j and k to move up or down and select those lines
+
 tips:
 1. when you use the --h or help commands on cli or any command that prints a lot of ouput on the screen, pipe it with the less command to use the ouput in the reader and navigate using hjkl 
 ```bash

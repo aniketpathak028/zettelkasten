@@ -14,6 +14,27 @@ Note:
 - so in order for a container to store data, it needs to have a volume or a disk mounted to it.
 - the volume is just a piece of the file system where the container is hosted, ex- a piece of the local storage, or it can be provisioned in the cloud.
 
+![[container-volumes.png]]
+consider a volume as an external disk connected to a container for storing data!
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-storage
+spec:
+  containers:
+    - image: nginx
+      name: nginx
+      volumeMounts:
+          - mountPath: /scratch
+            name: scratch-volume
+  volumes:
+    - name: scratch-volume
+      emptyDir:
+        sizeLimit: 500Mi
+
+```
 ### things to know
 - read https://kubernetes.io/docs/concepts/storage/volumes/
 

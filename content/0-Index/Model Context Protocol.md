@@ -1,6 +1,6 @@
 ---
 title: Model Context Protocol
-draft: false
+draft: true
 tags:
   - mcp
   - ai
