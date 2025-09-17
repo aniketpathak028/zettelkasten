@@ -14,16 +14,16 @@ By far the most useful key bindings i have been able to learn till now:
 2. :q -> exit vim
 3. :q! -> exit vim without saving
 4. :wq -> exit vim after saving changes
-5. gg -> move to the first line in the file
-6. shift + g (G caps) -> bottom of the file!
-7. 0 -> go to first character of the line
-8. $ -> last character of the line
+5. ==gg== -> move to the first line in the file
+6. ==shift + g== -> bottom of the file!
+7. ==0== -> go to first character of the line
+8. ==$== -> last character of the line
 
 ### deletion
 1. dd -> deletes curr line and copies it to register
-2. {x}dd -> deletes x lines from curr line
-3. d + shift + g (or dG) -> deletes from the current cursor pos to the end of the file
-4. dgg -> deletes everything from bottom line to top!
+2. =={x}dd== -> deletes x lines from curr line
+3. ==d + shift + g== -> deletes from the current cursor pos to the end of the file
+4. ==dgg== -> deletes everything from bottom line to top!
 
 ### copy, paste, redo and undo
 1. yy -> cp the line (yank in vim terminology 🙂)
@@ -56,6 +56,7 @@ k run -h | less
 k run -h | less
 ```
 then as the docs open press / and the term you want to search for! ex- /dry-run and use the n -> next result and N -> prev result
+
 3. when pasting something from docs into vim, the indentation may get messed up, to correct that when in esc mode use the below command and then in insert mode paste your content to preserve the indentation
 ```bash
 :set paste

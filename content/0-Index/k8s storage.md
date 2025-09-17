@@ -18,6 +18,8 @@ Note:
 - consider a volume as an external disk connected to a container for storing data!
 
 ### how to create a volume?
+
+read https://kubernetes.io/docs/concepts/storage/volumes/
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -36,11 +38,11 @@ spec:
         sizeLimit: 500Mi
 
 ```
-### things to know
-- read https://kubernetes.io/docs/concepts/storage/volumes/
 
-
-
+- the volumes are at the pod level and not in the container level, which means they can be used by any container within the pod.
+- also the volumes can be pre created or dynamically created during the life cycle of the pod
+- note the type of the volume is emptyDir, which is a type of volume in k8s which means it will be deleted when the pod is deleted and it can be used as a temp storage in between containers
+- 
 
 
 ## Links:
