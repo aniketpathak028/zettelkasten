@@ -10,13 +10,14 @@ description: how does k8s persist data?
 # How to make k8s persist data?
 
 Note:
-- a container is ephemeral, ie. it doesn't store any data/state, so once it is deleted, state/data gets lost!
-- so in order for a container to store data, it needs to have a volume or a disk mounted to it.
+- a container is ephemeral, ie. it doesn't store any data/state, so once it is deleted, state/data of the container gets lost!
+- so in order for a container to store data, it needs to have a volume or a disk mounted to it, which usually happens outside the container.
 - the volume is just a piece of the file system where the container is hosted, ex- a piece of the local storage, or it can be provisioned in the cloud.
 
 ![[container-volumes.png]]
-consider a volume as an external disk connected to a container for storing data!
+- consider a volume as an external disk connected to a container for storing data!
 
+### how to create a volume?
 ```yaml
 apiVersion: v1
 kind: Pod
