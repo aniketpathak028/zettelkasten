@@ -11,7 +11,7 @@ description: how does k8s persist data?
 
 Note:
 - a container is ephemeral, ie. it doesn't store any data/state, so once it is deleted, state/data of the container gets lost!
-- so in order for a container to store data, it needs to have a volume or a disk mounted to it, which usually happens outside the container.
+- so in order for a container to store data, it needs to have a volume or a disk mounted to it, which usually happens outside the container in volumes.
 - the volume is just a piece of the file system where the container is hosted, ex- a piece of the local storage, or it can be provisioned in the cloud.
 
 ![[container-volumes.png]]
@@ -38,11 +38,12 @@ spec:
         sizeLimit: 500Mi
 
 ```
-
-- the volumes are at the pod level and not in the container level, which means they can be used by any container within the pod.
-- also the volumes can be pre created or dynamically created during the life cycle of the pod
-- note the type of the volume is emptyDir, which is a type of volume in k8s which means it will be deleted when the pod is deleted and it can be used as a temp storage in between containers
-- 
+- the volumes are at the pod level and not in the container level, which means they can be used by any container within the pod, sometimes also by pods present in different nodes!
+- volumes can be pre created or dynamically created during the life cycle of the pod
+- volumes are mostly used by containers to share and persist data among each other, and hence there are several types of volumes.
+- note the type of the volume above is emptyDir, which is a type of volume which will be deleted when the pod is deleted and can be used as a temp storage in between containers
+- the mountPath creates a dir inside the container to mount the volume
+- the name of the volume indicates which volume to be mounted in the container from the pod
 
 
 ## Links:

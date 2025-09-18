@@ -28,7 +28,7 @@ By far the most useful key bindings i have been able to learn till now:
 ### copy, paste, redo and undo
 1. yy -> cp the line (yank in vim terminology 🙂)
 2. {x}yy -> cp x lines from curr line
-3. :%y+ -> cp entire file in VIM to clipboard
+3. ==:%y+== -> cp entire file in VIM to clipboard
 4. p -> pastes copied lines after the cursor
 5. u -> undo
 6. ctrl + r -> redo changes
