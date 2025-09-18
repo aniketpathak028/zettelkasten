@@ -43,6 +43,7 @@ By far the most useful key bindings i have been able to learn till now:
 2. shift + < - shift left
 
 ### select lines in VIM
+- gg V g -> SELECT ALL IN VIM!
 - V to select the current line
 - j and k to move up or down and select those lines
 

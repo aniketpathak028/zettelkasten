@@ -45,7 +45,37 @@ spec:
 - the mountPath creates a dir inside the container to mount the volume
 - the name of the volume indicates which volume to be mounted in the container from the pod
 
+### making containers access shared volumes
 
+![[sharing-volumes.png]]
+- here we have 2 containers both sharing the same emptyDir volume in the pod
+- the busybox container is able to list and read the files created by the nginx container in the pod
+- however once the pod is deleted, the emptyDir volume data is lost, this is why we need to learn about persistent volumes in k8s
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-storage
+spec:
+  containers:
+    - image: nginx
+      name: nginx
+      volumeMounts:
+          - mountPath: /scratch
+            name: scratch-volume
+    - image: busybox
+      name: busybox
+      command: ["/bin/sh", "-c"]
+      args: ["sleep 1000"]
+      volumeMounts:
+          - mountPath: /scratch
+            name: scratch-volume
+  volumes:
+    - name: scratch-volume
+      emptyDir:
+        sizeLimit: 500Mi
+
+```
 ## Links:
 
 202509122352

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6213b59882cc2f0a",
+        "id": "8c19a8f66d97c69a",
         "type": "tabs",
         "children": [
           {
-            "id": "2d4bb3217e0379c7",
+            "id": "d7cca95fbbb4b391",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -171,13 +171,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2d4bb3217e0379c7",
+  "active": "d7cca95fbbb4b391",
   "lastOpenFiles": [
+    "content/3-Resources/tech/vim/vim keybindings.md",
+    "content/3-Resources/tech/vim/neovim.md",
+    "content/3-Resources/tech/k8s/k8s storage.md",
+    "content/0-Index/sharing-volumespng.md",
+    "content/assets/sharing-volumes.png",
     "k8s",
     "content/3-Resources/tech/ai/model context protocol.md",
     "content/0-Index/containerization.md",
-    "content/3-Resources/tech/vim/vim keybindings.md",
-    "content/3-Resources/tech/k8s/k8s storage.md",
     "content/3-Resources/tech/k8s/interacting with pods.md",
     "content/3-Resources/tech/k8s/how k8s saves our app from breaking?.md",
     "content/3-Resources/tech/k8s/docker vs containerd.md",
@@ -197,9 +200,7 @@
     "content/index.md",
     "content/2-Areas/buddhism/how to control your mind 🧠.md",
     "content/3-Resources/tech/k8s/k8s services.md",
-    "content/3-Resources/tech/vim/neovim.md",
     "content/3-Resources/tech/k8s/cli-crictrl.md",
-    "content/3-Resources/tech/k8s/cli-nerdctl.md",
     "content/assets/k8s-ingress-architecture.png",
     "content/0-Index/Untitled.base",
     "content/assets/k8s-services.png",
@@ -212,13 +213,11 @@
     "public/static/icon.png",
     "public/static/og-image.png",
     "public/index-og-image.webp",
-    "content/assets/pod-of-whales.png",
     "content/assets",
     "public/tags/index.html",
     "public/tags/mental-health.html",
     "public/index.html",
     "public/tags/tech.html",
-    "public/tags/ocd.html",
     "content/0-Index/Untitled.canvas",
     "Untitled.canvas"
   ]
