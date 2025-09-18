@@ -36,7 +36,7 @@ By far the most useful key bindings i have been able to learn till now:
 ### search, replace
 1. r  + {whatever you want to replace it with where the cursor is} -> replace at the position where the cursor is
 2. / -> search in the file
-3. :%s/{word to be replaced}/{replacement word} -> find and replace in the file
+3. ==:%s/{word to be replaced}/{replacement word}== -> find and replace in the file
 
 ### indentation
 1. shift + > - shift right
