@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8c19a8f66d97c69a",
+        "id": "a962851e05f152e8",
         "type": "tabs",
         "children": [
           {
-            "id": "d7cca95fbbb4b391",
+            "id": "ccfb66e12d84ef9b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/3-Resources/tech/k8s/k8s storage.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "k8s storage"
+              "title": "New tab"
             }
           }
         ]
@@ -171,11 +167,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d7cca95fbbb4b391",
+  "active": "ccfb66e12d84ef9b",
   "lastOpenFiles": [
+    "content/3-Resources/tech/k8s/k8s storage.md",
     "content/3-Resources/tech/vim/vim keybindings.md",
     "content/3-Resources/tech/vim/neovim.md",
-    "content/3-Resources/tech/k8s/k8s storage.md",
     "content/0-Index/sharing-volumespng.md",
     "content/assets/sharing-volumes.png",
     "k8s",
