@@ -78,4 +78,7 @@ spec:
 ```
 ## Links:
 
+[[kubernetes]]
+[[persistent volumes]]
+
 202509122352
