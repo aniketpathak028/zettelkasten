@@ -68,7 +68,22 @@ spec:
             claimName: mealie-data
 ```
 
-- once a persistent volume is created and a persistent volume claim is made in the deployment, even if we delete the pods, the data is going to persist
+- once a persistent volume is created and a persistent volume claim is made in the deployment, even if we delete the deployment, the data is going to persist when we restart it!
+- also we have the liberty to mount this pvc to any other pod and access it there!
+
+amazing ain't it! 😍
+
+### where is k8s storing the data actually?
+
+- when we talk of persistent volumes where does k8s actually store the data???!
+- that's where storage classes come into play, it defines where the cluster is supposed to store the data - in local storage, cloud, or some place else
+```bash
+❯ k get storageclasses.storage.k8s.io
+NAME                   PROVISIONER             RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
+local-path (default)   rancher.io/local-path   Delete          WaitForFirstConsumer   false                  12d
+```
+- in rancher desktop it is local-path by default and hence the data is stored in the local machine
+- read more about storage classes - https://kubernetes.io/docs/concepts/storage/storage-classes/
 ## Links:
 
 [[k8s storage]]
