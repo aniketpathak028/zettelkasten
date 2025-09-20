@@ -14,13 +14,12 @@ read - https://kubernetes.io/docs/concepts/storage/persistent-volumes/
 ### things to know
 - persistent volume is like a huge disk running in the cluster
 - while persistent volume claim is like a small piece of the persistent volume claimed by an application in the cluster
-- volumes are just like any other k8s resource like pods, nodes, etc.
+- volumes are just like any other k8s resource ex pods, nodes, etc.
 - can be provisioned beforehand or dynamically
 
+### how to create a PersistentVolumeClaim?
 
-### how to create a persistentvolumeclaim?
-
-storage.yaml
+storage.yaml - creates a persistent volume claim named mealie-data in the mealie namespace of the cluster
 ```yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -35,7 +34,7 @@ spec:
       storage: 500Mi
 ```
 
-deployment.yaml
+deployment.yaml - the persistent volume claim is being used by the deployment by mounting it to a certain path in the pod ex- /app/data
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
