@@ -24,6 +24,7 @@ Note: to check logs natively using kubectl command do the following:
 kubectl logs <podname> | less
 ```
 - attach to pods directly by pressing "s"
+- press "d" to go to the description of a pod
 - 
 
 
