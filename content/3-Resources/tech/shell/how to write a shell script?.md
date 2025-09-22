@@ -36,4 +36,7 @@ echo "hello world!"
 
 ## Links:
 
+[[shell]]
+[[linux]]
+
 202509222244

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3351cee6223f77bf",
+        "id": "94ff2c3590e4db2e",
         "type": "tabs",
         "children": [
           {
-            "id": "2463eb993dd28fa8",
+            "id": "3e56e032e97efacd",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -171,12 +171,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2463eb993dd28fa8",
+  "active": "3e56e032e97efacd",
   "lastOpenFiles": [
+    "content/3-Resources/tech/linux/file permissions.md",
+    "content/3-Resources/tech/linux/linux basics.md",
+    "content/3-Resources/tech/shell/how to write a shell script?.md",
+    "content/0-Index/file-permissions.md",
+    "content/assets/chmod-table.png",
     "content/3-Resources/tech/shell/what is a shell?.md",
+    "content/3-Resources/tech/linux/basic linux commands.md",
     "content/3-Resources/tech/vim/vim keybindings.md",
     "content/3-Resources/tech/vim/neovim.md",
-    "content/3-Resources/tech/shell/how to write a shell script?.md",
     "content/0-Index/helm.md",
     "content/2-Areas/buddhism/how to control your mind 🧠.md",
     "content/3-Resources/tech/linux",
@@ -199,10 +204,6 @@
     "content/index.md",
     "content/0-Index/().md",
     "templates/zettel template.md",
-    "CODE_OF_CONDUCT.md",
-    "README.md",
-    "Untitled.md",
-    "content/3-Resources/tech/k8s/k8s ingress.md",
     "content/assets/k9s.png",
     "content/assets/sharing-volumes.png",
     "k8s",
@@ -216,7 +217,6 @@
     "content/2-Areas/buddhism",
     "content/assets/k8s-architecture.png",
     "content/assets/container-error.png",
-    "public/static/icon.png",
     "content/assets",
     "public/tags/index.html",
     "content/0-Index/Untitled.canvas",

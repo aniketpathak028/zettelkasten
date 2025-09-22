@@ -38,4 +38,9 @@ description: what the shell!?
 
 ## Links:
 
+[[linux]]
+[[shell]]
+[[shell-script]]
+[[how to write a shell script?]]
+
 202509222222
