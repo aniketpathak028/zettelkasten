@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a59e1020350717f1",
+        "id": "3351cee6223f77bf",
         "type": "tabs",
         "children": [
           {
-            "id": "c3305251f0a66b30",
+            "id": "2463eb993dd28fa8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/0-Index/helm.md",
+                "file": "content/3-Resources/tech/shell/how to write a shell script?.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "helm"
+              "title": "how to write a shell script?"
             }
           }
         ]
@@ -171,12 +171,29 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c3305251f0a66b30",
+  "active": "2463eb993dd28fa8",
   "lastOpenFiles": [
+    "content/3-Resources/tech/shell/what is a shell?.md",
+    "content/3-Resources/tech/shell/how to write a shell script?.md",
+    "content/0-Index/helm.md",
+    "content/2-Areas/buddhism/how to control your mind 🧠.md",
+    "content/3-Resources/tech/linux",
+    "content/3-Resources/tech/yaml.md",
+    "content/3-Resources/tech/backend/asyncio.md",
+    "content/3-Resources/tech/backend",
+    "content/3-Resources/tech/backend/starlette.md",
+    "content/3-Resources/tech/backend/pydantic.md",
+    "content/3-Resources/tech/backend/fastapi.md",
+    "content/3-Resources/tech/backend/fastapi vs django vs flask.md",
+    "content/3-Resources/tech/ai/model context protocol.md",
+    "content/4-Archive/wisdom/doing what matters.md",
+    "content/4-Archive/wisdom/tech is overwhelming! 🤯.md",
+    "content/4-Archive/wisdom/productivity >>.md",
+    "content/assets/shell-architecture.png",
+    "content/3-Resources/tech/shell",
     "content/3-Resources/tech/k8s/k8s storage.md",
     "content/3-Resources/tech/k8s/k8s services.md",
     "content/3-Resources/tech/k8s/k9s.md",
-    "content/0-Index/helm.md",
     "content/index.md",
     "content/0-Index/().md",
     "templates/zettel template.md",
@@ -187,21 +204,8 @@
     "content/assets/k9s.png",
     "content/3-Resources/tech/k8s/persistent volumes.md",
     "content/3-Resources/tech/vim/vim keybindings.md",
-    "content/3-Resources/tech/k8s/deploying a simple app using k8s.md",
-    "content/3-Resources/tech/k8s/docker vs containerd.md",
-    "content/3-Resources/tech/k8s/how k8s saves our app from breaking?.md",
-    "content/3-Resources/tech/k8s/interacting with pods.md",
-    "content/3-Resources/tech/k8s/k8s networking.md",
-    "content/3-Resources/tech/vim/neovim.md",
-    "content/0-Index/sharing-volumespng.md",
     "content/assets/sharing-volumes.png",
     "k8s",
-    "content/3-Resources/tech/ai/model context protocol.md",
-    "content/0-Index/containerization.md",
-    "content/3-Resources/tech/k8s/deployment.md",
-    "content/0-Index/to do before leaving for Germany 🇩🇪.md",
-    "content/0-Index/pods.md",
-    "content/3-Resources/tech/k8s/pod.md",
     "content/assets/container-volumes.png",
     "content/assets/k8s-ingress-architecture.png",
     "content/0-Index/Untitled.base",
@@ -213,12 +217,8 @@
     "content/assets/k8s-architecture.png",
     "content/assets/container-error.png",
     "public/static/icon.png",
-    "public/static/og-image.png",
     "content/assets",
     "public/tags/index.html",
-    "public/tags/mental-health.html",
-    "public/index.html",
-    "public/tags/tech.html",
     "content/0-Index/Untitled.canvas",
     "Untitled.canvas"
   ]
