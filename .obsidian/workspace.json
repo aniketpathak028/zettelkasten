@@ -174,6 +174,8 @@
   "active": "2463eb993dd28fa8",
   "lastOpenFiles": [
     "content/3-Resources/tech/shell/what is a shell?.md",
+    "content/3-Resources/tech/vim/vim keybindings.md",
+    "content/3-Resources/tech/vim/neovim.md",
     "content/3-Resources/tech/shell/how to write a shell script?.md",
     "content/0-Index/helm.md",
     "content/2-Areas/buddhism/how to control your mind 🧠.md",
@@ -202,8 +204,6 @@
     "Untitled.md",
     "content/3-Resources/tech/k8s/k8s ingress.md",
     "content/assets/k9s.png",
-    "content/3-Resources/tech/k8s/persistent volumes.md",
-    "content/3-Resources/tech/vim/vim keybindings.md",
     "content/assets/sharing-volumes.png",
     "k8s",
     "content/assets/container-volumes.png",
