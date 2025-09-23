@@ -1,11 +1,12 @@
 ---
-title: linux basics
+title: commands
 draft: false
 tags:
   - linux
   - basics
+  - commands
 date: 2025-09-23
-description: linux basics
+description: commands
 ---
 # basic commands
 

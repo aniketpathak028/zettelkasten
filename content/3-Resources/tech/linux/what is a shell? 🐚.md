@@ -31,7 +31,7 @@ description: what the shell!?
     - the original Unix shell.
     - still exists, but often sh on Linux systems is a symlink to Bash or a minimal shell like Dash (Debian Almquist Shell), which is optimized for speed.
     - very basic features compared to Bash or Zsh. It's important for POSIX compliance.
-4. **Fish (Friendly Interactive SHell):**
+4. Fish (Friendly Interactive SHell):
     - designed from the ground up to be user-friendly and interactive.
     - not as common as Bash or Zsh, but gaining popularity for its out-of-the-box features.
     - offers "autosuggestions" (based on history and man pages), syntax highlighting, and excellent tab completion without much configuration. It's not POSIX compliant, so Bash scripts might not run directly without modification.
