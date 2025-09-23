@@ -36,6 +36,10 @@ random content...
 - cp "src_path" "dest_path"-> copy a file from src → destination
 - >> - use echo “content…” >> file path to write content to the file
 - mv-> can be used to rename a file incase no destination path is mentioned
+- df -h-> disk space usage in human readable format (mb, kb, gb)
+- free -g-> mem usage (ram and swap memory) in gigabytes
+- ps -ef-> shows all the running processes with detailed info
+- nproc-> shows the number of available CPU cores in the system
 #### more about htop, top and netstat
 
 1. htop (just an advanced version of top)
