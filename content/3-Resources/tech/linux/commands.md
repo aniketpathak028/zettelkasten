@@ -41,6 +41,7 @@ random content...
 - free -g-> mem usage (ram and swap memory) in gigabytes
 - ps -ef-> shows all the running processes with detailed info
 - nproc-> shows the number of available CPU cores in the system
+- awk -> 
 #### more about htop, top and netstat
 
 1. htop (just an advanced version of top)
