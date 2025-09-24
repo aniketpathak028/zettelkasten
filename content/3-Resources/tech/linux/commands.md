@@ -41,7 +41,37 @@ random content...
 - free -g-> mem usage (ram and swap memory) in gigabytes
 - ps -ef-> shows all the running processes with detailed info
 - nproc-> shows the number of available CPU cores in the system
-- awk -> 
+- awk -> text processing command, designed to process structured text data like rows and columns
+```bash
+awk 'pattern {action}' filename
+command | awk 'pattern {action}'
+```
+built in variables
+- $0 -> entire current line
+- $1, $2, $3... -> individual fields (columns)
+- NF -> number of fields in the current record
+- NR -> current record number
+- FS - field separator (default - whitespace)
+ex- 
+```bash
+awk '{print $1, $3}' file.txt # print specific columns
+awk '/pattern/ {print}' file.txt # print line containing a pattern
+awk -F',' '{print $1}' data.csv # custom line separator
+
+cat test.txt
+my name is aniket
+
+grep name test.txt | awk -F' ' '{print $1}'
+my
+```
+
+- curl -> fetch data from the internet
+- wget -> fetch and download from the internet
+```bash
+curl https://raw.githubusercontent.com/logpai/loghub/refs/heads/master/Linux/Linux_2k.log
+
+wget https://raw.githubusercontent.com/logpai/loghub/refs/heads/master/Linux/Linux_2k.log
+```
 #### more about htop, top and netstat
 
 1. htop (just an advanced version of top)

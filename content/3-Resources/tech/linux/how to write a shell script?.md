@@ -37,13 +37,17 @@ a simple script to print the system health info
 #####################
 
 # to print the command everytime before executing
-set -x # debug mode
+set -x          # debug mode
+set -e          # exit the script when there is an error
+set -o pipefail # exits the script when there is a pipefail
 
 df -h
 
 free -g
 
 nproc
+
+ps -ef | grep "sysmond" | awk -F' ' '{print $1}'
 ```
 
 
