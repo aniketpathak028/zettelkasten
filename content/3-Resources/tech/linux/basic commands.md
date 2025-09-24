@@ -24,7 +24,7 @@ description: commands
 ls -alh # a for all files, l for long list, h for human readable
 ```
 - ll → long list
-- mv "source_path" "dest_path"→ move a file from source to destination dir
+- mv "source_path" "dest_path"→ move a file from source to destination dir, can be used to rename a file incase no destination path is mentioned
 - cat "filename"→ read the content of a file or concat the contents of 2 files together
 ```bash
 cat temp2/temp.txt temp2/temp.txt                              
@@ -36,23 +36,10 @@ random content...
 - netstat-> list n/w info (tcp, udp connections, and ports)
 - cp "src_path" "dest_path"-> copy a file from src → destination
 - ">>" - use ">> file path" to write content to the file
-- mv-> can be used to rename a file incase no destination path is mentioned
 - df -h-> disk space usage in human readable format (mb, kb, gb)
 - free -g-> mem usage (ram and swap memory) in gigabytes
 - ps -ef-> shows all the running processes with detailed info
 - nproc-> shows the number of available CPU cores in the system
-
-- curl -> fetch stuff from the internet
-- wget -> fetch and download stuff from the internet
-```bash
-curl https://raw.githubusercontent.com/logpai/loghub/refs/heads/master/Linux/Linux_2k.log
-
-wget https://raw.githubusercontent.com/logpai/loghub/refs/heads/master/Linux/Linux_2k.log
-```
-- find -> find files or dir in the system
-```bash
-sudo 
-```
 ### more about htop, top and netstat
 
 1. htop (just an advanced version of top)
