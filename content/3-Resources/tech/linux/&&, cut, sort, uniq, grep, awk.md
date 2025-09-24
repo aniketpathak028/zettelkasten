@@ -73,9 +73,9 @@ grep ls random.txt | cut -d: -f1 | uniq
 
 here for example we’re searching for ls in random.txt and delimiting it based on : and picking the first part of each line and displaying the unique results
 
-</aside>
+### awk
 
-awk -> text processing command, designed to process structured text data like rows and columns
+text processing command, designed to process structured text data like rows and columns
 ```bash
 awk 'pattern {action}' filename
 command | awk 'pattern {action}'
@@ -98,10 +98,6 @@ my name is aniket
 grep name test.txt | awk -F' ' '{print $1}'
 my
 ```
-
-
-
-
 
 ## Links:
 
