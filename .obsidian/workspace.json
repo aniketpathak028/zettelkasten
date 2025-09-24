@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 303.5,
+    "collapsed": true
   },
   "right": {
     "id": "7d24a31d29b9d0b6",
@@ -173,9 +174,9 @@
   },
   "active": "9bd41b977e089f77",
   "lastOpenFiles": [
-    "content/3-Resources/tech/linux/sudo and apt-get.md",
     "content/3-Resources/tech/linux/process.md",
     "content/3-Resources/tech/linux/process signals.md",
+    "content/3-Resources/tech/linux/sudo and apt-get.md",
     "content/3-Resources/tech/linux/pipes and redirections.md",
     "content/3-Resources/tech/linux/how to write a shell script?.md",
     "content/3-Resources/tech/linux/file permissions.md",
