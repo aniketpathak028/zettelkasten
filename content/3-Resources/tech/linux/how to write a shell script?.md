@@ -9,14 +9,14 @@ tags:
 date: 2025-09-22
 description: how to write a shell script?
 ---
-## Why to write a shell script?
+# why to write a shell script?
 
 - scripting is a part of automation, which is essential to reduce the manual effort needed to do repetitive tasks!
 - shell scripts can help reduce such manual efforts on linux based kernels by automating them using bash or any other shell commands.
 - other programming languages like Go and Python may also be used but shell (bash, ksh, zsh, or fsh) is the most unix native language to talk to the kernel, hence it is often more reliable, faster, and more compatible for scripting.
 - and ofcourse it is cool AF! 😎
 
-## How to write a script?
+### how to write a script?
 
 - every shell script has this line at the very beginning "#!/bin/bash" which indicated what kind of shell script it is and the path of the shell executable!
 	- shebang -> #!
@@ -25,7 +25,8 @@ description: how to write a shell script?
 - in some bash scripts, the path might be /bin/sh as it is a symlink to bash (/bin/sh -> /bin/bash)
 - however recently, ubuntu has started linking /bin/sh -> /bin/dash, so it is imp to clearly specify the type of the shell.
 
-a simple script to print the system health info
+### a simple script to print the system health info
+
 ```bash
 #!/bin/bash
 
@@ -49,12 +50,6 @@ nproc
 
 ps -ef | grep "sysmond" | awk -F' ' '{print $1}'
 ```
-
-
-
-
-
-
 
 ## Links:
 

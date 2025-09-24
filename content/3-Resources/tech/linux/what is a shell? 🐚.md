@@ -17,7 +17,7 @@ description: what the shell!?
 
 >The key thing to note here is shell is the interpreter/way to talk to the OS but the terminal is just an emulator which can run on any of the shells! ex - iterm, terminal, pwsh, alacritty, wezterm etc
 
-## Flavors of shell!
+### Flavors of shell!
 
 1. Bash (Bourne-Again SHell):
     - enhanced version of the original Bourne Shell (sh) which was developed by the GNU Project.

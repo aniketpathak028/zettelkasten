@@ -11,7 +11,7 @@ description: learning to control our minds and be in the present!
 
 > mind is our greatest servant when in control, and when not we are merely slaves of it!
 
-#### ask these 5 questions to yourself?
+### ask these 5 questions to yourself?
 
 > these steps are extremely hard to practice at the beginning, but gets easier with time!
 

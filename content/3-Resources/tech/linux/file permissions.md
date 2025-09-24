@@ -9,6 +9,8 @@ description: file permissions in linux
 ---
 # file permissions in linux
 
+### permission groups
+
 every file/dir has 3 permission groups in linux:
 
 - owner/user
@@ -59,7 +61,8 @@ sudo chmod 777 <filename> # not the best way to give permissions
 
 774 - owner (7) group (7) others (4) so the other people can only read the file
 
-chmod table:
+### chmod table
+
 ![[chmod-table.png]]
 so each group can have a number from 0 → 7 each having a permission combination!
 
@@ -68,7 +71,7 @@ some common permissions:
 - 664 - File Baseline (rw → owner, group, and r → others)
 - 755 - Directory Baseline (rwx → owner, rx→ group, others)
 
->for a dir execute means changing into the directory!
+>for a dir execute means ability to change into the directory!
 
 - 400 - Key pair (r - owner, no permissions → others)
 

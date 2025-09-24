@@ -7,7 +7,7 @@ tags:
 date: 2025-09-19
 description: learn how to persist data in k8s using persistent volumes!
 ---
-## How to persist volumes in k8s?
+# How to persist volumes in k8s?
 
 read - https://kubernetes.io/docs/concepts/storage/persistent-volumes/
 

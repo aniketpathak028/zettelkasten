@@ -8,6 +8,8 @@ tags:
 date: 2025-09-23
 description: pipes and redirections
 ---
+# pipes and redirections
+
 a STDIN, STDOUT could be a shell/keyboard/network!
 
 3 std streams in linux:

@@ -8,6 +8,8 @@ tags:
 date: 2025-08-10
 description: docker commands that are handy everyday!
 ---
+# docker basics
+
 commands I keep forgetting 😅
 
 ```shell
