@@ -46,5 +46,6 @@ anything that the kernel spawns to do some work is a process starting from openi
 
 [[linux]]
 [[process]]
+[[process signals]]
 
 202509241815
