@@ -62,6 +62,12 @@ kill -15 1234 # each signal has a number 15 = SIGTERM
 | SIGSEGV | 11     | Segmentation fault (invalid memory access)               |
 | SIGALRM | 14     | Alarm from timer expiry                                  |
 
+```bash
+sudo killall <process-name> # kill all processes started by process-name
+pkill <user-name> # kill all processes started by the user
+man 7 signal # get all the signals
+```
+
 
 ## Links:
 

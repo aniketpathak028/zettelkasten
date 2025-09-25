@@ -51,6 +51,8 @@ nproc
 ps -ef | grep "sysmond" | awk -F' ' '{print $1}'
 ```
 
+
+
 ## Links:
 
 [[shell]]

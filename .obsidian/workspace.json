@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/tech/linux/process signals.md",
+                "file": "content/3-Resources/tech/linux/how to write a shell script?.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "process signals"
+              "title": "how to write a shell script?"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5,
-    "collapsed": true
+    "width": 303.5
   },
   "right": {
     "id": "7d24a31d29b9d0b6",
@@ -174,6 +173,12 @@
   },
   "active": "9bd41b977e089f77",
   "lastOpenFiles": [
+    "content/3-Resources/tech/linux/pipes and redirections.md",
+    "content/3-Resources/tech/linux/how to write a shell script?.md",
+    "content/3-Resources/tech/linux/&&, cut, sort, uniq, grep, awk.md",
+    "content/3-Resources/tech/linux/basic commands.md",
+    "content/3-Resources/tech/linux/curl, wget, and find.md",
+    "content/3-Resources/tech/linux/process signals.md",
     "public/index-og-image.webp",
     "public/4-Archive/wisdom/tech-is-overwhelming!-🤯-og-image.webp",
     "public/4-Archive/wisdom/productivity->>-og-image.webp",
@@ -184,7 +189,6 @@
     "public/3-Resources/tech/linux/what-is-a-shell-🐚-og-image.webp",
     "public/3-Resources/tech/linux/sudo-and-apt-get-og-image.webp",
     "public/3-Resources/tech/linux/process-og-image.webp",
-    "public/3-Resources/tech/linux/process-signals-og-image.webp",
     "public/tags/index.html",
     "public/tags/mental-health.html",
     "public/tags/tech.html",
@@ -196,14 +200,8 @@
     "public/tags/config-mgmt.html",
     "public/tags/neovim.html",
     "content/3-Resources/tech/linux/process.md",
-    "content/3-Resources/tech/linux/process signals.md",
     "content/3-Resources/tech/linux/sudo and apt-get.md",
-    "content/3-Resources/tech/linux/pipes and redirections.md",
-    "content/3-Resources/tech/linux/how to write a shell script?.md",
     "content/3-Resources/tech/linux/file permissions.md",
-    "content/3-Resources/tech/linux/curl, wget, and find.md",
-    "content/3-Resources/tech/linux/basic commands.md",
-    "content/3-Resources/tech/linux/&&, cut, sort, uniq, grep, awk.md",
     "content/3-Resources/tech/linux/what is a shell? 🐚.md",
     "content/3-Resources/tech/vim/vim keybindings.md",
     "content/3-Resources/tech/vim/neovim.md",
