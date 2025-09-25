@@ -13,6 +13,9 @@ anything that the kernel spawns to do some work is a process starting from openi
 
 > process → kernel → hardware
 
+```bash
+ps -ef # shows all the running processes with detailed info
+```
 ### parts of a process:
 
 - address space → physical address (RAM) virtual address

@@ -36,22 +36,8 @@ random content...
 - netstat-> list n/w info (tcp, udp connections, and ports)
 - cp "src_path" "dest_path"-> copy a file from src → destination
 - ">>" - use ">> file path" to write content to the file
-- df -h-> disk space usage in human readable format (mb, kb, gb)
-- free -g-> mem usage (ram and swap memory) in gigabytes
-- ps -ef-> shows all the running processes with detailed info
-- nproc-> shows the number of available CPU cores in the system
 ### more about htop, top and netstat
 
-1. htop (just an advanced version of top)
-    - default tool that lists all the processes and threads running/sleeping on the system
-    - displays the system load, cpu usage and other sys stats
-    - lists all the processes with PIDs, Command., cpu usage, port etc.
-2. netstat
-	- default tool to view n/w connections, ports, and routing table in the machine
-```bash
-	netstat -a # shows all tcp and udp connections
-	netstat -lntu # l -> listening, -n -> ip/port, -t -> tcpm, -u -> udp
-```
 ## Links:
 
 [[linux]]

@@ -64,6 +64,7 @@ sudo chmod 777 <filename> # not the best way to give permissions
 ### chmod table
 
 ![[chmod-table.png]]
+
 so each group can have a number from 0 → 7 each having a permission combination!
 
 some common permissions:
