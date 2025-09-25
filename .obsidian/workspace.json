@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "acf285070b566af1",
+        "id": "5de797fcc2ae4bd6",
         "type": "tabs",
         "children": [
           {
-            "id": "f5c1253c2abd9a26",
+            "id": "3e7190f08bedc179",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "content/3-Resources/tech ⚙️/linux 🐧/powers of shell scripting 🔥.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "powers of shell scripting 🔥"
             }
           }
         ]
@@ -167,8 +171,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f5c1253c2abd9a26",
+  "active": "3e7190f08bedc179",
   "lastOpenFiles": [
+    "content/3-Resources/tech ⚙️/linux 🐧/powers of shell scripting 🔥.md",
     "content/3-Resources/tech ⚙️/dsa 🧠/dynamic programming_files/image.png",
     "content/3-Resources/tech ⚙️/dsa 🧠/dynamic programming_files",
     "content/3-Resources/tech ⚙️/dsa 🧠/python-concepts.md",
