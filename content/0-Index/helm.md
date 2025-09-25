@@ -30,7 +30,7 @@ helm repo update
 helm install homarr homarr-labs/homarr --namespace homarr --create-namespace
 ```
 
-
+> Homarr now needs a secret 
 
 
 
