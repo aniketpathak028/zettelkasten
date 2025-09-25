@@ -30,9 +30,13 @@ helm repo update
 helm install homarr homarr-labs/homarr --namespace homarr --create-namespace
 ```
 
-> Homarr now needs a secret 
+> Homarr now needs a secret called "db-secret" without which it won't start!
 
+create a db-secret for homarr
 
+```bash
+ k create secret generic db-secret --from-literal=db-encryption-keys='597171fe5103489b52ce71936728cc395267839b4d5d7b4b7b486d8ce31d295a' --namespace homarr
+```
 
 
 ## Links:
