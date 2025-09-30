@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/tech/yaml.md",
+                "file": "content/3-Resources/tech/docker/what is docker?.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "yaml"
+              "title": "what is docker?"
             }
           }
         ]
@@ -171,11 +171,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "671e42c614eb4832",
+  "active": "91da6d355622476a",
   "lastOpenFiles": [
     "content/3-Resources/tech/docker/docker-commands.md",
-    "content/3-Resources/tech/devops",
     "content/3-Resources/tech/docker/what is docker?.md",
+    "content/3-Resources/tech/yaml.md",
+    "content/3-Resources/tech/devops",
     "content/3-Resources/tech/docker/rancher-desktop vs docker-desktop.md",
     "content/3-Resources/tech/docker/containerd.md",
     "content/3-Resources/tech/docker/cli-crictrl.md",
