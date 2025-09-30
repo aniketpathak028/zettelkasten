@@ -1,8 +1,13 @@
 # Python Concepts for Rookies
 
-### 1. Reference Behavior of Python
+### 1. Reference Behavior of Python 
 
-In Python, variables are references to objects. When you append to lists, only references are stored:
+read this - https://medium.com/@devyjoneslocker/understanding-pythons-pass-by-assignment-in-the-backdrop-of-pass-by-value-vs-9f5cc602f943
+
+In Python, variables are references to object and their behaviour depends on if they are mutable or immutable.
+
+for mutable objects (like lists, dictionaries, sets), changes made to the object via one reference will be reflected in all references to that object.
+for immutable objects (like integers, strings, tuples), any operation that modifies the object will create a new object, leaving the original object unchanged.
 
 
 ```python

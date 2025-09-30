@@ -85,6 +85,8 @@ def quicksort(arr, start, end):
 arr = [2, 1, 3, 8, 4, 6]
 quicksort(arr, 0, len(arr) - 1)
 print(arr)
+
+# Time Complexity = O(NlogN) on average, O(N^2) in worst case , Space Complexity = O(logN) on average, O(N) in worst case
 ```
 
     [1, 2, 3, 4, 6, 8]

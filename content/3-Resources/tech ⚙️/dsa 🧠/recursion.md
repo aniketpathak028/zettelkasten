@@ -119,10 +119,11 @@ def print_sum(n,sum):
 		print(sum)
 		return
 	print_sum(n-1,sum+n)
-	
-	
+		
 n = int(input("enter the value of n"))
 print_sum(n,0)
+
+# in parameterized recursion we carry the ans as a paramter
 ```
 
     15
@@ -139,6 +140,8 @@ def print_sum(n):
 	
 n = int(input("enter the value of n"))
 print(print_sum(n))
+ 
+# in functional recursion we return the ans to the previous call! 
 ```
 
     15
@@ -158,7 +161,6 @@ def rev(arr, i):
 arr= [3, 2, 4, 1, 5]
 rev(arr, 0)
 print("reversed array:", arr)
-
 ```
 
     reversed array: [5, 1, 4, 2, 3]
@@ -186,9 +188,11 @@ print(check(str,0))
 
 ### Recursion Mindset
 
+the following problems are crucial to develop a recursion mindset!
+
 
 ```python
-# sort an array using recursion
+# sort an array using recursion, tricky one!
 
 def sort(arr, i):
     if i==len(arr)-1:
@@ -215,7 +219,7 @@ print(arr)
 
 
 ```python
-# sort a stack using recursion
+# sort a stack using recursion, tricky one!
 
 def insert(st, num):
     if len(st)==0:
@@ -229,8 +233,6 @@ def insert(st, num):
     else:
         st.append(top)
         st.append(num)
-
-
 
 def sort(st):
     if len(st)==1:
@@ -284,7 +286,7 @@ print(st)
 
 
 ```python
-# fast exponentiation (find pow(x,n))
+# fast exponentiation (find pow(x,n)) - difficult one!
 
 def exp(x, n):
     powr= n if n>0 else -n
@@ -307,7 +309,7 @@ print(exp(2, 10))
 
 
 ```python
-# Generate Parentheses
+# Generate Parentheses, beautiful approach!
 
 def gen(n, comb, ans):
     if len(comb)==2*n:
@@ -433,7 +435,6 @@ def print_sub(i, sub, arr):
     sub.pop()
     print_sub(i+1,sub,arr)
 
-
 arr = [2, 1, 5]
 print_sub(0, [], arr)
 
@@ -520,6 +521,8 @@ print_sub(0, [], arr, 0, 5)
 
 
 #### Note:
+
+A very important trick for recursion is:
 
 - Whenever we have to print / return a single item we return True / False
 - Whenever we have to return a count, return 0 or 1
