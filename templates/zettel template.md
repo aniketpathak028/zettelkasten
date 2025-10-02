@@ -1,11 +1,11 @@
 ---
-title:
+title: <% tp.file.title %>
 draft: false
 tags:
 date:
 description:
 ---
-
+# <% tp.file.title %>
 
 
 

@@ -57,5 +57,13 @@
       ],
       "key": "H"
     }
+  ],
+  "file-explorer:new-file": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "N"
+    }
   ]
 }
