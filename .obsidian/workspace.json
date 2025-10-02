@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "deploying a qr code generator"
             }
-          },
-          {
-            "id": "a8df9f8c4aa582b0",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.14"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.9.14"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -184,7 +171,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a8df9f8c4aa582b0",
+  "active": "c241b7b9a2078a23",
   "lastOpenFiles": [
     "content/3-Resources/tech/docker/what is docker?.md",
     "content/0-Index/deploying a qr code generator.md",
