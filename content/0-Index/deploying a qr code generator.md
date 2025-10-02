@@ -184,7 +184,39 @@ docker tag url-to-qr-frontend:latest aniketpathak028/url-to-qr-frontend:latest
 docker push aniketpathak028/url-to-qr-frontend:latest
 ```
 
+### step-3: add github actions for cicd
 
+create a folder structure .github/workflows and create a file build-docker.yml which will contain our github actions workflow
+```yaml
+name: Build and Push image to Docker Hub
+on:
+    #[workflow_dispatch] provides a button to trigger the workflow instead of running automatically
+    push:
+        branches:
+            - main
+        paths:
+            - "api/*"
+            - "front-end-nextjs/*"
+              
+jobs:
+    publish_images:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+            - name: build image
+              run: | 
+                docker build ./api/ -t aniketpathak028/url-to-qr:latest
+                docker build ./front-end-nextjs/ -t aniketpathak028/url-to-qr-frontend:latest
+            - name: push image to docker hub
+              run: |
+                docker login -u aniketpathak028 -p ${{ secrets.DOCKERHUB_TOKEN }}
+                docker push aniketpathak028/url-to-qr:latest
+                docker push aniketpathak028/url-to-qr-frontend:latest
+```
+this creates a github action workflow which gets triggered when we push to the main branch and it automatically generates the docker image and pushes it to docker hub
+
+> make sure to add dockerhub access token to repository secrets in the github repo so that github can authenticate while pushing the image in dockerhub!
 
 
 ## Links:

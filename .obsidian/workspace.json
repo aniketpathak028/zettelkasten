@@ -171,19 +171,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7b3c585142c85574",
+  "active": "91da6d355622476a",
   "lastOpenFiles": [
-    "content/3-Resources/tech/cicd/github-actions/what is github actions?.md",
+    "content/3-Resources/tech/iac/terraform",
+    "content/3-Resources/tech/iac",
+    "content/3-Resources/tech/docker/what is docker?.md",
+    "content/3-Resources/tech/docker/dockerhub.md",
+    "content/3-Resources/tech/docker/dockerfile.md",
     "content/0-Index/deploying a qr code generator.md",
+    "content/3-Resources/tech/cicd/github-actions/what is github actions?.md",
     "content/3-Resources/tech/cicd/github-actions/hello.md",
     "templates/zettel template.md",
     "content/0-Index/Untitled.md",
     "content/0-Index/Hello.md",
     "content/3-Resources/tech/cicd/github-actions",
     "content/3-Resources/tech/cicd",
-    "content/3-Resources/tech/docker/what is docker?.md",
-    "content/3-Resources/tech/docker/dockerhub.md",
-    "content/3-Resources/tech/docker/dockerfile.md",
     "content/3-Resources/tech/docker/rancher-desktop vs docker-desktop.md",
     "content/3-Resources/tech/docker/cli-nerdctl.md",
     "content/3-Resources/tech/docker/containerd.md",
@@ -207,7 +209,6 @@
     "content/3-Resources/tech/dsa/heap.md",
     "content/3-Resources/tech/dsa/graphs.md",
     "content/3-Resources/tech/dsa/dynamic programming.md",
-    "content/3-Resources/tech/dsa/binary search.md",
     "content/assets/lcs.png",
     "content/assets/etc-shadow.png",
     "public/index-og-image.webp",
@@ -218,7 +219,6 @@
     "public/tags/tech.html",
     "public/tags/ocd.html",
     "public/tags/focus.html",
-    "public/tags/productivity.html",
     "content/0-Index/Untitled.canvas",
     "Untitled.canvas"
   ]
