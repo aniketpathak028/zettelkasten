@@ -10,8 +10,7 @@ description: learning terraform with aws
 ---
 # terraform with aws
 
-the goal of this blog is to learn terraform by deploying this static website to AWS S3 using terraform as Infrastructure as Code.
-
+the goal of this blog is to learn terraform by deploying a static website to AWS S3 using terraform as Infrastructure as Code.
 ### Architecture
 
 ![[terraform-aws.png]]

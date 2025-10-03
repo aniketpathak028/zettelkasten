@@ -173,10 +173,10 @@
   },
   "active": "73317f6423c0fee3",
   "lastOpenFiles": [
+    "content/3-Resources/tech/iac/terraform/what is terraform?.md",
+    "content/3-Resources/tech/iac/terraform/terraform with aws.md",
     "templates/AWSCLIV2.pkg",
     "content/assets/terraform-aws.png",
-    "content/3-Resources/tech/iac/terraform/terraform with aws.md",
-    "content/3-Resources/tech/iac/terraform/what is terraform?.md",
     "content/0-Index/deploying a qr code generator.md",
     "content/assets/terraform-workflow.png",
     "content/assets/terraform.png",
@@ -218,7 +218,6 @@
     "public/tags/index.html",
     "public/tags/mental-health.html",
     "public/tags/tech.html",
-    "public/tags/ocd.html",
     "content/0-Index/Untitled.canvas",
     "Untitled.canvas"
   ]
