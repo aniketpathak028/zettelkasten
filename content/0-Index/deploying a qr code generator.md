@@ -221,4 +221,10 @@ this creates a github action workflow which gets triggered when we push to the m
 
 ## Links:
 
+[[devops]]
+[[docker]]
+[[cicd]]
+[[terraform]]
+[[kubernetes]]
+
 202510012352
