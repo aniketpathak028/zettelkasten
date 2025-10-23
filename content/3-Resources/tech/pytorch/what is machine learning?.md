@@ -14,7 +14,9 @@ description: what is machine learning?
 
 ![[ML vs DL.png]]
 
-## Traditional 
+## Traditional Programming vs Machine Learning
+
+![[traditional vs ml.png]]
 
 
 ## Links:
