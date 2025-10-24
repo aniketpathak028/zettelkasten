@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "f317b5fd57bd7aa6",
+        "id": "02a2baa000331c6b",
         "type": "tabs",
         "children": [
           {
-            "id": "9e1712bbeec54f9b",
+            "id": "d28e47d30ea6aa18",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/tech/pytorch/what is machine learning?.md",
+                "file": "content/0-Index/what is pytorch?.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "what is machine learning?"
-            }
-          },
-          {
-            "id": "70a1606a238ae273",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/0-Index/neural networks.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "neural networks"
+              "title": "what is pytorch?"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -186,12 +171,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "70a1606a238ae273",
+  "active": "d28e47d30ea6aa18",
   "lastOpenFiles": [
-    "Pasted image 20251023134443.png",
-    "content/3-Resources/tech/pytorch/when to use ml?.md",
     "content/3-Resources/tech/pytorch/what is machine learning?.md",
-    "content/0-Index/neural networks.md",
+    "content/3-Resources/tech/pytorch/when to use ml?.md",
+    "content/3-Resources/tech/pytorch/neural networks.md",
+    "content/assets/tensors.png",
+    "content/0-Index/what is pytorch?.md",
+    "content/0-Index/Untitled.md",
+    "content/assets/types of learning.png",
+    "content/assets/anatomy of neural networks.png",
+    "content/assets/neural network.png",
     "content/assets/ml vs dl algo.png",
     "ml vs dl algo",
     "content/assets/what ml is not good for.png",
@@ -200,15 +190,11 @@
     "content/assets/what is deep learning good for?.png",
     "content/assets/traditional vs ml.png",
     "Pasted image 20251021101719.png",
-    "content/assets/what is machine learning?.png",
-    "content/assets/when to use ml.png",
     "content/3-Resources/tech/pytorch",
     "content/3-Resources/tech/iac/terraform/terraform with aws.md",
     "content/3-Resources/tech/iac/terraform/what is terraform?.md",
     "templates/AWSCLIV2.pkg",
-    "content/assets/terraform-aws.png",
     "content/0-Index/deploying a qr code generator.md",
-    "content/assets/terraform-workflow.png",
     "content/3-Resources/tech/iac/terraform",
     "content/3-Resources/tech/iac",
     "content/3-Resources/tech/docker/what is docker?.md",
@@ -230,8 +216,6 @@
     "content/3-Resources/tech/k8s/rancher-desktop.md",
     "node_modules/micromark-util-classify-character/docker vs containerd.md",
     "content/3-Resources/tech/k8s/kubernetes.md",
-    "content/3-Resources/tech/k8s/helm.md",
-    "content/3-Resources/tech/linux/powers of shell scripting 🔥.md",
     "content/3-Resources/tech ⚙️/dsa 🧠/dynamic programming_files",
     "public/tags/index.html",
     "content/0-Index/Untitled.canvas",
