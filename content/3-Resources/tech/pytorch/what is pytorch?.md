@@ -20,6 +20,9 @@ description: What is Pytorch?
 *TPU - tensor processing unit
 ![[tensors.png]]
 
+an example PyTorch workflow:
+
+![[pytorch wf.png]]
 ## Links:
 
 202510231417
