@@ -22,7 +22,7 @@ The github repo has a comprehensive architecture explanation but in short there 
 - a worker microservice that writes the in memory data from redis DB to a persistent Postgress DB written in .NET
 - a result microservice written in Node.js that displays the live results of the poll
 
-![architecture][https://raw.githubusercontent.com/dockersamples/example-voting-app/main/architecture.excalidraw.png]
+![[architecture example voting.png]]
 
 Fork the repo and clone it locally and run `docker compose up` to test the app locally!
 Now that we have a rough idea of the architecture, we can get started!
@@ -35,10 +35,11 @@ Make sure you have an Azure DevOps (https://dev.azure.com) and a Microsoft Azure
 
 - Create a new project in Azure DevOps
 
-![[azure-project-creation.png]]
+![[azure-project-creation.png|697]]
 
 - import the repository to Azure DevOps from GitHub using HTTPS or SSH
-![[import repo azure.png]]
+
+![[import repo azure.png|697]]
 
 
 
