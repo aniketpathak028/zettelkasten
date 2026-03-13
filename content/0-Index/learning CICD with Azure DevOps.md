@@ -22,7 +22,7 @@ The github repo has a comprehensive architecture explanation but in short there 
 - a worker microservice that writes the in memory data from redis DB to a persistent Postgress DB written in .NET
 - a result microservice written in Node.js that displays the live results of the poll
 
-![[architecture example voting.png]]
+![[architecture example voting.png|357]]
 
 Fork the repo and clone it locally and run `docker compose up` to test the app locally!
 Now that we have a rough idea of the architecture, we can get started!
@@ -39,7 +39,13 @@ Make sure you have an Azure DevOps (https://dev.azure.com) and a Microsoft Azure
 
 - import the repository to Azure DevOps from GitHub using HTTPS or SSH
 
+> Note: Incase the main branch is not selected by default for the project go to branches and set the main branch as the default!
+
 ![[import repo azure.png|697]]
+
+### Step-3: Creating container registry in Azure portal
+
+Before we start building our pipelines for the microservices which pushes the docker images into the Azure container registry, let's create the registry first in Azure portal
 
 
 
