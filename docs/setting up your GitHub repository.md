@@ -10,7 +10,7 @@ Then, create a new repository on GitHub.com. Do **not** initialize the new repos
 
 At the top of your repository on GitHub.com's Quick Setup page, click the clipboard to copy the remote repository URL.
 
-![[github-quick-setup.png]]
+![[github-quick-setup.png|649]]
 
 In your terminal of choice, navigate to the root of your Quartz folder. Then, run the following commands, replacing `REMOTE-URL` with the URL you just copied from the previous step.
 
