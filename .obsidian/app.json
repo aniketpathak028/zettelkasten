@@ -7,5 +7,6 @@
   "userIgnoreFilters": [
     "public/*",
     "public/"
-  ]
+  ],
+  "promptDelete": false
 }
