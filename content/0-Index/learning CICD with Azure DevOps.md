@@ -125,13 +125,25 @@ Simply create an Azure Virtual Machine and make sure to use the same resource gr
 
 ### Step-6 Add this VM to the Azure DevOps agent pools
 
-Now that we have created this Azure VM, we must add this to our Azure DevOps project under the agent pools
+Now that we have created this Azure VM, we must create an Azure agentpool and add the VM into the pool.
 
 ![[add agent in azure devops.png]]
 
+login to your Azure VM simply by copying its public ip address and run the commands provided in Azure DevOps platform to integrate this VM into the pool using the below commands:
+
+![[get the agent into azure devops.png]]
+
+```shell
+chmod 600 azureagent_key.pem
+
+ssh -i azureagent_key.pem azureuser@172.174.233.192
+
+azureuser@azureagent:~$ mkdir myagent && cd myagent
+
+azureuser@azureagent:~/myagent$ wget https://download.agent.dev.azure.com/agent/4.269.0/vsts-agent-linux-x64-4.269.0.tar.gz
 
 
-
+```
 
 
 
