@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "19d909d68283bf93",
+        "id": "278bb0ee6ff8e387",
         "type": "tabs",
         "children": [
           {
-            "id": "081dc108b1873c74",
+            "id": "14b30bbfb91efa3f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5,
-    "collapsed": true
+    "width": 303.5
   },
   "right": {
     "id": "7d24a31d29b9d0b6",
@@ -183,20 +182,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "081dc108b1873c74",
+  "active": "14b30bbfb91efa3f",
   "lastOpenFiles": [
-    "content/assets/pipeline test.png",
+    "content/assets/run voting pipeline.png",
+    "content/0-Index/learning CICD with Azure DevOps.md",
     "content/assets/get the agent into azure devops.png",
-    "content/assets/add agent in azure devops.png",
+    "content/assets/import repo azure.png",
     "content/assets/create azure vm.png",
     "content/assets/create pipeline.png",
+    "content/assets/containers vs vms.png",
     "content/assets/container-volumes.png",
     "content/assets/container-error.png",
     "content/assets/chmod-table.png",
     "content/assets/azure-project-creation.png",
-    "content/assets/azure container registry.png",
-    "content/assets/architecture example voting.png",
-    "content/0-Index/learning CICD with Azure DevOps.md",
     "content/0-Index/deploying a qr code generator.md",
     "content/3-Resources/tech/docker/dockerfile.md",
     "content/3-Resources/tech/docker/cli-nerdctl.md",

@@ -99,6 +99,20 @@ stages:
         command: 'build'
         Dockerfile: 'vote/Dockerfile'
         tags: '$(tag)'
+- stage: Push
+  displayName: Push 
+  jobs:
+  - job: Push
+    displayName: Push
+    steps:
+    - task: Docker@2
+      displayName: Push an image
+      inputs:
+        containerRegistry: '$(dockerRegistryServiceConnection)'
+        repository: '$(imageRepository)'
+        command: 'push'
+        Dockerfile: 'vote/Dockerfile'
+        tags: '$(tag)'
 ```
 
 This is a CI for the voting microservice, which looks for changes in the voting microservice code and triggers a Docker build and push pipeline in Azure DevOps and this pipeline runs on a VM that we must create in Microsoft Azure beforehand. In this case the name of the VM is `azureagent` which we are now going to create in Azure.
@@ -157,9 +171,9 @@ sudo systemctl restart docker
 
 Once done, try changing anything minor inside the vote/* directory to test if the pipeline gets triggered automatically or just directly run the pipeline manually. 
 
-![[pipeline test.png]]
+![[run voting pipeline.png]]
 
-
+similarly create the pipelines for the other microservices ie. result and 
 
 
 
