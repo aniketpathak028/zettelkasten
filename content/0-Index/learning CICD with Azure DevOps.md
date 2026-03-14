@@ -142,11 +142,15 @@ azureuser@azureagent:~$ mkdir myagent && cd myagent
 
 azureuser@azureagent:~/myagent$ wget https://download.agent.dev.azure.com/agent/4.269.0/vsts-agent-linux-x64-4.269.0.tar.gz
 
+tar zxvf /vsts-agent-linux-x64-4.269.0.tar.gz
+
+./config.sh
 
 ```
 
+Next it will prompt you to enter the server url and your personal access token which can be easily created in Azure DevOps portal in settings!
 
-
+> Note: the server url is of this format - `https://dev.azure.com/{your-organization}` can be found in docs - https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/linux-agent
 
 
 
