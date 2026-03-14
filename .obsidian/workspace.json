@@ -182,8 +182,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "14b30bbfb91efa3f",
+  "active": "91da6d355622476a",
   "lastOpenFiles": [
+    "content/assets/azure container registry 1.png",
+    "content/assets/all pipelines azure.png",
     "content/assets/run voting pipeline.png",
     "content/0-Index/learning CICD with Azure DevOps.md",
     "content/assets/get the agent into azure devops.png",
@@ -194,7 +196,6 @@
     "content/assets/container-volumes.png",
     "content/assets/container-error.png",
     "content/assets/chmod-table.png",
-    "content/assets/azure-project-creation.png",
     "content/0-Index/deploying a qr code generator.md",
     "content/3-Resources/tech/docker/dockerfile.md",
     "content/3-Resources/tech/docker/cli-nerdctl.md",

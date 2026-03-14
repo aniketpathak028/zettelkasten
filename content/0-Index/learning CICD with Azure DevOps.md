@@ -47,7 +47,7 @@ Make sure you have an Azure DevOps (https://dev.azure.com) and a Microsoft Azure
 
 Before we start building our pipelines for the microservices which pushes the docker images into the Azure container registry, let's create the registry first in Azure portal!
 
-![[azure container registry.png|533]]
+![[content/assets/azure container registry.png|533]]
 
 ### Step-4 Create a Pipeline for Voting microservice
 
@@ -152,7 +152,7 @@ Next it will prompt you to enter the server url and your personal access token w
 
 > Note: the server url is of this format - `https://dev.azure.com/{your-organization}` can be found in docs - https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/linux-agent
 
-### Step-7 Install docker in VM and grant the agent user permission
+### Step-7 Install Docker in VM and test Pipelines
 
 Since this VM is going to build and run docker images, it must have docker installed and the agent user ie. azureuser in our case should have the privilege of running docker daemon. 
 
@@ -173,10 +173,19 @@ Once done, try changing anything minor inside the vote/* directory to test if th
 
 ![[run voting pipeline.png]]
 
-similarly create the pipelines for the other microservices ie. result and 
+similarly create the pipelines for the other microservices ie. result and worker!
 
+![[all pipelines azure.png]]
 
+> Note: when setting up a new pipeline always choose the source of the pipeline as the repository already imported in Azure!
 
+congratulations!  🎉 we have successfully migrated our project to Azure CI and all our microservices are now getting built and pushed to Azure container registry!
+
+![[azure container registry 1.png]]
+
+Now that Continous Integration is successfull, let's implement Continous Deployment!
+
+### Step
 
 ## Links:
 
