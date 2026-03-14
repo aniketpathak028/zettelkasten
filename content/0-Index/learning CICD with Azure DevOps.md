@@ -27,6 +27,8 @@ The github repo has a comprehensive architecture explanation but in short there 
 Fork the repo and clone it locally and run `docker compose up` to test the app locally!
 Now that we have a rough idea of the architecture, we can get started!
 
+## Continous Integration
+
 ### Step-1: Azure DevOps and Azure account
 
 Make sure you have an Azure DevOps (https://dev.azure.com) and a Microsoft Azure (https://portal.azure.com) account! Both are different and it is always better to have a single microsoft account on both!
@@ -183,9 +185,43 @@ congratulations!  🎉 we have successfully migrated our project to Azure CI and
 
 ![[azure container registry 1.png]]
 
-Now that Continous Integration is successfull, let's implement Continous Deployment!
+Now that Continous Integration is successfull, let's implement Continous Deployment with ArgoCD!
 
-### Step
+## Continous Delivery
+
+Before implementing the continous delivery part here is a brief explanation on the high level architecture of the same!
+
+For continous delivery we would be using ArgoCD which will be monitoring for latest changes in the Azure container registry for the voting and result services docker images and the moment a new docker image is uploaded, it will trigger a change in the k8s specification of the deployment to use the latest image leading to a new deployment!
+
+Since this project uses K8s to host the application, we are going to create an Azure K8s service in Azure to deploy the application!
+### Step-1 Create a managed AKS service
+
+![[Pasted image 20260314205024.png|499]]
+
+create a simple AKS service with default configurations and login to the cluster locally
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Links:
 
