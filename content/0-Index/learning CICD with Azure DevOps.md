@@ -206,7 +206,14 @@ az aks get-credentials --name "NAME_OF_YOUR_CLUSTER" --resource-group "RESOURCE_
 kubectl get pods # to check the connection, should show no resource found in default namespace 
 ```
 
+### Step-2: Setup ArgoCD in the AKS cluster
 
+let's set up ArgoCD in the AKS cluster now by simply running the below command, can be found in ArgoCD docs - https://argo-cd.readthedocs.io/en/stable/
+
+```shell
+kubectl create namespace argocd
+kubectl apply -n argocd --server-side --force-conflicts -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+```
 
 
 
