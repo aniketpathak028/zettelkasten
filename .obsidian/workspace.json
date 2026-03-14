@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 303.5,
+    "collapsed": true
   },
   "right": {
     "id": "7d24a31d29b9d0b6",
@@ -182,7 +183,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "91da6d355622476a",
+  "active": "081dc108b1873c74",
   "lastOpenFiles": [
     "content/assets/pipeline test.png",
     "content/assets/get the agent into azure devops.png",
