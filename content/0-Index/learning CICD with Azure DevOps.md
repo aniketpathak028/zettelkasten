@@ -196,7 +196,7 @@ For continous delivery we would be using ArgoCD which will be monitoring for lat
 Since this project uses K8s to host the application, we are going to create an Azure K8s service in Azure to deploy the application!
 ### Step-1 Create a managed AKS service
 
-![[Pasted image 20260314205024.png|499]]
+![[create aks.png|499]]
 
 create a simple AKS service with default configurations and login to the cluster locally using the azure cli
 
@@ -208,13 +208,52 @@ kubectl get pods # to check the connection, should show no resource found in def
 
 ### Step-2: Setup ArgoCD in the AKS cluster
 
-let's set up ArgoCD in the AKS cluster now by simply running the below command, can be found in ArgoCD docs - https://argo-cd.readthedocs.io/en/stable/
+let's set up ArgoCD in the AKS cluster now by simply running the below command
+
+> Note: can be found in ArgoCD docs - https://argo-cd.readthedocs.io/en/stable/
 
 ```shell
 kubectl create namespace argocd
+
 kubectl apply -n argocd --server-side --force-conflicts -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
+Now we need the login password for ArgoCD server, which can be found in the following way
+
+```shell
+# fetch the secrets in the argocd namespace
+kubectl get secrets -n argocd
+
+# open the argocd-inital-admin-secret in edit mode in vim
+kubectl edit secret argocd-inital-admin-secret -n argocd
+
+# copy the password ex in my case
+aVZDMXdaVC1lQ2RYRHExSg==
+
+# decode the base64 encoded password
+echo aVZDMXdaVC1lQ2RYRHExSg== | base64 --decode
+iVC1wZT-eCdXDq1J
+
+# edit the argocd server config from ClusterIP to LoadBalancer
+kubectl get svc -n argocd
+kubectl edit svc argocd-server -n argocd
+```
+
+Now we can simply access the ArgoCD server directly by visiting https://<EXTERNAL_IP>
+
+```shell
+kubectl get svc argocd-server -n argocd
+```
+
+> Note: the username is admin by default and the password is the decoded base64 without %
+
+### Step-3 Connecting ArgoCD to Azure DevOps repository
+
+Now that ArgoCD is setup on our AKS cluster, we can connect it with our Azure DevOps repository so that it can monitor the changes in the K8s manifest files and quickly deploy any new changes into the cluster!
+
+![[connect argo with azure repo.png]]
+
+> Note: for the repository url first copy it from the Azure DevOps portal in the repo and just replace the organization name with the personal access token instead
 
 
 
