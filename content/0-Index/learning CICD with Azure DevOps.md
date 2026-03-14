@@ -198,7 +198,13 @@ Since this project uses K8s to host the application, we are going to create an A
 
 ![[Pasted image 20260314205024.png|499]]
 
-create a simple AKS service with default configurations and login to the cluster locally
+create a simple AKS service with default configurations and login to the cluster locally using the azure cli
+
+```shell
+az aks get-credentials --name "NAME_OF_YOUR_CLUSTER" --resource-group "RESOURCE_GROUP"
+
+kubectl get pods # to check the connection, should show no resource found in default namespace 
+```
 
 
 
