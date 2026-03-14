@@ -99,19 +99,6 @@ stages:
         command: 'build'
         Dockerfile: 'vote/Dockerfile'
         tags: '$(tag)'
-- stage: Push
-  displayName: Push 
-  jobs:
-  - job: Push
-    displayName: Push
-    steps:
-    - task: Docker@2
-      displayName: Build an image
-      inputs:
-        containerRegistry: '$(dockerRegistryServiceConnection)'
-        repository: '$(imageRepository)'
-        command: 'push'
-        tags: '$(tag)'
 ```
 
 This is a CI for the voting microservice, which looks for changes in the voting microservice code and triggers a Docker build and push pipeline in Azure DevOps and this pipeline runs on a VM that we must create in Microsoft Azure beforehand. In this case the name of the VM is `azureagent` which we are now going to create in Azure.
@@ -145,16 +132,32 @@ azureuser@azureagent:~/myagent$ wget https://download.agent.dev.azure.com/agent/
 tar zxvf /vsts-agent-linux-x64-4.269.0.tar.gz
 
 ./config.sh
-
 ```
 
 Next it will prompt you to enter the server url and your personal access token which can be easily created in Azure DevOps portal in settings!
 
 > Note: the server url is of this format - `https://dev.azure.com/{your-organization}` can be found in docs - https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/linux-agent
 
+### Step-7 Install docker in VM and grant the agent user permission
 
+Since this VM is going to build and run docker images, it must have docker installed and the agent user ie. azureuser in our case should have the privilege of running docker daemon. 
 
+```shell
+sudo apt update
+sudo apt install docker.io
+sudo usermod -aG docker azureuser
+sudo systemctl restart docker
+```
 
+>Note: try testing docker by pulling a simple image like hello-world
+>```shell
+>docker pull hello-world
+>```
+>if it throws an error that permissions are denied to run the docker daemon, then restart the connection to the VM to resolve this!
+
+Once done, try changing anything minor inside the vote/* directory to test if the pipeline gets triggered automatically or just directly run the pipeline manually. 
+
+![[pipeline test.png]]
 
 
 
