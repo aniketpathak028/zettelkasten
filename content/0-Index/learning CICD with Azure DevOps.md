@@ -255,15 +255,128 @@ Now that ArgoCD is setup on our AKS cluster, we can connect it with our Azure De
 
 > Note: for the repository url first copy it from the Azure DevOps portal in the repo and just replace the organization name with the personal access token instead
 
+Now let's create a new application in ArgoCD to track our repo manifest files
 
+![[create argoCD app.png]]
 
+>Note: 
+>- Sync Policy should be automatic if you don't want to manually trigger a deployment
+>- Also by default ArgoCD takes 180 sec to detect a change in the repository before pushing for a new deployment, which can be changed in the configuration!
+>- The path should be the path to the K8s manifest folder
 
+![[create argoCD app.png]]
 
+Once completed click on create to have an ArgoCD application
 
+![[argoCD app.png]]
 
+### Step-4: Adding update step in the pipeline to trigger ArgoCD
 
+Now that we have our ArgoCD looking for K8s manifest changes, we must add an update step in our Azure pipeline, so that whenever the pipeline is triggered it makes sure to update the manifest file with the latest docker image as well!
 
+This can be achieved using a simple shell script :)
 
+```bash
+#!/bin/bash
+
+# run the script in debug mode to catch errors!
+set -x
+
+# Set the repository URL
+REPO_URL="https://<ACCESS-TOKEN>@dev.azure.com/<AZURE-DEVOPS-ORG-NAME>/voting-app/_git/voting-app"
+
+# Clone the git repository into the /tmp directory
+git clone "$REPO_URL" /tmp/temp_repo
+
+# Navigate into the cloned repository directory
+cd /tmp/temp_repo
+
+# Make changes to the Kubernetes manifest file(s)
+# For example, let's say you want to change the image tag in a deployment.yaml file
+# $1 -> which manifest file to make changes to - db, redis, vote, result, worker
+# $2 -> repository name in azure container registry - vote-service, result-service, worker-service
+# $3 -> build tag or build number
+sed -i "s|image:.*|image: <ACR-REGISTRY-NAME>/$2:$3|g" k8s-specifications/$1-deployment.yaml
+
+# Add the modified files
+git add .
+
+# Commit the changes
+git commit -m "Update Kubernetes manifest"
+
+# Push the changes back to the repository
+git push
+
+# Cleanup: remove the temporary directory
+rm -rf /tmp/temp_repo
+```
+
+This script can be placed in out Azure repo inside a folder scripts, and can be triggered as a part of update step in the pipeline!
+
+```yaml
+# Docker
+# Build and push an image to Azure Container Registry
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+ paths:
+   include:
+     - vote/*
+
+resources:
+- repo: self
+
+variables:
+  # Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: 'eca4cbb3-7c0c-4b87-84cb-518a41212fad'
+  imageRepository: 'vote-service'
+  containerRegistry: 'aniketazurecicd.azurecr.io'
+  dockerfilePath: '$(Build.SourcesDirectory)/result/Dockerfile'
+  tag: '$(Build.BuildId)'
+
+pool:
+ name: 'azureagent'
+
+stages:
+- stage: Build
+  displayName: Build 
+  jobs:
+  - job: Build
+    displayName: Build
+    steps:
+    - task: Docker@2
+      displayName: Build an image
+      inputs:
+        containerRegistry: '$(dockerRegistryServiceConnection)'
+        repository: '$(imageRepository)'
+        command: 'build'
+        Dockerfile: 'vote/Dockerfile'
+        tags: '$(tag)'
+- stage: Push
+  displayName: Push 
+  jobs:
+  - job: Push
+    displayName: Push
+    steps:
+    - task: Docker@2
+      displayName: Build an image
+      inputs:
+        containerRegistry: '$(dockerRegistryServiceConnection)'
+        repository: '$(imageRepository)'
+        command: 'push'
+        tags: '$(tag)'
+- stage: Update
+  displayName: Update 
+  jobs:
+  - job: Update
+    displayName: Update
+    steps:
+      - task: ShellScript@2
+        displayName: update K8s Manifests
+        inputs:
+          scriptPath: 'scripts/updateK8sManifests.sh'
+          args: 'vote $imageRepository $tag'
+```
 
 
 
