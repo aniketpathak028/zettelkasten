@@ -77,7 +77,7 @@ variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '284718ac-36e2-41fd-95cd-000cdff21b27'
   imageRepository: 'votingapp'
-  containerRegistry: 'aniketazurecicd.azurecr.io'
+  containerRegistry: '<CONTAINER_REGISTRY_NAME>.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/result/Dockerfile'
   tag: '$(Build.BuildId)'
 
@@ -228,7 +228,7 @@ kubectl get secrets -n argocd
 kubectl edit secret argocd-inital-admin-secret -n argocd
 
 # copy the password ex in my case
-aVZDMXdaVC1lQ2RYRHExSg==
+aVZDMXdaVC1lQ2RYRHExSg== # delete this
 
 # decode the base64 encoded password
 echo aVZDMXdaVC1lQ2RYRHExSg== | base64 --decode
@@ -380,6 +380,8 @@ stages:
           args: 'vote $(imageRepository) $(tag)'
 ```
 
+
+Now, to test if the entire lifecycle is working or not we can simple update the vote codebase and check it! Let's change the options of the poll to "Summer" and "Winter" and test if the change is reflected in the website or not! Currently the website looks like this:
 
 
 
