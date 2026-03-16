@@ -239,13 +239,15 @@ kubectl get svc -n argocd
 kubectl edit svc argocd-server -n argocd
 ```
 
-Now we can simply access the ArgoCD server directly by visiting https://<EXTERNAL_IP>
+Now we can simply access the ArgoCD server directly by visiting https://<EXTERNAL_IP>:<PORT_NUMBER> for example in my case - https://20.19.14.130:30367
 
 ```shell
 kubectl get svc argocd-server -n argocd
 ```
 
 > Note: the username is admin by default and the password is the decoded base64 without %
+
+> Note: Incase this doesn't work, it maybe beacause the inbound port does not have the permission, in that case just go to Azure portal and in vmms resource select the VM
 
 ### Step-3 Connecting ArgoCD to Azure DevOps repository
 
