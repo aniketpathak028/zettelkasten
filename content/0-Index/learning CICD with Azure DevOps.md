@@ -410,11 +410,7 @@ kubectl create secret docker-registry <secret-name> \
     --docker-password=<service-principal-password>
     
     
-    kubectl create secret docker-registry imagepullsecret
-    --namespace default
-    --docker-server=aniketazurecicd.azurecr.io
-    --docker-username=aniketazurecicd
-    --docker-password=ArfR89oUPLBsMkVFuCbPPkXgbCfUVMBrRV0FB8wMSxjR6HmktEZZJQQJ99CCACYeBjFEqg7NAAACAZCRJ2Kl
+    kubectl create secret docker-registry imagepullsecret --namespace default --docker-server=aniketazurecicd.azurecr.io --docker-username=aniketazurecicd --docker-password=ArfR89oUPLBsMkVFuCbPPkXgbCfUVMBrRV0FB8wMSxjR6HmktEZZJQQJ99CCACYeBjFEqg7NAAACAZCRJ2Kl
 ```
 
 
