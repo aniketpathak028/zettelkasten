@@ -383,13 +383,18 @@ stages:
 
 Now, to test if the entire lifecycle is working or not we can simple update the vote codebase and check it! Let's change the options of the poll to "Summer" and "Winter" and test if the change is reflected in the website or not! Currently the website looks like this:
 
+![[voteapp_v1.png]]
 
+But there is one small issue which is althought the entire cycle works and the image is updated, our container registry is private hence argocd cannot pull the docker image hence we get an error here:
 
+```shell
+❯ k get pods
+vote-99cdd4ddb-mm8jj      0/1     ImagePullBackOff   0          45m
+```
 
+### Step-5 ImagePullSecrets
 
-
-
-
+Since ArgoCD needs to authenticate to our container registry, we can use the concept of ImagePullSecrets 
 
 
 ## Links:
