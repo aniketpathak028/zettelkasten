@@ -385,7 +385,7 @@ Now, to test if the entire lifecycle is working or not we can simple update the 
 
 ![[voteapp_v1.png]]
 
-But there is one small issue which is althought the entire cycle works and the image is updated, our container registry is private hence argocd cannot pull the docker image hence we get an error here:
+But there is one small issue which is although the entire CI/CD works and the image is updated, our container registry is private hence K8s cannot pull the docker image hence we get an error here:
 
 ```shell
 ❯ k get pods
@@ -394,7 +394,29 @@ vote-99cdd4ddb-mm8jj      0/1     ImagePullBackOff   0          45m
 
 ### Step-5 ImagePullSecrets
 
-Since ArgoCD needs to authenticate to our container registry, we can use the concept of ImagePullSecrets 
+Since K8s needs to authenticate to our container registry, we can use the concept of ImagePullSecrets, which is a secret to access the container registry!
+
+Let's create the K8s secret in the default namespace where the application is deployed!
+
+- First get the access key from the container registry
+![[Pasted image 20260316193444.png]]
+
+- Create an ImagePullSecret in the K8s cluster in the namespace where the application is deployed
+```shell
+kubectl create secret docker-registry <secret-name> \
+    --namespace <namespace> \
+    --docker-server=<container-registry-name>.azurecr.io \
+    --docker-username=<service-principal-ID> \
+    --docker-password=<service-principal-password>
+    
+    
+    kubectl create secret docker-registry imagepullsecret
+    --namespace default
+    --docker-server=aniketazurecicd.azurecr.io
+    --docker-username=aniketazurecicd
+    --docker-password=ArfR89oUPLBsMkVFuCbPPkXgbCfUVMBrRV0FB8wMSxjR6HmktEZZJQQJ99CCACYeBjFEqg7NAAACAZCRJ2Kl
+```
+
 
 
 ## Links:
