@@ -311,7 +311,7 @@ git push
 rm -rf /tmp/temp_repo
 ```
 
-This script can be placed in out Azure repo inside a folder scripts, and can be triggered as a part of update step in the pipeline!
+This script can be placed in our Azure repo inside a folder scripts, and can be triggered as a part of update step in the pipeline!
 
 ```yaml
 # Docker
@@ -375,7 +375,7 @@ stages:
         displayName: update K8s Manifests
         inputs:
           scriptPath: 'scripts/updateK8sManifests.sh'
-          args: 'vote $imageRepository $tag'
+          args: 'vote $(imageRepository) $(tag)'
 ```
 
 
