@@ -9,25 +9,7 @@ description: learn the fundamentals of docker
 ---
 # What is Docker?
 
-### Containers vs VMs
-
-- a container is a packaging of software code with just the operating system (OS) libraries and dependencies required to run the code to create a single lightweight executable
-- more portable and resource-efficient than virtual machines (VMs)
-- In simple words these can be consider tiny units of machine responsible for running an instance of application
-
-![[containers vs vms.png]]
-
-> the core difference in VM and Containers are containers virtualize the OS while VMs virtualize the hardware, hence containers are lightweight and faster to run!
-
-| Feature              | Containers                   | Virtual Machines                    |
-| -------------------- | ---------------------------- | ----------------------------------- |
-| Virtualization Level | Operating System (OS) layer  | Hardware layer                      |
-| Resource Usage       | Lightweight, fewer resources | Resource-intensive, higher overhead |
-| Startup Time         | Fast (seconds)               | Slower (minutes)                    |
-| Isolation            | Process-level isolation      | Full OS isolation                   |
-| Kernel               | Shares the host OS kernel    | Each VM has its own kernel          |
-| Portability          | Highly portable, move easily | Less portable, larger images        |
-### What is Docker?
+Docker is a tool that helps us create containers, manage them, store and share them!
 
 - an application for developing, shipping and running applications in containers, simplifies the process of container management!
 - helps to containerize an application and containers could be as low as 50MB.

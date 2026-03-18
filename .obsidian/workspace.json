@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/0-Index/learning CICD with Azure DevOps.md",
+                "file": "content/3-Resources/tech/docker/what is docker?.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "learning CICD with Azure DevOps"
+              "title": "what is docker?"
             }
           }
         ]
@@ -184,8 +184,13 @@
   },
   "active": "72abf1c471295702",
   "lastOpenFiles": [
-    "content/assets/azure acr access keys.png",
+    "content/3-Resources/tech/docker/containers.md",
+    "content/3-Resources/tech/docker/dockerfile.md",
+    "content/3-Resources/tech/docker/rancher-desktop vs docker-desktop.md",
+    "content/3-Resources/tech/docker/what is docker?.md",
+    "content/assets/container vs VM.png",
     "content/0-Index/learning CICD with Azure DevOps.md",
+    "content/assets/azure acr access keys.png",
     "content/assets/architecture diagram voting app.png",
     "Pasted image 20260318120424.png",
     "content/assets/final result voting app.png",
@@ -195,8 +200,6 @@
     "content/assets/create argoCD app.png",
     "content/assets/create aks.png",
     "content/assets/connect argo with azure repo.png",
-    "content/assets/azure container registry 1.png",
-    "content/3-Resources/tech/docker/dockerfile.md",
     "content/3-Resources/tech/docker/cli-nerdctl.md",
     "content/3-Resources/tech/docker/cli-ctr.md",
     "content/3-Resources/tech/docker/cli-crictrl.md",
@@ -219,8 +222,6 @@
     "templates/zettel template.md",
     "content/3-Resources/tech/pytorch/what is pytorch?.md",
     "content/3-Resources/tech/pytorch/neural networks.md",
-    "content/3-Resources/tech/pytorch/what is machine learning?.md",
-    "content/3-Resources/tech/pytorch/when to use ml?.md",
     "ml vs dl algo",
     "content/3-Resources/tech/pytorch",
     "templates/AWSCLIV2.pkg",
