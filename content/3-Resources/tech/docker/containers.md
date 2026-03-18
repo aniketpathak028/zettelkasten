@@ -31,7 +31,9 @@ description: What is the difference between Virtual Machines and Containers?
 | Isolation            | Process-level isolation      | Full OS isolation                   |
 | Kernel               | Shares the host OS kernel    | Each VM has its own kernel          |
 | Portability          | Highly portable, move easily | Less portable, larger images        |
-
+more on containers 
+- https://www.infoq.com/articles/build-a-container-golang/
+- https://www.reddit.com/r/docker/comments/jexmjt/build_your_own_container_using_less_than_100/
 ## Links:
 
 [[docker]]

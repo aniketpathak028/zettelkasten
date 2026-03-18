@@ -28,6 +28,8 @@ Docker is a tool that helps us create containers, manage them, store and share t
 - container - a container that runs on the docker daemon
 
 > [[dockerhub]] is a repository for storing docker images just like github stores codebases
+
+more understanding of docker - https://github.com/iam-veeramalla/Docker-Zero-to-Hero
 ### commands
 
 ```shell
