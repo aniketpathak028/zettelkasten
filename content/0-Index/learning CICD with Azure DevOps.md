@@ -400,7 +400,7 @@ Let's create the K8s secret in the default namespace where the application is de
 
 - First get the access key from the container registry
 
-![[Pasted image 20260316193444.png]]
+![[azure acr access keys.png]]
 
 - Create an ImagePullSecret in the K8s cluster in the namespace where the application is deployed
 ```shell
@@ -422,12 +422,13 @@ vote-66b68659d9-pk77b     1/1     Running   0              101m   10.244.2.109  
 worker-84b8474cfd-z8rj9   1/1     Running   0              101m   10.244.2.4     aks-amd64pool-32853815-vmss000001   <none>           <none>
 ```
 
-![[Pasted image 20260318113759.png]]
+![[final result voting app.png]]
 
 Woohooo! We have successfully created an entire CI/CD pipeline that checks for any code changes in the microservices, triggers an Azure Pipeline to rebuild a docker image and store them in the ACR and a custom shell script to update the K8s manifests in the pipeline to trigger a deployment using ArgoCD!
 
 Here is a complete Architecture Diagram for this entire project that I created using eraser.io!
 
+![[architecture diagram voting app.png]]
 
 ~aniket
 ## Links:
