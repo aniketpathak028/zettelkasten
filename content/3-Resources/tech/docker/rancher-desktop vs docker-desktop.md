@@ -23,7 +23,7 @@ docker context use rancher-desktop # switch context to rancher desktop
 
 - if docker desktop is installed on the system, it might be claiming the docker socket which rancher might want to use, this can lead to problems where the docker commands are directed to docker desktop instead of rancher desktop, so make sure to be in the correct context!
 
-#### difference
+#### differences
 - both use containerd as container runtime engine but rancher does not run the full docker engine, instead it provides a docker compatible api layer through [[cli-nerdctl]]
 - docker-desktop includes its own distribution of k8s, but rancher lets us use multiple distributions - k3s and also lets us configure and manage diff k8s versions
 - docker-desktop has commercial license however rancher is fully open-source

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/tech/docker/what is docker?.md",
+                "file": "content/3-Resources/tech/docker/docker vs buildah.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "what is docker?"
+              "title": "docker vs buildah"
             }
           }
         ]
@@ -184,10 +184,15 @@
   },
   "active": "72abf1c471295702",
   "lastOpenFiles": [
+    "content/3-Resources/tech/docker/what is docker?.md",
+    "content/3-Resources/tech/docker/containerd.md",
+    "content/3-Resources/tech/docker/docker vs buildah.md",
+    "different container runtimes.png",
+    "content/3-Resources/tech/docker/Untitled",
+    "content/assets/lifecycle_of_docker_containers.png",
+    "content/3-Resources/tech/docker/rancher-desktop vs docker-desktop.md",
     "content/3-Resources/tech/docker/containers.md",
     "content/3-Resources/tech/docker/dockerfile.md",
-    "content/3-Resources/tech/docker/rancher-desktop vs docker-desktop.md",
-    "content/3-Resources/tech/docker/what is docker?.md",
     "content/assets/container vs VM.png",
     "content/0-Index/learning CICD with Azure DevOps.md",
     "content/assets/azure acr access keys.png",
@@ -198,8 +203,6 @@
     "content/assets/voteapp_v1.png",
     "content/assets/argoCD app.png",
     "content/assets/create argoCD app.png",
-    "content/assets/create aks.png",
-    "content/assets/connect argo with azure repo.png",
     "content/3-Resources/tech/docker/cli-nerdctl.md",
     "content/3-Resources/tech/docker/cli-ctr.md",
     "content/3-Resources/tech/docker/cli-crictrl.md",
@@ -220,8 +223,6 @@
     "content/0-Index/Untitled 1.base",
     "content/0-Index/Untitled.base",
     "templates/zettel template.md",
-    "content/3-Resources/tech/pytorch/what is pytorch?.md",
-    "content/3-Resources/tech/pytorch/neural networks.md",
     "ml vs dl algo",
     "content/3-Resources/tech/pytorch",
     "templates/AWSCLIV2.pkg",
@@ -229,7 +230,6 @@
     "content/3-Resources/tech/iac",
     "content/3-Resources/tech/cicd/github-actions",
     "content/3-Resources/tech/cicd",
-    "content/3-Resources/tech/devops",
     "content/0-Index/Untitled.canvas",
     "Untitled.canvas"
   ]

@@ -17,6 +17,10 @@ Docker is a tool that helps us create containers, manage them, store and share t
 
 > docker can be run by both docker desktop and rancher read [[rancher-desktop vs docker-desktop]]
 
+### lifecycle of docker containers
+
+![[lifecycle_of_docker_containers.png|533]]
+
 ### components of docker
 
 - [[dockerfile]] - is a script containing a series of instructions and commands for building a docker image
