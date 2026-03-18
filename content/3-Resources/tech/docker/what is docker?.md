@@ -9,13 +9,17 @@ description: learn the fundamentals of docker
 ---
 # What is Docker?
 
-Docker is a tool that helps us create containers, manage them, store and share them!
+Docker is a tool that implements containerization and helps us create containers, manage them, store and share them!
 
 - an application for developing, shipping and running applications in containers, simplifies the process of container management!
 - helps to containerize an application and containers could be as low as 50MB.
 - simply put docker is a way of containerizing an application but is a better alternative than creating a VM!
 
 > docker can be run by both docker desktop and rancher read [[rancher-desktop vs docker-desktop]]
+
+### architecture of docker
+
+![[architecture of docker.png|526]]
 
 ### lifecycle of docker containers
 

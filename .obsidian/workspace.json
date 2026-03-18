@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/tech/docker/containers.md",
+                "file": "content/3-Resources/tech/docker/what is docker?.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "containers"
+              "title": "what is docker?"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 303.5,
+    "collapsed": true
   },
   "right": {
     "id": "7d24a31d29b9d0b6",
@@ -184,17 +185,18 @@
   },
   "active": "72abf1c471295702",
   "lastOpenFiles": [
+    "content/assets/architecture of docker.png",
+    "content/3-Resources/tech/docker/containers.md",
     "content/3-Resources/tech/docker/dockerfile.md",
     "content/3-Resources/tech/docker/what is docker?.md",
     "content/3-Resources/tech/docker/dockerhub.md",
     "content/3-Resources/tech/docker/rancher-desktop vs docker-desktop.md",
     "content/3-Resources/tech/docker/docker vs buildah.md",
-    "content/3-Resources/tech/docker/containers.md",
     "content/3-Resources/tech/docker/containerd.md",
     "content/3-Resources/tech/docker/cli-nerdctl.md",
     "content/3-Resources/tech/docker/cli-ctr.md",
     "content/3-Resources/tech/docker/cli-crictrl.md",
-    "different container runtimes.png",
+    "content/assets/different container runtimes.png",
     "content/3-Resources/tech/docker/Untitled",
     "content/assets/lifecycle_of_docker_containers.png",
     "content/assets/container vs VM.png",
@@ -220,7 +222,6 @@
     "content/4-Archive/wisdom/productivity >>.md",
     "content/4-Archive/wisdom/doing what matters.md",
     "content/2-Areas/note-taking/para.md",
-    "content/2-Areas/stoicism/stoicism and why I got attracted to it?.md",
     "content/0-Index/Untitled 1.base",
     "content/0-Index/Untitled.base",
     "ml vs dl algo",
