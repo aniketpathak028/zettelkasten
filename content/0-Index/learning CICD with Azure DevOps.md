@@ -232,7 +232,7 @@ aVZDMXdaVC1lQ2RYRHExSg== # delete this
 
 # decode the base64 encoded password
 echo aVZDMXdaVC1lQ2RYRHExSg== | base64 --decode
-iVC1wZT-eCdXDq1J
+<YOUR_DECODED_PASSWD>
 
 # edit the argocd server config from ClusterIP to LoadBalancer
 kubectl get svc -n argocd
@@ -381,7 +381,7 @@ stages:
 ```
 
 
-Now, to test if the entire lifecycle is working or not we can simple update the vote codebase and check it! Let's change the options of the poll to "Summer" and "Winter" and test if the change is reflected in the website or not! Currently the website looks like this:
+Now, to test if the entire lifecycle is working or not we can simple update the vote codebase and check it! Let's change the options of the poll to "Spring" and "Winter" and test if the change is reflected in the website or not! Currently the website looks like this:
 
 ![[voteapp_v1.png]]
 
@@ -399,19 +399,37 @@ Since K8s needs to authenticate to our container registry, we can use the concep
 Let's create the K8s secret in the default namespace where the application is deployed!
 
 - First get the access key from the container registry
+
 ![[Pasted image 20260316193444.png]]
 
 - Create an ImagePullSecret in the K8s cluster in the namespace where the application is deployed
 ```shell
-kubectl create secret docker-registry <secret-name> \
-    --namespace <namespace> \
-    --docker-server=<container-registry-name>.azurecr.io \
-    --docker-username=<service-principal-ID> \
-    --docker-password=<service-principal-password>
+kubectl create secret docker-registry <secret-name> --namespace <namespace> --docker-server=<container-registry-name>.azurecr.io --docker-username=<service-principal-ID> --docker-password=<service-principal-password>
 ```
 
+> Note: We can get the docker-username and docker-password in the ACR access keys in Azure portal and use them in the secret to authenticate while K8s pulls the image from the registry!
+### Step-6 Final Test
+
+after making the above change just delete the pod in AKS, and let it rebuild the pod with the new image:
+
+```shell
+❯ kgp -o wide
+NAME                      READY   STATUS    RESTARTS       AGE    IP             NODE                                NOMINATED NODE   READINESS GATES
+db-858bf9ff8-xxsjt        1/1     Running   0              101m   10.244.2.34    aks-amd64pool-32853815-vmss000001   <none>           <none>
+redis-7c6bcf54c7-jdwzn    1/1     Running   0              101m   10.244.2.113   aks-amd64pool-32853815-vmss000001   <none>           <none>
+result-b4df9ddcf-cxd47    1/1     Running   1 (100m ago)   101m   10.244.2.102   aks-amd64pool-32853815-vmss000001   <none>           <none>
+vote-66b68659d9-pk77b     1/1     Running   0              101m   10.244.2.109   aks-amd64pool-32853815-vmss000001   <none>           <none>
+worker-84b8474cfd-z8rj9   1/1     Running   0              101m   10.244.2.4     aks-amd64pool-32853815-vmss000001   <none>           <none>
+```
+
+![[Pasted image 20260318113759.png]]
+
+Woohooo! We have successfully created an entire CI/CD pipeline that checks for any code changes in the microservices, triggers an Azure Pipeline to rebuild a docker image and store them in the ACR and a custom shell script to update the K8s manifests in the pipeline to trigger a deployment using ArgoCD!
+
+Here is a complete Architecture Diagram for this entire project that I created using eraser.io!
 
 
+~aniket
 ## Links:
 
 202603131831
