@@ -11,7 +11,7 @@ tags:
 date: 2026-03-13
 description: learn how to build your own Azure DevOps pipeline with continuous integration and continuous deployment
 ---
-# Azure CICD
+# learning Azure CICD by deploying a Voting App
 
 In this blog, we are going to learn how to build an Azure CICD pipeline using Azure DevOps by implementing it for a real time voting app - [[https://github.com/dockersamples/example-voting-app]], this is a sample microservices app built by the docker team which implements the principles of distributed systems mimicking a real life scenario. We will deploy this app into Azure Devops and create CI-CD pipelines for the microservices. Let's get started!
 
