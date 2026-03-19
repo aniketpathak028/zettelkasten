@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/tech/docker/dockerfile.md",
+                "file": "content/3-Resources/tech/docker/multi-stage builds in docker.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "dockerfile"
+              "title": "multi-stage builds in docker"
             }
           }
         ]
@@ -185,17 +185,18 @@
   },
   "active": "72abf1c471295702",
   "lastOpenFiles": [
-    "content/3-Resources/tech/docker/what is docker?.md",
-    "content/assets/architecture of docker.png",
-    "content/3-Resources/tech/docker/containers.md",
-    "content/3-Resources/tech/docker/dockerfile.md",
     "content/3-Resources/tech/docker/dockerhub.md",
-    "content/3-Resources/tech/docker/rancher-desktop vs docker-desktop.md",
-    "content/3-Resources/tech/docker/docker vs buildah.md",
+    "content/3-Resources/tech/docker/multi-stage builds in docker.md",
+    "content/3-Resources/tech/docker/dockerfile.md",
+    "content/3-Resources/tech/docker/containers.md",
     "content/3-Resources/tech/docker/containerd.md",
     "content/3-Resources/tech/docker/cli-nerdctl.md",
     "content/3-Resources/tech/docker/cli-ctr.md",
     "content/3-Resources/tech/docker/cli-crictrl.md",
+    "content/3-Resources/tech/docker/docker vs buildah.md",
+    "content/3-Resources/tech/docker/what is docker?.md",
+    "content/3-Resources/tech/docker/rancher-desktop vs docker-desktop.md",
+    "content/assets/architecture of docker.png",
     "content/assets/different container runtimes.png",
     "content/3-Resources/tech/docker/Untitled",
     "content/assets/lifecycle_of_docker_containers.png",

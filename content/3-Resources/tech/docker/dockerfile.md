@@ -34,9 +34,7 @@ ENTRYPOINT ["fastapi"]
 CMD ["run", "main.py", "--port", "80"]
 ```
 
-
 > the WORKDIR instruction sets the current working directory inside the container for all the subsequent instructions COPY, ADD, RUN, CMD etc. so from this line onwards docker assumes everything happens inside the WORKDIR
-
 ### Difference between ENTRYPOINT and CMD
 
 - ENTRYPOINT is a command that is always fixed for the application for example in the above dockerfile it is `fastapi` since this application is written using `fastapi` so we cannot change it to django or flask for instance, the framework remains the same in the image everytime an image is created!

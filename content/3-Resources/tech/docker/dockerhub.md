@@ -12,7 +12,8 @@ description: what is dockerhub?
 
 dockerhub is a central repository for storing docker images both by organizations and by individuals for community and personal use!
 
-> its like github but for containers!
+> its like github but for containers! you can also make them private or public!
+> 
 > there are container registries for cloud providers too like azure, gcp, aws and github etc.
 ### how to publish an image in dockerhub?
 
