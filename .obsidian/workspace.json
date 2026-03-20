@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "docker networking"
             }
+          },
+          {
+            "id": "3aee1ef86f3612b5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/3-Resources/tech/docker/docker bind, mounts and volumes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "docker bind, mounts and volumes"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -78,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5,
-    "collapsed": true
+    "width": 303.5
   },
   "right": {
     "id": "7d24a31d29b9d0b6",
@@ -183,11 +197,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "72abf1c471295702",
+  "active": "91da6d355622476a",
   "lastOpenFiles": [
+    "content/3-Resources/tech/docker/docker networking.md",
+    "content/3-Resources/tech/docker/docker bind, mounts and volumes.md",
     "content/assets/docker networking.png",
     "content/0-Index/archives in linux.md",
-    "content/3-Resources/tech/docker/docker networking.md",
     "content/3-Resources/tech/docker/multi-stage builds in docker.md",
     "content/3-Resources/tech/docker/dockerhub.md",
     "content/3-Resources/tech/docker/dockerfile.md",
@@ -211,7 +226,6 @@
     "content/assets/final result voting app.png",
     "content/0-Index/deploying a qr code generator.md",
     "content/assets/voteapp_v1.png",
-    "content/assets/argoCD app.png",
     "docs/setting up your GitHub repository.md",
     "docs/philosophy.md",
     "docs/layout-components.md",
