@@ -10,7 +10,7 @@ description: all about creating, managing archives in linux
 ---
 # Archives in Linux
 
-archives have many benifits like:
+archives have many benefits like:
 - smaller size
 - easy to transport
 
