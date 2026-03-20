@@ -18,10 +18,53 @@ Concept:
 
 This is the concept of Multi-stage docker builds :)
 
+### Advantage of dockerfile with multi-stage builds
 
+Let's say we have a simple dockerfile without any multistage builds that containerizes a simple Go application, let's build this docker image and check its size!
 
+```dockerfile
+FROM ubuntu AS build
 
+RUN apt-get update && apt-get install -y golang-go
 
+ENV GO111MODULE=off
+
+COPY ..
+
+RUN CGO_ENABLE=0 go build -o /app .
+
+ENTRYPOINT [/app]
+```
+
+It's almost 1GB, let's now see if we can reduce this using multistage dockerfile!
+
+```dockerfile
+FROM ubuntu AS build
+
+RUN apt-get update && apt-get install -y golang-go
+
+ENV GO111MODULE=off
+
+COPY ..
+
+RUN CGO_ENABLE=0 go build -o /app .
+
+FROM scratch
+
+COPY --from=build /app /app
+
+ENTRYPOINT [/app]
+```
+
+Can you guess the size now? it's only 3.19 MB! From 1GB -> 3.19MB it's crazy good :)
+
+### Advantages
+
+So there are overall 2 advantages of this kind of build:
+- It reduces the size of the docker images making them very lightweight, minimalistic and definitely faster!
+- It also reduces security vulnerabilities because the final image is usually distroless or very minimal not allowing much operations possible in the container incase it is hacked!
+
+these distroless images for all usecases can be found here - https://github.com/googlecontainertools/distroless
 
 ## Links:
 
