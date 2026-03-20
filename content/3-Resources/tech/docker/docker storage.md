@@ -44,6 +44,13 @@ docker volume ls
 
 # delete a docker volume
 docker volume rm <volume-name>
+
+# to inspect a volume 
+docker volume inspect <volume-name>
+
+# mount a volume to docker container
+docker run -d --name container --mount type=volume,src=aniket,dst=/app nginx:latest
+
 ```
 
 

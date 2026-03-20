@@ -87,6 +87,13 @@ docker build -t {name}:tag .
 
 docker exec -it <container_id or name> /bin/bash
 # enter docker container
+
+# kill all containers
+docker stop $(docker ps -a -q)
+docker kill $(docker ps -a -q)
+
+# delete a docker image
+docker rm -f <image-name>
 ```
 
 
