@@ -14,6 +14,12 @@ description: the most amazing piece of tech every dev should know!
 rule of thumb 👍:
 `to learn about any command always use the cli with --help subcommand if it is present (most linux cli tools have it!) only if it doesn't explain very well go to the docs 🙂`
 
+### issues with docker and why k8s came into picture?
+- single host issue - docker containers run on a single host which can be prone to failure, if the host if down the containers are down! also since the resources of a single host is limited we cannot scale the containers easily
+- auto-healing - once a docker container is destroyed, it does not get booted up automatically, we need to manually start it again which is possible in k8s
+- auto-scaling - when the load of the system increases, the containers do not scale automatically, a person must manually scale up and down which is automated in k8s
+- enterprise features - k8s comes with many enterprise features that docker does not have and thus cannot be used in production!
+
 ## what is k8s (my POV)?
 - after [[containerization]] came into picture, people started containerizing apps inside VMs, and to scale it multiple VM copies were created.
 - Bottleneck?
