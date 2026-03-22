@@ -8,7 +8,7 @@ tags:
 date: 2025-08-22
 description: what is kubectl?
 ---
-# kubectl
+dock# kubectl
 
 - cli tool to interact with the k8s cluster.
 - controls the kubernetes cluster manager
