@@ -10,6 +10,7 @@ description: what is containerd and why is it needed?
 ---
 # Containerd
 
+- simply put it is a container runtime, that lets docker run containers 
 - althought it is a part of docker but
 - it is also a separate project
 - member of CNCF

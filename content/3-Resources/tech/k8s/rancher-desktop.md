@@ -56,7 +56,7 @@ When running multiple clusters check this file to make sure which cluster is bei
 
 [[kubernetes]]
 [[containerd]]
-[[docker vs containerd]]
+[[container runtime]]
 [[rancher-desktop vs docker-desktop]]
 
 202508212225
