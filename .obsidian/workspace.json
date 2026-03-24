@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/tech/k8s/interacting with pods.md",
+                "file": "content/3-Resources/tech/k8s/deployment.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "interacting with pods"
+              "title": "deployment"
             }
           }
         ]
@@ -185,11 +185,12 @@
   },
   "active": "b8ecd59bb6a16ee1",
   "lastOpenFiles": [
+    "content/3-Resources/tech/k8s/interacting with pods.md",
     "content/3-Resources/tech/k8s/pod.md",
+    "content/3-Resources/tech/k8s/k8s architecture.md",
     "content/3-Resources/tech/docker/rancher-desktop vs docker-desktop.md",
     "content/3-Resources/tech/k8s/kubectl.md",
     "content/3-Resources/tech/k8s/rancher-desktop.md",
-    "content/3-Resources/tech/k8s/k8s architecture.md",
     "content/assets/k8s-arch.png",
     "content/3-Resources/tech/docker/docker networking.md",
     "content/3-Resources/tech/docker/containers.md",

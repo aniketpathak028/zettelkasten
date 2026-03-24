@@ -49,12 +49,13 @@ kubectl describe pods <pod-name>
 kubectl logs <pod-name>
 ```
 
-Note:
-dry-run
---------------
-none-> default
-client-> only generates yaml!
-server-> generates yaml and also runs it!
+> Note:
+> dry-run
+   - none-> default
+   - client-> only generates yaml!
+   - server-> generates yaml and also runs it!
+   
+
 ## Links:
 
 [[kubernetes]]
