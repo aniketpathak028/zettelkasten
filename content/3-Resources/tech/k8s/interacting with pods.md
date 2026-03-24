@@ -43,6 +43,10 @@ kubectl delete pod nginx-aniket
 
 # get into a pod and open a shell!
 kubectl exec -it nginx-aniket -- /bin/bash
+
+# debug a pod - 2 commands
+kubectl describe pods <pod-name>
+kubectl logs <pod-name>
 ```
 
 Note:
