@@ -98,7 +98,7 @@ spec:
 
 
 Note:
-this basically means telling k8s to achieve the desired state of 10 pod replicase given it can have 1 pod unavailable and 1 extra pod running at any point in time! so, the state can be 9 pods fully available and 1 extra pod at any point in time!
+this basically means telling k8s to achieve the desired state of 10 pod replicas given it can have 1 pod unavailable and 1 extra pod running at any point in time! so, the state can be 9 pods fully available and 1 extra pod at any point in time!
 
 To see the magic of RollingUpdate do the following:
 
