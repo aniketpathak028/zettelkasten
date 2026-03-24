@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "11c0dc590766c6d6",
+        "id": "357b23da20a7bac5",
         "type": "tabs",
         "children": [
           {
-            "id": "b8ecd59bb6a16ee1",
+            "id": "5c3ee11c2c380c1d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -183,8 +183,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b8ecd59bb6a16ee1",
+  "active": "5c3ee11c2c380c1d",
   "lastOpenFiles": [
+    "content/3-Resources/tech/k8s/deploying a simple app using k8s.md",
+    "content/1-Projects/deploying a qr code generator.md",
+    "content/assets/Pasted image 20260324210502.png",
+    "content/3-Resources/tech/k8s/deployment.md",
+    "content/assets/k8s-deploymenty.png",
+    "content/assets/k8s-deployment.png",
     "content/3-Resources/tech/k8s/interacting with pods.md",
     "content/3-Resources/tech/k8s/pod.md",
     "content/3-Resources/tech/k8s/k8s architecture.md",
@@ -209,9 +215,6 @@
     "content/3-Resources/tech/k8s/namespaces.md",
     "content/3-Resources/tech/k8s/kubernetes.md",
     "content/3-Resources/tech/k8s/k9s.md",
-    "content/3-Resources/tech/k8s/k8s storage.md",
-    "content/3-Resources/tech/k8s/k8s services.md",
-    "content/3-Resources/tech/k8s/k8s networking.md",
     "content/assets/docker networking.png",
     "content/assets/architecture of docker.png",
     "content/assets/different container runtimes.png",
@@ -219,9 +222,6 @@
     "content/assets/lifecycle_of_docker_containers.png",
     "content/assets/container vs VM.png",
     "content/assets/azure acr access keys.png",
-    "content/assets/architecture diagram voting app.png",
-    "Pasted image 20260318120424.png",
-    "content/assets/final result voting app.png",
     "content/0-Index/Untitled 1.base",
     "content/0-Index/Untitled.base",
     "ml vs dl algo",

@@ -13,6 +13,15 @@ description: the wonders of k8s deployments!
 Note:
 `in prod we never run individual pods, we use something called deployment to orchestrate the creation of pods! Deployments are a way to express your desired state for an app to k8s`
 
+### What is the major difference between containers, pods and deployments?
+
+- containers - a single isolated unit that can be run by a single docker command using the docker api, no auto-scaling or auto-healing features present!
+- pods - declarative approach by k8s where we just mention the desired state in a yaml file and k8s achieves it! doesn't need a cli based approach but still no auto-scaling and auto-healing capability!
+- deployments - a wrapper over pods, as pods are rarely run in deployment, it rolls out replica-sets or controller which always maintains the desired number of pods in the deployment. It ensures auto-scaling and auto-healing features that can be used in production.
+
+![[k8s-deploymenty.png|427]]
+
+![[Pasted image 20260324210502.png|432]]
 ### things to know:
 
 - we can create a deployment just like we create pods using the cli or using yaml

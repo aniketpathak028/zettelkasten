@@ -8,5 +8,6 @@
     "public/*",
     "public/"
   ],
-  "promptDelete": false
+  "promptDelete": false,
+  "attachmentFolderPath": "content/assets"
 }
