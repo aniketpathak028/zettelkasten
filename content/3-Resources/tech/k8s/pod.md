@@ -14,6 +14,13 @@ description: learn about k8s pods and how they work?
 
 ![[pod-of-whales.png]]
 
+### differences between pods and containers?
+- in docker the smallest unit was a container and in k8s it is a pod, what is the difference?
+- in docker we had to specify in the cli the type of container we want to create but k8s uses a declarative approach we just mention everything in the yaml and it achieved the desired state!
+- a single pod in k8s can have multiple containers and these container can easily talk to each other as they are in the same network!
+```shell
+docker run -d --name docker-example --network bridge -t nginx:latest
+```
 ## things to know
 
 - a pod is the smallest element in a k8s cluster
