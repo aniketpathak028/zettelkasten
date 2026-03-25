@@ -24,7 +24,6 @@ Kubernetes service enables network access to a set of Pods while **Kubernetes de
 - how will the system keep track of the constantly changing IP addresses?
 
 ```bash
-
 # expose a deployment and generate a svc - not used in prod
 kubectl expose deployment frontend --port 8080
 
