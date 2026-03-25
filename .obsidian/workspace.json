@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/tech/k8s/most asked k8s interview qns.md",
+                "file": "content/3-Resources/tech/k8s/k8s services.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "most asked k8s interview qns"
+              "title": "k8s services"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 303.5,
+    "collapsed": true
   },
   "right": {
     "id": "7d24a31d29b9d0b6",
@@ -184,8 +185,8 @@
   },
   "active": "5c3ee11c2c380c1d",
   "lastOpenFiles": [
-    "content/3-Resources/tech/k8s/k8s services.md",
     "content/3-Resources/tech/k8s/most asked k8s interview qns.md",
+    "content/3-Resources/tech/k8s/k8s services.md",
     "content/3-Resources/tech/k8s/deployment.md",
     "content/3-Resources/tech/k8s/deploying a simple app using k8s.md",
     "content/1-Projects/deploying a qr code generator.md",

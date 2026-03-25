@@ -71,6 +71,7 @@ spec:
     app: mealie
   type: LoadBalancer
 ```
+
 ## Links:
 
 [[k8s networking]]
