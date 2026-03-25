@@ -10,7 +10,7 @@ description: what are k8s services?
 ---
 # Services
 
-- think of services are grouping of pods! ex- frontend svc, backend svc
+- think of services as grouping of pods! ex- frontend svc, backend svc
 - we can define a frontend svc and the svc figures out the pod level stuff like ip address, scaling up and down the pods based on metrics etc.
 ![[k8s-services.png]]
 #### depl vs svc
@@ -36,6 +36,11 @@ kubectl forward svc/mealie 9000
 ```
 
 - a service has a cluster ip and a name that can be used for internal dns resolution in k8s!
+
+### Advantages of Services?
+- load-balancing - balancing and distributing incoming load among pods  
+- service discovery - figuring out the relevant pods using labels & selectors
+- exposing deployments to world - expose a group of pods or a service using a public IP!
 
 ### Types of Services
 - ClusterIp - default, creates a cluster wide ip for the service.
