@@ -51,7 +51,22 @@ if you see a pod names nginx-controller running than the nginx controller is suc
 now lets deploy a simple nginx-ingress-resource in the cluster 
 
 ```yaml
-
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: minimal-ingress
+spec:
+  ingressClassName: nginx-example
+  rules:
+  - http:
+      paths:
+      - path: /testpath
+        pathType: Prefix
+        backend:
+          service:
+            name: python-django-app
+            port:
+              number: 80
 ```
 ## Links:
 
