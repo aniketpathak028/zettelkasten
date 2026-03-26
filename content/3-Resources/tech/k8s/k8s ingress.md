@@ -9,8 +9,17 @@ description: how does k8s ingress work?
 ---
 # ingress
 
-Note: 
-Ingress is the way to route URLs or FQDNs to ip addresses in a k8s cluster!
+> Note: 
+    Ingress is the way to route URLs or FQDNs to ip addresses in a k8s cluster!
+
+### why is ingress needed? - problems with k8s service
+- k8s service does not offer enterprise & TLS based load balancing capabilities like:-
+	- sticky sessions
+	- TLS
+	- path based
+	- host based
+	- ration based etc.
+- for every load balancer created in k8s, the cloud provider creates a static public IP which is expensive!
 
 ### things to know
 - ingress is a resource on the cluster
