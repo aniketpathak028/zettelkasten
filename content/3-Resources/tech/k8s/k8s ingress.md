@@ -48,7 +48,9 @@ kubectl get pods -A | grep nginx
 ```
 if you see a pod names nginx-controller running than the nginx controller is successfully deployed in the cluster!
 
-now lets deploy a simple nginx-ingress resource in the cluster 
+now lets learn more about ingress in detail deploying a simple flask application:
+
+
 
 ```yaml
 apiVersion: networking.k8s.io/v1
