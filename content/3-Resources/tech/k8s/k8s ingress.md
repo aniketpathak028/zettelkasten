@@ -33,6 +33,26 @@ description: how does k8s ingress work?
 - Ingress controller - nginx, traefik, cilium, cloud: agic
 
 ![[k8s-ingress-architecture.png]]
+
+### creating an ingress controller in rancher
+
+we can simply create an ingress controller in rancher node using the following command
+```shell
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.1.2/deploy/static/provider/cloud/deploy.yaml
+```
+once the nginx controller pod comes up and running we can create an ingress resource in our cluster!
+
+to check if the ingress controller pod is running or not use the command
+```shell
+kubectl get pods -A | grep nginx
+```
+if you see a pod names nginx-controller running than the nginx controller is successfully deployed in the cluster!
+
+now lets deploy a simple nginx-ingress-resource in the cluster 
+
+```yaml
+
+```
 ## Links:
 
 [[kubernetes]]
