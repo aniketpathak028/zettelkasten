@@ -18,9 +18,11 @@ description: how does k8s ingress work?
 	- TLS
 	- path based
 	- host based
-	- ration based etc.
+	- ratio based etc.
 - for every load balancer created in k8s, the cloud provider creates a static public IP which is expensive!
-
+### solution
+- K8s came up with a solution that since they cannot write the logic for all the different kind of loadbalancers like nginx, haproxy, f5 etc. it asked them to write an ingress controller for k8s which can be implemented by the customer as per his choice of load balancer.
+- so now the user just needs to decide which loadbalancer he wants to choose for his application and first create an ingress controller for the same and then simply create an ingress resource with an ingress rule for all his services!
 ### things to know
 - ingress is a resource on the cluster
 - exposes http and https routes from outside the cluster to services within the cluster
