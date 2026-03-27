@@ -1,18 +1,33 @@
 ---
-title: k8s ingress
+title: all about k8s ingress!
 draft: false
 tags:
   - k8s
   - ingress
 date: 2025-09-06
-description: how does k8s ingress work?
+description: how does k8s ingress work and why is it needed?
 ---
-# ingress
+# Ingress
 
 > Note: 
     Ingress is the way to route URLs or FQDNs to ip addresses in a k8s cluster!
 
-### why is ingress needed? - problems with k8s service
+### why is k8s ingress even needed? - problems with k8s service
+
+Imagine you are a company `http://onlinestore.com` and you want to expose your application to your users using k8s, a simple way to do it would be to expose your services as `LoadBalancer` type in k8s for example:
+
+- `onlinestore.com/shop` -> shopping service in k8s cluster
+- `onlinestore.com/wear` -> video streaming service in the cluster 
+- `example.com/payment` -> payment service in the cluster and so on...
+
+![[Pasted image 20260327191244.png|508]]
+
+but each of these services when deployed as a LoadBalancer requests a static public IP from your cloud provider which has 2 demerits:
+- You need to pay extra for each static ip you request from your provider and the amount of requests on it!
+- You need a way to configure the different possibilities to route to different services based on path based routing or url based routing using another proxy of some sort on top of these loadbalancers ex:
+	- `login.onlinestore.com` -> login service (url based)
+	- `onlinestore.com/cart` -> cart service (path based) 
+
 - k8s service does not offer enterprise & TLS based load balancing capabilities like:-
 	- sticky sessions
 	- TLS
