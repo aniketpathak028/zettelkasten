@@ -75,6 +75,6 @@ spec:
 ## Links:
 
 [[k8s networking]]
-[[k8s ingress]]
+[[K8s Ingress]]
 
 202508312348

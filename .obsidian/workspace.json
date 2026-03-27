@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/tech/k8s/k8s ingress.md",
+                "file": "content/3-Resources/tech/k8s/K8s Ingress.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "k8s ingress"
+              "title": "K8s Ingress"
             }
           }
         ]
@@ -185,6 +185,12 @@
   },
   "active": "5c3ee11c2c380c1d",
   "lastOpenFiles": [
+    "content/assets/Pasted image 20260327201348.png",
+    "content/assets/Pasted image 20260327194809.png",
+    "content/assets/Pasted image 20260327194506.png",
+    "content/assets/Pasted image 20260327194151.png",
+    "content/assets/Pasted image 20260327194119.png",
+    "content/assets/Pasted image 20260327193313.png",
     "content/assets/Pasted image 20260327191244.png",
     "content/3-Resources/tech/k8s/k8s services.md",
     "content/3-Resources/tech/k8s/most asked k8s interview qns.md",
@@ -215,13 +221,7 @@
     "content/3-Resources/tech/docker/docker storage.md",
     "node_modules/micromark-util-classify-character/container runtime.md",
     "content/3-Resources/tech/k8s/persistent volumes.md",
-    "content/assets/docker networking.png",
-    "content/assets/architecture of docker.png",
-    "content/assets/different container runtimes.png",
     "content/3-Resources/tech/docker/Untitled",
-    "content/assets/lifecycle_of_docker_containers.png",
-    "content/assets/container vs VM.png",
-    "content/assets/azure acr access keys.png",
     "content/0-Index/Untitled 1.base",
     "content/0-Index/Untitled.base",
     "ml vs dl algo",

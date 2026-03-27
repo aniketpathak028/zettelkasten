@@ -53,6 +53,6 @@ in a typical prod setup, a k8s cluster consists of few worker nodes (or VMs) han
 [[pod]]
 [[deployment]]
 [[k8s networking]]
-[[k8s ingress]]
+[[K8s Ingress]]
 
 202508202239
