@@ -15,7 +15,7 @@ Imagine you are a company `http://onlinestore.com` and you want to expose your a
 
 - `onlinestore.com/shop` -> shopping service in k8s cluster
 - `onlinestore.com/wear` -> video streaming service in the cluster 
-- `example.com/payment` -> payment service in the cluster and so on...
+- `onlinestore.com/payment` -> payment service in the cluster and so on...
 
 ![[Pasted image 20260327191244.png|508]]
 
@@ -104,32 +104,46 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/shop"
+        path: "/wear"
         backend:
           service:
-            name: shop-service
+            name: wear-service
             port:
               number: 80
-	- pathType: Prefix
-		path: "/shop"
+	  - pathType: Prefix
+		path: "/watch"
 		backend:
 		  service:
-			name: shop-service
+			name: watch-service
 			port:
 			  number: 80
-  - host: "*.foo.com"
+  - host: "login.onlinestore.com"
     http:
       paths:
       - pathType: Prefix
-        path: "/foo"
+        path: "/auth"
         backend:
           service:
-            name: service2
+            name: auth-service
+            port:
+              number: 80
+  - host: "*.onlinestore.com/*"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/forbidden"
+        backend:
+          service:
+            name: forbidden-404-service
             port:
               number: 80
 ```
 
+![[Pasted image 20260327204254.png]]
 
+>Note: there is also a concept of default backend, if no rules match in the ingress resource, the traffic is redirected to a default-http-backend:80 service which must be deployed in the cluster! It's usually a 404 not found page or a forbidden page!
+
+~aniket
 ## Links:
 
 [[kubernetes]]
