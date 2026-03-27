@@ -42,6 +42,10 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 ```
 once the nginx controller pod comes up and running we can create an ingress resource in our cluster!
 
+> Note:
+> the default ingress controller in rancher-desktop is traefik, and it must be first disabled in order to install and run nginx-controller!
+> It can be disabled in rancher-desktop settings directly 
+
 to check if the ingress controller pod is running or not use the command
 ```shell
 kubectl get pods -A | grep nginx
