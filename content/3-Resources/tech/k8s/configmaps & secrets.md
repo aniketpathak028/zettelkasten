@@ -18,10 +18,33 @@ description:
 
 ![[Pasted image 20260328191910.png]]
 
+a configmap in k8s looks something like this:
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: game-demo
+data:
+  # property-like keys; each key maps to a simple value
+  player_initial_lives: "3"
+  ui_properties_file_name: "user-interface.properties"
+
+  # file-like keys
+  game.properties: |
+    enemy.types=aliens,monsters
+    player.maximum-lives=5    
+  user-interface.properties: |
+    color.good=purple
+    color.bad=yellow
+    allow.textmode=true   
+```
 ### why is secret needed?
 
-- The major difference between configmap and secrets is that, secrets usually contain confidential data which is stored in etcd but it is always encrypted by k8s before it is stored by k8s!
-- 
+- The major difference between configmap and secrets is that, secrets usually contain confidential data which is stored in etcd but it is always encrypted by k8s before it is stored!
+- the issue in storing confidential files as configmap is, if the cluster gets hacked, these credentials could be exposed.
+- Therefore k8s always recommends to assign an RBAC to these secrets and only allow privileges to necessary people!
+
 
 
 
