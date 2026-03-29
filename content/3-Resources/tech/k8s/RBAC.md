@@ -17,7 +17,8 @@ How is it done?
 - roles / cluster role
 - role binding / crb
 
-
+How Kuberenetes handles user management?
+- K8s offloads the user management to 3rd party Identity providers like AWS - IAM, Azure, or GCP, Keyclook
 
 
  
