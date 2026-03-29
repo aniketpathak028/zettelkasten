@@ -132,11 +132,39 @@ now if you change the value in configMap, the value would be updated in the pod 
 ### why is secret needed?
 
 - The major difference between configmap and secrets is that, secrets usually contain confidential data which is stored in etcd but it is always encrypted by k8s before it is stored!
-- the issue in storing confidential files as configmap is, if the cluster gets hacked, these credentials could be exposed.
+- the issue in storing confidential data as configmap is, if the cluster gets hacked, these credentials could be exposed.
 - Therefore k8s always recommends to assign an RBAC to these secrets and only allow privileges to necessary people!
 
+![[Pasted image 20260329101518.png|415]]
 
+```shell
+kubectl create secret generic test --from-literal=db-port=3306
 
+kubectl edit secret test
+```
+
+A secret is stored somewhat like this in k8s, as you can see the db-port is encrypted, and by default it is base 64 encrypted, which is not suggested! other encryption techniques can also be used to encrypt the same!
+
+```yaml
+apiVersion: v1
+data:
+  db-port: MzMwNg==
+kind: Secret
+metadata:
+  creationTimestamp: "2026-03-29T08:17:16Z"
+  name: test-secret
+  namespace: default
+  resourceVersion: "58605"
+  uid: cf1bc7bc-e21f-4e2b-860f-4931399dc70c
+type: Opaque
+```
+
+base64 can be easily decoded!
+
+```
+❯ echo MzMwNg== | base64 --decode
+3306%
+```
 
 
 ## Links:
