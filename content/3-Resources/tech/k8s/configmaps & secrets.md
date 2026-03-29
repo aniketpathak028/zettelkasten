@@ -159,13 +159,52 @@ metadata:
 type: Opaque
 ```
 
-base64 can be easily decoded!
+base64 can be easily decoded but you configure your own custom encryption and decryption keys in the cluster to make it more secure!
 
 ```
 ❯ echo MzMwNg== | base64 --decode
 3306%
 ```
 
+similar to configmap, secrets can also be mounted on to pods in the same way
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world
+  labels:
+    app: hello-world
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-world
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      containers:
+      - name: hello-world
+        imagePullPolicy: IfNotPresent
+        image: aniketpathak028/flask-app:latest
+        ports:
+        - containerPort: 80
+        volumeMounts:
+         - name: foo
+           mountPath: /opt
+      volumes:
+       - name: foo
+         secret:
+          secretName: test-secret
+```
+
+```shell
+kubectl exec -it <pod-name> -- /bin/bash
+cat /opt/db-port
+3306 
+```
 
 ## Links:
 
