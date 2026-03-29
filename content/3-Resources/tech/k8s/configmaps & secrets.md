@@ -18,27 +18,117 @@ description:
 
 ![[Pasted image 20260328191910.png]]
 
-a configmap in k8s looks something like this:
+### creating and using a configmap
+
+#### 1. as env variables
+
+- create a configmap resource in the cluster!
 
 ```yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: game-demo
+  name: test-cm
 data:
-  # property-like keys; each key maps to a simple value
-  player_initial_lives: "3"
-  ui_properties_file_name: "user-interface.properties"
-
-  # file-like keys
-  game.properties: |
-    enemy.types=aliens,monsters
-    player.maximum-lives=5    
-  user-interface.properties: |
-    color.good=purple
-    color.bad=yellow
-    allow.textmode=true   
+  DB_PORT: "3008"
 ```
+
+```shell
+kubectl apply -f configMap.yml
+```
+
+- add the reference to the configmap in the deployment!
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world
+  labels:
+	app: hello-world
+spec:
+  replicas: 1
+  selector:
+	  matchLabels:
+	    app: hello-world
+  template:
+	metadata:
+	 labels:
+	   app: hello-world
+	spec:
+	  containers:
+	  - name: hello-world
+        imagePullPolicy: IfNotPresent
+        image: aniketpathak028/flask-app:latest
+	    envFrom:
+        - configMapRef:
+            name: test-cm
+```
+
+- once the deployment is applied you can log into any of the pods and check if the env variable is present in the pod or not!
+
+```shell
+kubectl apply -f deployment.yaml
+
+kubectl exec -it <pod-name> -- /bin/bash
+
+printenv | grep DB
+DB_PORT=3008
+```
+
+- but the issue with this method is that if you change the port, the pods won't know it, as the env variables do not get changed when the configmap is reapplied! 
+- We must destroy and re-create the pods inorder to change it!
+
+To overcome this we should use method 2
+#### 2. as volume mounts
+
+- instead of using an env variable we could create a volume mount in the pod and have it updated everytime we update the value in the configMap!
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world
+  labels:
+    app: hello-world
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-world
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      containers:
+      - name: hello-world
+        imagePullPolicy: IfNotPresent
+        image: aniketpathak028/flask-app:latest
+        ports:
+        - containerPort: 80
+        envFrom:
+        - configMapRef:
+           name: test-cm
+        volumeMounts:
+         - name: foo
+           mountPath: /opt
+      volumes:
+       - name: foo
+         configMap:
+          name: test-cm
+```
+
+- now a volume is mounted to every deployment, which extracts the configmap info into a path `/etc/foo`
+- confirm this by logging into the pods and checking for this file
+
+```shell
+kubectl exec -t <pod-name> -- /bin/bash
+cat /opt/DB_PORT
+3008
+```
+
+now if you change the value in configMap, the value would be updated in the pod too!
 ### why is secret needed?
 
 - The major difference between configmap and secrets is that, secrets usually contain confidential data which is stored in etcd but it is always encrypted by k8s before it is stored!
