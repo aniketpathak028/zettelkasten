@@ -4,7 +4,7 @@ draft: false
 tags:
   - k8s
   - ingress
-date: 2025-09-06
+date: 2026-03-30
 description: how does k8s ingress work and why is it even needed?
 ---
 # K8s Ingress
