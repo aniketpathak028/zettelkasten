@@ -1,9 +1,11 @@
 ---
-title: Untitled
+title: configmaps and secrets
 draft: false
 tags:
-date:
-description:
+  - configmap
+  - secrets
+date: 2026-03-30
+description: what are configmaps and secrets
 ---
 # configmaps and secrets
 
