@@ -10,8 +10,8 @@ description: what the helm?
 # what the [helm](https://helm.sh/)?
 
 - helm is a package manager for kubernetes based applications
-- helm runs as a binary on your local machine and when we run the helm command, it connects to the current kubernetes cluster using the config and performs actions similar to kubectl behind the scenes
-- helm chart is a complete package for a kubernetes application containing all the resources needed to run the app, making lives of devs easier
+- helm runs as a binary on your local machine and when we run the helm command, it connects to the current kubernetes cluster using the config and performs actions similar to `kubectl` behind the scenes
+- helm chart is a complete package for a kubernetes application containing all the resources needed to run the app, making lives of devs easier!
 
 ### installing [homarr](https://homarr.dev/docs/getting-started/installation/helm/) using helm
 

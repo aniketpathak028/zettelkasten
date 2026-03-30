@@ -20,7 +20,7 @@ How is it done?
 - role binding / crb - these are k8s api to bind a role to a service account!
 
 How K8s handles user management?
-- K8s offloads the user management to 3rd party Identity providers like AWS - IAM, Azure, or GCP, Keyclook etc!
+- K8s offloads the user management to 3rd party Identity providers like AWS - IAM, Azure, or GCP, Keycloak etc!
 
  
 
