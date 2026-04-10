@@ -25,7 +25,9 @@ docker run -d --name=db postgres # run the postgres container
 
 docker run -d --name=vote -p 5000:80 voting-app # run the voting-app image and fwd the container port 80 to host port 5000
 
+docker run -d --name=result -p 5001:80 result-app # run the result-app image and fwd the container port 80 to host port 5001
 
+docker run -d --name=worker worker # run the worker microservice
 ```
 
 
