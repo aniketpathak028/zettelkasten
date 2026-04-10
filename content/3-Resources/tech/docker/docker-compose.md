@@ -28,6 +28,9 @@ docker run -d --name=vote -p 5000:80 voting-app # run the voting-app image and f
 docker run -d --name=result -p 5001:80 result-app # run the result-app image and fwd the container port 80 to host port 5001
 
 docker run -d --name=worker worker # run the worker microservice
+
+# since the voting container needs to connect to the redis container we can link it to the same using --link
+docker run -d --name=vote -p 5000:80 --link redis:redis voting-app
 ```
 
 
