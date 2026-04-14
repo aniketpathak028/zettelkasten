@@ -12,7 +12,7 @@ description: what is docker-compose and why is it needed?
 
 docker compose is useful when we want to run and manage multiple containers in a single host using a single command!
 
-![[Pasted image 20260409185200.png|595]]
+![[Pasted image 20260409185200.png|508]]
 
 ### difference in running containers using plain docker vs docker-compose!
 
