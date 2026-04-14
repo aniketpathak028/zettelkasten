@@ -26,10 +26,13 @@ challenges with manual provisioning of infra:
 - insecure
 - it works on my machine!
 
-
-
-
-
+## what terraform helps with?
+- automates - provisioning, maintenance, destruction saving resources, ensuring security and saving cost
+- saves time
+- consistent environments
+- write once, deploy many
+- track of changes - version control
+- life easy!
 
 ## Links:
 
