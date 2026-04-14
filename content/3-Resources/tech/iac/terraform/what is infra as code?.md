@@ -9,7 +9,7 @@ description: what is infrastructure as code?
 ---
 # infrastructure as code
 
-notes from video here: https://github.com/piyushsachdeva/Terraform-Full-Course-Azure/tree/main/lessons/day01
+notes: https://github.com/piyushsachdeva/Terraform-Full-Course-Azure/tree/main/lessons/day01
 
 ## what is IAC?
 
@@ -27,7 +27,8 @@ challenges with manual provisioning of infra:
 - it works on my machine!
 
 ## what terraform helps with?
-- automates - provisioning, maintenance, destruction saving resources, ensuring security and saving cost
+
+- automates - provisioning, maintenance, and destruction - saving resources, ensuring security and saving cost
 - saves time
 - consistent environments
 - write once, deploy many

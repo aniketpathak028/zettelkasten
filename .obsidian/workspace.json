@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/tech/iac/terraform/azure terraform.md",
+                "file": "content/3-Resources/tech/iac/terraform/terraform providers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "azure terraform"
+              "title": "terraform providers"
             }
           }
         ]
@@ -186,7 +186,8 @@
   "active": "5c3ee11c2c380c1d",
   "lastOpenFiles": [
     "content/3-Resources/tech/iac/terraform/what is infra as code?.md",
-    "content/3-Resources/tech/iac/terraform/azure terraform.md",
+    "content/3-Resources/tech/iac/terraform/terraform providers.md",
+    "content/3-Resources/tech/iac/terraform/terraform with aws.md",
     "content/3-Resources/tech/iac/terraform/what is terraform?.md",
     "content/3-Resources/tech/docker/docker-compose.md",
     "content/assets/Pasted image 20260410173555.png",
@@ -220,7 +221,6 @@
     "content/3-Resources/tech/k8s/most asked k8s interview qns.md",
     "content/3-Resources/tech/k8s/deploying a simple app using k8s.md",
     "content/1-Projects/deploying a qr code generator.md",
-    "content/3-Resources/tech/k8s/k8s architecture.md",
     "content/3-Resources/tech/docker/Untitled",
     "content/0-Index/Untitled 1.base",
     "content/0-Index/Untitled.base",
