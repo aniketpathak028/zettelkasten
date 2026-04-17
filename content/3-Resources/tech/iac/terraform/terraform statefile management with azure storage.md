@@ -19,10 +19,9 @@ description: what is tf statefile and how it should be managed?
 - tf uses this file to directly compare what changes it must do to make `current state = desired state` 
 
 > Note: when we run terraform plan it creates this file and stores in our PC! it is not the best thing to do, and it is always better to store it in a remote backend!
+### state file best practices
 
-
-
-### 
+![[Pasted image 20260417104751.png]]
 
 
 
