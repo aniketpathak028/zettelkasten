@@ -24,6 +24,14 @@ description: what is tf statefile and how it should be managed?
 ![[Pasted image 20260417104751.png]]
 
 
+- store state file to a remote backend - it is always the best practice to store state files in a remote backend because it is easier to manager and more secure than storing locally
+- never update or delete the state file as it might get corrupted and once the state file is lost, terraform cannot recollect the infra state
+- state locking - the state file must be locked as when changes are made simultaneously by multiple users, it can cause conflicts! we must ensure a lock mechanism
+- isolation of state file - maintain different state files for different environments
+- regular backup - the state file must be regularly backed up which can be used for accidental deletion
+
+### how to create the remote backend?
+
 
 
 ## Links:
