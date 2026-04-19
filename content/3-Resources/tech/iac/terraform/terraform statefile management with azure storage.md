@@ -97,7 +97,8 @@ resource "azurerm_storage_account" "example" {
 ```
 
 - once the remote backend is included in the `main.tf` just run `terraform init` and the remote backend will be created in azure and running `terraform plan` will generate the state lock file inside the azure storage container!
-- 
+
+> Note: when running tf init, the terraform.tfstate file gets created in azure blob storage but the `.terraform.lock.hcl` file gets created locally
 ## Links:
 
 202604162222
