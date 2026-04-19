@@ -224,7 +224,7 @@ this creates a github action workflow which gets triggered when we push to the m
 [[devops]]
 [[docker]]
 [[cicd]]
-[[terraform]]
+[[terraform variables - input, output and local]]
 [[kubernetes]]
 
 202510012352

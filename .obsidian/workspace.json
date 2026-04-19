@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/tech/iac/terraform/terraform.md",
+                "file": "content/3-Resources/tech/iac/terraform/terraform variables - input, output and local.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "terraform"
+              "title": "terraform variables - input, output and local"
             }
           }
         ]
@@ -186,7 +186,7 @@
   "active": "5c3ee11c2c380c1d",
   "lastOpenFiles": [
     "content/3-Resources/tech/iac/terraform/terraform statefile management with azure storage.md",
-    "content/3-Resources/tech/iac/terraform/terraform.md",
+    "content/3-Resources/tech/iac/terraform/terraform variables - input, output and local.md",
     "content/assets/Pasted image 20260417104751.png",
     "content/assets/Pasted image 20260416222528.png",
     "content/3-Resources/tech/iac/terraform/creating an azure storage account using terraform.md",
