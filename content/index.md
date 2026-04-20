@@ -18,7 +18,7 @@ keeping geeky things aside I also like:
 - hiking 🏔️ - Feldberg, Titisee, Kybfelsen, Todnau and a lot more
 - working out 🏋️
 - learning new languages 🗣️ - I can speak German, English, Hindi and Bengali!
-- and I also like talking about Life and [philosophy](obsidian://open?vault=zet&file=content%2F4-Archive%2Fwisdom%2Fdoing%20what%20matters) or whatever you're up to! :)
+- and I also like talking about Life and philosophy or whatever you're up to! :)
 
 get hold of me at my email - aniketpathak028@gmail.com
 
