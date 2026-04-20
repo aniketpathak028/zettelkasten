@@ -5,6 +5,22 @@ description: my second brain 🧠
 # Welcome! 👋
 
 here I share everything I’m learning— tech, philosophy, or whatever I am currently exploring!
+### About me
+
+I am a masters student at the [University of Freiburg](https://uni-freiburg.de/), Germany and currently pursuing my degree in Computer Science with a specialization in AI.
+
+![[me.jpeg|193]]
+
+I like exploring tech be it AI, DevOps, Backend, or even Hardware!
+
+keeping geeky things aside I also like:
+- traveling - travelled to 🇫🇷 🇮🇹 🇩🇪 🇮🇳🇨🇭 so far!
+- hiking 🏔️ - Feldberg, Titisee, Kybfelsen, Todnau and a lot more
+- working out 🏋️ - here is a [pic](obsidian://open?vault=zet&file=content%2Fassets%2Fflexing.jpeg)
+- learning new languages 🗣️ - I can speak German, English, Hindi and Bengali!
+- and I also like talking about Life and [philosophy](obsidian://open?vault=zet&file=content%2F4-Archive%2Fwisdom%2Fdoing%20what%20matters) or whatever you're up to! :)
+
+get hold of me at my email - aniketpathak028@gmail.com
 
 ### Why?
 
