@@ -9,7 +9,7 @@ here I share everything I’m learning— tech, philosophy, or whatever I am cur
 
 I am a masters student at the [University of Freiburg](https://uni-freiburg.de/), Germany and currently pursuing my degree in Computer Science with a specialization in AI.
 
-![[me.jpeg|193]]
+![[me.jpeg|238]]
 
 I like exploring tech be it AI, DevOps, Backend, or even Hardware!
 

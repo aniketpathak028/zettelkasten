@@ -1,9 +1,9 @@
 ---
-title: <% tp.file.title %>
+title: '"<% tp.file.title %>"'
 draft: false
 tags:
 date:
-description:
+description: '"<% tp.file.title %>"'
 ---
 # <% tp.file.title %>
 
