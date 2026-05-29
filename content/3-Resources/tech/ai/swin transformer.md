@@ -34,19 +34,35 @@ understanding the dimensions:
 - Patch merging: in patch merging we merge the patches to reduce the number of patches and increase the channel dimension! ideally we merge 2 patches along row and column so a patch of size 4 x 4 becomes 2 x 2 so our dimensions become (H/4) x (W/4) x C -> (H/8) x (W/8) x 4C but we again multiply with 4C X 2C linear projection to change its dim to (H/8) x (W/8) x 2C
 - the same thing keeps repeating again and again in further stages as patches get merged and channels get wider, the model gets a better context of rough and smooth edges in the image similar to CNNs
 
-issues:
+W-MSA:
 - regular window cannot capture long term dependencies or attention which is tackled by shifted window
 
 ![[Pasted image 20260529092429.png|554]]
 
 - each window is shifted my M/2 position in height and width which allows it to capture the attention between patches far apart!
-- in swin transformer regular block when calculating the attention scores, we add a bias term called relative positional bias:
+- in swin transformer regular block when calculating the attention scores, we add a bias term called positional bias
 
 ![[Pasted image 20260529095815.png|374]]
 
-- however in shifted window we cannot calculate the attention this way as the window keeps moving so we use a mask_ij to calculate which patches are in the current window by masking the other patches as -infinity
-- 
+Shifted-Window:
+- however in shifted window we cannot calculate the attention this way as the window keeps moving so we use a mask_ij to calculate which patches are in the current window by masking the other patches as -infinity and we also add a relative positional bias
+- to think of it if a window contains 7 x 7 patches, the number of Q, K attention pairs would be 49x49=2401 for each attention pair, calculating a positional bias would be challenging, so swin uses relative positioning
+- the positional bias here unlike in ViT is calculated during calculating attention score!
+
 ![[Pasted image 20260529100217.png|357]]
+
+### why we do not need 2401 bias terms?
+
+- if we consider rel positions of any two patches in a 7x7 window, it would range:
+	- delta y = -6 to 6 (ie. any 2 patches in the window could be min -6 dist apart or max 6 )
+	- delta x = -6 to 6
+- which makes the number of possibilities as 13 x 13 = 169
+- for each of these possibilities the model learns the appropriate weight during training!
+
+![[Pasted image 20260529104852.png]]
+
+
+
 ## Links:
 
 202605261605
