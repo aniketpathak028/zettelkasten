@@ -35,9 +35,18 @@ understanding the dimensions:
 - the same thing keeps repeating again and again in further stages as patches get merged and channels get wider, the model gets a better context of rough and smooth edges in the image similar to CNNs
 
 issues:
+- regular window cannot capture long term dependencies or attention which is tackled by shifted window
+
 ![[Pasted image 20260529092429.png|554]]
 
+- each window is shifted my M/2 position in height and width which allows it to capture the attention between patches far apart!
+- in swin transformer regular block when calculating the attention scores, we add a bias term called relative positional bias:
 
+![[Pasted image 20260529095815.png|374]]
+
+- however in shifted window we cannot calculate the attention this way as the window keeps moving so we use a mask_ij to calculate which patches are in the current window by masking the other patches as -infinity
+- 
+![[Pasted image 20260529100217.png|357]]
 ## Links:
 
 202605261605
