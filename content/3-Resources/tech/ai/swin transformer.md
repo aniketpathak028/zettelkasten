@@ -61,8 +61,16 @@ Shifted-Window:
 
 ![[Pasted image 20260529104852.png]]
 
+### architecture
 
+![[Pasted image 20260529160217.png]]
 
+Let's take a batch of 2 images - [2, 3, 28, 28] (this means that there are 2 images of 28x28 with 3 channels):
+
+- we have to make patches in these images, let's say we create patches of 2x2 since the res of the image is less we get - `nn.Conv2d(3, 48, 2, 2)` - [2, 48, 14, 14]
+- now we have to flatten this image from 14 x 14 to 196 patches each having 48 dim so we get the flattened vector as - [2, 196, 48] - dim 1 and 2 was transposed to make it fit the transformer input so `x= x.flatten(2).transpose(1,2)`
+- next in patch partition we just convert this vector from 48 dim to C dim
+- 
 ## Links:
 
 202605261605
