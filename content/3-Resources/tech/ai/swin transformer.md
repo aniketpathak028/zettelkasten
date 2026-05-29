@@ -11,7 +11,7 @@ paper link - https://arxiv.org/pdf/2103.14030
 
 - shifted window transformer
 - released by microsoft asia team
-- sort of proved that transformer could be used to solve any kind of vision problem - classfication, segmentation or detection.
+- proved that transformers could be used to solve any kind of vision problems - classification, segmentation or detection.
 
 ### problems with ViT
 
@@ -19,9 +19,11 @@ paper link - https://arxiv.org/pdf/2103.14030
   
 ![[Pasted image 20260526164136.png]]
 
-
+- the attention complexity increases with the resolution of the image which is a big concern!
 
 ### swin transformer architecture
+
+> works on the principle that attention need not be applied on the entire image instead could be calculated on smaller windows of patches!
 
 ![[Pasted image 20260526165602.png]]
 
@@ -32,8 +34,8 @@ understanding the dimensions:
 - Patch merging: in patch merging we merge the patches to reduce the number of patches and increase the channel dimension! ideally we merge 2 patches along row and column so a patch of size 4 x 4 becomes 2 x 2 so our dimensions become (H/4) x (W/4) x C -> (H/8) x (W/8) x 4C but we again multiply with 4C X 2C linear projection to change its dim to (H/8) x (W/8) x 2C
 - the same thing keeps repeating again and again in further stages as patches get merged and channels get wider, the model gets a better context of rough and smooth edges in the image similar to CNNs
 
-
-
+issues:
+![[Pasted image 20260529092429.png|554]]
 
 
 ## Links:
