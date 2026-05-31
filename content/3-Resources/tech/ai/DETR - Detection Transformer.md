@@ -60,6 +60,43 @@ description: what is DETR and how it works?
 - the feature map is of dim - h x w x d where d is the dim needed by the transformer
 - usually these tokens are not equivalent to patches because these are low resolution and do not need to be divided into further patches like high res images!
 
+![[Pasted image 20260531091747.png|334]]
+
+> number of boxes with obj + no-object = object queries for ex here it is 4! These object queries which are of dim "d" as of transformers get transformed into bounding boxes by the decoder in combination with the encoder output above!
+
+![[Pasted image 20260531092349.png]]
+
+### complete architecture
+![[Pasted image 20260531092506.png]]
+
+### encoder
+![[Pasted image 20260531094148.png]]
+#### positional embedding
+few key points to note is that:
+- pos embeddings for encoder are added before each MHA block in each transformer block instead of just once when the tokens are created
+- sinosoidal pos encoding (which is not a learnable pos encoding instead a fixed one) is used for both K and Q:
+![[Pasted image 20260531094320.png|247]]
+![[Bildschirmfoto 2026-05-31 um 9.44.53 AM.png|465]]
+
+### decoder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Links:
 
 202605301813
