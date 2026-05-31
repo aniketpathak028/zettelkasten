@@ -45,11 +45,20 @@ description: what is DETR and how it works?
 		- a variable number of objects
 		- arbitrary positions
 		- with arbitrary shapes
+		
 ![[Pasted image 20260530190812.png]]
 
 
+### architecture
 
-
+![[Pasted image 20260530234341.png]]
+![[Pasted image 20260530234618.png]]
+![[Pasted image 20260530234743.png]]
+- feature maps are multi channeled with much lower resolution than the original image
+![[Pasted image 20260530234915.png]]
+- the feature map is flattened before passing to the transformer encoder
+- the feature map is of dim - h x w x d where d is the dim needed by the transformer
+- usually these tokens are not equivalent to patches because these are low resolution and do not need to be divided into further patches like high res images!
 
 ## Links:
 
