@@ -79,14 +79,16 @@ few key points to note is that:
 ![[Bildschirmfoto 2026-05-31 um 9.44.53 AM.png|465]]
 
 ### decoder
+![[Pasted image 20260531100313.png]]
 
+- the tokens converted to context vectors in encoder are used for cross attention in decoder block as Keys and Values!
+- the object queries (which symbolize the number of objects to be detected are random learnable vectors) are used as Queries in cross attention!
+- first the object queries are passed thro decoder block where they get layer normalized and a self attention, in this case the pos embedding is learnable instead!
+- later these enriched obj query embeddings are used for cross attention with the output from encoder!
 
+> compare this architecture with the original paper - attention is all you need
 
-
-
-
-
-
+![[Pasted image 20260531100951.png|385]]
 
 
 
