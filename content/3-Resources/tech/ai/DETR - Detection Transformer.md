@@ -91,7 +91,6 @@ few key points to note is that:
 ![[Pasted image 20260531100951.png|385]]
 
 
-### DETR loss
 - DETR loss is a matching problem as it does a set number of predictions
 - these predictions may have some Ground truth object or be null
 - then these predictions are matched to the original ground truth consisting of the actual object and null
@@ -126,6 +125,20 @@ few key points to note is that:
 ![[Pasted image 20260531111210.png]]
 ![[Pasted image 20260531111313.png]]
 
+- in DETR we use hungarian matching between the predicted bounding boxes by the model and the ground truth.c
+### DETR loss
+
+- classification loss: penalizes the model for incorrect classification of the bounding box
+- localization loss 
+	- L1 loss: absolute diff of x, y, w, h with predicted x', y', w', h'
+	- GIOU loss: hungarian matching loss
+![[Pasted image 20260531144014.png|526]]
+![[Pasted image 20260531144555.png|372]]
+![[Pasted image 20260531144618.png|511]]
+![[Pasted image 20260531144723.png|493]]
+![[Pasted image 20260531145231.png]]
+![[Pasted image 20260531145204.png]]
+- hence greater GIOU is better! as GIOU(1) > GIOU(2)
 
 
 
