@@ -91,6 +91,40 @@ few key points to note is that:
 ![[Pasted image 20260531100951.png|385]]
 
 
+### DETR loss
+- DETR loss is a matching problem as it does a set number of predictions
+- these predictions may have some Ground truth object or be null
+- then these predictions are matched to the original ground truth consisting of the actual object and null
+- instead of using NMS, because DETR predicts an object only once, it uses something known as Hungarian Loss!
+
+### Hungarian Loss
+
+- used when we try to map a set to another set of objects!
+ ![[Pasted image 20260531104606.png|361]]
+![[Pasted image 20260531104739.png|472]]
+- because substracting the same number doesn't change the distribution in a row!
+- same logic can be applied across columns too!
+![[Pasted image 20260531105028.png|532]]
+
+![[Pasted image 20260531105155.png|307]]
+
+- look at the numbers that are not crossed and find the min! here - 1
+
+![[Pasted image 20260531105420.png|424]]
+
+- now add this min number to all the crossed entried and substract it back from the entire matrix!
+![[Pasted image 20260531105918.png|408]]
+
+- this is now the zero cost assignment and the actual cost is the sum of the cost for each job in the original matrix = 6
+
+### why hungarian loss?
+- because the DETR matching problem is similar we have a bunch of preds which we need to map with the GT!
+- in DETR ideally there are about 100 object queries and hence 100 preds!
+- usually when there are multiple object queries and multiple ground truths, can we use hungarian matching!
+
+![[Pasted image 20260531111037.png]]
+![[Pasted image 20260531111210.png]]
+![[Pasted image 20260531111313.png]]
 
 
 
