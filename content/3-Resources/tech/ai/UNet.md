@@ -19,9 +19,23 @@ description: "UNet: the 2015 model that changed segmentation"
 ![[Bildschirmfoto 2026-06-03 um 1.14.05 PM.png]]
 - UNet performs semantic segmentation
 
-### what is UNet?
+### What is UNet architecture?
+![[Pasted image 20260603142104.png]]
 
+- the UNet architecture has a U shaped transformation where the left part is called the encoder, the bottom is called the bottleneck and the right part is the decoder
+- the unique part in UNet is that is uses skip connections between the respective layers in encoder and decoder to better train the network and preserve the original image characteristics which helps the gradients flow better during backprop!
 
+Dimensions:
+- input image is of dim - 572 x 572 x 1 (gray scale image)
+- 3 x 3 x 1 filter convolution with 64 filters result in 570 x 570 x 64 output dim
+- another convolution by 3 x 3 x 64 result in 568 x 568 x 64 output dim
+- after block 1 when it goes to block 2, it goes through a max pooling layer of 2 thus it loses half of its width and height - 284 x 284 x 64
+- then it goes through another 3 x 3 x 64 filter conv of 128 filters reaching dim 282 x 282 x 128 and so on..
+- finally it reaches the bottleneck where it has the dim of 32 x 32 x 512 and there are 3 consecutive convolutions to have the final output of 28 x 28 x 1024 and then it gets up-convoluted using bilinear interpolation to have an output of 56 x 56 x 1024
+![[Pasted image 20260603143438.png]]
+- there is also a copy and crop operation that takes place and concatenates the encoder outputs after cropping its input dim to match the decoder input dimension and directly concatenates it along the channel dim! 
+- concatenation makes sure that the image has both the abstract representation coming from the bottleneck and the original representations from the encoder!
+- 
 ## Links:
 
 202606031256
