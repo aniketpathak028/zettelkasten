@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "dbab3bf1f9408549",
+        "id": "798eb785f8f62c63",
         "type": "tabs",
         "children": [
           {
-            "id": "4e3e3b6dceab66fd",
+            "id": "1c5faece4d531cea",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/3-Resources/tech/ai/computer vision/image classification with a simple nn.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "image classification with a simple nn"
+              "title": "Neuer Tab"
             }
           }
         ]
@@ -182,11 +178,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4e3e3b6dceab66fd",
+  "active": "1c5faece4d531cea",
   "lastOpenFiles": [
+    "content/3-Resources/tech/ai/computer vision/image classification with a simple nn.md",
     "content/3-Resources/tech/ai/computer vision/UNet.md",
     "content/3-Resources/tech/ai/computer vision/vision transformers.md",
-    "content/3-Resources/tech/ai/computer vision/image classification with a simple nn.md",
     "content/3-Resources/tech/ai/computer vision/filters and convolutions.md",
     "content/3-Resources/tech/ai/computer vision/clip - connecting text and images.md",
     "content/3-Resources/tech/ai/Deep Q-Learning.md",
