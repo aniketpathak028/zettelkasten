@@ -11,12 +11,8 @@ description: ADAM
 # ADAM
 
 - Adam is a weight optimizer commonly used in most deep learning models by default
-- 
 
-
-
-
-
+![[Pasted image 20260610190432.png]]
 
 
 ## Links:
