@@ -44,9 +44,14 @@ new model params:
 
 ![[Pasted image 20260609132157.png]]
 
+- About ADAM
+![[Pasted image 20260610140127.png]]
 
-
-
+### comparison
+- Batch GD - weight is updated once after one epoch (which is the entire Dataset) the model calculates the loss for all images in the dataset and then updates the weights based on an avg of the loss!
+- Stochastic GD - weight is updated (# of images) times in one epoch as the model updates the weights after calculating the loss for a single image itself
+- Mini batch GD - weight is updated after a batch of image predictions are made (say batch of 12 images) so if there are 240 images in a Dataset, the weight would be updated 20 times in one epoch ie. after each batch!
+- ADAM - similar to mini batch in terms of weight update step but uses advanced update strategies
 
 ### random experiments
 ![[Pasted image 20260609132341.png]]

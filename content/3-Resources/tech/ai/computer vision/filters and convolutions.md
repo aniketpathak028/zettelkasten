@@ -10,7 +10,7 @@ description: filters and convolutions
 ---
 # filters and convolutions
 
-https://miro.com/app/board/uXjVIUaPG0Y=/?share_link_id=593132997072
+notes https://miro.com/app/board/uXjVIUaPG0Y=/?share_link_id=593132997072
 
 - convolutions and classical filters - heart of cv
 - before deep learning came, cv was all about filters
