@@ -9,6 +9,7 @@ description: how alexnet changed the history of CV
 # AlexNet
 
 notes - https://miro.com/app/board/uXjVI8dE4Uc=/?share_link_id=670176722548
+colab - https://colab.research.google.com/drive/1Mr-E5i-YvK2L6P0GchUxKcQOmj4JTdgb?usp=sharing
 
 
 
