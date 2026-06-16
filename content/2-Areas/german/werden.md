@@ -39,7 +39,7 @@ description: werden
 		- Morgen wird es sicher kalt oder? Nein, es wird warm und sonnig
 		- Linda spricht schon sehr gut Deutsch! Ja, ihr Deutsch wird immer besser
 		- Ist Marc schon nach Hause gegangen? Ja, er wurde plötzlich müde
-	- 
+	
 2. werden as a hilfsverb
 	- werden + FUTUR (no so common use present instead)
 		- Wirst du morgen kommen? Ja ich werde morgen kommen
@@ -58,55 +58,34 @@ description: werden
 		- wo würdest du gern wohnen? ich würde gern in Köln wohnen
 		- willst du morgen auch kommen? Ja, ich würde sehr gern kommen
 
-
 - geworden vs worden
 	- when werden is the main verb -> use geworden
 		- Hans wird bald Vater -> Gestern ist Hans Vater geworden
 	- when werden is helping verb -> use worden
 		- Hans wird morgen operiert -> Gestern ist Hand operiert worden
 
-
 Practice:
-
 - Nächstes Jahr _werden wir nach Japan fliegen.
-    
 - Das Abendessen _wird_ gerade von meinem Vater gekocht.
-    
 - Mein Bruder ist gestern 18 Jahre alt _geworden_ ________.
-    
 - An deiner Stelle _______würde_ ich den Job nicht annehmen.
-    
-- Als der Lehrer das Zimmer betrat, _______wird_ die Schüler plötzlich ganz leise.
-    
+- Als der Lehrer das Zimmer betrat, _______wird_ die Schüler plötzlich ganz leise. x wurden
 - Das Haus ist im Jahr 2020 gebaut _worden_.
-    
 - Was willst du später mal _werden_? — Ich will Arzt _werden_.
-    
-- Die Diebe _wird_ gestern von der Polizei gefangen.
-
-- Früher _______wurde_ ich Polizist werden, aber heute bin ich Programmierer.
-    
+- Die Diebe _wird_ gestern von der Polizei gefangen. x wurde
+- Früher _______wurde_ ich Polizist werden, aber heute bin ich Programmierer. x wollte
 - Wenn ich im Lotto gewinnen würde, _______würde_ ich sofort ein Haus kaufen.
-    
 - Wo sind meine Schlüssel? — Keine Sorge, sie _______werden_ sicher gleich gefunden.
-    
 - Ich bin im Jahr 2002 geboren _worden.
-    
-- _würdest_ du morgen Zeit für mich haben? _(Asking a polite/hypothetical question)_
-    
+- _würdest_ du morgen Zeit für mich haben? 
 - Mein Opa _______wird_ langsam alt, er vergisst vieles.
-    
-- Warum ist das Fenster offen? — Es _______wird_ vor fünf Minuten von Anna geöffnet.
-    
+- Warum ist das Fenster offen? — Es _______wird_ vor fünf Minuten von Anna geöffnet. x wurde
 - Oh nein, meine Haare sind grün _geworden! Was habe ich getan?
-    
-- Die Brücke _______wird_ nächstes Jahr komplett neu gebaut. _(Talking about a future plan)_
-    
+- Die Brücke _______wird_ nächstes Jahr komplett neu gebaut. 
 - Gestern _______werden_ wir im Kino von unserem Lehrer gesehen.
-    
-- Du _wirst immer besser im Deutschlernen! Weiter so!
-    
-- Was _______würdest_ du tun, wenn du unsichtbar wärst?
+- Du _wirst_ immer besser im Deutschlernen! Weiter so!
+- Was _würdest_ du tun, wenn du unsichtbar wärst?
+
 ## Links:
 
 202606160003

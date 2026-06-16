@@ -8,31 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ecff733d9e215849",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/3-Resources/tech/docker/what is docker?.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "what is docker?"
-            }
-          },
-          {
             "id": "1089d97a7248b58c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/0-Index/werden.md",
+                "file": "content/2-Areas/german/werden.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "werden"
+            }
+          },
+          {
+            "id": "e1113140d1168320",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/0-Index/german hw.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "german hw"
             }
           }
         ],
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "7d24a31d29b9d0b6",
@@ -197,11 +198,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "91da6d355622476a",
+  "active": "e1113140d1168320",
   "lastOpenFiles": [
+    "content/2-Areas/german/werden.md",
+    "content/0-Index/german hw.md",
     "content/2-Areas/german",
     "content/3-Resources/tech/docker/what is docker?.md",
-    "content/0-Index/werden.md",
     "content/3-Resources/tech/docker/rancher-desktop vs docker-desktop.md",
     "content/3-Resources/tech/docker/dockerhub.md",
     "content/3-Resources/tech/docker/docker-compose.md",
@@ -244,7 +246,6 @@
     "content/3-Resources/tech/pytorch",
     "templates/AWSCLIV2.pkg",
     "content/3-Resources/tech/iac/terraform",
-    "content/3-Resources/tech/iac",
     "content/0-Index/Untitled.canvas",
     "Untitled.canvas"
   ]
