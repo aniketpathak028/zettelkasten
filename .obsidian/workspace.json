@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "7d24a31d29b9d0b6",
@@ -184,6 +185,8 @@
   },
   "active": "dcaf78bcd5d31db5",
   "lastOpenFiles": [
+    "content/assets/Pasted image 20260618004953.png",
+    "content/assets/Pasted image 20260618004705.png",
     "content/2-Areas/buddhism/how to control your mind 🧠.md",
     "content/3-Resources/research papers/autoencoders.md",
     "content/assets/Pasted image 20260617235900.png",
@@ -217,11 +220,9 @@
     "content/assets/Pasted image 20260610193040.png",
     "content/3-Resources/tech/ai/computer vision/ADAM.md",
     "content/assets/Pasted image 20260610190432.png",
-    "content/3-Resources/tech/ai/computer vision/Building a simple deep nn with 2 hidden layers.md",
     "content/assets/Pasted image 20260610140127.png",
     "content/assets/Pasted image 20260609135343.png",
     "content/assets/Pasted image 20260609135315.png",
-    "content/assets/Pasted image 20260609132341.png",
     "content/3-Resources/tech/ai/computer vision",
     "content/3-Resources/tech/iac/terraform/Unbenannt",
     "content/3-Resources/tech/docker/Untitled",

@@ -19,12 +19,26 @@ Limitations:
 - random sampling won't work!
 
 
+Architecture
+
+input image -> encoder (784  -> 256 -> RELU) -> Latent dim (64) -> RELU -> decoder (256 -> RELU -> 784 -> sigmoid) -> reconstructed image 
+
 ![[Pasted image 20260617235900.png]]
 
+![[Pasted image 20260618004705.png]]
+![[Pasted image 20260618004953.png|506]]
 
+uses:
+- dim reduction
+- denoising
+- anomaly detection
+- compression
 
-
-
+challenges:
+- not true gen model
+- unstructured latent space
+- poor extrapolation
+- mem reconstruction
 
 ## Links:
 
