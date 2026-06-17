@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/research papers/orbis.md",
+                "file": "content/3-Resources/research papers/flow matching.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "orbis"
+              "title": "flow matching"
             }
           }
         ]
@@ -185,8 +185,11 @@
   },
   "active": "e1113140d1168320",
   "lastOpenFiles": [
-    "content/index.md",
+    "content/assets/Pasted image 20260617190301.png",
+    "content/assets/Pasted image 20260617185829.png",
     "content/3-Resources/research papers/orbis.md",
+    "content/3-Resources/research papers/flow matching.md",
+    "content/index.md",
     "content/3-Resources/research papers",
     "content/2-Areas/german/german hw.md",
     "content/3-Resources/tech/ai/computer vision/AlexNet.md",
@@ -215,14 +218,11 @@
     "content/3-Resources/tech/ai/computer vision/Building a simple deep nn with 2 hidden layers.md",
     "content/assets/Pasted image 20260610140127.png",
     "content/3-Resources/tech/ai/computer vision/vision transformers.md",
-    "content/3-Resources/tech/ai/computer vision/Building a simple linear nn for image classification.md",
     "content/assets/Pasted image 20260609135343.png",
     "content/assets/Pasted image 20260609135315.png",
     "content/assets/Pasted image 20260609132341.png",
     "content/assets/Pasted image 20260609132157.png",
     "content/assets/Bildschirmfoto 2026-06-09 um 1.21.07 PM.png",
-    "content/assets/Pasted image 20260609132112.png",
-    "content/3-Resources/tech/ai/Point Transformers.md",
     "content/3-Resources/tech/ai/computer vision",
     "content/3-Resources/tech/iac/terraform/Unbenannt",
     "content/3-Resources/tech/docker/Untitled",
