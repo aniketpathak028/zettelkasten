@@ -26,6 +26,12 @@ description: orbis
 - latent space -> quantizer (turns data into discrete ids) -> Discrete models
 - latent space -> continuous vector (keeps data fluid) -> flow matching models
 
+architecture:
+
+- initial real frame -> encoder -> latent rep 
+- pure noise -> flow matching (gets the latent rep of the real frame + driving actions - steering, throttle, brake) -> next frame latent rep 
+- next frame latent -> decoder -> pixels
+-
 
 
 
