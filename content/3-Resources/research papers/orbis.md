@@ -9,6 +9,13 @@ description: orbis
 ---
 # Orbis - Overcoming challenge of Long-Horizon prediction in Driving World Models
 
+-> existing problems:
+- existing world models issues - Vista, GEM, or Cosmos
+- bad at turns
+- discrete (better at long rollout but images lose res) ex- GAIA-1 vs continous (better res image but struggles with long rollouts)
+
+
+-> Orbis MVP
 - imagines and generates realistic video of the next frames
 - long-horizon generation even in turns and chaotic moments
 - favors continuous math over discrete tokens
