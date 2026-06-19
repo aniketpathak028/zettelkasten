@@ -45,6 +45,15 @@ architecture:
 
 
 
+- failiure mode of the model
+- categories of objects in anomaly detection
+- quantify different failure modes
+- OOD datasets
+- failed2drive
+- syntehtic eval 
+- real - DOTA, search more ds
+- eval - rollout, based on classifier, knn, linear probe
+- 15-30 frames
 
 ## Links:
 
