@@ -14,7 +14,6 @@ description: orbis
 - bad at turns
 - discrete (better at long rollout but images lose res) ex- GAIA-1 vs continous (better res image but struggles with long rollouts)
 
-
 -> Orbis MVP
 - imagines and generates realistic video of the next frames
 - long-horizon generation even in turns and chaotic moments
