@@ -44,6 +44,29 @@ f. Man hätte jemand anderen für diesen Job nehmen sollen
 
 neu vokabeln:
 - durchschnittlich - ordinary
+- debt - Schulden
+- er hat bankrott gemacht oder hat pleite gemacht!
+- was "an die Wand fahren"
+- die Privatinsolvenz - jemand der Schulden hat könnte es nutzen
+- verschuldet
+- überschuldet
+
+- bitte nicht nachmachen - don't try it at home!
+- gewissen - conscience
+- bereut - regret
+- treten - er ist in die Hundescheiße / Hundehaufen getreten
+- zeugnis - transcript -> er hat keine gute Lesitung gezeigt
+- 
+
+
+realistisch schreiben:
+
+Liebe Tante,
+ich hab Schieße gebaut und jetzt hab ich 25000 euro schulden!
+Die Banken sitzem mir im Nacken. Wenn ich nicht zahlen, muss ich vielleicht in den knast!
+konntest du mir nochmal den Arsch retten??
+
+
 
 
 
