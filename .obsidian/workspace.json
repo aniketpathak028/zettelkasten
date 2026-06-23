@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/research papers/orbis.md",
+                "file": "content/2-Areas/german/german hw.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "orbis"
+              "title": "german hw"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "7d24a31d29b9d0b6",
@@ -185,6 +184,7 @@
   },
   "active": "dcaf78bcd5d31db5",
   "lastOpenFiles": [
+    "content/3-Resources/research papers/orbis.md",
     "content/3-Resources/research papers/flow matching.md",
     "content/3-Resources/research papers/autoencoders.md",
     "content/assets/Pasted image 20260618004953.png",
@@ -193,7 +193,6 @@
     "content/assets/Pasted image 20260617235900.png",
     "content/assets/Pasted image 20260617190301.png",
     "content/assets/Pasted image 20260617185829.png",
-    "content/3-Resources/research papers/orbis.md",
     "content/index.md",
     "content/3-Resources/research papers",
     "content/2-Areas/german/german hw.md",

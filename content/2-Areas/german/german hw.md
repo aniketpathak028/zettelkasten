@@ -31,6 +31,14 @@ description: '"Unbenannt"'
 	f. Sie sollte früher ihre Kinder ins Bett schicken
 
 
+pg-135
+
+3. schlechte Stimmung 
+b. Der neue Kollege hätte diesen Fall schon am Mittwoch bearbeiten sollen!
+c. Meine Assistentin hätte Ihnen alle nötigen Informationen geben können
+d. Sie hätte vor unseren Geschäftspartnern nicht darüber reden dürfen
+e. Ihre Mitarbeiter hätten mehr auf die Details achten müssen
+f. Man hätte jemand anderen für diesen Job nehmen sollen
 
 
 
