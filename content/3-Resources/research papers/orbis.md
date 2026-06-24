@@ -26,18 +26,27 @@ description: orbis
 - continuous - images are unbroken numerical values - diffusion models, flow matching
 - discrete - image is broken into patches and each patch is a token 
 
--> hybrid tokenizer
+-> hybrid tokenizer - stage1
 
 - high res video frame -> encoder -> latent space 
 - latent space -> quantizer (turns data into discrete ids) -> Discrete models
 - latent space -> continuous vector (keeps data fluid) -> flow matching models
+- the encoder is frozen ultimately!
+
+-> World model - imagination
+
+past latent vectors + driver actions -> DiT (flow matching) -> pred next latent vector
+
+
+
+
 
 architecture:
 
 - initial real frame -> encoder -> latent rep 
 - pure noise -> flow matching (gets the latent rep of the real frame + driving actions - steering, throttle, brake) -> next frame latent rep 
 - next frame latent -> decoder -> pixels
--
+
 
 
 
