@@ -5,10 +5,11 @@ tags:
 date:
 description: '"Unbenannt"'
 ---
-# 
 
-- etwas an die wand gefahren
-
+Vokabeln:
+- das Gedächtnis
+- behalten <-> vergessen
+- 
 
 
 
