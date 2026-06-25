@@ -35,7 +35,8 @@
               "title": "notes - 23 juni"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -197,11 +198,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dcaf78bcd5d31db5",
+  "active": "b9cbcb8d763dd99d",
   "lastOpenFiles": [
+    "content/3-Resources/research papers/orbis.md",
     "content/2-Areas/german/german hw.md",
     "content/0-Index/notes - 23 juni.md",
-    "content/3-Resources/research papers/orbis.md",
     "content/3-Resources/research papers/flow matching.md",
     "content/3-Resources/research papers/autoencoders.md",
     "content/assets/Pasted image 20260618004953.png",
