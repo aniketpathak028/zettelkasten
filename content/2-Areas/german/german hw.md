@@ -67,7 +67,16 @@ Die Banken sitzem mir im Nacken. Wenn ich nicht zahlen, muss ich vielleicht in d
 konntest du mir nochmal den Arsch retten??
 
 
+Der Wein, schmeckt nicht. Ich habe ihn bestellt.
+Der Wein, den ich bestellt habe, schmeckt nicht!
 
+Ich habe den Film gesehen. Wir haben über ihn gesprochen
+ich habe den Film gesehen, über den wir gesprochen haben.
+
+- jdn verlassen - leave
+- sich auf jdn verlassen - rely on
+- die Pfoten - claws
+- ein Maul - mouth!
 
 
 

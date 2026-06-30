@@ -10,7 +10,7 @@ tags:
 date: 2025-10-01
 description: learn devops principles by building and deploying a simple qr code generator
 ---
-# url to qr generator
+ # url to qr generator
 
 the purpose of this blog is to learn devops principles like containerization, cicd and monitoring by containerizing and deploying a simple app that converts urls to qr codes and stores them in AWS.
 
