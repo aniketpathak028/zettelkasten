@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/2-Areas/german/german hw.md",
+                "file": "content/0-Index/german.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "german hw"
+              "title": "german"
             }
           }
         ]
@@ -184,12 +184,12 @@
   },
   "active": "dcaf78bcd5d31db5",
   "lastOpenFiles": [
+    "content/3-Resources/research papers/flow matching.md",
+    "content/2-Areas/german/german hw.md",
     "content/2-Areas/german/werden.md",
     "content/1-Projects/deploying a qr code generator.md",
-    "content/0-Index/notes - 25 juni.md",
+    "content/0-Index/german.md",
     "content/3-Resources/research papers/orbis.md",
-    "content/2-Areas/german/german hw.md",
-    "content/3-Resources/research papers/flow matching.md",
     "content/3-Resources/research papers/autoencoders.md",
     "content/assets/Pasted image 20260618004953.png",
     "content/assets/Pasted image 20260618004705.png",
