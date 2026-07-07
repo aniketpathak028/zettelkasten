@@ -12,6 +12,7 @@ paper - https://arxiv.org/abs/2210.02747
 -> traditional diffusion models
 - add noise to image step by step until it is gaussian 
 - reverse the noise in the image in the same order of steps to learn how to reconstruct the original image
+- train a network for each denoising step t=n to t=n-1
 
 -> flow matching (does not define a fixed noising process!)
 - proposes that we can learn to generate the original dist (data) from a random gaussian noise with only samples from that dist
