@@ -1,6 +1,6 @@
 ---
 title: '"Unbenannt"'
-draft: true
+draft: false
 tags:
 date:
 description: '"Unbenannt"'
@@ -83,6 +83,46 @@ ich habe den Film gesehen, über den wir gesprochen haben.
 
 pg-170
 
+1. 
+a. Hast du alles verstanden, was du gelesen hast?
+b. Hast du alles verbessert, was du falsch gemacht hast?
+c. Hast du alles mitbekommen, was die Lehrerin erklärt hat?
+d. Hast du alles notiert, was der Lehrer diktiert hat?
+
+2. ![[Pasted image 20260707172935.png]]
+
+b. was
+c. wo
+d. was
+e. wo
+f. was
+e. wo
+f. was
+g. was 
+h. wohin
+i. was
+j. wer
+
+![[Pasted image 20260707173226.png]]
+
+b. in der Nähe eines Waldes (wo / in dem) man gut spazieren gehen kann. 
+c. in dem FG wo es keine modernen Hotelanlagen gibt
+d. wo
+e. wo
+f. wo
+g. wo/in dem
+
+
+![[Pasted image 20260707173142.png]]
+
+4. b. worüber
+c. woran
+d. worüber
+e. worauf
+
+5. b. worauf
+c. worauf
+d. worüber
 
 
 
