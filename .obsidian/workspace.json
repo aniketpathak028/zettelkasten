@@ -4,39 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "612db1992282483b",
+        "id": "b74229b0f863f11f",
         "type": "tabs",
         "children": [
           {
-            "id": "9e8c50cd0e4be835",
+            "id": "c34731f6beceea2b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/3-Resources/research papers/flow matching.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "flow matching"
-            }
-          },
-          {
-            "id": "f9236ba37a0b31aa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/0-Index/adl exam notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "adl exam notes"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -198,7 +179,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f9236ba37a0b31aa",
+  "active": "c34731f6beceea2b",
   "lastOpenFiles": [
     "content/3-Resources/research papers/flow matching.md",
     "content/0-Index/adl exam notes.md",
