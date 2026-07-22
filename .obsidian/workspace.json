@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b74229b0f863f11f",
+        "id": "ceaf8052220c4896",
         "type": "tabs",
         "children": [
           {
-            "id": "c34731f6beceea2b",
+            "id": "8b8cc36f12dd20e6",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -179,7 +179,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c34731f6beceea2b",
+  "active": "8b8cc36f12dd20e6",
   "lastOpenFiles": [
     "content/3-Resources/research papers/flow matching.md",
     "content/0-Index/adl exam notes.md",
