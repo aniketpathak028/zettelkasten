@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "icp and point cloud registration"
             }
+          },
+          {
+            "id": "d2d45a280a6cfed5",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.13.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.13.4"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -183,7 +196,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8b8cc36f12dd20e6",
+  "active": "d2d45a280a6cfed5",
   "lastOpenFiles": [
     "content/assets/Pasted image 20260726200731.png",
     "content/assets/Pasted image 20260726200614.png",
