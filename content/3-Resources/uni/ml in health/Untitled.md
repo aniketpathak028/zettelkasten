@@ -50,9 +50,9 @@ SHAP axioms:
 
 example:
 ![[Pasted image 20260814214254.png]]
-- step-1 is to calculate the baseline!
+- step-1: is to calculate the baseline!
 ![[Pasted image 20260814214639.png]]
-
+- step-2:  
 
 
 
