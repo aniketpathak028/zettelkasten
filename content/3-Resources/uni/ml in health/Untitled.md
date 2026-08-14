@@ -48,6 +48,22 @@ SHAP axioms:
 - consistency - changing model such that feat j's marginal contribution increases or decreases but SHAP guaranteed it will never decrease
 ![[Pasted image 20260814103427.png]]
 
+example:
+![[Pasted image 20260814214254.png]]
+- step-1 is to calculate the baseline!
+![[Pasted image 20260814214639.png]]
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Links:
