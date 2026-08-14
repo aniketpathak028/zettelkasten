@@ -46,7 +46,7 @@ SHAP axioms:
 - local accuracy - baseline + sum of feat contribution = model pred
 - missingness - if feat j is missing from input then mc_j=0
 - consistency - changing model such that feat j's marginal contribution increases or decreases but SHAP guaranteed it will never decrease
-
+![[Pasted image 20260814103427.png]]
 
 
 
