@@ -52,9 +52,12 @@ example:
 ![[Pasted image 20260814214254.png]]
 - step-1: is to calculate the baseline!
 ![[Pasted image 20260814214639.png]]
-- step-2:  
-
-
+- step-2: find the marginal contribution for all the feat except the target feat so here we want to find out the MC for BP but we find out the value for Age first
+![[Pasted image 20260814223228.png]]
+- now we include BP as well and we can get the MC for BP = v(Age, BP) - v(Age)
+![[Pasted image 20260814223456.png]]
+- similarly find out the mc for all feat combinations except BP and then take the weighted avg!
+![[Pasted image 20260814223909.png]]
 
 
 
