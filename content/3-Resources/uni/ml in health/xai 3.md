@@ -62,6 +62,19 @@ description: '"Untitled"'
 
 ![[Pasted image 20260815155114.png]]
 
+- Grad-CAM uses the idea that by using **backpropagation** we can calculate gradients, we can derive the importance of each feature map dynamically, regardless of what layers lie between the feature map and the final output score.
+
+![[Pasted image 20260815161318.png]]
+
+- why this is better than using input feat?
+	- **Semantic Abstraction:** Deep channels at the final conv layer capture high-level semantic concepts (e.g., "dog snout", "wheel"), whereas raw input pixels $x$ only capture low-level color and edge information.
+
+![[Pasted image 20260815161536.png]]
+![[Pasted image 20260815161800.png]]
+
+
+
+
 
 
 
