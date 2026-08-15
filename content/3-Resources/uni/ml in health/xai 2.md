@@ -1,11 +1,13 @@
 ---
-title: '"Untitled"'
+title: xai-2
 draft: false
 tags:
-date:
-description: '"Untitled"'
+  - ml-for-health
+  - shapley-value
+date: 2026-08-14
+description: shapley values and shap
 ---
-# # week-5 : xai 2
+# xai 2
 
 1. marginal contribution
 	- contribution of an element j to a function f when j is added, holding everything else fixed

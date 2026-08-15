@@ -1,9 +1,12 @@
 ---
-title: '"Untitled"'
+title: xai-3
 draft: false
 tags:
-date:
-description: '"Untitled"'
+  - ml-for-health
+  - dl-xai
+  - kernelSHAP
+date: 2026-08-15
+description: kernelSHAP and dl explanations
 ---
 # xai 3
 
