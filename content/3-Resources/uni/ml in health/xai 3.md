@@ -23,6 +23,13 @@ description: '"Untitled"'
 - instead of calculating all 2^p coalitions, we only check for a smaller number and then use weighted least squares
 ![[Pasted image 20260815015236.png]]
 
+![[Pasted image 20260815112655.png]]
+
+![[Pasted image 20260815113120.png]]
+
+
+
+
 
 
 
