@@ -52,13 +52,15 @@ description: '"Untitled"'
 		![[Pasted image 20260815135212.png]]
 		![[Pasted image 20260815135324.png]]
 
-	- class activation mapping
+	- class activation mapping - using classifier's own weights as localiser
+		![[Pasted image 20260815153317.png]]
 	
+		![[Pasted image 20260815153506.png]]
 
+	- Grad-CAM
+		![[Pasted image 20260815154822.png]]
 
-
-
-
+![[Pasted image 20260815155114.png]]
 
 
 
