@@ -35,7 +35,14 @@ description: patient stratification and disease subtypes
 
 1. Dimensionality reduction
 
-
+	- PCA (unsupervised)
+		- rotated high dim data onto new axis called principal components ordered by amount of variance (or spread) they capture (all PCs are orthogonal to each other)
+		- standardization - before applying PCA put every feat on same scale using z-score
+		![[Pasted image 20260816145049.png|568]]
+		- covariance matrix - captures how different clinical feat move together
+		![[Pasted image 20260816145730.png|564]]
+		- eigenvectors and variance retained
+		
 
 
 
