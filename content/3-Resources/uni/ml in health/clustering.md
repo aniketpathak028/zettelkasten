@@ -33,6 +33,38 @@ description: patient stratification and disease subtypes
 	- dim reduction - pca, t-sne, umap, vae
 	- clustering - k-means, gmm
 
+1. Dimensionality reduction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Clustering
+
+
+
+
+
+
+
+
 ## Links:
 
 202608151734
