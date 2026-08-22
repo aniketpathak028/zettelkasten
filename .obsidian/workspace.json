@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "clustering"
             }
+          },
+          {
+            "id": "91217d63e40bd1d8",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.13.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.13.7"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -185,7 +198,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8b8cc36f12dd20e6",
+  "active": "91217d63e40bd1d8",
   "lastOpenFiles": [
     "content/assets/Pasted image 20260816145730.png",
     "content/assets/Pasted image 20260816145049.png",
