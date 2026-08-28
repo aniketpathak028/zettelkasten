@@ -11,10 +11,14 @@
             "id": "940515b7d065e195",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "content/0-Index/small language model.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "small language model"
             }
           }
         ]
@@ -183,6 +187,7 @@
   },
   "active": "940515b7d065e195",
   "lastOpenFiles": [
+    "content/0-Index/small language model.md",
     "content/3-Resources/research papers/orbis.md",
     "content/3-Resources/uni/ml in health/clustering.md",
     "content/assets/Pasted image 20260816145730.png",
