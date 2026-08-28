@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "ceaf8052220c4896",
+        "id": "5e89d1a66d07fc17",
         "type": "tabs",
         "children": [
           {
-            "id": "8b8cc36f12dd20e6",
+            "id": "940515b7d065e195",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/3-Resources/uni/ml in health/clustering.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "clustering"
+              "title": "New tab"
             }
           }
         ]
@@ -185,14 +181,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8b8cc36f12dd20e6",
+  "active": "940515b7d065e195",
   "lastOpenFiles": [
+    "content/3-Resources/research papers/orbis.md",
+    "content/3-Resources/uni/ml in health/clustering.md",
     "content/assets/Pasted image 20260816145730.png",
     "content/assets/Pasted image 20260816145049.png",
     "content/assets/Pasted image 20260815180455.png",
     "content/3-Resources/uni/ml in health/xai 3.md",
     "content/3-Resources/uni/ml in health/xai 2.md",
-    "content/3-Resources/uni/ml in health/clustering.md",
     "content/assets/Pasted image 20260815161800.png",
     "content/assets/Pasted image 20260815161536.png",
     "content/assets/Pasted image 20260815161318.png",
@@ -200,7 +197,6 @@
     "content/assets/Pasted image 20260815154822.png",
     "content/assets/Pasted image 20260815153506.png",
     "content/assets/Pasted image 20260815153317.png",
-    "content/assets/Pasted image 20260815135324.png",
     "content/0-Index/bcf website notes.md",
     "content/0-Index/icp and point cloud registration.md",
     "content/3-Resources/uni/ml in health",
@@ -212,7 +208,6 @@
     "content/0-Index/Unbenannt.md",
     "content/2-Areas/german/werden.md",
     "content/1-Projects/deploying a qr code generator.md",
-    "content/3-Resources/research papers/orbis.md",
     "content/3-Resources/research papers/autoencoders.md",
     "content/2-Areas/buddhism/how to control your mind 🧠.md",
     "content/index.md",
