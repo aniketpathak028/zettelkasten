@@ -1,9 +1,11 @@
 ---
-title: '"Untitled"'
+title: building a small language model
 draft: false
 tags:
-date:
-description: '"Untitled"'
+  - small-language-models
+  - llm
+date: 2026-08-29
+description: building a small language model from scratch
 ---
 # small language model
 
@@ -27,14 +29,51 @@ description: '"Untitled"'
 	- types of tokenization:
 		- character level tokenization - each character is a token 
 		- word level tokenization - each word is a token (english language has a big vocabulary so too many number of tokens, also spelling mistakes would not be a token!)
-2. Assembling the model architecture
+		- subword tokenization or byte pair encoding - characters and some basic words are tokens but some subwords are also tokens which can form new words like "tokenization" = "token" + "ization"
+- so we follow a roadmap something like: 
+	- dataset -> tokenizer -> tokens -> token id
+- the dataset contains rows of stories where each story is a row or a data sample and there are 2 million such rows for training and nearly 20000 such rows for validation!
 
-3. Setting up the SLM training pipeline
+- iterating through the setup with a small example, we have to do 2 things:
+	- tokenize the dataset -> use gpt 2 subword tokenizer (BPE) for example 1 story is a collection of token ids with its length.
+		![[Pasted image 20260829211128.png|572]]
+	- store all the IDs in a single .bin file! why?
+		![[Pasted image 20260829211526.png|574]]
+		
 
-4. Pre-training the SLM
+3. Assembling the model architecture
 
 
-5. Running inference
+
+
+
+
+
+
+
+4. Setting up the SLM training pipeline
+
+
+
+
+
+
+
+
+5. Pre-training the SLM
+
+
+
+
+
+
+
+
+
+
+
+
+6. Running inference
 
 
 
