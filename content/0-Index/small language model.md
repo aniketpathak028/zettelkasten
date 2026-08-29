@@ -19,21 +19,22 @@ description: '"Untitled"'
 - the goal of this dataset is to have as small dataset as possible while having all the concise information to teach something to the model
 - so our task is to use this dataset which contains many tiny stories in english for 3-5 year old children, can we successfully teach english to our SLM which is going to be only 15M params - if yes, then our goal is achieved!
 
-Goal: can we construct a language model with just 10-15M params and which produces coherent text?
-
-
-
+	Goal: can we construct a language model with just 10-15M params and which produces coherent text?
 
 2. Data pre-processing
 
-3. Assembling the model architecture
+- since LLMs cannot understand words like humans, we need to tokenize the stories in some way to convert them into numbers using tokenization:
+	- types of tokenization:
+		- character level tokenization - each character is a token 
+		- word level tokenization - each word is a token (english language has a big vocabulary so too many number of tokens, also spelling mistakes would not be a token!)
+2. Assembling the model architecture
 
-4. Setting up the SLM training pipeline
+3. Setting up the SLM training pipeline
 
-5. Pre-training the SLM
+4. Pre-training the SLM
 
 
-6. Running inference
+5. Running inference
 
 
 
