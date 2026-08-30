@@ -9,11 +9,20 @@ description: building a small language model from scratch
 ---
 # small language model
 
+read - https://www.ibm.com/think/topics/small-language-models
+
+- the rise of LLM models
+
+![[Pasted image 20260831004916.png|480]]
+
 - why we need SLMs?
 	- LLMs are large and need more computational power to run and train
 	- SLMs contain less than 10B<= params whereas LLMs have 100B+ 
 	- SLMs are fast and efficient and can be deployed on small devices like phones, laptops, IoTs and can be fine tuned for specific tasks like healthcare, legal, customer support etc
 	- On device privacy
+	- ex - Microsoft Phi-3 Mini (3.8B), Google's Gemma 2 (2B-9B) and Meta's Llama 3.2 (1B-3B), DistilBERT, Mistral Ministral, Qwen2.5, SmolLM2
+	
+![[Pasted image 20260831005340.png]]
 
 1. Dataset
 
@@ -23,13 +32,17 @@ description: building a small language model from scratch
 
 	Goal: can we construct a language model with just 10-15M params and which produces coherent text?
 
+- the dataset contains 2.2M rows - every row is a story!
+	- training - 2.1M
+	- validation - 20k 
+
 2. Data pre-processing
 
 - since LLMs cannot understand words like humans, we need to tokenize the stories in some way to convert them into numbers using tokenization:
 	- types of tokenization:
 		- character level tokenization - each character is a token 
 		- word level tokenization - each word is a token (english language has a big vocabulary so too many number of tokens, also spelling mistakes would not be a token!)
-		- subword tokenization or byte pair encoding - characters and some basic words are tokens but some subwords are also tokens which can form new words like "tokenization" = "token" + "ization"
+		- subword tokenization or byte pair encoding - characters and some basic words are tokens but some subwords are also tokens which can form new words like "tokenization" = "token" + "ization" ex- Byte Pair Encoding
 - so we follow a roadmap something like: 
 	- dataset -> tokenizer -> tokens -> token id
 - the dataset contains rows of stories where each story is a row or a data sample and there are 2 million such rows for training and nearly 20000 such rows for validation!
@@ -38,12 +51,26 @@ description: building a small language model from scratch
 	- tokenize the dataset -> use gpt 2 subword tokenizer (BPE) for example 1 story is a collection of token ids with its length.
 		![[Pasted image 20260829211128.png|572]]
 	- store all the IDs in a single .bin file! why?
+		![[Pasted image 20260831011208.png|509]]
+
 		![[Pasted image 20260829211526.png|574]]
-		
+
+- we are storing the bin file as a memmap which means the file is backed on disk but looks like a NumPy array!
+
+	![[Pasted image 20260831011345.png]]
+
+- split into batches (for faster loading in RAM) and add everything as a whole into train.bin and validation.bin for validation and test datasets!
+
+- creating input and output pairs from Dataset! why?
+	- because LLM is a a next token prediction task and we want to take a sequence of tokens and predict the next token so we need ip and output pairs to calculate our loss!
+	- context size - max len of words of tokens that the LLM needs to see to predict the next token ex- 4
+	- batch size - the number of samples that the network processes to update the weights once!
+	![[Pasted image 20260831014105.png]]
+	- when creating the input output pairs, we always stack the input tensor in batch_size x context_size matrix and output tensor in batch_size x context_size matrix but one token shifted meaning for each row, we have context_size number of tasks!
 
 3. Assembling the model architecture
 
-
+![[Pasted image 20260831010501.png]]
 
 
 
