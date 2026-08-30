@@ -13,7 +13,7 @@ read - https://www.ibm.com/think/topics/small-language-models
 
 - the rise of LLM models
 
-![[Pasted image 20260831004916.png|480]]
+![[Pasted image 20260831004916.png|621]]
 
 - why we need SLMs?
 	- LLMs are large and need more computational power to run and train
@@ -60,7 +60,6 @@ read - https://www.ibm.com/think/topics/small-language-models
 	![[Pasted image 20260831011345.png]]
 
 - split into batches (for faster loading in RAM) and add everything as a whole into train.bin and validation.bin for validation and test datasets!
-
 - creating input and output pairs from Dataset! why?
 	- because LLM is a a next token prediction task and we want to take a sequence of tokens and predict the next token so we need ip and output pairs to calculate our loss!
 	- context size - max len of words of tokens that the LLM needs to see to predict the next token ex- 4
