@@ -84,8 +84,6 @@ read - https://www.ibm.com/think/topics/small-language-models
 	- MultiHeadAttention
 		![[Pasted image 20260831134237.png]]
 		
-
-
 4. Setting up the SLM training pipeline
 
 
