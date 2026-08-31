@@ -75,6 +75,7 @@ read - https://www.ibm.com/think/topics/small-language-models
 - each token is then transformed into a 768 dim vector using a dictionary which stores 768 dim vector for each token in the vocabulary of the LLM called as token embedding
 - finally we want to add positional embedding which gives the neural network the order of the tokens ex- "the dog eats the cat" and "the cat eats the dog" would have the same meaning in the n/w if there was no pos embedding!
 - the pos embedding is the same for all sample, as the number of pos would be at max -> context size ex - 1024
+- the token embeddings and pos embeddings are intially randomized matrix
 - If your input has shape **`(B, T)`** = `(8, 1024)`:
 	1. `tok_emb` becomes **`(8, 1024, 768)`**
 	2. `pos_emb` becomes **`(1024, 768)`** (broadcasted across the batch)
@@ -82,7 +83,14 @@ read - https://www.ibm.com/think/topics/small-language-models
 - coming to the transformer block:
 	- pre-layer norm - we normalize the tokens across the embedding dim of 768 so that the mean=0 and var=1 
 	- MultiHeadAttention
-		![[Pasted image 20260831134237.png]]
+		- takes the embedding vectors and converts them into context vectors which contains the context of how a token relates to others!
+		- so masked multihead attention takes the embedding vector of size 768 and converts it to context vector of the same size!
+		- causality - a token should not attend to future tokens
+		- 
+		
+		![[Pasted image 20260831222028.png]]
+		
+		![[Pasted image 20260831134237.png|583]]
 		
 4. Setting up the SLM training pipeline
 
