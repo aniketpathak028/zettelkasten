@@ -55,7 +55,7 @@ read - https://www.ibm.com/think/topics/small-language-models
 
 		![[Pasted image 20260829211526.png|574]]
 
-- we are storing the bin file as a memmap which means the file is backed on disk but looks like a NumPy array!
+- we are storing the bin file as a memmap
 
 	![[Pasted image 20260831011345.png]]
 
