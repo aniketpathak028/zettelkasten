@@ -14,7 +14,7 @@ description: generative models
 - conditional generation - p(x|c)
 - diff b/w generative and discriminative models
 	- discriminative - p(y|x) -> only 1 true label y for each input x (many-to-one)
-	- conditional generative - p(x|c) -> many valid outputs x for a cond c - (one-to-many or many-to-many)
+	- conditional generative - p(x|c) -> many valid outputs x for a condition c - (one-to-many or many-to-many)
 - formulating generative modeling
 
 ![[Pasted image 20260902201941.png|468]]
@@ -26,11 +26,13 @@ description: generative models
 
 - Types of Generative Models:
 	- Autoregressive Models
-		![[Pasted image 20260902203357.png|463]]
+		![[Pasted image 20260902203357.png|458]]
 	- Latent Variable Models
+		![[Pasted image 20260902224504.png|469]]
 	- Flow-based Models
+		![[Pasted image 20260902224605.png|474]]
 	- Energy-based Models
-
+		![[Pasted image 20260902224700.png|471]]
 
 
 
