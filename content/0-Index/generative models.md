@@ -34,6 +34,28 @@ description: generative models
 	- Energy-based Models
 		![[Pasted image 20260902224700.png|471]]
 
+![[Pasted image 20260902231033.png]]
+
+- main objectives of generative model is to max -ve log likelihood
+- flow-based models - does not need a latent space, takes an intial dist and turns it into output dist.
+- latent variable models - sample a latent variable z and then conditionally generates the output based on the prior z.
+- directly allows to learn the energy function via NN, the exponential function ensures positivity and partition function ensures normalization.
+
+- Problem with partition function? -> computing it is intractable!
+- how to avoid the partition function? gradient of the log p(x) is the score function of p wrt to x
+	![[Pasted image 20260902233150.png|493]]
+- we can optimize the score (which is independent of the partition function) by minimizing the Fisher divergence which has the same optimum as the max log likelihood
+
+- Denoising Score matching
+	![[Pasted image 20260902235007.png]]
+
+
+
+
+
+
+
+
 
 
 ## Links:
