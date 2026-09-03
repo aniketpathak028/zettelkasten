@@ -103,7 +103,7 @@ Maximizing likelihood = Minimizing -ve log likelihood
 	- Diffusion - conclusion
 		- diffusion is basically training a denoiser or noise eliminator
 		- usually implemented as a single network with time as input (S(x,t)) where t is encoded using sinosudal embeddings (or similar)
-		- sampling and training are disjoint (so we need to scale and reparametrize accordingly)
+		- sampling and training are disjoint (so we need to scale and reparameterize accordingly)
 
 	![[Pasted image 20260903185017.png]]
 	- SDE formulation allows us to choose f and g flexibly
@@ -111,7 +111,37 @@ Maximizing likelihood = Minimizing -ve log likelihood
 
 	- Guidance methods
 		- until now we saw models that generated a random sample from a dist but in reality we want to generate something using a text prompt or a condition!
-		- classifier based guidance methods use 
+		- classifier based guidance methods use bayes rule to get score
+		![[Pasted image 20260904002024.png]]
+		- problems:
+			- the classifier deals with noisy inputs (so we need to train the classifier)
+			- guidance can be only applied to known classes!
+			- classifier free guidance
+			![[Pasted image 20260904002650.png]]
+		![[Pasted image 20260904002721.png]]
+		- we need to compute dx(log(c|x)) which requires classifier trained on noisy inputs, this limits us to known conditioning formats or fixed set of classes.
+		- we amplify the conditioned signal and subtract or remove the unconditioned signal
+		- we need to train a conditioned score estimator, which does not depend on the condition scale gamma!
+
+- Diffusion in Practice
+	![[Pasted image 20260904003617.png]]
+	- Loss formulation
+		- likelihood based derivation gives time-step weights alpha for loss terms
+	- noise schedule
+		- the choice of noise can significantly influence output quality
+	- samplers
+		- stochastic vs deterministic
+		- SDE and ODE
+		- diffusion specific solvers take advantage of ODE structure!
+	![[Pasted image 20260904004255.png]]
+- Diffusion process is an ODE hence it is easy to use existing ODE solvers which gives access to many numerical methods and allows us to trade off sampling speed against accuracy!
+- they are equivalent only upto transformations, during optimization, however different parametrization lead to different loss landscapes, gradient magnitudes and convergence behavior
+- training and sampling are decoupled, as long as the sampler can work with learned representation, for example a noise or score estimate, different sampling strategies can be applied to the same trained model.
+
+
+
+
+
 
 
 
