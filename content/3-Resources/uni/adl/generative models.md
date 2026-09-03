@@ -90,10 +90,15 @@ Maximizing likelihood = Minimizing -ve log likelihood
 		- approximated with a lower bound, it tells us that we can optimize it by training a noise estimator
 	- Continuous-time Diffusion
 		- infinitely many steps, taking dt=0 leads to SDE - Stochastic Differential Equation
-		- 
-
-
-
+			![[Pasted image 20260903175504.png|407]]
+		- Reverse process - we start with random noise at t=1 and solve the SDE backwards in time to t=0
+			![[Pasted image 20260903180332.png|427]]
+		- Our SDE has a corresponding ordinary differential equation (ODE) inducing the same Pt(x) called probability flow ODE which is deterministic and no stochastic process is needed.
+		- Discretizing the ODE leads to Denoising Diffusion Implicit Models
+		- Benefits of ODE:
+			- no random noise is injected during generation which allows for completely deterministic sampling paths!
+			- discretizing the ODE yields Denoising Diffusion Implicit Models (DDIM)
+			- 
 
 
 
