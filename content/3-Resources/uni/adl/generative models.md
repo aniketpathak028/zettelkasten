@@ -51,13 +51,13 @@ Maximizing likelihood = Minimizing -ve log likelihood
 	![[Pasted image 20260902235007.png]]
 
 	- in order to bypass Z, we take the gradient of the log-likelihood w.r.t input x, this derivative is called score function. The score vector at any specific data point points in the direction where the probability density increases most steeply!
+	
 	![[Pasted image 20260903120610.png|531]]
 	![[Pasted image 20260903120730.png|532]]
-
-
-
-
-
+	![[Pasted image 20260903124010.png|533]]
+	![[Pasted image 20260903124518.png|534]]
+	![[Pasted image 20260903124610.png|532]]
+	- we must add a small noise to avoid the convergence case!
 
 ## Links:
 
