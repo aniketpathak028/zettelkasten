@@ -66,9 +66,9 @@ Maximizing likelihood = Minimizing -ve log likelihood
 
 	![[Pasted image 20260903131604.png]]
 
-- benefit -> we do not need to deal with the partition function
-- score and the noise level
-- because for lower noise, the density is lower at many regions causing inaccurate score estimates
+- benefit -> we do not need to deal with the partition function as the score does not depend on normalization constant and since the score is real values function without any constraints, it can be directly approximated by a neural network
+- score (moves the sample towards more probable region of the target dist) and the noise level (required to actually model the dist)
+- because for lower noise, the density is lower at many regions causing inaccurate score estimates, but since larger noise reduce acc, use both large and small noise!
 
 - Diffusion models
 	- Denoising Diffusion probabilistic Models
@@ -79,9 +79,15 @@ Maximizing likelihood = Minimizing -ve log likelihood
 			![[Pasted image 20260903153315.png|520]]
 		- from noise to data - backward diffusion process leads to a similar Markov chain
 			![[Pasted image 20260903153618.png|525]]
-
-
-
+		- Training a DDPM -> predicting the noise contained in a noisy sample!
+		- DDPM is score matching!
+			- training with denoising objective
+			- the update step is however different from the denoising score matching problem
+		![[Pasted image 20260903161327.png]]
+		![[Pasted image 20260903164628.png]]
+		- because it is easier for the network to learn small denoising steps. From pure noise, it is hard to infer a realistic sample in one shot, taking small steps is much easier!
+		- both add noise to the original sample and try to denoise it, in DDPM the model predicts the noise that was added to x, this predicted noise is directly related to the score of the noisy distribution, which connects DDPMs to denoising score matching and score-based models
+		- approximated with a lower bound, it tells us that we can optimize it by training a noise estimator
 
 
 
