@@ -88,6 +88,9 @@ Maximizing likelihood = Minimizing -ve log likelihood
 		- because it is easier for the network to learn small denoising steps. From pure noise, it is hard to infer a realistic sample in one shot, taking small steps is much easier!
 		- both add noise to the original sample and try to denoise it, in DDPM the model predicts the noise that was added to x, this predicted noise is directly related to the score of the noisy distribution, which connects DDPMs to denoising score matching and score-based models
 		- approximated with a lower bound, it tells us that we can optimize it by training a noise estimator
+	- Continuous-time Diffusion
+		- infinitely many steps, taking dt=0 leads to SDE - Stochastic Differential Equation
+		- 
 
 
 
