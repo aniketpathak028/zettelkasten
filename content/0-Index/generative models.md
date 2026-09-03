@@ -49,7 +49,7 @@ description: generative models
 - Denoising Score matching
 	![[Pasted image 20260902235007.png]]
 
-
+	- in order to bypass Z, we take the gradient of the log-likelihood w.r.t input x, this derivative is called score function. The score vector at any specific data point points in the direction where the probability density increases most steeply!
 
 
 
