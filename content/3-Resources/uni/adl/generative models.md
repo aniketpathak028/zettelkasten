@@ -109,6 +109,10 @@ Maximizing likelihood = Minimizing -ve log likelihood
 	- SDE formulation allows us to choose f and g flexibly
 	- we can use any ODE solver and since it is deterministic, it allows interpolation in the latent space!
 
+	- Guidance methods
+		- until now we saw models that generated a random sample from a dist but in reality we want to generate something using a text prompt or a condition!
+		- classifier based guidance methods use 
+
 
 
 ## Links:
