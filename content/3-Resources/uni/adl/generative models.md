@@ -13,16 +13,17 @@ description: generative models
 - p(x) does not have to be known explicitly!
 - conditional generation - p(x|c)
 - diff b/w generative and discriminative models
-	- discriminative - p(y|x) -> only 1 true label y for each input x (many-to-one)
+	- discriminative - p(y|x) -> only 1 true label y for each input x (many-to-one) ex- classification
 	- conditional generative - p(x|c) -> many valid outputs x for a condition c - (one-to-many or many-to-many)
 - formulating generative modeling
 
 ![[Pasted image 20260902201941.png|468]]
 ![[Pasted image 20260902202003.png|468]]
+Maximizing likelihood = Minimizing -ve log likelihood
 
 - implicit vs explicit representations
 	- explicit - directly learn the probability density function using max likelihood estimation method ex- VAEs, Autoregressive GPT etc.
-	- implicit - bypass the need to calc exact probability numbers, the dist is learned within the model's weights, instead focuses on generation ex- GANs 
+	- implicit - bypass the need to calc exact probability numbers, the dist is learned within the model's weights, instead focus on generation ex- GANs 
 
 - Types of Generative Models:
 	- Autoregressive Models
@@ -36,8 +37,8 @@ description: generative models
 
 ![[Pasted image 20260902231033.png]]
 
-- main objectives of generative model is to max -ve log likelihood
-- flow-based models - does not need a latent space, takes an intial dist and turns it into output dist.
+- main objectives of generative model is to minimize -ve log likelihood
+- flow-based models - does not need a latent space, takes an intial dist -> o/p dist.
 - latent variable models - sample a latent variable z and then conditionally generates the output based on the prior z.
 - directly allows to learn the energy function via NN, the exponential function ensures positivity and partition function ensures normalization.
 
@@ -50,8 +51,8 @@ description: generative models
 	![[Pasted image 20260902235007.png]]
 
 	- in order to bypass Z, we take the gradient of the log-likelihood w.r.t input x, this derivative is called score function. The score vector at any specific data point points in the direction where the probability density increases most steeply!
-
-
+	![[Pasted image 20260903120610.png|531]]
+	![[Pasted image 20260903120730.png|532]]
 
 
 
