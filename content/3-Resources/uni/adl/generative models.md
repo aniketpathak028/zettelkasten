@@ -59,6 +59,33 @@ Maximizing likelihood = Minimizing -ve log likelihood
 	![[Pasted image 20260903124610.png|532]]
 	- we must add a small noise to avoid the convergence case!
 
+- Noise Conditional Score Networks (NCSN)
+	- for regions with low-density, the noise based score estimate is inaccurate so we artificially enlarge the dist by adding stronger noise
+	- large noise corrupts data, so we use multiple noise levels, in training we sum up the losses over noise levels 
+	![[Pasted image 20260903131542.png]]
+
+	![[Pasted image 20260903131604.png]]
+
+- benefit -> we do not need to deal with the partition function
+- score and the noise level
+- because for lower noise, the density is lower at many regions causing inaccurate score estimates
+
+- Diffusion models
+	- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Links:
 
 202609022007
