@@ -71,9 +71,14 @@ Maximizing likelihood = Minimizing -ve log likelihood
 - because for lower noise, the density is lower at many regions causing inaccurate score estimates
 
 - Diffusion models
-	- 
-
-
+	- Denoising Diffusion probabilistic Models
+		- we first try to learn how to create noise from data q(z|x)
+		- then we try to reverse learn how to obtain data p(x|z) from q(z|x)
+		- similar to variational auto-encoders but trying to learn in a single step is difficult hence we break it into smaller, iterative steps that are easier to learn
+		- q(z|x) is called forward diffusion process which yields a markov chain
+			![[Pasted image 20260903153315.png|520]]
+		- from noise to data - backward diffusion process leads to a similar Markov chain
+			![[Pasted image 20260903153618.png|525]]
 
 
 
