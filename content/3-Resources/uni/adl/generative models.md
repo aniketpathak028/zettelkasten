@@ -98,10 +98,16 @@ Maximizing likelihood = Minimizing -ve log likelihood
 		- Benefits of ODE:
 			- no random noise is injected during generation which allows for completely deterministic sampling paths!
 			- discretizing the ODE yields Denoising Diffusion Implicit Models (DDIM)
-			- 
+			- bridges diffusion models to CNF and flow matching
 
+	- Diffusion - conclusion
+		- diffusion is basically training a denoiser or noise eliminator
+		- usually implemented as a single network with time as input (S(x,t)) where t is encoded using sinosudal embeddings (or similar)
+		- sampling and training are disjoint (so we need to scale and reparametrize accordingly)
 
-
+	![[Pasted image 20260903185017.png]]
+	- SDE formulation allows us to choose f and g flexibly
+	- we can use any ODE solver and since it is deterministic, it allows interpolation in the latent space!
 
 
 
