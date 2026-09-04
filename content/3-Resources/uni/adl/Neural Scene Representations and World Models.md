@@ -80,6 +80,16 @@ description: neural scene representations and world models
 	- geometry and scene are encoded implicitly
 	
 - idea - represents the radiance field with anisotropic 3D gaussians
+- we parametrize each gaussian with:
+	- mean and covariance matrix
+	- opacity
+	- view dependent color
+- we can then computer color and density by blending together all Gaussians in our scene!
+- Rendering:
+	- instead of tracing a ray through scene we project or splat the 3D gaussians onto the 2D plane also called as rasterization!
+	- we can project the mean and the covariance using transformation matrices and view projection
+	- then we only need to render 2d gaussians using standard alpha-composting!
+	- 
 
 
 
