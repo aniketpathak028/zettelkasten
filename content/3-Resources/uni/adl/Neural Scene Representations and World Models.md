@@ -68,9 +68,11 @@ description: neural scene representations and world models
 		-> how we train the network?
 			![[Pasted image 20260904155016.png]]
 
-![[Pasted image 20260904155317.png]]
+![[Pasted image 20260904155317.png|571]]
 
-
+- it simplifies the volumetric rendering equation by removing the in and out scattering terms and only keeping the absorption and emission terms! reflection and scattering effects are therefore not modeled explicitly
+- it helps the network learn continuous scene representation and prevents the network from memorizing values at specific locations and helps avoid discretization artifacts
+- 
 
 
 
