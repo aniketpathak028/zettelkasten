@@ -88,8 +88,10 @@ description: neural scene representations and world models
 - Rendering:
 	- instead of tracing a ray through scene we project or splat the 3D gaussians onto the 2D plane also called as rasterization!
 	- we can project the mean and the covariance using transformation matrices and view projection
-	- then we only need to render 2d gaussians using standard alpha-composting!
-	- 
+	- then we only need to render 2d gaussians using standard alpha-composting (aka alpha blending)!
+	- the gaussians need to be sorted by depth along the ray to compute Ti 
+	- by projecting into 2d, we assume all gaussians are non-overlapping and there is a clear order.
+	- Alpha-blending is standard CG and can be implemented highly efficiently by drawing transparent 2D gaussians on 2d screen!
 
 
 
