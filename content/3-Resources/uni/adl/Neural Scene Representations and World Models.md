@@ -76,7 +76,7 @@ description: neural scene representations and world models
 
 3. 3D Gaussian Splatting
 	- NeRFs are slow to train (takes several days for a single scene)
-	- NeRFs are slow at rendering
+	- NeRFs are slow at rendering (upto 1 min per frame)
 	- geometry and scene are encoded implicitly
 	
 - idea - represents the radiance field with anisotropic 3D gaussians
