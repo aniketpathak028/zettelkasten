@@ -142,11 +142,14 @@ Maximizing likelihood = Minimizing -ve log likelihood
 	- we defined normalizing flows as invertible transform f with x = f(z) where z ~ p0(z)
 	- since learning a single function f is complicated we split it such that each step is invertible
 	![[Pasted image 20260904100811.png]]
-
-
-
-
-
+	![[Pasted image 20260904102415.png]]
+	Problems: to train CNFs we need to deal with ODEs which is complex! can't we approximate the true vector field and take a squared error?
+	- We choose parametrized Gaussian path to approximate the true vector field
+	![[Pasted image 20260904102816.png|588]]
+	![[Pasted image 20260904102955.png]]
+	- Learn the vector field directly instead of using likelihood estimator or ODE solver, which turns generative modeling into a simple regression problem and generalizes diffusion models
+	- as the true vector field is unknown, we use conditional paths that provide vector fields that we can use as training targets
+	- 
 
 ## Links:
 
