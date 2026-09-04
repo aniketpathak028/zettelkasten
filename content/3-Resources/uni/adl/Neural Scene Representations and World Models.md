@@ -55,7 +55,7 @@ description: neural scene representations and world models
 			- sample the coarse model uniformly along the ray to obtain volumetric density
 			- then use this to create a coarse probability density function for the ray and finally use this probability density to sample with finer model!
 			- Hierarchical Volume sampling
-			![[Pasted image 20260904153606.png]]
+			![[Pasted image 20260904153606.png|408]]
 
 		- NERF architecture
 			![[Pasted image 20260904153657.png|416]]
@@ -87,26 +87,71 @@ description: neural scene representations and world models
 - we can then computer color and density by blending together all Gaussians in our scene!
 - Rendering:
 	- instead of tracing a ray through scene we project or splat the 3D gaussians onto the 2D plane also called as rasterization!
-	- we can project the mean and the covariance using transformation matrices and view projection
+	- we can project the mean (of the gaussian) and the covariance (how spread the gaussian is) using transformation matrices and view projection
 	- then we only need to render 2d gaussians using standard alpha-composting (aka alpha blending)!
-	- the gaussians need to be sorted by depth along the ray to compute Ti 
+	- the gaussians need to be sorted by depth along the ray to compute Ti (transmittance - which means the fraction of light that successfully passes through all layers in front of layer i)
 	- by projecting into 2d, we assume all gaussians are non-overlapping and there is a clear order.
 	- Alpha-blending is standard CG and can be implemented highly efficiently by drawing transparent 2D gaussians on 2d screen!
+![[Pasted image 20260904221612.png|586]]
 
+- here Ti means how much light is reaching to the viewer ultimately after passing through all the gaussians in the ray! and C is the final color at the pixel which is the sum of each layer's color ci, scaled by its opacity alpha and the light that actually reached it Ti
 
+4-step method to render gaussian splatting:
+- project the 3d gaussian into 2d (splatting)
+- sorting by depth (i.e. sort the 2d gaussians by their depth along the viewing ray) which allows the transmittance Ti in the exact front-to-back order
+- calc the pixel opacity which is calc as - max opacity at center (ã) x prob density of the gaussian
+- alpha blending to get the final pixel color
 
+![[Pasted image 20260904223337.png|526]]
 
+parameters that need to be handled carefully:
+- covariance needs to be pos semi-definite
+- ã needs to be between 0 and 1
 
+How to control the number of gaussians?
 
+Adaptive Density Control:
+- for every K training steps, check if we should add or remove Gaussians
+- if ã becomes too small (below a threshold) remove the gaussian
+- add a gaussian if objects are over or under reconstructed
+	- under-reconstructed - small gaussian cannot cover the whole object (clone it and offset it by pos gradient)
+	- over-reconstructed - large gaussian covers more than the object (split it and re-position)
+
+![[Pasted image 20260904230120.png|497]]
+
+![[Pasted image 20260904230456.png|549]]
+- NeRF uses ray tracing and uses a neural network to learn the scene implicitly while Gaussian splatting uses an explicit 3D point cloud of gaussians without using a neural network
+- position, covariance, opacity, view-dependent color
+- None, gaussian params are optimized directly through backpropagation without using any NN. 
 
 4. World Models
 
+- a model that learns how the world works well enough to predict what might happen next
+- feat of world models:
+	- the curr state of the world
+	- how the world changes over time (dynamics)
+	- how the actions affect future states
+	- uncertainty about the future!
+- world models can imagine futures for planning, learning and safe-exploration
+- Neural Scene representations describes what the world looks like in a fixed scene state whereas World models can think how the world might evolve, predict possible futures, and act as a learned simulator
+- We can learn an env and generate imagined rollouts (dreams) and train an agent inside the dream!
+![[Pasted image 20260904233244.png]]
 
+World models (2018)
+- Vision - learn a latent repr using VAE
+- Memory - predict future latent state using an RNN
+- Controller - train a controller inside imagined rollouts
+limitations:
+- the RNN hidden state must simultaneously represent
+	- mem of past
+	- uncertainty about present
+	- possible future outcomes
+- this makes modelling complex and uncertain environments difficult because deterministic vector has no built-in way to model probability distribution natively 
 
-
-
-
-
+- RSSM - Recurrent State Space Models
+	- introduced in PlaNet and utilized in Dreamer (v1 to v3) - RSSMs solve this bottleneck by explicitly separating deterministic memory from stochastic uncertainty
+	- RSSM maintains dual state representation at every timestep
+	- Deterministic Latent state - 
 
 
 

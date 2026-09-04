@@ -152,7 +152,6 @@ Maximizing likelihood = Minimizing -ve log likelihood
 	- diffusion models correspond to particular choices of probability paths. Variance exploding and variance preserving diffusion models are examples of such choices!
 
 
-
 	![[Pasted image 20260904112028.png]]
 	- because diffusion models can represent multiple plausible futures instead of producing only a single pred
 	- the goal is to not just generate a plausible result, but to also faithfully reconstruct the true underlying signal
