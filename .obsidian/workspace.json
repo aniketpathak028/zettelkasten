@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/uni/adl/generative models.md",
+                "file": "content/3-Resources/uni/adl/Neural Scene Representations and World Models.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "generative models"
+              "title": "Neural Scene Representations and World Models"
             }
           }
         ]
@@ -188,6 +188,9 @@
   },
   "active": "007a3419983533e4",
   "lastOpenFiles": [
+    "content/assets/Pasted image 20260904142943.png",
+    "content/3-Resources/uni/adl/generative models.md",
+    "content/3-Resources/uni/adl/Neural Scene Representations and World Models.md",
     "content/assets/Pasted image 20260904112028.png",
     "content/assets/Pasted image 20260904102955.png",
     "content/assets/Pasted image 20260904102816.png",
@@ -198,7 +201,6 @@
     "content/assets/Pasted image 20260904002721.png",
     "content/assets/Pasted image 20260904002650.png",
     "content/assets/Pasted image 20260904002024.png",
-    "content/assets/Pasted image 20260903185017.png",
     "content/3-Resources/uni/adl/adl exam notes.md",
     "content/3-Resources/tech/ai/diffusion models/principles of diffusion models.md",
     "content/3-Resources/tech/ai/diffusion models/Deep Generative Models.md",
@@ -206,7 +208,6 @@
     "content/0-Index/learning CICD with Azure DevOps.md",
     "content/2-Areas/german/german.md",
     "content/4-Archive/icp and point cloud registration.md",
-    "content/3-Resources/uni/adl/generative models.md",
     "content/0-Index/Unbenannt.md",
     "content/3-Resources/uni/adl",
     "content/4-Archive/bcf website notes.md",
@@ -228,7 +229,6 @@
     "content/index.md",
     "content/3-Resources/research papers",
     "content/3-Resources/tech/ai/computer vision/AlexNet.md",
-    "content/3-Resources/tech/ai/computer vision/UNet.md",
     "content/2-Areas/german",
     "content/3-Resources/tech/ai/computer vision",
     "content/3-Resources/tech/iac/terraform/Unbenannt",
