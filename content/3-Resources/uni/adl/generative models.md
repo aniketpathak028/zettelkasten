@@ -138,7 +138,10 @@ Maximizing likelihood = Minimizing -ve log likelihood
 - they are equivalent only upto transformations, during optimization, however different parametrization lead to different loss landscapes, gradient magnitudes and convergence behavior
 - training and sampling are decoupled, as long as the sampler can work with learned representation, for example a noise or score estimate, different sampling strategies can be applied to the same trained model.
 
-
+- Continuous Normalizing Flows and Flow Matching
+	- we defined normalizing flows as invertible transform f with x = f(z) where z ~ p0(z)
+	- since learning a single function f is complicated we split it such that each step is invertible
+	![[Pasted image 20260904100811.png]]
 
 
 
