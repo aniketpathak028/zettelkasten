@@ -149,8 +149,14 @@ Maximizing likelihood = Minimizing -ve log likelihood
 	![[Pasted image 20260904102955.png]]
 	- Learn the vector field directly instead of using likelihood estimator or ODE solver, which turns generative modeling into a simple regression problem and generalizes diffusion models
 	- as the true vector field is unknown, we use conditional paths that provide vector fields that we can use as training targets
-	- 
+	- diffusion models correspond to particular choices of probability paths. Variance exploding and variance preserving diffusion models are examples of such choices!
 
+
+
+	![[Pasted image 20260904112028.png]]
+	- because diffusion models can represent multiple plausible futures instead of producing only a single pred
+	- the goal is to not just generate a plausible result, but to also faithfully reconstruct the true underlying signal
+	- high likelihood does not necessarily mean that a sample belongs to the target dist!
 ## Links:
 
 202609022007
