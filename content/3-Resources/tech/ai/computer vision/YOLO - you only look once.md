@@ -28,7 +28,38 @@ arxiv - https://arxiv.org/pdf/1506.02640
 	- Region proposal + classifier (RCNN)
 	![[Pasted image 20260905105633.png]]
 	- in R-CNNs the region proposal network propose several sub sections of the image that the model inspects to decide which region has the best overlap with the image, however YOLO needs just a single fwd pass!
-	- 
+
+- How could we possibly design such a system to detect objects?
+	- we could input the image and expect an output in the format like (p_obj, x, y, h, w, p_class1, p_class2) where p_obj= prob that an object is present, x,y= coordinates of the center, h= height, w= width, and p_class1= prob of class 1, and so on!
+	- but this method is not scalable because if there are multiple objects or multiple classes we need to scale this vector dimension!
+
+- How YOLO architecture works?
+	![[Pasted image 20260905112953.png]]
+
+- in yolo we divide the input image into S x S grid
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Links:
 
 202609050105
