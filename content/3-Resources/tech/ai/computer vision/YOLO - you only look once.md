@@ -56,7 +56,9 @@ Note:
 - how confidence score calc?
 ![[Pasted image 20260905125446.png]]
 
+confidence = IOU (pred, GT) x P(object)
 
+![[Pasted image 20260905132114.png]]
 
 
 
