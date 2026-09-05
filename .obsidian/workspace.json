@@ -216,10 +216,10 @@
           }
         ],
         "direction": "vertical",
-        "x": 2430,
-        "y": -32,
-        "width": 960,
-        "height": 1050,
+        "x": 855,
+        "y": 39,
+        "width": 855,
+        "height": 1073,
         "maximize": false,
         "zoom": 0
       }
@@ -227,6 +227,10 @@
   },
   "active": "007a3419983533e4",
   "lastOpenFiles": [
+    "content/assets/Pasted image 20260905105633.png",
+    "content/assets/Pasted image 20260905105325.png",
+    "content/assets/Pasted image 20260905105054.png",
+    "content/assets/Pasted image 20260905105047.png",
     "content/3-Resources/uni/adl/neural scene representations and world models.md",
     "content/assets/Pasted image 20260905015956.png",
     "content/assets/Pasted image 20260905015944.png",
@@ -237,10 +241,7 @@
     "content/assets/Pasted image 20260905002939.png",
     "content/assets/Pasted image 20260904233244.png",
     "content/assets/Pasted image 20260904230456.png",
-    "content/assets/Pasted image 20260904230120.png",
     "content/3-Resources/uni/adl/generative models.md",
-    "content/assets/Pasted image 20260904223337.png",
-    "content/assets/Pasted image 20260904221612.png",
     "content/3-Resources/uni/adl/adl exam notes.md",
     "content/3-Resources/tech/ai/diffusion models/principles of diffusion models.md",
     "content/3-Resources/tech/ai/diffusion models/Deep Generative Models.md",
