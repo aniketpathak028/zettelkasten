@@ -10,7 +10,7 @@ description: yolo - you only look once
 # yolo - you only look once
 
 arxiv - https://arxiv.org/pdf/1506.02640
-
+- original yolo paper 65k+ citations
 - real time models - can process 24-30+ fps
 - use cases:
 	- video surveillance
@@ -36,9 +36,25 @@ arxiv - https://arxiv.org/pdf/1506.02640
 - How YOLO architecture works?
 	![[Pasted image 20260905112953.png]]
 
-- in yolo we divide the input image into S x S grid
 
+1. Input and Output
 
+- in yolo we divide the input image into S x S grid where for each grid we need to predict 2 things:
+	- bounding boxes + confidence ie. (x, y, width, height, confidence score)
+	- output class probabilities (each box would have a highest class probability)
+
+Note:
+>  each grid can have multiple (B) bounding boxes and n class probabilities so that we can detect multiple objects i.e. if there are 7x7=49 grids we would have 49 * (2 x 5 + 3) outputs if each grid had 2 bounding boxes and predicted (x, y, width, height, conf) + output class prob for 3 classes
+
+- We also keep our 0 <= x, y <= 1 and 0 <= w, h <= 1 because we want to normalize these values for our NN! how?
+	- w -> w/width of image
+	- h -> h/height of image
+	- x -> (x%s)/s
+	- y -> (y%s)/s
+![[Pasted image 20260905124257.png|582]]
+
+- how confidence score calc?
+![[Pasted image 20260905125446.png]]
 
 
 
