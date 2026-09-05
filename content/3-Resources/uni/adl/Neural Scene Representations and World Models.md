@@ -148,10 +148,95 @@ limitations:
 	- possible future outcomes
 - this makes modelling complex and uncertain environments difficult because deterministic vector has no built-in way to model probability distribution natively 
 
-- RSSM - Recurrent State Space Models
+- RSSM - Recurrent State Space Models (separate memory and uncertainty)
 	- introduced in PlaNet and utilized in Dreamer (v1 to v3) - RSSMs solve this bottleneck by explicitly separating deterministic memory from stochastic uncertainty
-	- RSSM maintains dual state representation at every timestep
-	- Deterministic Latent state - 
+	- RSSM maintains dual state representation at every timestep:
+		- Deterministic state - long term memory + context
+		- Stochastic state - current state + uncertainty + multiple plausible futures
+	![[Pasted image 20260905002939.png|583]]
+
+	Training of RSSM:
+	- KL Divergence Alignment - the predicted prior distribution p is forced to closely match the inferred posterior distribution q. This ensures that when the model is dreaming in the future without observations, its pure predictions remain physically realistic!
+	- Reconstruction loss - both the reconstructed observation and the pred reward must match the real data
+
+- PlaNet - Planning in Latent Space
+	- plan directly in the latent space not in the observation space
+	- learn a latent world model using RSSM
+	- predict future latent states and rewards
+	- evaluate candidate action sequences through imagined rollouts
+	- select actions with the highest predicted reward
+	- replan at every time step using the latest observation
+
+- Latent rollouts are significantly more efficient than predicting future observations
+![[Pasted image 20260905004425.png]]
+
+- Dreamer
+	- PlaNet uses online planning via MPC - model predictive control
+	- online planning needs many imagined rollouts for every decision
+	- dreamer learns a policy and value function from imagined trajectories (training in dreams)
+	- actions are selected directly using the learned policy
+
+- Dreamer v2:
+	- discrete latent states
+	- improved training stability
+	- scales to Atari
+	- competitive with model-free RL
+- Dreamer v3
+	- robust training across domains
+	- single hyperparam config
+	- Atari, robotics, Minecraft
+	- Minecraft diamond benchmark
+
+- Limitations of RSSM:
+	- RSSM have been highly successful:
+		- efficient latent space prediction
+		- strong performance in planning and reinforcement learning
+		- PlaNet and Dreamer use RSSMs
+	- Challenges:
+		- long horizon prediction
+		- modeling highly multimodal futures
+		- scaling to increasingly complex environments
+		- exploiting advances in modern generative models
+
+![[Pasted image 20260905012028.png|440]]
+
+- World models predict the future from the past
+- Diffusion models are typically trained to generate an entire trajectory jointly
+- Future and past are treated symmetrically:
+	- no notion of causality
+
+How can diffusion models be adapted for causal prediction? because a physical world model must strictly predict the future conditioned on the past!
+- Diffusion Forcing - trains the model by assigning different noise levels to different timesteps!
+- past tokens are kept clean while future tokens receive more noise
+- this assymetry forces the model to learn causal, step-by-step future predictions
+
+
+Dreamer v4
+- scale world models using transformer arch and diffusion based sequence modeling
+- overview:
+	- transformer based world model
+	- causal sequence prediction via diffusion forcing
+	- shortcut forcing enables efficient inference
+	- improved long-horizon prediction and complex interactions
+	- enables training from large offline datasets
+
+![[Pasted image 20260905015944.png]]
+
+![[Pasted image 20260905015956.png]]
+- learn predictive model of the env that can be used to imagine future states without interacting with the real world
+- imagined trajectories are much cheaper and safer than real interactions, enabling more sample-efficient reinforcement learning
+- diffusion forcing solves the problem that Diffusion transformer models jointly predict a trajectory without considering the past state or causality, diffusion forcing enables future prediction conditioned on a known past!
+
+
+
+
+
+
+
+
+
+
+
 
 
 
