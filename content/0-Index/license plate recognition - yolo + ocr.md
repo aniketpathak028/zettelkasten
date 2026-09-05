@@ -12,7 +12,7 @@ description: building a license plate recognition using YOLO and OCR
 # License plate recognition using YOLO and OCR
 
 yolo v8n - https://platform.ultralytics.com/ultralytics/yolov8/yolov8n
-license plate datatset - https://public.roboflow.com/object-detection/license-plates-us-eu
+license plate datatset - https://universe.roboflow.com/roboflow-universe-projects/license-plate-recognition-rxg4e
 
 we would be using yolo v8n from ultralytics for this problem statement and since it is trained on COCO dataset, it does not contain license data as part of its training so we need to finetune it with a license plate dataset
 
