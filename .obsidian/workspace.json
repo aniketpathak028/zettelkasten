@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/index.md",
+                "file": "content/3-Resources/tech/ai/computer vision/YOLO - you only look once.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "YOLO - you only look once"
             }
           }
         ]
@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "7d24a31d29b9d0b6",
@@ -225,6 +226,9 @@
   },
   "active": "007a3419983533e4",
   "lastOpenFiles": [
+    "content/assets/Pasted image 20260905140739.png",
+    "content/assets/Pasted image 20260905134802.png",
+    "content/index.md",
     "content/3-Resources/tech/ai/computer vision/flow matching and diffusion models.md",
     "content/3-Resources/tech/ai/computer vision/hyperparam tuning using wandb.md",
     "content/3-Resources/tech/ai/computer vision/filters and convolutions.md",
@@ -248,7 +252,6 @@
     "content/assets/Pasted image 20260905105047.png",
     "content/3-Resources/uni/adl/neural scene representations and world models.md",
     "content/assets/Pasted image 20260905015956.png",
-    "content/assets/Pasted image 20260905015944.png",
     "content/3-Resources/tech/ai/computer vision/UNet.md",
     "content/3-Resources/uni/adl/generative models.md",
     "content/3-Resources/tech/ai/diffusion models/principles of diffusion models.md",
@@ -260,8 +263,6 @@
     "content/3-Resources/uni/adl",
     "content/3-Resources/research papers/autoencoders.md",
     "content/3-Resources/research papers/orbis.md",
-    "content/3-Resources/research papers/flow matching.md",
-    "content/3-Resources/tech/ai/Deep Q-Learning.md",
     "content/3-Resources/tech/ai/diffusion models",
     "content/3-Resources/uni/ml in health",
     "content/3-Resources/uni",

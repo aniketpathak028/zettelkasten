@@ -60,13 +60,20 @@ confidence = IOU (pred, GT) x P(object)
 
 ![[Pasted image 20260905132114.png]]
 
+- since we know each grid can produce multiple bounding boxes we always chose the one with the highest IOU
 
+> What about inference? - We do not have the GT during inference like in training!
+> ![[Pasted image 20260905134802.png]]
 
+- Confidence during training = IOU x P(object)
+- Confidence during inference = C (confidence predicted directly by the model) x P(class)
 
-
-
-
-
+Loss Function - Object detection as Regression
+- what should we penalize our network for?
+	- wrong class prediction
+	- bbox location
+	- confidence score
+![[Pasted image 20260905140739.png]]
 
 
 
