@@ -75,9 +75,6 @@ confidence = IOU (pred, GT) x P(object)
 
 
 
-
-
-
 ## Links:
 
 202609050105

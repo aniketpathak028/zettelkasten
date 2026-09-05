@@ -7,22 +7,15 @@ description: my second brain 🧠
 here I share everything I’m learning— tech, philosophy, or whatever I am currently exploring!
 ### About me
 
-I am a masters student at the [University of Freiburg](https://uni-freiburg.de/), Germany and currently pursuing my degree in Computer Science with a specialization in AI.
+I am a masters student at the [University of Freiburg](https://uni-freiburg.de/), Germany specializing in AI and Computer Vision
 
-![[me.jpeg|238]]
-
-I like exploring tech be it AI, DevOps, Backend, or even Hardware!
-
-keeping geeky things aside I also like:
-- traveling - travelled to 🇫🇷 🇮🇹 🇩🇪 🇮🇳🇨🇭 so far!
-- hiking 🏔️ - Feldberg, Titisee, Kybfelsen, Todnau and a lot more
-- working out 🏋️
-- learning new languages 🗣️ - I can speak German, English, Hindi and Bengali!
-- and I also like talking about Life and philosophy or whatever you're up to! :)
+but my current topics of interest are:
+- [[flow matching]]
+- [[diffusion models]]
+- world models
+- anomaly detection
 
 get hold of me at my email - aniketpathak028@gmail.com
-
-### Why?
 
 I mostly made this for myself as I realized my note taking was extremely poor and I kept forgetting stuff after a while.. sometimes when I did have notes they weren't organized and collectively present at the same place! The idea was to have my notes hosted somewhere so they are not just publicly available to me and others but also organized at a single place for reference. 😇
 
