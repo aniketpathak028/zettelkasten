@@ -75,6 +75,8 @@ Loss Function - Object detection as Regression
 	- confidence score
 ![[Pasted image 20260905140739.png]]
 
+- Limitations of YOLO
+![[Pasted image 20260905163725.png|488]]
 
 
 
