@@ -39,20 +39,20 @@ steps:
 		- labels
 	- data.yaml
 
-![[Pasted image 20260905183407.png]]
+![[Pasted image 20260905183407.png|507]]
 
 - 0 - class id since there is only 1 class number plate
 - 7057 training images and 2048 validation images
 - model - 130 layers with 3.01M params
 
-![[Pasted image 20260905201342.png]]
+![[Pasted image 20260905201342.png|514]]
 
 - What is OCR?
 	- OCR can be done through traditional and ML based methods
 	- Traditional OCR ex- Tesseract OCR
 	- DL based OCR - https://github.com/jaidedai/easyocr
 	
-	![[Pasted image 20260905202102.png|192]]  ![[Pasted image 20260905202026.png|262]]
+	![[Pasted image 20260905202102.png|191]]  ![[Pasted image 20260905202026.png|293]]
 
 	- inference
 
