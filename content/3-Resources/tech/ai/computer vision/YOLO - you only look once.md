@@ -79,9 +79,29 @@ Loss Function - Object detection as Regression
 ![[Pasted image 20260905163725.png|488]]
 
 
+versions of YOLO model:
+- yolo v1, v3, v8 -> 3 revolutionary models
+![[Pasted image 20260907000017.png]]
 
 
+![[Pasted image 20260907000352.png]]
 
+![[Pasted image 20260907000616.png]]
+
+- yolov2 introduced anchor boxes which solved the problem of weird aspect ratio for bounding boxes!
+- each anchor point can have 9 different anchor boxes
+![[Pasted image 20260907001115.png]]
+
+- yolov3 used residual skip connections and mult-scale predictions
+![[Pasted image 20260907001702.png]]
+
+![[Pasted image 20260907001734.png]]
+- combines different grid sizes to make prediction!
+
+- yolov8 - removed anchors, anchor free detection
+![[Pasted image 20260907002016.png]]
+
+![[Pasted image 20260907002304.png]]
 
 
 ## Links:
