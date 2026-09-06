@@ -56,21 +56,28 @@ we would be using yolo v8n from ultralytics for this problem statement and since
 
 ### inference
 
-
-
-
-
-
-
-
-
-
-
+- once we have finetuned our yolov8n model with the license plate dataset, we need to do the following steps:
+	- we process the video frame by frame, and for each frame we pass it to our trained YOLOv8n model to attain the bounding boxes of the number plates
+	- we do some image processing on these bounding boxes like bicubic resizing, grayscale conversion and otsu-thresholding to better parse our characters using easyOCR.
+	- we display the enlarged processed bounding box with a green boundary near the number plate and also display the detected number in white above it
+	- since we might misread our numberplate sometimes, we maintain a queue to store the detected number at every frame by dividing the coordinates of the bounding box by 10 since there would be very minimal movement of the car in a few frames, this way we choose the number that appears most frequently in our queue.
+	- once we have annotated all the frames in the video we stitch it back as our output video
 #### Issues:
 - YOLO specific issue - flickering effect due to occlusion, since the position of the car changes in the video, the number plate maybe sometimes visible and sometimes not visible! (need a very well trained YOLO model)
 - OCR specific issue - the OCR misreads some numbers or alphabets in the number plates when the image is pixelated, to solve this we use the following techniques:
 	- note the number plate readings for 20-30 frames and take the one that has the maximum frequency using a deque.
 	- once we get the bounding box of the license plate, increase brightness before passing to OCR.
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Links:
