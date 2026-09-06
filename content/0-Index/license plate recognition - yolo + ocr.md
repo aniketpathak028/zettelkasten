@@ -58,6 +58,12 @@ steps:
 
 
 
+#### Issues:
+- YOLO specific issue - flickering effect due to occlusion, since the position of the car changes in the video, the number plate maybe sometimes visible and sometimes not visible! (need a very well trained YOLO model)
+- OCR specific issue - the OCR misreads some numbers or alphabets in the number plates when the image is pixelated, to solve this we use the following techniques:
+	- note the number plate readings for 20-30 frames and take the one that has the maximum frequency using a deque.
+	- once we get the bounding box of the license plate, increase brightness before passing to OCR.
+
 
 ## Links:
 
