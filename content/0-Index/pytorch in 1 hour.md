@@ -49,6 +49,8 @@ model weights and biases -> float32 (standard)
 
 ![[Pasted image 20260907212919.png]]
 ![[Pasted image 20260907213121.png]]
+![[Pasted image 20260907214807.png]]
+#### making forward pass
 
 
 
