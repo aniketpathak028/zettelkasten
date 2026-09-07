@@ -52,7 +52,9 @@ model weights and biases -> float32 (standard)
 ![[Pasted image 20260907214807.png]]
 #### making forward pass
 
-
+- model's first guess
+- simple linear regression ŷ = XW + b
+- 
 
 
 
