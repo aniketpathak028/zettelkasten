@@ -54,7 +54,37 @@ model weights and biases -> float32 (standard)
 
 - model's first guess
 - simple linear regression ŷ = XW + b
-- 
+![[Pasted image 20260907235432.png]]
+![[Pasted image 20260907235546.png]]
+![[Pasted image 20260907235718.png]]
+![[Pasted image 20260907235807.png]]
+![[Pasted image 20260907235843.png]]
+![[Pasted image 20260908000056.png]]
+![[Pasted image 20260908000205.png]]
+The magic command - loss.backward()
+	- calculates the gradient of the loss wrt to our weight "W"
+	- the gradient of the loss wrt to our Bias 'b'
+
+![[Pasted image 20260908000339.png]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

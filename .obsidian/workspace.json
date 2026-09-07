@@ -35,8 +35,7 @@
               "title": "pytorch in 1 hour"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -200,20 +199,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4071034133f80f79",
+  "active": "ae7cb6864a6c523e",
   "lastOpenFiles": [
-    "content/3-Resources/uni/adl/similarity learning.md",
+    "content/assets/Pasted image 20260908012856.png",
+    "content/assets/Pasted image 20260908011933.png",
+    "content/assets/Pasted image 20260908011922.png",
+    "content/assets/Pasted image 20260908011542.png",
+    "content/assets/Pasted image 20260908011021.png",
+    "content/assets/Pasted image 20260908010957.png",
+    "content/assets/Pasted image 20260908010759.png",
+    "content/assets/Pasted image 20260908005629.png",
+    "content/assets/Pasted image 20260908005548.png",
+    "content/assets/Pasted image 20260908005054.png",
+    "content/assets/Pasted image 20260908004449.png",
     "content/0-Index/pytorch in 1 hour.md",
-    "content/assets/Pasted image 20260907214807.png",
-    "content/assets/Pasted image 20260907213121.png",
-    "content/assets/Pasted image 20260907212919.png",
-    "content/assets/Pasted image 20260907212807.png",
-    "content/assets/Pasted image 20260907212716.png",
-    "content/assets/Pasted image 20260907212629.png",
-    "content/assets/Pasted image 20260907212448.png",
-    "content/assets/Pasted image 20260907212340.png",
-    "content/assets/Pasted image 20260907211634.png",
-    "content/assets/Pasted image 20260907211546.png",
+    "content/3-Resources/uni/adl/similarity learning.md",
     "content/0-Index/building a fall detection model using Roboflow.md",
     "content/3-Resources/uni/adl/adl exam notes.md",
     "content/3-Resources/uni/adl/transfer learning and domain adaptation.md",
