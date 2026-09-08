@@ -16,7 +16,17 @@ mcp - https://modelcontextprotocol.io/introduction
 
 ![[Pasted image 20260908233812.png]]
 
+- we can use the official python sdk mcp to write mcp servers easily
+- the sdk uses decorators to define tools so instead of writing JSON schemas manually, we can use python type hints and field descriptions.
+- the sdk automatically generates the schema that claude understands
 
+## Key Benefits of the SDK Approach
+
+- No manual JSON schema writing required
+- Type hints provide automatic validation
+- Clear parameter descriptions help Claude understand tool usage
+- Error handling integrates naturally with Python exceptions
+- Tool registration happens automatically through decorators
 
 ## Links:
 
