@@ -114,8 +114,31 @@ Note:
 	- doing this on whole dataset is infeasible
 	- we need to re-compute the embeddings again during training
 
-- Online Mining
-- 
+- Online Mining - Mine triplets on the fly from each batch while training
+	- take a batch of size B
+	- look at all the possible triplets in that batch (less than B^3)
+	- select a subset of valid ones
+	- compute loss and perform back-propagation only using those
+![[Pasted image 20260908123218.png|548]]
+- each batch should contain a min number of samples of each class otherwise positive pairs will not be well-represented
+- we can construct a batch by sampling K samples for each of the C classes
+![[Pasted image 20260908123445.png]]
+- it is important because it has direct impact on the quality of solution and the convergence speed. With some triplets we cannot train at all and with others the network might collapse
+- it can lead to network collapse, as the network might shortcut learn to just output the same embedding for all points
+- when we are constrained in batch size or have huge number of classes that we cannot adequately sample and pack into a batch, such that +ve and -ve are well reflected
+
+#### beyond contrastive methods
+
+- There are 2 major problems in contrastive learning
+	- expansion:
+		- majority losses only act locally (eg the triplet loss is limited to 3 samples)
+		- severely limits the global impact of the loss.
+		- no guarantee that all similar samples end up close to each other.
+	- sampling:
+		- contrastive approaches rely strongly on sampling (convergence, optima)
+		- we want to find the most useful samples.
+
+
 
 
 
