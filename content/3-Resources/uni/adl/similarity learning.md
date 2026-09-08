@@ -136,7 +136,24 @@ Note:
 		- no guarantee that all similar samples end up close to each other.
 	- sampling:
 		- contrastive approaches rely strongly on sampling (convergence, optima)
-		- we want to find the most useful samples.
+		- we want to find the most useful samples - as some do not contribute at all
+
+- Classification
+	- we use the learned embeddings and add a linear layer and softmax to our encoder and use the categorical cross-entropy loss for training 
+	- softmax loss
+		![[Pasted image 20260908131751.png]]
+	- training using this method in a toy example like the MNIST shows us that although the classes are separable there is significant intra-class variance which means the embeddings are not discriminative enough hence this method is not very well suited for distance functions
+	- we can use Center loss:
+	![[Pasted image 20260908132343.png|581]]
+	Note:
+		- training only with a softmax loss would lead to large intra-class variance
+		- training only with centroid loss would lead to network collapse
+		- we need both
+	- Original paper suggests incorporating a PCA:
+		- perform PCA on the training embeddings
+		- transform embedding during test time using that
+		- compute cosine similarity on embeddings after the PCA
+		- could help with unconformity between both loss terms
 
 
 
