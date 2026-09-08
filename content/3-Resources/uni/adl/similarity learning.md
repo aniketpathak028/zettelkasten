@@ -130,11 +130,11 @@ Note:
 #### beyond contrastive methods
 
 - There are 2 major problems in contrastive learning
-	- expansion:
+	- expansion problem:
 		- majority losses only act locally (eg the triplet loss is limited to 3 samples)
 		- severely limits the global impact of the loss.
 		- no guarantee that all similar samples end up close to each other.
-	- sampling:
+	- sampling problem:
 		- contrastive approaches rely strongly on sampling (convergence, optima)
 		- we want to find the most useful samples - as some do not contribute at all
 
@@ -155,8 +155,15 @@ Note:
 		- compute cosine similarity on embeddings after the PCA
 		- could help with unconformity between both loss terms
 
+Center loss:
+	- solves the expansion issue - class centers pull clusters together
+	- avoids the sample mining problem:
+		- we just train with individual samples
+		- there is no need to mine pairs or triplets
+	- Inter class distance can still be small
+	- only intra-class distance is penalized 
 
-
+![[Pasted image 20260908145807.png]]
 
 
 
