@@ -165,10 +165,23 @@ Center loss:
 
 ![[Pasted image 20260908145807.png]]
 
+![[Pasted image 20260908152116.png]]
+- calculate similarity directly via the cosine similarity between embeddings
+- solves expansion issue
+- bypasses sampling problem
+- retains inter-class distance via angular margin
 
+Contrastive vs Angular Margin Methods:
+- Angular margin methods more powerful as they bypass the sampling problem
+- they largely solve the expansion problem
+- both are inherent with contrastive methods
+- however we need to know class labels (cannot be used in unsupervised or self-supervised)
+- do not react well in OOD
 
-
-
+![[Pasted image 20260908153033.png]]
+- expansion and sampling
+- project the embeddings into a hypersphere and enforce an angular margin clusters of classes
+- when we do not have labels, for OOD data
 ## Links:
 
 202609070039
