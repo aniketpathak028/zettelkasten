@@ -22,9 +22,13 @@ install:
 	- langchain-anthropic
 	- langchain-openai
 
-```python
 
-```
+Notes:
+- use uv package manager - fast python pkg manager written in rust!
+- 
+
+
+
 
 
 
