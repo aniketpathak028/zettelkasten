@@ -8,7 +8,7 @@ description: agentic-ai topics
 ---
 # agentic ai topics
 
-1. [[Langchain]]
+1. [[langchain]]
 
 
 
