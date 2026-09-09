@@ -93,7 +93,24 @@ description: transfer learning and domain adaptation
 
 > questions like these in exam! - scenario based
 
+### types of transfer learning
 
+- inductive transfer learning
+- transductive transfer learning
+- unsupervised transfer learning
+
+- inductive → labeled target, domain - same, task - diff
+    - multi-task learning → labelled src + target, simultaneously learns many tasks
+    - self-taught learning → unlabeled src, labelled target, src and target task may be diff
+    - ex- pre trained BERT for sentiment analysis, pre trained AlexNet for img segmentation
+    - benefits
+        - reduces need for large labeled dataset for target task
+        - speeds up training process
+- transductive → labeled src, domains - diff, task - same
+    - ex- sentiment analysis in english → french, synthetic → real data
+    - benefits:
+        - allows use of models in new domain without labeled data
+        - enhances generalization
 
 
 
