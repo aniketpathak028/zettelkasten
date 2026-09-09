@@ -141,10 +141,30 @@ how to remember?
 	- unsupervised (transductive) - labelled src domain and unsupervised target domain
 	- semi-supervised - some labelled data for target
 	- supervised - inductive
-- unsupervised - 
-- 
+- unsupervised - src and target has some overlap
+	- problems - src is biased towards src dist and does not perform well in target - poor generalization and overfitting! aka sample selection bias
+	- solutions:
+		1. importance sampling
+			- works when src sufficiently covers target domain
+			- give more imp to examples that represent target domain and low imp to ones representing src domain
+			- train a binary classifier c to discriminate between src and target data
+			- compute importance weight w(x) = (1-c)/c
+			- reweight or resample the src data according to w(x)
+			- train the task classifier using the reweighted or resampled data
+		2. feat alignment - Domain Adversarial Network
+			- incase src does not cover target dist
+			- the encoder encodes src data and target data
+			- we try to fool a domain classifier c -> if the samples are indistinguishable to the discriminator then the dist are aligned
+			![[Pasted image 20260910013828.png]]
 
-
+		- 2 ways to update the domain classifier:
+			- gradient reversal
+				- acts as an identity function in fwd pass
+				- in bwd pass multiplies the gradient by a neg scalar
+				- feat extractor produces indistinguishable features for the domain classifier
+				![[Pasted image 20260910014707.png]]
+			- optimize for 50-50 guessing
+				- 
 
 
 
