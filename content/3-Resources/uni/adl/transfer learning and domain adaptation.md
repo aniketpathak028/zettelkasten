@@ -129,10 +129,20 @@ how to remember?
 
 > exam tip:- determine task, domain similar, and which learning to use?
 
-![[Pasted image 20260909194137.png]]
+![[Pasted image 20260910004404.png]]
 
+- transductive learning - labelled src and unlabelled target, domains diff but sim task ex- sentiment analysis in english -> unlabelled french data!
+- self-taught - labelled target but unlabelled src data
 
-
+### domain adaptation
+- problem - src domain and target domain can differ in dist called domain shift and we must try to reduce this gap!
+- solution - domain adaptation improves performance on target domain from src domain for the same task by reducing domain shift
+- types:
+	- unsupervised (transductive) - labelled src domain and unsupervised target domain
+	- semi-supervised - some labelled data for target
+	- supervised - inductive
+- unsupervised - 
+- 
 
 
 
