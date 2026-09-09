@@ -28,6 +28,13 @@ mcp - https://modelcontextprotocol.io/introduction
 - Error handling integrates naturally with Python exceptions
 - Tool registration happens automatically through decorators
 
+
+### Resources in MCP
+- allows server to expose info that can be directly included in prompts rather than requiring tool calls to access data
+
+![[Pasted image 20260909134636.png]]
+
+
 ## Links:
 
 202609082302
