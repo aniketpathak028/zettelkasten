@@ -99,18 +99,42 @@ description: transfer learning and domain adaptation
 - transductive transfer learning
 - unsupervised transfer learning
 
-- inductive → labeled target, domain - same, task - diff
-    - multi-task learning → labelled src + target, simultaneously learns many tasks
-    - self-taught learning → unlabeled src, labelled target, src and target task may be diff
+- inductive
+	- labeled target
+	- domain - same, task - diff
+    - multi-task learning
+	    - labelled src + target
+	    - simultaneously learns many tasks and generalizes well
+    - self-taught learning
+	    - unlabeled src, labelled target
+	    - src and target task may be diff
     - ex- pre trained BERT for sentiment analysis, pre trained AlexNet for img segmentation
     - benefits
         - reduces need for large labeled dataset for target task
         - speeds up training process
-- transductive → labeled src, domains - diff, task - same
+- transductive
+	- labeled src
+	- domains - diff, task - same
     - ex- sentiment analysis in english → french, synthetic → real data
     - benefits:
         - allows use of models in new domain without labeled data
         - enhances generalization
+- unsupervised transfer learning
+	- no labels in src and target
+    - ex- [[autoencoders]] , clustering, metric learning
+    - reduces need for extensive labels, saving time and resources, improves generalization
+
+how to remember?
+![[Pasted image 20260909194049.png]]
+
+> exam tip:- determine task, domain similar, and which learning to use?
+
+![[Pasted image 20260909194137.png]]
+
+
+
+
+
 
 
 
