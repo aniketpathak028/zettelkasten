@@ -20,7 +20,7 @@ description: transfer learning and domain adaptation
     - poor performance with limited data - overfitting / under-fitting / poor generalization
     - poor domain transfer - model for one domain performs bad in other domain
     - evolving data - changes in env results in model’s degradation
-- the cycle:
+- the vicious cycle:
     - annotated data → model depl → model obsolete → data collection → annotated data
     
 ![[Pasted image 20260909161140.png]]
@@ -41,6 +41,57 @@ description: transfer learning and domain adaptation
         - train the pre-trained model on the specific target task
         - apply past knowledge from src and relearn the target domain
         - ideal when the target data is large
+- transferable knowledge - info, patterns, representations
+- types of transferable knowledge
+    - low level feat
+        - edges, color, word embedding
+        - fundamental characteristics
+    - high level semantics
+        - abstract and complex concepts
+        - images - recognizing obj or context
+        - text - understanding sentiment
+    - domain specific
+        - specific to a particular domain → improves performance on same task
+    - generic knowledge
+        - not specific to a particular task → can be transferred to a wide range of tasks and domains
+        - ex - ImageNet pre trained model - semantic seg, depth est, pose est
+    - high task sim
+        - ex - truck recog and car recog
+    - low task sim
+        - ex - speech recog and obj det
+    - high domain sim
+        - dataset with similarity
+    - low domain sim
+        - distinct datasets
+- when to use transfer learning?
+    - insufficient data
+    - limited compute
+    - time constraints
+- efficient fine tuning techniques
+    - quantization - quantize model wt to lower precision for more efficiency!
+	- Low-rank adaptation (LoRA) - freeze the original model wt and instead train so called rank decomposition matrices
+    - QLoRA - quantization + low rank adaptation
+
+![[Pasted image 20260909170522.png]]
+
+![[Pasted image 20260909171930.png]]
+
+![[Pasted image 20260909171944.png]]
+
+- initially A is a gaussian dist and B=0 making delta BA=0
+- The idea is essentially breaking down the larger d x d weight matrix into smaller matrices d x r and r x d so that the number of params that need update reduces!
+
+- initially without LoRA we need to update ⇒ d x d params
+- with LoRA we need to update ⇒ d x r + r x d << d x d when r is a small number!
+
+![[Pasted image 20260909172421.png]]
+
+![[Pasted image 20260909172531.png]]
+
+- Yes, since the domain is the same ie. medical images we can use the pre-trained model to imporve performance
+- No, this will very unlikely help as there is low domain similarity
+
+> questions like these in exam! - scenario based
 
 
 
