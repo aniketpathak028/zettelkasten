@@ -9,13 +9,13 @@ description: transfer learning and domain adaptation
 ---
 # transfer learning and domain adaptation
 
-### why?
+### why we need transfer learning and domain adaptation?
 
 - traditional DL:
     - isolated for separate tasks
     - needs large data
-    - comp expensive
-    - models are static after training
+    - computationally expensive
+    - models are static after training (the world changes)
 - challenges:
     - poor performance with limited data - overfitting / under-fitting / poor generalization
     - poor domain transfer - model for one domain performs bad in other domain
@@ -31,7 +31,7 @@ description: transfer learning and domain adaptation
 ### transfer learning
 
 - reusing the knowledge from a pre-trained model to solve a new task!
-- step-1 - pretrain the model on a related task with lot of data ex- AlexNet
+- step-1 - pretrain a model on a related task with lot of data ex- AlexNet
 - step-2- apply to target task - feat extraction or fine-tuning
     - feat-extraction - frozen model + trainable head
         - use pre-trained model to extract generic feat
@@ -55,9 +55,9 @@ description: transfer learning and domain adaptation
     - generic knowledge
         - not specific to a particular task → can be transferred to a wide range of tasks and domains
         - ex - ImageNet pre trained model - semantic seg, depth est, pose est
-    - high task sim
+    - high task similarity
         - ex - truck recog and car recog
-    - low task sim
+    - low task similarity
         - ex - speech recog and obj det
     - high domain sim
         - dataset with similarity
@@ -84,6 +84,14 @@ description: transfer learning and domain adaptation
 - initially without LoRA we need to update ⇒ d x d params
 - with LoRA we need to update ⇒ d x r + r x d << d x d when r is a small number!
 
+- Benefits of LoRA:
+	- maintains a high model quality and does not introduce and additional latency during inference!
+	- reduces storage requirements, task-switching overhead, and hardware barrier
+	- agnostic to the training objective and orthogonal to many other methods
+- Limitations:
+	- sensitive to learning rate selection and introduces new hyperparameters such as rank and alpha which require careful tuning
+	- 
+	
 ![[Pasted image 20260909172421.png]]
 
 ![[Pasted image 20260909172531.png]]
