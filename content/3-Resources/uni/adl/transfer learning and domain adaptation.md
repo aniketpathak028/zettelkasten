@@ -208,12 +208,33 @@ how to remember?
 	- minimal increase in the model capacity and computation
 	- fast adaptation and recovery
 	- minimize catastrophic forgetting and interference
-	- mainitaining plasticity
+	- maintaining plasticity
 	- maximize fwd and bwd transfer
 	- stability and plasticity dilemma
+- these points are competing against each other as maintaining perfect recall in a fixed-capacity model is impossible
+- fast adaptation competes with stabilization (stability-plasticity dilemma in the brain)
 
+- Catastrophic Forgetting
+	- use an independent model for every task (needs storage :()
+	- share parts of network structure across tasks - catastrophic forgetting
 
-
+- Continual Learning
+	- regularization based - reg terms added to balance old and new tasks
+		- weight reg 
+		- fn reg
+	- replay based - approx and recover old data dist to mitigate catastrophic forgetting
+		- experience replay
+		- generative replay
+		- feat replay
+	- optimization based - explicitly design and manipulate optimization
+		- gradient proj
+		- meta-learning
+	- architecture based - construct task specific params to mitigate inter-task interference
+		- param allocation
+		- model decomposition
+		- modular network
+	![[Pasted image 20260910234554.png]]
+	
 ## Links:
 
 202609061123
