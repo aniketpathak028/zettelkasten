@@ -31,8 +31,8 @@ description: transfer learning and domain adaptation
 ### transfer learning
 
 - reusing the knowledge from a pre-trained model to solve a new task!
-- step-1 - pretrain a model on a related task with lot of data ex- AlexNet
-- step-2- apply to target task - feat extraction or fine-tuning
+- step-1 - pre-train a model on a related task with lot of data ex- AlexNet
+- step-2 - apply to target task - feat extraction or fine-tuning:
     - feat-extraction - frozen model + trainable head
         - use pre-trained model to extract generic feat
         - train n/w on top of the model called head on the target task using these feat
@@ -126,11 +126,13 @@ description: transfer learning and domain adaptation
         - allows use of models in new domain without labeled data
         - enhances generalization
 - unsupervised transfer learning
-	- no labels in src and target
+	- unlabelled src
+	- unlabelled target
     - ex- [[autoencoders]] , clustering, metric learning
     - reduces need for extensive labels, saving time and resources, improves generalization
 
 how to remember?
+
 ![[Pasted image 20260909194049.png]]
 
 > exam tip:- determine task, domain similar, and which learning to use?
@@ -138,7 +140,7 @@ how to remember?
 ![[Pasted image 20260910004404.png]]
 
 - transductive learning - labelled src and unlabelled target, domains diff but sim task ex- sentiment analysis in english -> unlabelled french data!
-- self-taught - 
+- self-taught - type of inductive learning which leverages unlabeled data from the src domain to learn useful feat. It does not require the src and target tasks to be the same and applies the learned feat to the target task, which has labeled data
 
 ### domain adaptation
 - problem - src domain and target domain can differ in dist called domain shift and we must try to reduce this gap!
@@ -154,7 +156,7 @@ how to remember?
 			- works when src sufficiently covers target domain
 			- give more imp to examples that represent target domain and low imp to ones representing src domain
 			- train a binary classifier c to discriminate between src and target data
-			- compute importance weight w(x) = (1-c)/c
+			- compute importance weight w(x) = (1-c(src|x))/c(src|x)
 			- reweight or resample the src data according to w(x)
 			- train the task classifier using the reweighted or resampled data
 		2. feat alignment - Domain Adversarial Network
@@ -198,7 +200,6 @@ how to remember?
 	![[Pasted image 20260910175341.png]]
 	- the underlying task must remain the same while data distribution between src and target might be different
 	- a technique used in adversarial training particularly in the context of domain adaptation
-
 
 ### continual learning
 
