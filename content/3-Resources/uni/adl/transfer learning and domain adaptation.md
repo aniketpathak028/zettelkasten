@@ -138,7 +138,7 @@ how to remember?
 ![[Pasted image 20260910004404.png]]
 
 - transductive learning - labelled src and unlabelled target, domains diff but sim task ex- sentiment analysis in english -> unlabelled french data!
-- self-taught - labelled target but unlabelled src data
+- self-taught - 
 
 ### domain adaptation
 - problem - src domain and target domain can differ in dist called domain shift and we must try to reduce this gap!
@@ -179,15 +179,25 @@ how to remember?
 		- disadvantages:
 			- requires clear alignment (if the src and target are very different dist, finding a common representation may be difficult or harmful aka negative transfer)
 		3. Transferring domain style
-			- when it is hard to align feat translate between domains we learn a mapping function F (that maps src samples to target samples) and a function G (that maps target samples to source samples)
+			- when it is hard to align feat we translate between domains by learning a mapping function F (that maps src samples to target samples) and a function G (that maps target samples to source samples)
 			- steps (same can be done vice versa on target):
-				- translate labelled src data -> target with F and train the predictor on src
+				- translate labeled src data -> target with func F and train the predictor on src
 				- train the predictor on the translated dataset use G to translate target to src
 				- deploy pred in the target domain and evaluate pred on translated sample
-			
-		
-
-
+				- but how to learn G and F?
+					- we use GAN where the generator G tries to generate the src image to a target like image and the discriminator tries to distinguish between the real and the translated image, and eventually the generator gets better with training!
+				- challenges:
+					- the mapping could be just arbitrary and inconsistent due to insufficient constriaints
+					- G(x) may not preserve the semantic content of x meaning the translated image G(x) may not correspond to the original image!
+				- solution - Cyclic consistency
+					![[Pasted image 20260910175201.png]]
+				- applications:
+					- Robotics Sim2Real - robot sim <-> real robot
+					- human-robot domain adaptation - human images <-> robot images
+					- CyCADA incorporates both cycle consistency and domain adversarial training!
+	![[Pasted image 20260910175341.png]]
+	- the underlying task must remain the same while data distribution between src and target might be different
+	- 
 
 
 ## Links:
