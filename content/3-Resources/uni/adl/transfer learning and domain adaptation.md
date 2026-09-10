@@ -164,7 +164,15 @@ how to remember?
 				- feat extractor produces indistinguishable features for the domain classifier
 				![[Pasted image 20260910014707.png]]
 			- optimize for 50-50 guessing
-				- 
+				- optimize the feat extractor to make the domain classifier output probabilities close to 0.5 for both src and target domains
+				![[Pasted image 20260910122003.png]]
+				- this forces the feat extractor to produce feat that the domain classifier cannot distinguish, aligning the source and target feature distributions.
+		- advantages:
+			- simple to implement and can work well
+			- does not require src data dist to cover target data dist
+		- disadvantages:
+			- requires clear alignment
+		
 
 
 
