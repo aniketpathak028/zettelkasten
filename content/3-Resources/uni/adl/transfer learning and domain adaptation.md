@@ -249,7 +249,7 @@ how to remember?
 
 ![[Pasted image 20260911003541.png]]
 
-
+![[Pasted image 20260911005412.png]]
 
 
 
