@@ -247,6 +247,7 @@ how to remember?
 
 > Exact replay is also known as experience replay!
 
+![[Pasted image 20260911003541.png]]
 
 
 
