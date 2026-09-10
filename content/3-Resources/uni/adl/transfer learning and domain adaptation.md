@@ -202,7 +202,15 @@ how to remember?
 	- a technique used in adversarial training particularly in the context of domain adaptation
 
 ### continual learning
-
+- agent must learn over time and adapt in a non-stationary environment, where it encounters a sequence of tasks that must be learned and addressed sequentially without forgetting previously learned tasks!
+- challenges + objectives:
+	- limited access to prev data
+	- minimal increase in the model capacity and computation
+	- fast adaptation and recovery
+	- minimize catastrophic forgetting and interference
+	- mainitaining plasticity
+	- maximize fwd and bwd transfer
+	- stability and plasticity dilemma
 
 
 
