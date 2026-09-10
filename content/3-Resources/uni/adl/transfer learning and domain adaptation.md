@@ -233,8 +233,33 @@ how to remember?
 		- param allocation
 		- model decomposition
 		- modular network
-	![[Pasted image 20260910234554.png]]
 	
+	![[Pasted image 20260910234554.png]]
+- storage and catastrophic forgetting
+
+### Exercise
+
+![[Pasted image 20260911000825.png]]
+
+![[Pasted image 20260911000839.png]]
+
+![[Pasted image 20260911001556.png]]
+
+> Exact replay is also known as experience replay!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Links:
 
 202609061123
