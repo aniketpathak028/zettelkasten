@@ -90,13 +90,11 @@ description: transfer learning and domain adaptation
 	- agnostic to the training objective and orthogonal to many other methods
 - Limitations:
 	- sensitive to learning rate selection and introduces new hyperparameters such as rank and alpha which require careful tuning
-	- 
+	- struggles with complex, novel tasks, widening performance gap when compared to full fine-tuning
 	
-![[Pasted image 20260909172421.png]]
-
 ![[Pasted image 20260909172531.png]]
 
-- Yes, since the domain is the same ie. medical images we can use the pre-trained model to imporve performance
+- Yes, since the domain is the same ie. medical images we can use the pre-trained model to improve performance
 - No, this will very unlikely help as there is low domain similarity
 
 > questions like these in exam! - scenario based
@@ -181,8 +179,12 @@ how to remember?
 		- disadvantages:
 			- requires clear alignment (if the src and target are very different dist, finding a common representation may be difficult or harmful aka negative transfer)
 		3. Transferring domain style
-			- when it is hard to align feat translate between domains ie. learning a mapping function F (that maps src samples to target samples) and a function G (that maps target samples to source samples)
-			- 
+			- when it is hard to align feat translate between domains we learn a mapping function F (that maps src samples to target samples) and a function G (that maps target samples to source samples)
+			- steps (same can be done vice versa on target):
+				- translate labelled src data -> target with F and train the predictor on src
+				- train the predictor on the translated dataset use G to translate target to src
+				- deploy pred in the target domain and evaluate pred on translated sample
+			
 		
 
 
