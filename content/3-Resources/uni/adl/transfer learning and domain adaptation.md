@@ -171,7 +171,10 @@ how to remember?
 			- simple to implement and can work well
 			- does not require src data dist to cover target data dist
 		- disadvantages:
-			- requires clear alignment
+			- requires clear alignment (if the src and target are very different dist, finding a common representation may be difficult or harmful aka negative transfer)
+		3. Transferring domain style
+			- when it is hard to align feat translate between domains ie. learning a mapping function F (that maps src samples to target samples) and a function G (that maps target samples to source samples)
+			- 
 		
 
 
