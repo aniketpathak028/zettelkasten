@@ -197,7 +197,12 @@ how to remember?
 					- CyCADA incorporates both cycle consistency and domain adversarial training!
 	![[Pasted image 20260910175341.png]]
 	- the underlying task must remain the same while data distribution between src and target might be different
-	- 
+	- a technique used in adversarial training particularly in the context of domain adaptation
+
+
+### continual learning
+
+
 
 
 ## Links:
