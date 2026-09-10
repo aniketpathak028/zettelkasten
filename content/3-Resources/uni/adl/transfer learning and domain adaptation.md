@@ -145,10 +145,10 @@ how to remember?
 ### domain adaptation
 - problem - src domain and target domain can differ in dist called domain shift and we must try to reduce this gap!
 - solution - domain adaptation improves performance on target domain from src domain for the same task by reducing domain shift
-- types:
+- types of domain adaptation:
 	- unsupervised (transductive) - labelled src domain and unsupervised target domain
 	- semi-supervised - some labelled data for target
-	- supervised - inductive
+	- supervised - inductive ie. labeled target and unlabeled src
 - unsupervised - src and target has some overlap
 	- problems - src is biased towards src dist and does not perform well in target - poor generalization and overfitting! aka sample selection bias
 	- solutions:
@@ -175,10 +175,10 @@ how to remember?
 				- optimize the feat extractor to make the domain classifier output probabilities close to 0.5 for both src and target domains
 				![[Pasted image 20260910122003.png]]
 				- this forces the feat extractor to produce feat that the domain classifier cannot distinguish, aligning the source and target feature distributions.
-		- advantages:
+		- advantages of feat alignment:
 			- simple to implement and can work well
 			- does not require src data dist to cover target data dist
-		- disadvantages:
+		- disadvantages of feat alignment:
 			- requires clear alignment (if the src and target are very different dist, finding a common representation may be difficult or harmful aka negative transfer)
 		3. Transferring domain style
 			- when it is hard to align feat we translate between domains by learning a mapping function F (that maps src samples to target samples) and a function G (that maps target samples to source samples)
