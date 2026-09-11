@@ -14,16 +14,16 @@ description: '"Untitled"'
 - equation based qn (ex- how many learnable params)
 	- no grade for writing
 	- final ans matters
-- explain diff between scannet and scnacomplete - writing type
+- explain diff between scan-net and scan-complete - writing type
 	- write 2 points for 2 marks
 - fill in the blanks
-- sort thetypes (lowest to highest and vice versa)
+- sort the types (lowest to highest and vice versa)
 	- ex- 3d rep on required mem 
 - mark all that apply
 - write a line for each
 - complete the diagram
 - psuedo coding (much less probable)
-- answer in wriitng
+- answer in writing
 - descriptive answers
 - context + question
 - more of mark T/F fill in blanks, pseudo coding, 

@@ -266,7 +266,18 @@ since there is a gradient respect to every weight, gradient -> 14GB
 Optimizer - Adam tracks momentum and variance for each param so -> 2 x 14 = 28GB
 total = 56GB + activations ~ 60GB
 
+![[Pasted image 20260911130932.png]]
+![[Pasted image 20260911132326.png]]
 
+![[Pasted image 20260911131601.png]]
+
+![[Pasted image 20260911131612.png]]
+
+![[Pasted image 20260911133509.png]]
+
+![[Pasted image 20260911133913.png]]
+
+coding exercise - 
 ## Links:
 
 202609061123
