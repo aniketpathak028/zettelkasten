@@ -12,9 +12,7 @@ description: neural scene representations and world models
 1. Novel view synthesis
 
 	- problem - given a set of images with calibrated camera poses.
-	- train a scene representation aloowing us to easily
-	- predict a new image of the scene using an unseen target camera pose.
-
+	- train a scene representation allowing us to easily predict a new image of the scene using an unseen target camera pose.
 	- application - entertainment - AR/VR, real world perception, simulating novel scenarios - autonomous driving
 
 	- how to obtain calibrated camera poses?
@@ -23,8 +21,7 @@ description: neural scene representations and world models
 	![[Pasted image 20260904142943.png|486]]
 
 	- a calibrated camera pose contains everything needed to project 3D points into the image which includes the camera's position, orientation, and typically its intrinsic parameters such as focal length.
-	- it tells where the image was taken from, by allowing us to relate observations across different views and reason about the 3D structure of the scene
-	- hardly, as a single image only provides  a part of the scene and limited geometric info!
+	- it tells where the image was taken from, by allowing us to relate observations across different views and reason about the 3D structure of the scene hardly, as a single image only provides a part of the scene and limited geometric info!
 
 2. Neural Radiance Fields (NeRFs)
 	- we cast rays into the scene from the camera ex - 1 ray per pixel using a pinhole camera model
@@ -226,20 +223,6 @@ Dreamer v4
 - learn predictive model of the env that can be used to imagine future states without interacting with the real world
 - imagined trajectories are much cheaper and safer than real interactions, enabling more sample-efficient reinforcement learning
 - diffusion forcing solves the problem that Diffusion transformer models jointly predict a trajectory without considering the past state or causality, diffusion forcing enables future prediction conditioned on a known past!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 5. Applications
 
