@@ -245,20 +245,26 @@ how to remember?
 
 ![[Pasted image 20260911001556.png]]
 
-> Exact replay is also known as experience replay!
+> learn more on this regularization based methods
+> exact replay is also known as experience replay
 
 ![[Pasted image 20260911003541.png]]
 
 ![[Pasted image 20260911005412.png]]
 
+![[Pasted image 20260911114055.png]]
 
+![[Pasted image 20260911114120.png]]
 
+![[Pasted image 20260911114800.png]]
 
+![[Pasted image 20260911115459.png]]
 
-
-
-
-
+Note:
+1 byte = 8 bits -> 7B model in 16 bits -> 7 billion x 2 bytes = 14GB
+since there is a gradient respect to every weight, gradient -> 14GB
+Optimizer - Adam tracks momentum and variance for each param so -> 2 x 14 = 28GB
+total = 56GB + activations ~ 60GB
 
 
 ## Links:
