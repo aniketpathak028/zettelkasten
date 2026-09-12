@@ -65,6 +65,7 @@ description: multi modal deep learning
 
 ### feature fusion
 
+![[Pasted image 20260912214533.png]]
 
 
 
