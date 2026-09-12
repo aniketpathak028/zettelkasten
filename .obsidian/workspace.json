@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/uni/adl/Untitled.md",
+                "file": "content/3-Resources/uni/adl/multimodal deep learning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "multimodal deep learning"
             }
           }
         ]
@@ -187,22 +187,21 @@
   },
   "active": "cd5683968df0437a",
   "lastOpenFiles": [
+    "content/3-Resources/uni/adl/neural scene representations and world models.md",
+    "content/3-Resources/uni/adl/similarity learning.md",
+    "content/3-Resources/uni/adl/transfer learning and domain adaptation.md",
+    "content/3-Resources/uni/adl/multimodal deep learning.md",
     "content/assets/Pasted image 20260912152001.png",
     "content/assets/Pasted image 20260912151745.png",
     "content/assets/Pasted image 20260912151632.png",
     "content/assets/Pasted image 20260912143515.png",
     "content/assets/Pasted image 20260912143451.png",
     "content/assets/Pasted image 20260912140940.png",
-    "content/3-Resources/uni/adl/similarity learning.md",
-    "content/3-Resources/uni/adl/Untitled.md",
     "content/3-Resources/uni/adl/generative models.md",
-    "content/3-Resources/uni/adl/neural scene representations and world models.md",
-    "content/3-Resources/uni/adl/transfer learning and domain adaptation.md",
     "content/assets/Pasted image 20260911133913.png",
     "content/assets/Pasted image 20260911133509.png",
     "content/assets/Pasted image 20260911132326.png",
     "content/assets/Pasted image 20260911131612.png",
-    "content/assets/Pasted image 20260911131601.png",
     "content/3-Resources/uni/adl/adl exam notes.md",
     "content/3-Resources/research papers/autoencoders.md",
     "content/0-Index/autoencoder.md",
