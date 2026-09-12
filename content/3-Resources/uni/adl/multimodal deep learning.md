@@ -53,7 +53,8 @@ description: multi modal deep learning
 - early fusion - common in transformer based arch where one modality is transformed to match another modality
 - hybrid fusion - at diff stages
 
-#### imp to understand the diff:
+#### imp to understand the diff
+
 - multimodal fusion - learn a shared representation capturing interactions across modalities, producing a unified output
 - multimodal coordination - learn a separate per-modality representation that are aligned with each other ex- used for cross modal retrieval
 
@@ -67,6 +68,53 @@ description: multi modal deep learning
 
 ![[Pasted image 20260912214533.png]]
 
+![[Pasted image 20260913001946.png]]
+
+![[Pasted image 20260913002246.png]]
+
+![[Pasted image 20260913002407.png]]
+
+- higher order fusion
+    - we can already make unimodal + bimodal + trimodal terms using fusion but can we add higher-order interaction terms like - xa^2 + xb^2 etc
+    - we could but it would be computationally expensive
+    - better way - fuse all features into a single feature vector → f = (1, z1, z2, z3...) and multiply it P times to get P-modal terms → F = f.f.f.f.f… P times
+    - ex - if we have a feat vector of 100 feat and we want P=5 we would have 100^5 elements in the matrix which is un-computable hence we never compute it but use a low rank tensor network W to contract it into a smaller more useful matrix Z
+    - how can we model highly non-linear interactions?
+        - using neural networks by concatenating feat and letting the n/w learn how to fuse them! y’ = f((Xa, Xb,...))
+
+![[Pasted image 20260913003748.png]]
+
+- tensor fusion is a combination of unimodal and bimodal parts, hence combines additive and bilinear fusion
+- we can compute an attention weight maybe based on a neural network
+
+### Vision and Language - Early and BERT like models
+
+- early models for vqa used an LSTM to process the text and a CNN to process the image finally having 1024 FC feature representation which was then element wise multiplied (fusion) to predict the final softmax prob!
+- FiLM - **Feature wise Linear Modulation** modulated the output of each layer of one modality conditioned on the other modality ex- the text is processed by a GRU type RNN which helps train a gamma and a beta params that are used by the CNN layers
+- BERT - **Bidirectional Encoder Representations from Transformers** is used primarily as a text encoder in various NLP tasks and is pre-trained with 2 self-supervised objectives, and fine-tuned on downstream tasks. No human annotated data is needed and it allows for training on vast unlabelled datasets
+- extending BERT to vision and language?
+	- how to encode images? (Region features, CNN features, linear projection)
+	- how to model interactions? (single or dual stream)
+- BERT + Vision - VilBERT
+	- ViLBERT (Vision and Language BERT) - Region features (Faster RCNN) + Dual stream
+	- uses self-attention for unimodal refinement
+	- uses cross-modal attention for multimodal interactions - use Q from one modality and V, K from other modality
+- BERT + Vision - UNITER
+	- UNITER - Universal Image-Text Representation - Region features (Faster R-CNN) + Single stream
+	- self attention on concatenated visual and language tokens allows for multi-modal interactions
+	- CONS- region feat extractors are slow takes around 900ms, trained on a fixed set of classes and lose all context information
+- BERT + Vision - Pixel-BERT
+	- replaces region features with CNN features (ResNet or ResNeXt) + Single stream.
+	- random sampling of pixels for computation reduction and semantic reasoning.
+- BERT + Vision - ViLT
+	- ViLT (Vision and Language Transformer) - Linear projection of patches (ViT) + Single stream. Linear projection drastically decreases runtime with similar performance
+		![[Pasted image 20260913013354.png]]
+
+![[Pasted image 20260913013405.png|563]]
+
+- The main difference lies in the way the images are encoded and tokenized (region based, CNN, linear proj) and the way multimodal interactions are performed (single vs dual stream)
+- we take queries from one modality, keys and values from other modality
+- Multimodal masked language modeling, image-text matching
 
 
 
