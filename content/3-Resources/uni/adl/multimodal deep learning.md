@@ -116,6 +116,19 @@ description: multi modal deep learning
 - we take queries from one modality, keys and values from other modality
 - Multimodal masked language modeling, image-text matching
 
+### Vision and Language - Contrastive and Generative Models
+
+- Can we model multimodal interactions without any fusion layer?
+	- yes using Contrastive Learning (multimodal coordination) to learn a joint embedding space
+- CLIP - Contrastive Language Image Pretraining
+	- combination of GPT2 for texts and ViT or ResNet for images
+	- Large training dataset - new dataset with 400M (image, text) pairs, compared to 15M of previous datasets
+	- trained with contrastive loss - InfoNCE due to which it can classify images into classes that were never used during training
+	- inference - zero-shot image classification
+	- generalizes much better
+- FLAVA - combines contrastive and masked pre-training
+	- image-text pairs, unpaired images, unpaired text
+- SimVLM - Simple Visual Language Model 
 
 
 ## Links:
