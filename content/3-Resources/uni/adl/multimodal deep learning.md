@@ -187,12 +187,33 @@ advantage of including unimodal training data in multimodal models:
 	- 3D region-based extractor for point cloud, and BERT for text, both frozen
 	- single-stream transformer decoder for multimodal fusion
 	- supervised training - grounding, classification, and text generation
-- Multimodal-DETR
+- Multimodal DETR
 	- input fusion - attach image info (Color or Feature) to each point
 	- intermediate fusion - extract features separately, convert them in a common frame - 3D, Bird's Eye View, or Perspective View and fuse them
-	- object query fusion - 
+	- object query fusion - queries are first refined using one modality and successively using the other modality. No need to convert feat in a common frame ex- CMT - Cross modal transformer
+	- CMT - object query fusion for camera and LiDAR
+		- avoid sequential decoders by including both BEV and PV projection of object queries' 3D position during positional encoding (PE) step
+	- OneLLM - One model to rule them all
+		- combines frozen encoder (CLIP) and frozen LLM with modality specific tokenizers and unified proj module to support eight different modalities with a single model
+		- challenge - due to the greatly unbalanced dataset OneLLM is trained in multiple stages on the X-text alignment task - Stage 1 (image), Stage 2 (video, audio and point cloud), and stage 3 (depth, normal map, IMU and fMRI)
+		- examples from prev stages are included to avoid catastrophic forgetting
+	- Multi-Modal graph learning
+		- multi-modal graph learning is an instance of heterogeneous graph learning.
+		- The main challenge is how to connect multiple modalities with one another to form meta graphs that abstract while still being descriptive wrt the original modality
 
+![[Pasted image 20260913223156.png]]
 
+- by using classical input fusion (via projection) or intermediate fusion
+- object-query fusion - fuse on object level via query and adapted decoder transformer
+
+- use multi-stage training strategies
+
+- drop tokens randomly like VATT (or use a more efficient transformer from lecture 3)
+
+### applications
+- RT-2-X is a BERT+Vision-style model that processes robotic observations with task instructions to predict the next action. RT-2-X  is trained on (a subset) of Open X-Embodiment
+- CrossCLR is a clip style contrastive learning for a video and language cross-modal representation. Improves negative mining to ignore false negatives
+- AdapNet++ fuses feat map from modality-specific streams at different layers. self-supervised model adaptation (SSMA) fusion block concatenates the feat maps and re-weights them using an attention mechanism
 ## Links:
 
 202609121311
