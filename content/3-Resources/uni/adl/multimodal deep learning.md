@@ -95,20 +95,29 @@ description: multi modal deep learning
 - extending BERT to vision and language?
 	- how to encode images? (Region features, CNN features, linear projection)
 	- how to model interactions? (single or dual stream)
-- BERT + Vision - VilBERT
-	- ViLBERT (Vision and Language BERT) - Region features (Faster RCNN) + Dual stream
-	- uses self-attention for unimodal refinement
-	- uses cross-modal attention for multimodal interactions - use Q from one modality and V, K from other modality
-- BERT + Vision - UNITER
-	- UNITER - Universal Image-Text Representation - Region features (Faster R-CNN) + Single stream
-	- self attention on concatenated visual and language tokens allows for multi-modal interactions
-	- CONS- region feat extractors are slow takes around 900ms, trained on a fixed set of classes and lose all context information
-- BERT + Vision - Pixel-BERT
-	- replaces region features with CNN features (ResNet or ResNeXt) + Single stream.
-	- random sampling of pixels for computation reduction and semantic reasoning.
-- BERT + Vision - ViLT
-	- ViLT (Vision and Language Transformer) - Linear projection of patches (ViT) + Single stream. Linear projection drastically decreases runtime with similar performance
+- BERT + Vision 
+	- ViLBERT
+		- ViLBERT (Vision and Language BERT) - Region features (Faster RCNN) + Dual stream
+		- uses self-attention TRM for unimodal refinement
+		- uses cross-modal attention Co-TRM for multimodal interactions 
+			- use Q from one modality and V, K from other modality
+	 - UNITER
+		- UNITER (Universal Image-Text Representation) - Region features (Faster R-CNN) + Single stream
+		- self attention on concatenated visual and language tokens allows for multi-modal interactions
+		- CONS- region feat extractors are slow takes around 900ms, trained on a fixed set of classes and lose all context information
+	- Pixel-BERT
+		- replaces region features with dense CNN features (ResNet or ResNeXt) + Single stream.
+		- random sampling of pixels for computation reduction and semantic reasoning.
+	- ViLT
+		- ViLT (Vision and Language Transformer) - Linear projection of patches (ViT) + Single stream. 
+		- Linear projection drastically decreases runtime with similar performance.
+		- modal-type embeddings for separate modals
+		
 		![[Pasted image 20260913013354.png]]
+
+- Pre-training objectives - How to train a Vision BERT model?
+	- Multimodal MLM objective - randomly mask tokens and predict them with the aid of unmasked text and visual tokens
+	- Image-Text Matching - predict if the sentence and the image are related
 
 ![[Pasted image 20260913013405.png|563]]
 
@@ -119,16 +128,20 @@ description: multi modal deep learning
 ### Vision and Language - Contrastive and Generative Models
 
 - Can we model multimodal interactions without any fusion layer?
-	- yes using Contrastive Learning (multimodal coordination) to learn a joint embedding space
+	- yes using Contrastive Learning (multimodal coordination) by aligning the feat representations in a shared representation space aka joint embedding space
 - CLIP - Contrastive Language Image Pretraining
 	- combination of GPT2 for texts and ViT or ResNet for images
 	- Large training dataset - new dataset with 400M (image, text) pairs, compared to 15M of previous datasets
 	- trained with contrastive loss - InfoNCE due to which it can classify images into classes that were never used during training
-	- inference - zero-shot image classification
-	- generalizes much better
+	- inference - zero-shot image classification (calculates cosine sim btw image embeddings and all candidate text label embeddings)
+	- generalizes much better than ResNet101 on various kinds of datasets like ImageNet-R, ImageNet-A etc.
 - FLAVA - combines contrastive and masked pre-training
-	- image-text pairs, unpaired images, unpaired text
-- SimVLM - Simple Visual Language Model 
+	- input -> image-text pairs, unpaired images, unpaired text
+	- multi-domain joint pretraining - global contrastive, MMM, MIM, MLM
+	- output -> Visual recognition, Language understanding, Multimodal reasoning
+- SimVLM - Simple Visual Language Model
+	- generative
+	- PrefixLM loss - given an image and the start of a sentence, predict how to continue the sentence (similar to autoregressive)
 
 
 ## Links:
