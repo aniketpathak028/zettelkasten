@@ -137,13 +137,17 @@ description: multi modal deep learning
 	- generalizes much better than ResNet101 on various kinds of datasets like ImageNet-R, ImageNet-A etc.
 - FLAVA - combines contrastive and masked pre-training
 	- input -> image-text pairs, unpaired images, unpaired text
-	- multi-domain joint pretraining - global contrastive, MMM, MIM, MLM
+	- multi-domain joint pre-training - global contrastive, MMM, MIM, MLM
 	- output -> Visual recognition, Language understanding, Multimodal reasoning
 - SimVLM - Simple Visual Language Model
 	- generative
 	- PrefixLM loss - given an image and the start of a sentence, predict how to continue the sentence (similar to autoregressive models)
 - Flamingo
-	- Frozen vision encoder (CLIP) used to modulate a frozen LLM 
+	- Frozen vision encoder (CLIP) used to modulate a frozen LLM
+	- the adapters are trained using a gated cross attention generative loss
+	- the overall system is trained using auto-regressive training objective
+
+
 
 ## Links:
 
