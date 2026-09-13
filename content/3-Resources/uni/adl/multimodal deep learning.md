@@ -141,8 +141,9 @@ description: multi modal deep learning
 	- output -> Visual recognition, Language understanding, Multimodal reasoning
 - SimVLM - Simple Visual Language Model
 	- generative
-	- PrefixLM loss - given an image and the start of a sentence, predict how to continue the sentence (similar to autoregressive)
-
+	- PrefixLM loss - given an image and the start of a sentence, predict how to continue the sentence (similar to autoregressive models)
+- Flamingo
+	- Frozen vision encoder (CLIP) used to modulate a frozen LLM 
 
 ## Links:
 
