@@ -147,6 +147,50 @@ description: multi modal deep learning
 	- the adapters are trained using a gated cross attention generative loss
 	- the overall system is trained using auto-regressive training objective
 
+How modern VLMs work?
+
+- Pre-trained image encoder (often CLIP) - possibly frozen
+- visual feat -> (proj layer or image tokenizer) -> tokens that can be processed by language model
+- decoder only single-stream transformer trained using a generative loss
+
+Lessons:
+- image encoder has the highest impact
+- number of visual tokens and image resolution matters more while the type of VL connector has little effect
+- careful mixture of captioned images, interleaved image-text and text-only data required to balance multimodal and text-only performance
+
+![[Pasted image 20260913204359.png]]
+
+advantages of contrastive cross-modal pre-training:
+- strong 0 or few-short capabilities
+- can align representations without explicit fine-grained labels (or pre-training)
+- modularity - we can employ already pre-trained encoders and use additional unimodal data for training
+
+advantage of including unimodal training data in multimodal models:
+- we are not restricted to aligned pairs - we can leverage significantly more training data and scale model more easily
+- large unimodal datasets often cover broader domains and dist than paired multimodal datasets
+- additional unimodal data can acts as a form of regularization and improve generalization
+
+### Beyond images and text - Towards Arbitrary Modalities
+
+- VideoBERT
+	- similar to Visual language BERTs
+	- pre-trained frozen video encoder + BERT (Single stream)
+	- large dataset - 23000 hrs of youtube cooking videos
+	- text extractor with automatic speech recognition
+	- language and video masked modelling + video-text matching
+	- tasks - action classification, text-to-video generation, future forecasting 
+- Video, Language, Audio - VATT
+	- tokenize raw input using linear projections
+	- contrastive learning - compare cosine similarity between paired inputs in intermediate video-audio and video-text common space
+	- DropToken - randomly drop tokens for reduced computation
+- UniT3D - Point cloud and Language
+	- 3D region-based extractor for point cloud, and BERT for text, both frozen
+	- single-stream transformer decoder for multimodal fusion
+	- supervised training - grounding, classification, and text generation
+- Multimodal-DETR
+	- input fusion - attach image info (Color or Feature) to each point
+	- intermediate fusion - extract features separately, convert them in a common frame - 3D, Bird's Eye View, or Perspective View and fuse them
+	- object query fusion - 
 
 
 ## Links:
