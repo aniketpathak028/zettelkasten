@@ -82,10 +82,13 @@ for all the terms that are present in the autograd graph that pytorch has built!
 
 ### torch.nn
 
+1. torch.nn.Linear
+![[Pasted image 20260914185826.png]]
 
 
+![[Pasted image 20260914185933.png]]
 
-
+![[Pasted image 20260914190042.png]]
 
 
 
