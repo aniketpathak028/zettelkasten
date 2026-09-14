@@ -66,6 +66,7 @@ Reduction - any operation that reduces a tensor to a smaller number of elements 
 The magic command - loss.backward()
 	- calculates the gradient of the loss wrt to our weight "W"
 	- the gradient of the loss wrt to our Bias 'b'
+for all the terms that are present in the autograd graph that pytorch has built!
 
 ![[Pasted image 20260908000339.png]]
 
