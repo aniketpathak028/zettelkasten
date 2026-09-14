@@ -1,5 +1,5 @@
 ---
-title: pytorch in 1 hour
+title: pytorch basics
 draft: false
 tags:
   - pytorch
