@@ -70,14 +70,17 @@ for all the terms that are present in the autograd graph that pytorch has built!
 
 ![[Pasted image 20260908000339.png]]
 
+## gradient descent
 
+![[Pasted image 20260914174716.png]]
 
+![[Pasted image 20260914174834.png]]
 
+![[Pasted image 20260914175022.png]]
 
+![[Pasted image 20260914175040.png]]
 
-
-
-
+### torch.nn
 
 
 
