@@ -19,7 +19,8 @@ description: understanding the math behind pytorch
 .device -> where the tensor lives. cpu or cuda (GPU)
 .dtype -> the data type of the numbers. The default is float32 (because of backprop and gradients)
 
-model weights and biases -> float32 (standard)
+model weights and biases must be a float32 (standard)
+data that represents categories or counts can be integers
 
 #### Autograd - Automatic Differentiation
 
