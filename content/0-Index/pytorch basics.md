@@ -36,11 +36,12 @@ data that represents categories or counts can be integers
 
 ![[Pasted image 20260907212340.png]]
 
-- for @ multiplication m1 col = m2 rows
+- for @ multiplication m1 col = m2 rows - used for neural networks
 ![[Pasted image 20260907212448.png]]
 
 - when building a linear layer always use @ -> y = X@W + b
 
+Reduction - any operation that reduces a tensor to a smaller number of elements ex- sum(), mean(), max() etc.
 #### dim arg
 
 ![[Pasted image 20260907212629.png]]
