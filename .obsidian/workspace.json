@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/uni/adl/graph neural networks.md",
+                "file": "content/1-Projects/DevSecOps - 3 tier end-to-end DevSecOps implementation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "graph neural networks"
+              "title": "DevSecOps - 3 tier end-to-end DevSecOps implementation"
             }
           }
         ]
@@ -187,6 +187,8 @@
   },
   "active": "cd5683968df0437a",
   "lastOpenFiles": [
+    "content/3-Resources/uni/adl/graph neural networks.md",
+    "content/1-Projects/DevSecOps - 3 tier end-to-end DevSecOps implementation.md",
     "content/assets/Pasted image 20260915171040.png",
     "content/assets/Pasted image 20260915130608.png",
     "content/assets/Pasted image 20260915125711.png",
@@ -197,9 +199,7 @@
     "content/assets/Pasted image 20260915032403.png",
     "content/assets/Pasted image 20260915032338.png",
     "content/assets/Pasted image 20260915031948.png",
-    "content/assets/Pasted image 20260915031754.png",
     "content/0-Index/pytorch basics.md",
-    "content/3-Resources/uni/adl/graph neural networks.md",
     "content/0-Index/building a fall detection model using Roboflow.md",
     "content/0-Index/autoencoder.md",
     "content/0-Index/learning CICD with Azure DevOps.md",
