@@ -119,7 +119,7 @@ transformers:
 		- it is observed that most of the activations in dense 3d cnns are near the surface so OctNet introduces:
 		    - hybrid grid-octree data structure - restrict max depth of an octree to 3
 		    - efficient convolution - avoid unnecessary calc on empty space
-		    - pooling + unpooling - pool reduces spat res by 2 long each axis
+		    - pooling + unpooling - pool reduces spat res by 2 along each axis
 		- performance
 		    - similar to dense at same resolution
 		    - can use high res due to less mem usage
