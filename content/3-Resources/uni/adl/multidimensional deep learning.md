@@ -125,7 +125,23 @@ transformers:
 		    - can use high res due to less mem usage
 		    - high res → high acc
 	![[Pasted image 20260917160055.png]]
-	
+
+	- 3D Generative Voxel CNN - Octree Generating Networks
+		- given an image of an object predict its shape
+		- use an encoder-decoder architecture
+		- decoder gradually refines rough estimated low-resolution shape to a higher resolution
+		- for every voxel the CNN predicts whether it is occupied, empty, or partially occupied
+		- if a voxel is partially occupied, subdivide it further
+![[Pasted image 20260917170439.png]]
+
+Convolutions on Hierarchical 3D CNNs:
+- pos
+	- Hierarchies can reduce the mem and time complexity
+	- Allows 3D CNNs on higher resolution, which leads to better performance
+- neg
+	- performance at the same resolution can be reduced because feature maps are not at high resolution everywhere
+	- still have computation over empty voxels
+
 ### Sparse CNNs
 
 
