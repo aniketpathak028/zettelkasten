@@ -142,6 +142,8 @@ Convolutions on Hierarchical 3D CNNs:
 	- performance at the same resolution can be reduced because feature maps are not at high resolution everywhere
 	- still have computation over empty voxels
 
+![[Pasted image 20260917180521.png]]
+
 ### Sparse CNNs
 
 
