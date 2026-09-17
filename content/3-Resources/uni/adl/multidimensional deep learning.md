@@ -144,6 +144,7 @@ Convolutions on Hierarchical 3D CNNs:
 
 ![[Pasted image 20260917180521.png]]
 
+
 ### Sparse CNNs
 
 
@@ -157,7 +158,9 @@ Convolutions on Hierarchical 3D CNNs:
 
 
 
-
+things to study:
+- java microservices
+- k8s, terraform, devops and devsecops
 
 
 
