@@ -52,6 +52,33 @@ transformers:
 
 ### 3D Voxel CNNs
 
+- volumetric grids:
+	- reg grid in 3D space stored as 3D array - H x W x D
+	- entry in the 3D array is called a voxel
+	- each voxel stores some information (feature)
+- types of vol grids:
+	- explicit
+		- occupancy grid - either the voxel is occupied or free (1 or 0)
+		- ternary grid - occupied, free or unknown
+	- implicit
+		- distance fields - voxel stores dist to nearest surface
+		- signed distance fields - signed dist to nearest surface
+			- pos dist in front of surface (outside obj)
+			- neg dist behind surface (inside obj)
+- voxelization - convert continuous geometric info into discrete grid
+	- convert a point cloud or mesh into a vol grid
+	- voxel occupied if there is at least one point within the voxel
+	- point feat within voxel can be pooled or extracted with small network - mean or max pool using PointNet!
+	- ex- VoxNet (point cloud -> occupancy grid -> convolutions -> classification) uses 3D CNN
+		![[Pasted image 20260917144903.png|324]]
+
+- CNN complete - 3D shape completion
+	- uses prior for 3D completion of the partial input
+	![[Pasted image 20260917145012.png]]
+
+- ScanNet - semantic segmentation
+
+![[Pasted image 20260917145141.png]]
 
 
 ### Hierarchical 3D Voxel CNNs
