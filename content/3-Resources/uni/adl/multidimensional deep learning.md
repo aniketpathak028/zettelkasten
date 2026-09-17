@@ -35,8 +35,8 @@ transformers:
 
  WaveNet 
  - ip - all prev generated audio samples, predicts - the next sample conditioned on a text
- - uses Causal conv to prevent future samples from being used
- - uses dilated conv to enable a very large receptive field!
+ - uses causal convolution to prevent future samples from being used
+ - uses dilated convolution to enable a very large receptive field
 
 - 3D tasks
     - shape classification: classify the shape of the object - chair, aeroplane, laptop etc (use ShapeNet)
@@ -88,7 +88,7 @@ transformers:
 	- coarse to fine prediction enables high spatial context and high resolution
 	![[Pasted image 20260917152956.png]]
 
-- conclusions:
+- conclusions about 3D Voxel CNNs:
 	- pos
 		- regular grid is simple - 2D network can easily be extended to 3D
 		- can encode free space
