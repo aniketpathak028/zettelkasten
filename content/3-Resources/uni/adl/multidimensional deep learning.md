@@ -74,17 +74,58 @@ transformers:
 
 - CNN complete - 3D shape completion
 	- uses prior for 3D completion of the partial input
-	![[Pasted image 20260917145012.png]]
+	![[Pasted image 20260917145012.png|583]]
 
 - ScanNet - semantic segmentation
 
-![[Pasted image 20260917145141.png]]
+![[Pasted image 20260917145141.png|607]]
+- computationally expensive because the network runs fwd pass on overlapping chunks repetitively
 
+- ScanComplete
+	- fully convolutional - one fwd pass to make the prediction for the whole scene
+	- trained on crops
+	- works on arbitrary sized scenes due to spatial invariance of CNNs
+	- coarse to fine prediction enables high spatial context and high resolution
+	![[Pasted image 20260917152956.png]]
 
+- conclusions:
+	- pos
+		- regular grid is simple - 2D network can easily be extended to 3D
+		- can encode free space
+		- can encode unknown space
+		- can encode distance fields (or other higher-order feat)
+	- neg
+		- high memory complexity
+		- high time complexity
+		- need high resolution to capture fine details
+
+![[Pasted image 20260917153925.png]]
+
+- ternary grid - voxel stores if it is occupied, free or unknown
+- signed dist field - voxel stores the signed dist to the nearest surface
+
+- the gradient in the dist field points to the surface so the network has direct knowledge of where the surface lies, and due to the sign also whether a point is in front of or behind a surface
 ### Hierarchical 3D Voxel CNNs
 
-
-
+- curse of dimensionality - volumetric grids:
+	- % of occupancy gets smaller with increasing resolution
+	- inefficient as most voxels are unoccupied in the volume
+	- very high memory usage to store the structure with high resolution
+- solution - Heirarchical Volumetric Representations or Octree
+	- partitions 3D space recursively into cubes called octants and saves memory by dividing the space adaptively, so the non occupied regions can remain coarse while the occupied regions could be of finer resolution
+	- however accessing indices in Octree is complicated as compared to volume grids because of its tree structure!
+	- 3D Voxel CNN - OctNet
+			![[Pasted image 20260917160242.png]]
+		- it is observed that most of the activations in dense 3d cnns are near the surface so OctNet introduces:
+		    - hybrid grid-octree data structure - restrict max depth of an octree to 3
+		    - efficient convolution - avoid unnecessary calc on empty space
+		    - pooling + unpooling - pool reduces spat res by 2 long each axis
+		- performance
+		    - similar to dense at same resolution
+		    - can use high res due to less mem usage
+		    - high res → high acc
+	![[Pasted image 20260917160055.png]]
+	
 ### Sparse CNNs
 
 
