@@ -205,17 +205,111 @@ Convolutions on Hierarchical 3D CNNs:
 	- so for K=5 and N=2 -> S2 = 1 + 2.(5-1) = 1 + 8 = 9 -> 9 * 9 = 81 
 ### Point Based Networks
 
+- set of 3d points P where each point has additional features - color, reflectivity etc
+- issue - irregular variable density
+- scanning devices can produce point clouds ex- LIDAR and RGB-D Camera
+- Invariances:
+    - point permutation invariance - order of the set does not influence predictions
+    - spatial transformation invariance - rigid transformation (rotation, translation) should not influence predictions
+    - sampling invariance - the process of sampling should not influence predictions but only the underlying geometry!
+- PointNet (Vanilla)
+    - takes point cloud as input - 2d array
+    - can perform - classification, part segmentation or semantic segmentation
+    - MLP h transforms points to a high dim feat space
+    - max pooling g aggregates all points features usually it is the max pooling fn
+    - MLP gamma aggregates pooled features and classifies the point cloud
+    - iff g is symmetric then the network is permutation invariant!
+    - symmetic fn - for every input permutation the output remain same! ex - sum, add, mean, min, max etc.
+![[Pasted image 20260918143541.png]]
 
+- Spatial Transformation Invariance: Spatial Transformer Network
+    - make the network spatially invariant using T-Net, it creates a 3 x 3 matix that when multiplied with the input point cloud, we get the transformed point cloud!
+    - a regularization loss is added to make the transform matrix T close to orthogonal L_reg = || I - TT^T||^2
+    
+![[Pasted image 20260918144245.png]]
 
+- PointNet classification and segmentation networks:
+
+![[Pasted image 20260918144454.png]]
+
+![[Pasted image 20260918144504.png]]
+
+![[Pasted image 20260918144706.png]]
+
+![[Pasted image 20260918144847.png]]
+
+![[Pasted image 20260918144855.png]]
+
+- PointNet++
+	- applies multiple PointNets at different locations and scales
+	- learns hierarchical representation making the network translation invariant
+	- in each layer - farthest point sampling -> query ball grouping -> pointnet
+![[Pasted image 20260918145526.png]]
+
+- How PointNet++ works in detail!
+	
+	![[Pasted image 20260918150430.png]]
+	
+	![[Pasted image 20260918150441.png]]
+
+	![[Pasted image 20260918150951.png]]
+	
+	![[Pasted image 20260918151134.png]]
+
+	
+
+- Sampling invariances - MSG and MRG in PointNet++
+	- PointNet suffers from non-uniform sampling density
+	- Use multi-scale and multi-resolution grouping which makes the network more robust to varying sampling densities
+
+![[Pasted image 20260918151215.png]]
+
+![[Pasted image 20260918151447.png]]
+
+- Conclusion on Point-based Networks:
+	- pos
+	    - fast training + testing → easy to implement (do not need voxelization so avoid quantization problem of grid based methods)
+	    - cover large spaces in one shot
+	- neg
+	    - cannot represent free space unlike grid based methods
+	    - performance is worse than volumetric networks!
+
+![[Pasted image 20260918151543.png]]
+
+- It uses max pooling layer to be invariant to point permutation and a Spatial transformer Network T-Net to be invariant to spatial transformations
+- concatenate the global feat to each local point features to make the point feat aware of the global information
 ### Projection based Networks
 
+- Project 3D data into 2D image and apply standard 2D CNNs
+- 2 popular choices:
+	- Range View - dense, Z-axis preserved, scale variation wrt range and occlusions
+	- Birds Eye View - preserves the metric space, sparse at distance
+- RangeNet++
+	- Network for LiDAR semantic segmentation
+	- takes a 2D range image with 5 channels - depth, x, y, z, remission as input
+	- segmentation output of the 2D CNN is projected back into the point cloud
+	![[Pasted image 20260918152614.png]]
 
+- EfficientLPS - Range-Guided Dilated convolutions
+	- adapts the receptive field of convolution by predicting the dilation factor from the range-encoded features
+	- captures distant-invariant features
+	- employed in the semantic head
+	![[Pasted image 20260918152756.png]]
 
-
-
-
-
-
+- Conclusions on Projection based networks:
+	- pos
+		- avoids costly computations in 3D
+		- low latency
+	- neg
+		- spatial info may get lost thro proj
+			- ex- clearly separated obj in 3d may look close in 2d
+			- perspective proj distorts obj sizes
+		- not suitable for all 3d tasks
+			- suffers from occlusions
+			- not suitable for completion tasks
+![[Pasted image 20260918153046.png]]
+- it preserves metric space which means that obj sizes are preserved with dist
+- EfficientLPS predicts the dilation factor from the range encoded feat to adapt the receptive field, thus handling scale variations
 
 ## Links:
 
