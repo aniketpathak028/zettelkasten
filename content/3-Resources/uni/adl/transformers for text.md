@@ -67,18 +67,37 @@ description: transformers for text
 
 - Parallelization - self-attention enables greater parallelization by involving a constant number of sequentially executed operations
 - Path-length for long-range dependencies - minimizes the path length that signals need to traverse in the network
-- 
 
+- Illustrative example of transformers:
+	- first the inputs are converted into embeddings and positional encoding is added 
+	- each word is a token with a specific learn representation or embedding
+	- multi-head attention captures the attention between different tokens in the sequence
+	- add+norm + feed fwd - full understanding of the sentence identifying imp words and relationships
+	- decoder output embeddings - begin constructing while looking at previous translations
+	- decoder masked-multi-head attention - determine the best words for translation on what has been translated so, without looking ahead(masked)
+	- decoder MHA - utilize the prev translation and the newly input text to identify the most likely words
+	- feed-fwd + add norm - normalize the data and transform it
+	- linear + softmax - generate output words
+![[Pasted image 20260919003732.png]]
 
-
-
-
-
-
-
-
-
+![[Pasted image 20260919003812.png]]
+- transformers inherently do not account for the order of tokens, as the attention mechanism is permutation-invariant. To encode word order, positional encodings is required.
+- To make sure word only attends to preceding words and itself Triangular masking is used aka Causal masking
 ### Classifications of Transformers
+
+- classification by architecture:
+	- Encoder only transformer - specializes in processing input data eg. BERT
+	- Decoder only transformer - focused on generating outputs from learned representations eg. GPT
+	- Encoder-Decoder transformer - combines both functionalities, ideal for tasks like translation (eg. the original transformer model, T5)
+- BERT (Bidirectional Encoder Representations from Transformers)
+	- BERT is designed primarily for transfer learning
+	- Pre-trained with 2 self-supervised objectives, then fine-tuned on downstream tasks
+	- No human-annotated data needed, allows for training on vast, unlabelled datasets
+	- 
+
+
+
+
 
 
 
