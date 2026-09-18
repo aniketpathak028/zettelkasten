@@ -115,7 +115,7 @@ transformers:
 	- partitions 3D space recursively into cubes called octants and saves memory by dividing the space adaptively, so the non occupied regions can remain coarse while the occupied regions could be of finer resolution
 	- however accessing indices in Octree is complicated as compared to volume grids because of its tree structure!
 	- 3D Voxel CNN - OctNet
-			![[Pasted image 20260917160242.png]]
+					![[Pasted image 20260917160242.png]]
 		- it is observed that most of the activations in dense 3d cnns are near the surface so OctNet introduces:
 		    - hybrid grid-octree data structure - restrict max depth of an octree to 3
 		    - efficient convolution - avoid unnecessary calc on empty space
@@ -132,7 +132,7 @@ transformers:
 		- decoder gradually refines rough estimated low-resolution shape to a higher resolution
 		- for every voxel the CNN predicts whether it is occupied, empty, or partially occupied
 		- if a voxel is partially occupied, subdivide it further
-![[Pasted image 20260917170439.png]]
+		![[Pasted image 20260917170439.png]]
 
 Convolutions on Hierarchical 3D CNNs:
 - pos
@@ -144,11 +144,34 @@ Convolutions on Hierarchical 3D CNNs:
 
 ![[Pasted image 20260917180521.png]]
 
-
+- hierarchical vol representations subdivide the space adaptively into smaller voxels near the surface. For empty space, larger voxels are used which saves memory
+- OctNet CNNs are designed to act as if they were regular convolution on a reg grid at the highest resolution of the hybrid structure, but are implemented such that redundant computations inside nodes are avoided
 ### Sparse CNNs
+- Regular 3D Convolution - Dilation Problem
+	- convolution operates on both active and non-active sites
+- issue - dilation
+	- regular convolutions dilates the sparse data in every layer
+	- set of active sites (non-zero pixels / voxels) grows rapidly - loss of sparsity!
+	- features get diluted - slower propagation
+![[Pasted image 20260918020240.png]]
 
+- Regular Sparse Convolution
+	- convolutions that operate only at active sites where the kernel touches an active site
+- issue - dilation
+	- set of active sites (non-zero pixels / voxels) grows rapidly - loss of sparsity!
+	- more efficient than dense conv for sparse data
+		- but continual increase in computation and required memory in deeper layers
 
+- Sub-manifold Sparse Convolutions (SSC) or Valid Sparse Convolutions (VSC)
+	- restricts convolutions to retain the same set of active sites throughout the network
+	- prevents the activation of new sites and preserves the input sparsity pattern
+	- kernels are centered only at active locations
+![[Pasted image 20260918020751.png]]
 
+- disconnected components do not communicate in sub-manifold sparse convolutions, how do we resolve this?
+	- strided convolutions 
+	- pooling operations
+	- regular sparse convolutions (SC)
 ### Point Based Networks
 
 
@@ -158,9 +181,7 @@ Convolutions on Hierarchical 3D CNNs:
 
 
 
-things to study:
-- java microservices
-- k8s, terraform, devops and devsecops
+
 
 
 
