@@ -93,10 +93,38 @@ description: transformers for text
 	- BERT is designed primarily for transfer learning
 	- Pre-trained with 2 self-supervised objectives, then fine-tuned on downstream tasks
 	- No human-annotated data needed, allows for training on vast, unlabelled datasets
-	- 
-
-
-
+	- embeddings
+		- token embeddings - represent individual words or subwords in the seq
+		- segment embeddings - to indicate the sentence A or B
+		- position embeddings - to indicate the pos in the seq
+		![[Pasted image 20260919011839.png]]
+	- special tokens:
+		- CLS - learnable token (CLS stands for classification and is used to represent sentence-level classification)
+		- SEP - indicate the end of the sentence
+	- pre-training
+		- benefits:
+			- contextual understanding - enables BERT to grasp language context, crucial for downstream tasks
+			- transfer learning - pre-training on large datasets allows BERT to learn generalized representations, which can be fine-tuned with smaller datasets for specific tasks
+			- efficiency and accuracy - pre-trained models boost performance and speed for NLP tasks compared to training from scratch
+		- objectives
+			- masked language modelling (MLM)
+			- next sentence prediction (NSP)
+	- Mask Language Modeling - MLM
+		- randomly mask out words in the input sequence
+		- predict the masked words with the context from the input itself
+		- encourages the network to understand contextual relationship at the word level
+	- Next Sentence Prediction - NSP
+		- takes 2 sentences A and B from the dataset
+		- B is the next sentence of A 50% of the time, the other 50%, B is randomly chosen
+		- the task is to predict if B truly follows A
+		- encourages the network to understand contextual relationships at the sentence level
+	- Encoder Only transformer
+		- efficiency and size reduction
+			- DistilBERT - Knowledge distillation to reduce size
+			- ALBERT - Lowers memory use by optimizing embedding layers and sharing parameters across layers
+		- Improvements in Attention Mechanism:
+			- DeBERTa - Utilizes a disentangled attention mechanism encoding the content of words and their positions separately
+			- Longformer - Introduces a blend of local windowed and global attention to efficiently manage longer texts.
 
 
 
