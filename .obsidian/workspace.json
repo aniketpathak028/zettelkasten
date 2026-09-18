@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/uni/adl/multidimensional deep learning.md",
+                "file": "content/3-Resources/uni/adl/transformers-background.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "multidimensional deep learning"
+              "title": "transformers-background"
             }
           }
         ]
@@ -187,6 +187,10 @@
   },
   "active": "cd5683968df0437a",
   "lastOpenFiles": [
+    "content/3-Resources/uni/adl/introduction.md",
+    "content/3-Resources/uni/adl/transformers-background.md",
+    "content/3-Resources/uni/adl/graph neural networks.md",
+    "content/3-Resources/uni/adl/multidimensional deep learning.md",
     "content/assets/Pasted image 20260918153046.png",
     "content/assets/Pasted image 20260918152756.png",
     "content/assets/Pasted image 20260918152614.png",
@@ -197,11 +201,7 @@
     "content/assets/Pasted image 20260918151127.png",
     "content/assets/Pasted image 20260918151119.png",
     "content/assets/Pasted image 20260918150951.png",
-    "content/assets/Pasted image 20260918150441.png",
     "content/3-Resources/uni/adl/multimodal deep learning.md",
-    "content/3-Resources/uni/adl/graph neural networks.md",
-    "content/3-Resources/uni/adl/multidimensional deep learning.md",
-    "content/3-Resources/uni/adl/introduction.md",
     "content/3-Resources/uni/adl/neural scene representations and world models.md",
     "content/3-Resources/uni/adl/self-supervised learning and foundation models.md",
     "content/3-Resources/uni/adl/transfer learning and domain adaptation.md",
