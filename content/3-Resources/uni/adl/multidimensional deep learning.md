@@ -145,7 +145,7 @@ Convolutions on Hierarchical 3D CNNs:
 ![[Pasted image 20260917180521.png]]
 
 - hierarchical vol representations subdivide the space adaptively into smaller voxels near the surface. For empty space, larger voxels are used which saves memory
-- OctNet CNNs are designed to act as if they were regular convolution on a reg grid at the highest resolution of the hybrid structure, but are implemented such that redundant computations inside nodes are avoided
+- OctNet CNNs are designed to act as if they were regular convolution on a reg grid at the highest resolution of the hybrid structure, but are implemented such that redundant computations inside nodes are avoided. 
 ### Sparse CNNs
 - Regular 3D Convolution - Dilation Problem
 	- convolution operates on both active and non-active sites
@@ -153,7 +153,7 @@ Convolutions on Hierarchical 3D CNNs:
 	- regular convolutions dilates the sparse data in every layer
 	- set of active sites (non-zero pixels / voxels) grows rapidly - loss of sparsity!
 	- features get diluted - slower propagation
-![[Pasted image 20260918020240.png]]
+		![[Pasted image 20260918020240.png]]
 
 - Regular Sparse Convolution
 	- convolutions that operate only at active sites where the kernel touches an active site
@@ -166,12 +166,43 @@ Convolutions on Hierarchical 3D CNNs:
 	- restricts convolutions to retain the same set of active sites throughout the network
 	- prevents the activation of new sites and preserves the input sparsity pattern
 	- kernels are centered only at active locations
-![[Pasted image 20260918020751.png]]
+		![[Pasted image 20260918020751.png]]
 
 - disconnected components do not communicate in sub-manifold sparse convolutions, how do we resolve this?
-	- strided convolutions 
-	- pooling operations
-	- regular sparse convolutions (SC)
+	- strided convolutions - stride>1 reduces the spatial resolution and brings sites closer in the lower resolution representation
+	- pooling operations - also reduces spatial resolution and creates effective neighbourhood
+	- regular sparse convolutions (SC) - controls dilation of the active site
+- Sparse Upconvolution
+	- inverse of strided regular sparse convolution
+	- retains the sparse structure on the same resolution
+		- during downsampling, we store the sparse structure
+		- during upsampling, we take the prev stored structure
+	- used for sparse decoder
+	- sparse decoders need to know not just how to upsample features but also where those upsampled feat must stay!
+
+- Minkowski Engine - library for sparse CNNs
+	- implements generalized sparse convolution
+	- generalizes to 4D and higher dim data
+	- covers previous work submanifold sparse conv as a special case
+- applications:
+	- shape classification
+	- 3D semantic segmentation
+	- 3D shape generation
+	- shape completion
+	- 3D Object detection
+- conclusions on sparse CNNs:
+	- pos
+		- features only around the surface
+		- requires significantly less mem
+		- allows for much higher resolutions and thus better performance
+	- neg
+		- quantization remains
+
+![[Pasted image 20260918125605.png]]
+- reg sparse convolution dilate in each layer resulting in more active sites after each layer. Submanifold sparse convolutions do not change the set of active sites.
+- it has 5x5 active sites after first regular sparse convolution and 9x9 after second
+	- general formula for a K x K kernel applied N times to a single point the side length Sn of the active bounding square is given by: Sn = 1 + N x (K-1)
+	- so for K=5 and N=2 -> S2 = 1 + 2.(5-1) = 1 + 8 = 9 -> 9 * 9 = 81 
 ### Point Based Networks
 
 
