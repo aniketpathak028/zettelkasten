@@ -118,17 +118,47 @@ description: transformers for text
 		- B is the next sentence of A 50% of the time, the other 50%, B is randomly chosen
 		- the task is to predict if B truly follows A
 		- encourages the network to understand contextual relationships at the sentence level
-	- Encoder Only transformer
+	- Encoder only transformer
 		- efficiency and size reduction
 			- DistilBERT - Knowledge distillation to reduce size
 			- ALBERT - Lowers memory use by optimizing embedding layers and sharing parameters across layers
 		- Improvements in Attention Mechanism:
 			- DeBERTa - Utilizes a disentangled attention mechanism encoding the content of words and their positions separately
 			- Longformer - Introduces a blend of local windowed and global attention to efficiently manage longer texts.
+- GPT - Decoder only transformer
+	- composed of a series of unidirectional transformer decoder blocks
+	- processes information seq from left to right
+	- uses masked self-attention mechanism to prevent the model from accessing future tokens
+	![[Pasted image 20260919020334.png]]
+	- Tokenization
+		- converts input text into tokens that the model can process using Byte Pair Encoding (BPE)
+			- tokenize the input sentence into individual characters
+			- count the frequency of character pairs
+			- merge the most frequent pair
+			- repeat 2 and 3 until hitting a stopping point
+	- input representations
+		- each token is converted into a vector using embedding layers
+		- positional encodings are added to give the model context about the position of each token in the sequence
+	- framework:
+		- unsupervised pre-training
+			![[Pasted image 20260919021011.png]]
+		- supervised fine-tuning
+			![[Pasted image 20260919021045.png]]
 
+- T5 - Text-to-Text Transfer Transformer
+	- used primarily for machine translation, summarization, question answering
+	- self-supervised training uses corrupted tokens
+	- uses relative scalar embeddings
 
+- difference between MASK and corrupting tokens
+![[Pasted image 20260919022059.png]]
 
+![[Pasted image 20260919022151.png]]
 
+![[Pasted image 20260919022218.png]]
+- 2 pre-training objectives of BERT are:- MLM and NSP
+- seq of tokens derived from text, the structure and use of special tokens (such as delimiters) can depend on the task for which it is used (classification vs entailment)
+- unsupervised pre-training, supervised fine tuning
 ### Advanced Transformer Variants
 
 
