@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/tech/cicd/cicd with gitlab.md",
+                "file": "content/3-Resources/tech/cicd/CICD with gitlab.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "cicd with gitlab"
+              "title": "CICD with gitlab"
             }
           }
         ]
@@ -188,7 +188,7 @@
   "active": "cd5683968df0437a",
   "lastOpenFiles": [
     "content/0-Index/stryker interview prep.md",
-    "content/3-Resources/tech/cicd/cicd with gitlab.md",
+    "content/3-Resources/tech/cicd/CICD with gitlab.md",
     "content/3-Resources/tech/devops/terraform.md",
     "content/3-Resources/uni/adl/transformers for text.md",
     "content/assets/Pasted image 20260919135421.png",
