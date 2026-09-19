@@ -161,9 +161,69 @@ description: transformers for text
 - unsupervised pre-training, supervised fine tuning
 ### Advanced Transformer Variants
 
+- challenges in standard transformer models:
+	- difficulty in encoding an arbitrarily long context into a fixed size representation
+	- split the corpus into shorter, manageable segments and train within each, independently
+	- limitations:
+		- **context discontinuity** - each segment is processed in isolation, ignoring contextual information from preceding segments
+		- **context fragmentation** - fixed-length segments are cut without considering semantic boundaries, leading to significant information loss and impacting model performance
+		- **extrapolation failure** - transformer fail to generalize in many simple tasks that recurrent models handle with ease, eg copying strings or even simple logical inference when the string or formula lengths exceed those observed at training time
+- Some transformer variants to tackle these challenges are:
+	- Transformer-XL
+	- Compressive Transformer
+	- Universal Transformer
+	- Sparse Transformer
 
+- Transformer-XL
+	- incorporates recurrence to extend transformer's mem across segments
+	- caches and reuses hidden states from previous segments during training to enhance context continuity
+	- maintains gradients within segments but leverages historical data
 
+	>Note:  old segment gradients are not updated!
 
+	- improves long-term dependency modeling and reducing context fragmentation
+
+![[Pasted image 20260919133647.png]]
+
+![[Pasted image 20260919125935.png]]
+
+![[Pasted image 20260919130046.png]]
+
+![[Pasted image 20260919130343.png]]
+
+- Compressive Transformers
+	- builds on transformer-XL, further enhancing long-term memory in models
+	- instead of discarding older activations, compress old memories
+	- store these in an additional compressed memory bank
+	![[Pasted image 20260919131100.png]]
+	
+	![[Pasted image 20260919131153.png]]
+
+![[Pasted image 20260919133705.png]]
+
+- Universal Transformers
+	- Builds on the transformer architecture by applying a recurrent process over the transformer layers to overcome the extrapolation features
+	- recurs over consecutive revisions of the feature representations of each position
+	- does not recur over the positions in the sequence
+	
+![[Pasted image 20260919133402.png]]
+
+- Transition Functions - separable convolution or feed forward network
+	- a shared, position-wise computational block applied independently to each token's vector representation after the self-attention step 
+- Adaptive Computation time with Dynamic Handling:
+	- Dynamically modulates the number of recurrent steps needed to process each input token
+	- based on halting probabilities predicted by the model at each step
+![[Pasted image 20260919134751.png]]
+
+- Sparse Transformers
+	- standard transformer mem usage grows quadratically with the sequence len
+	- sparse transformer introduces sparse factorization of the attention matrix to reduce mem usage from O(n^2) to O(n sqrt(n))
+	- designed to efficiently handle very long seq with reduced computational complexity
+	![[Pasted image 20260919134945.png]]
+
+![[Pasted image 20260919135031.png]]
+
+![[Pasted image 20260919135124.png]]
 
 
 
