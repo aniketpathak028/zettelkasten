@@ -21,8 +21,8 @@ description: deploying a java spring boot microservice using gitlab cicd pipelin
 ![[Pasted image 20260919232831.png]]
 
 - step-1: create the repository in gitlab with the project for this example we use - https://gitlab.com/aniketpathak/Boardgame
-- step-2: create a VM or EC2 instance on AWS
-
+- step-2: create a VM in a cloud platform or somewhere else here I create an EC2 instance on AWS and create a security group with the following inbound rules:
+![[Pasted image 20260920001548.png]]
 
 
 
