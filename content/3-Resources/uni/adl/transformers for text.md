@@ -225,7 +225,7 @@ description: transformers for text
 
 ![[Pasted image 20260919135124.png]]
 
-
+![[Pasted image 20260919135336.png]]
 
 
 ## Links:
