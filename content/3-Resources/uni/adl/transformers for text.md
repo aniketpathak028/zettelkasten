@@ -227,6 +227,13 @@ description: transformers for text
 
 ![[Pasted image 20260919135336.png]]
 
+- comparison of different variants of transformer models
+![[Pasted image 20260919135408.png]]
+
+![[Pasted image 20260919135421.png]]
+
+- extended context, segment recurrence mechanism, relative pos encoding
+- the key objective is to overcome extrapolation failures, it targets this by employing a dynamic number of recurrent steps
 
 ## Links:
 
