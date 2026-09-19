@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/uni/adl/transformers for text.md",
+                "file": "content/3-Resources/tech/devops/terraform.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "transformers for text"
+              "title": "terraform"
             }
           }
         ]
@@ -187,6 +187,8 @@
   },
   "active": "cd5683968df0437a",
   "lastOpenFiles": [
+    "content/3-Resources/uni/adl/transformers for text.md",
+    "content/3-Resources/tech/devops/terraform.md",
     "content/assets/Pasted image 20260919135421.png",
     "content/assets/Pasted image 20260919135408.png",
     "content/assets/Pasted image 20260919135336.png",
@@ -197,9 +199,7 @@
     "content/assets/Pasted image 20260919133705.png",
     "content/assets/Pasted image 20260919133647.png",
     "content/assets/Pasted image 20260919133640.png",
-    "content/assets/Pasted image 20260919133402.png",
     "content/3-Resources/uni/adl/transformers-background.md",
-    "content/3-Resources/uni/adl/transformers for text.md",
     "content/3-Resources/uni/adl/introduction.md",
     "content/3-Resources/uni/adl/graph neural networks.md",
     "content/3-Resources/uni/adl/multidimensional deep learning.md",
