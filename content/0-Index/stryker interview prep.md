@@ -44,6 +44,24 @@ I am currently at a point in my masters that I would be done with more than half
 - I worked extensively on microservices development and deployment using CICD on cloud platforms like GCP and Azure
 - Currently I am doing my masters degree in Comp Sci with a specialization in AI ad
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Links:
 
 202609191618

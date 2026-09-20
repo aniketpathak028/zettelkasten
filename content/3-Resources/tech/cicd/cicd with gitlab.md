@@ -108,6 +108,44 @@ sonar.qualitygate.wait=true
 for ex- here the java binaries are stored in target/classes
 
 
+### setting up own self-hosted k8s cluster
+
+- create 2 VMs - 1 slave and 1 master in any cloud platform
+- run the following code in the VMs after connecting to them via SSH:
+```bash
+sudo apt-get update
+sudo apt install docker.io -y
+sudo chmod 666 /var/run/docker.sock
+sudo apt-get install -y apt-transport-https ca-certificates curl gnupg
+sudo mkdir -p -m 755 /etc/apt/keyrings
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg]
+https://pkgs.k8s.io/core:/stable:/v1.30/deb /' | sudo tee
+/etc/apt/sources.list.d/kubernetes.list
+sudo apt update
+sudo apt install -y kubeadm=1.30.0-1.1 kubelete=1.30.0-1.1 kubectl=1.30.0-1.1
+```
+- run this for the master node:
+```bash
+sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+```
+- this creates a token and a range of ip addresses that would be used for creating the pods in the cluster, once we run this on the master node it will generate another command which we need to run on the slave node to make it a part of the k8s cluster
+- create a dir for the kube config file in master node:
+```bash
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+- run these to setup calico and ingress-nginx for networking
+```bash
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.28.3/manifests/calico.yaml
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/baremetal/deploy.yaml
+```
+
+- now we have 3 nodes, a runner vm, a k8s master and a k8s worker, we can simply put the k8s config file (kubeconfig) in the .kube folder of our runner so that it can authenticate with the cluster and deploy our application into the cluster
+
+
 
 
 
