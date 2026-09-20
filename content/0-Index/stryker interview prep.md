@@ -39,13 +39,14 @@ I am already based in Freiburg for my studies so location works well and I am co
 I am currently at a point in my masters that I would be done with more than half of my degree by the end of this semester and I was really seeking out for some industry experience alongside it, as I want to learn how experienced engineering teams in industries are currently using AI to develop large scale applications. Also if I have this opportunity, it would be my first corporate experience in Germany, so I am excited to learn more about that too :)
 
 8. Walk me through your resume
+
 - I have done my bachelors in India and then I worked for almost 2 years at Nokia
 - First I was an intern and later I was converted for a full time position
 - I worked extensively on microservices development and deployment using CICD on cloud platforms like GCP and Azure
 - Currently I am doing my masters degree in Comp Sci with a specialization in AI
 - I also work as a research assistant in the Uni where i mostly automate manual tasks like server maintenance and backups
 
-8. What was your role at Nokia?
+8.  What was your role at Nokia?
 
 
 
