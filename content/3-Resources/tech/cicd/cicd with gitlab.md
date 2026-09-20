@@ -40,9 +40,43 @@ sudo apt update
 gitlab-runner run
 ```
 
+### create a pipeline
+- once the runner is set up, go to gitlab project > build > pipeline editor and create a new pipeline
+- in the pipeline we will define stages and jobs that will be automatically triggered when we push code changes to gitlab
+- a simple pipeline to install necessary dependencies and tools in the VM and run unit tests:
+```yml
+stages: # List of stages for jobs, and their order of execution
+- install_tools
+- test
 
+install_mvn_trivy_docker_kubectl:
+stage: install_tools
+script:
+- sudo apt install openjdk-17-jre-headless -y
+- sudo apt install maven -y
+- sudo apt-get install wget gnupg -y
+- wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+- echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb generic main" | sudo tee -a /etc/apt/sources.list.d/trivy.list
+- sudo apt-get update && sudo apt-get install trivy -y
+- sudo apt install docker.io -y && sudo chmod 666 /var/run/docker.sock
+- sudo snap install kubectl --classic
 
+tags:
+- runner-ec2
 
+unit_testing:
+stage: test
+script:
+- mvn test
+
+tags:
+- runner-ec2
+```
+- once the basic pipeline works we need to install sonarqube in our vm using docker and start the sonarqube server and access it using {ipaddress}:9000
+- by default the username and password is admin
+```bash
+docker run -d -p 9000:9000 sonarqube:lts-community 
+```
 
 
 
