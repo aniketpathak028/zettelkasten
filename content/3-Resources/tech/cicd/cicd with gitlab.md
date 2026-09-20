@@ -144,6 +144,9 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main
 ```
 
 - now we have 3 nodes, a runner vm, a k8s master and a k8s worker, we can simply put the k8s config file (kubeconfig) in the .kube folder of our runner so that it can authenticate with the cluster and deploy our application into the cluster
+- for security reasons we will encode the kubeconfig file into base64 and when using it we will decode it and use the same during authentication
+
+
 
 
 
