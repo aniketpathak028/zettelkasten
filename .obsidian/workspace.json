@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/0-Index/learning CICD with Azure DevOps.md",
+                "file": "content/0-Index/stryker interview prep.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "learning CICD with Azure DevOps"
+              "title": "stryker interview prep"
             }
           }
         ]
@@ -187,6 +187,7 @@
   },
   "active": "cd5683968df0437a",
   "lastOpenFiles": [
+    "content/0-Index/learning CICD with Azure DevOps.md",
     "content/3-Resources/tech/cicd/CICD with gitlab.md",
     "content/0-Index/stryker interview prep.md",
     "content/assets/Pasted image 20260920001548.png",
@@ -215,7 +216,6 @@
     "content/0-Index/pytorch basics.md",
     "content/0-Index/building a fall detection model using Roboflow.md",
     "content/0-Index/autoencoder.md",
-    "content/0-Index/learning CICD with Azure DevOps.md",
     "content/0-Index/license plate recognition - yolo + ocr.md",
     "content/0-Index/small language model.md",
     "content/3-Resources/uni/adl/generative models.md",

@@ -42,7 +42,10 @@ I am currently at a point in my masters that I would be done with more than half
 - I have done my bachelors in India and then I worked for almost 2 years at Nokia
 - First I was an intern and later I was converted for a full time position
 - I worked extensively on microservices development and deployment using CICD on cloud platforms like GCP and Azure
-- Currently I am doing my masters degree in Comp Sci with a specialization in AI ad
+- Currently I am doing my masters degree in Comp Sci with a specialization in AI
+- I also work as a research assistant in the Uni where i mostly automate manual tasks like server maintenance and backups
+
+8. What was your role at Nokia?
 
 
 

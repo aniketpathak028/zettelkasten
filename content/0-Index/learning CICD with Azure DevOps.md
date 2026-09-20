@@ -247,7 +247,7 @@ kubectl get svc argocd-server -n argocd
 
 > Note: the username is admin by default and the password is the decoded base64 without %
 
-> Note: Incase this doesn't work, it maybe beacause the inbound port does not have the permission, in that case just go to Azure portal and in vmms resource select the VM
+> Note: Incase this doesn't work, it maybe because the inbound port does not have the permission, in that case just go to Azure portal and in vmms resource select the VM
 
 ### Step-3 Connecting ArgoCD to Azure DevOps repository
 
