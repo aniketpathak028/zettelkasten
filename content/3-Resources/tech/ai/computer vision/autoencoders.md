@@ -28,6 +28,8 @@ input image -> encoder (784  -> 256 -> RELU) -> Latent dim (64) -> RELU -> decod
 ![[Pasted image 20260618004705.png]]
 ![[Pasted image 20260618004953.png|506]]
 
+implementation - https://colab.research.google.com/drive/1G3KziG5b4jhzpvliFgesCT22WlJIHDUb?usp=sharing
+
 uses:
 - dim reduction
 - denoising
@@ -39,7 +41,7 @@ challenges:
 - unstructured latent space
 - poor extrapolation
 - mem reconstruction
-
+- latent space is disorganized and irregular hence, sampling a random point from the latent space results in messy reconstruction
 ## Links:
 
 202606172354
