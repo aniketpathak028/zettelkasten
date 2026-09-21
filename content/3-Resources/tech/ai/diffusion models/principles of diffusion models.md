@@ -8,7 +8,7 @@ description: principles of diffusion models
 ---
 # principles of diffusion models
 
-- revolutionized text-to-image synthesis by producing photorealistic, controllable images from textual prompts ex- Stable diffusion, DallE-3, Midjourney
+- revolutionized text-to-image synthesis by producing photorealistic, controllable images from textual prompts ex- Stable diffusion, DallE-3, Midjourney etc
 - used to generate 3d molecular structures and protein conformations by modeling spatial distributions of atoms. ex- DiffDock, RFdiffusion
 - video diffusion models extend image diffusion temporally learning dynamics and frame consistency. They can generate videos from text or still images. ex- Lumiere
 - diffusion models are applied to robot policy learning generating action trajectories from observations rather than pixel-wise noise
