@@ -35,9 +35,7 @@ paper - https://arxiv.org/abs/1312.6114
 	![[Pasted image 20260922182942.png]]
 
 
-10 = 1  + 2 + 3 + 5
-integration (1, 2, 3, 5) = 10
-integration (x) = 10
+
 
 
 ## Links:
