@@ -23,7 +23,7 @@ Architecture
 
 input image -> encoder (784  -> 256 -> RELU) -> Latent dim (64) -> RELU -> decoder (256 -> RELU -> 784 -> sigmoid) -> reconstructed image 
 
-![[Pasted image 20260617235900.png]]
+
 
 ![[Pasted image 20260618004705.png]]
 ![[Pasted image 20260618004953.png|506]]
