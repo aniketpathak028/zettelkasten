@@ -34,8 +34,7 @@ paper - https://arxiv.org/abs/1312.6114
 	- but instead we use the KL diverge to get the difference between the 2 dist instead of simply comparing the mean and the std dev with 0 and 1 as it results in a much smoother loss 
 	![[Pasted image 20260922182942.png]]
 
-
-
+![[Pasted image 20260922223927.png]]
 
 
 ## Links:
