@@ -17,11 +17,17 @@ description: understanding variational autoencoders
 
 paper - https://arxiv.org/abs/1312.6114
 
+- autoencoder vs VAE
+![[Pasted image 20260922104423.png]]
 
+- autoencoder
+![[Pasted image 20260922104956.png]]
 
+- VAE
+![[Pasted image 20260922105034.png]]
 
-
-
+- we are forcing the network to learn a dist with mu and sigma
+- 
 
 ## Links:
 
