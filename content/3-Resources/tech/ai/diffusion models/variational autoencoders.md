@@ -27,7 +27,18 @@ paper - https://arxiv.org/abs/1312.6114
 ![[Pasted image 20260922105034.png]]
 
 - we are forcing the network to learn a dist with mu and sigma
-- 
+- we are enforcing 2 things here:
+	- reconstructed image is similar to the original image
+	- penalize the model for predicting a dist farther from gaussian dist N(mu=0, sigma^2=1)
+	- something like - (mu-0)^2 + (sigma-1)^2  + (ŷi-yi)^2 
+	- but instead we use the KL diverge to get the difference between the 2 dist instead of simply comparing the mean and the std dev with 0 and 1 as it results in a much smoother loss 
+	![[Pasted image 20260922182942.png]]
+
+
+10 = 1  + 2 + 3 + 5
+integration (1, 2, 3, 5) = 10
+integration (x) = 10
+
 
 ## Links:
 
