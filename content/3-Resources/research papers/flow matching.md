@@ -27,7 +27,9 @@ paper - https://arxiv.org/abs/2210.02747
 
 ![[Pasted image 20260617185829.png]]
 
-- at every step we 
+https://diffusion.csail.mit.edu/2026/docs/20260122_Lecture_02.pdf
+https://diffusion.csail.mit.edu/2026/docs/20260120_Lecture_01.pdf
+https://diffusion.csail.mit.edu/2026/index.html
 
 
 ## Links:
