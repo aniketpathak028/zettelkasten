@@ -25,7 +25,7 @@ install:
 
 Notes:
 - use uv package manager - fast python pkg manager written in rust!
-- 
+
 
 
 
