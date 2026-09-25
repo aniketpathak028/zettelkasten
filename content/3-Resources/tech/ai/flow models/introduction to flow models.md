@@ -61,6 +61,7 @@ Once we have an ODE, how do we simulate it an find the trajectories?
 - a flow model is described by the following ODE:
 	![[Pasted image 20260925131234.png]]
 - our goal is to make the endpoint x<sub>1</sub> of the trajectory have dist p<sub>data</sub>
+- the neural network that predicts this ODE is aka neural ode
 
 
 
