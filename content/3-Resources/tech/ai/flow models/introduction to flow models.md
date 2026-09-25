@@ -34,6 +34,38 @@ https://diffusion.csail.mit.edu/2026/index.html
 
 so in sequence we have Velocity Field -> Trajectories -> Flow
 
+Let's take an example:
+- suppose we have a velocity vector field given by :- u<sub>t</sub>(x) = -𝛉<sub>x</sub>
+- then the flow field is given as follows (how can we check if this is valid?)
+
+![[Pasted image 20260925125548.png|331]]
+
+differential equation:
+
+![[Pasted image 20260925125647.png|293]]
+
+if the flow field is replaced in the differential equation and it satisfies the equation it is a valid flow field:
+
+![[Pasted image 20260925130053.png|297]]
+
+Once we have an ODE, how do we simulate it an find the trajectories?
+- We use Euler method in inference to simulate the trajectories and find the final state!
+- We simply take small steps in the direction of vector field
+
+![[Pasted image 20260925130713.png]]
+
+#### Flow models:
+
+- goal is to convert a simple dist p<sub>init</sub> to a complex dist p<sub>data</sub>
+- simulation of an ODE is a natural choice for this transformation
+- a flow model is described by the following ODE:
+	![[Pasted image 20260925131234.png]]
+- our goal is to make the endpoint x<sub>1</sub> of the trajectory have dist p<sub>data</sub>
+
+
+
+
+
 
 
 ## Links:
