@@ -3,6 +3,7 @@ title: introduction to flow models
 draft: false
 tags:
   - flow-models
+  - flow-matching
 date: 2026-09-25
 description: what are flow-models?
 ---
