@@ -64,17 +64,24 @@ I am currently at a point in my masters that I would be done with more than half
 
 12. Go project and Azure CICD project
 
-- Go Project - it is a simple implementation of a forward proxy which is nothing but an intermediate web server that sits between the client and the internet which intersects every browser request sent to the internet, in the process of this intersection we store the connection request, its metadata and also the content received in local cache so that when an user re-sends the same request we simply load the stored content instead of making a new request which reduces our response time
+- Go Project - it is a simple implementation of a forward proxy which is nothing but an intermediate web server that sits between the client and the internet which intersects every browser request sent to the internet, in the process of this intersection we store the connection request, its metadata and also the content received in local cache so that when an user re-sends the same request we simply load the stored content instead of making a new request which reduces our response time. The hardest part in the project was to 
 
-- Azure [CICD](https://zet.aniketpathak.me/0-Index/learning-CICD-with-Azure-DevOps) project - it is a simple project where I deployed a simple voting app (containing microservices written using python, .NET and nodejs) into AKS - Azure K8s cluster using Azure DevOps following the principles of CICD and devsecops
+- Azure [CICD](https://zet.aniketpathak.me/0-Index/learning-CICD-with-Azure-DevOps) project - it is a simple project where I deployed a simple voting app (containing microservices written using python, .NET and nodejs) into AKS - Azure K8s cluster using Azure DevOps following the principles of CICD and devsecops. I think the hardest part in the project was the 
 
-8. Which of your skills are strongest and what are you still building?
+13. Which of your skills are strongest and what are you still building?
+
+- I believe I have a strong foundation in building and deploying microservices, building CICD pipelines (keeping security in mind)
+- Currently I am building more towards AI agents and automations, learning more on tech like langchain, lang-graph, RAG, n8n etc.
+
+14. 
 
 
 
 
 
 
+Questions to ask them:
+- what sort of project might I start on? and what does the video interview stage cover?
 
 
 
