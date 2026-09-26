@@ -11,7 +11,7 @@ description: deploying a java spring boot microservice using gitlab cicd pipelin
 
 ### why gitlab is better?
 
-- for jenkins we need to setup master and slave nodes which need 2 VMs
+- for jenkins we need to setup master and slave nodes which needs 2 VMs
 - we also need to store our codebase in github or gitlab additionally and then connect it to jenkins
 - gitlab cicd is better because we can directly store and deploy our code using gitlab itself
 - gitlab provides shared runner and private runner
