@@ -64,8 +64,11 @@ Once we have an ODE, how do we simulate it an find the trajectories?
 - the neural network that predicts this ODE is aka neural ode
 
 
+### key things to note:
 
-
+- an ODE specifies that the rate of change of position is given by a vector field dX<sub>t</sub>/dt = u<sub>t</sub>(X<sub>t</sub>)
+- the solution to an ODE for all starting location x<sub>0</sub> at once is called the flow ψ<sub>t</sub>(x<sub>0</sub>) which maps where the initial point ends up at time t
+- 
 
 
 
