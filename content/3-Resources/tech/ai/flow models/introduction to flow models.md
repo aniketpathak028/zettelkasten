@@ -68,7 +68,9 @@ Once we have an ODE, how do we simulate it an find the trajectories?
 
 - an ODE specifies that the rate of change of position is given by a vector field dX<sub>t</sub>/dt = u<sub>t</sub>(X<sub>t</sub>)
 - the solution to an ODE for all starting location x<sub>0</sub> at once is called the flow ψ<sub>t</sub>(x<sub>0</sub>) which maps where the initial point ends up at time t
-- 
+- because the vector field is parameterized by a complex deep nn, there is no pencil and paper solution for the solution, therefore solving an ode in practice means simulating it step by step using numerical solvers like euler method or heun's method by taking small updates into the direction predicted by the nn
+- necessary at inference but avoided in training - solving the ode is mandatory to preoduce samples at inference however during training, modern flow matching is sim free meaning we can train the nn vector field without ever having to solve or sim the ode!
+- the neural network takes a continuous location or state x and a time scalar t and outputs a single velocity vector telling a pa
 
 
 
