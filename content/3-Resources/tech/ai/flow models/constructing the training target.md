@@ -16,6 +16,15 @@ description: constructing the training target
 
 
 
+- conditional prob path
+	- the first step to construct the training target is by specifying the prob path
+	- given a point "z", we define the conditional prob path as a transformation from p<sub>init</sub> to point "z"
+
+
+
+
+
+
 
 ## Links:
 
