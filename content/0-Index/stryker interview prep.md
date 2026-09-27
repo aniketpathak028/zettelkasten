@@ -95,10 +95,14 @@ Prior to my Master's, I spent two years as a Software Engineer at Nokia, where I
 What really drew me to the Cloud Applications & Software Engineering internship at Stryker in Freiburg is the team's focus on cloud platforms, developer tooling, and AI integration. I'm excited about the opportunity to apply my background in microservices, CI/CD pipelines, and AI to build reliable R&D tools that advance healthcare software
 
 
+At Nokia, our platform managed network devices like nodes and ports for global telecom clients. The application was built on Java Spring Boot microservices containerized with Docker, pushed to Azure Container Registry via GitLab CI, and automatically deployed to Azure Kubernetes Service using ArgoCD for GitOps.
+
+During a modernization project to upgrade a core microservice from legacy Java 5 to Java 17, I tackled a device search feature that was suffering from high latency (1 to 2 seconds per query).
+
+While inspecting the codebase, I discovered an anti-pattern: instead of executing indexed database queries, the legacy service was fetching entire dataset tables into application memory and filtering them in Java. I refactored the data access layer to delegate filtering directly to optimized database queries and utilized modern Java 17 streaming features, which brought search latency down to under a second (0.6s / 0.6ms)—significantly reducing API response times on high-traffic endpoints.
 
 
-
-
+We tried to include sec checks directly into the CI pipeline instead of tackling it at the end, for IAC i structured the HCL scripts to provision AKS clusters, networking, and container registries. We always tored state files in remote backends with state locking to prevent concurrent modification conflicts, using separate environment cofiguration for development and production
 
 
 
