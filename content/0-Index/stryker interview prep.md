@@ -82,8 +82,17 @@ I am currently at a point in my masters that I would be done with more than half
 
 Questions to ask them:
 - what sort of project might I start on? and what does the video interview stage cover?
+- 
 
 
+
+
+
+Hi! I'm Aniket, currently in my 3rd semester pursuing my Master's in Computer Science with a specialization in AI at the University of Freiburg
+
+Prior to my Master's, I spent two years as a Software Engineer at Nokia, where I built cloud-native backend microservices in Java Spring Boot and Python for global platforms serving clients like Vodafone and Verizon. Alongside backend development, I focused heavily on DevOps automating CI/CD deployment pipelines using GitLab and Azure DevOps, and provisioning infrastructure with Terraform and Kubernetes. At Freiburg, I also work part-time as a Research Assistant writing Python and Bash automation tools for workflow efficiency.
+
+What really drew me to the Cloud Applications & Software Engineering internship at Stryker in Freiburg is the team's focus on cloud platforms, developer tooling, and AI integration. I'm excited about the opportunity to apply my background in microservices, CI/CD pipelines, and AI to build reliable R&D tools that advance healthcare software
 
 
 
