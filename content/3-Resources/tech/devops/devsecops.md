@@ -11,7 +11,6 @@ description: devsecops
 
 ### securing containers
 - root vs non-root users
-
 	- because container is running as a root user on the host machine
 	- the container can access docker daemon and docker daemon always runs as a root user hence the hacker can get acess to the host as a root user
 - multistage containers
