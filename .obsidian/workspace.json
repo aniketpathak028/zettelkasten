@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/tech/devops/devsecops.md",
+                "file": "content/0-Index/stryker interview prep.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "devsecops"
+              "title": "stryker interview prep"
             }
           }
         ]
@@ -187,8 +187,8 @@
   },
   "active": "0f5eca85766e0b1b",
   "lastOpenFiles": [
-    "content/3-Resources/tech/iac/Untitled.md",
     "content/3-Resources/tech/devops/devsecops.md",
+    "content/3-Resources/tech/iac/Untitled.md",
     "content/3-Resources/tech/iac/terraform/terraform providers.md",
     "content/3-Resources/tech/iac/terraform/terraform file and directory structure best practices.md",
     "content/3-Resources/tech/iac/terraform/creating an azure storage account using terraform.md",

@@ -24,7 +24,10 @@ Cloud and automation are where my strongest experience is, from Nokia and my res
 
 4. What do you know about Stryker?
 
-Stryker is a global medical technology leader. Its products spans all across healthcare domains and I read that it impacts over 150 million patients a year. I also love that you guys value inclusion and believe that people from different backgrounds can contribute equally towards the growth of the mission! That is something that stood out to me 
+Stryker is a global medical technology leader. It builds software solutions that spans all across healthcare domains and I read on the website that it impacts over 150 million patients a year. I also love that you guys value inclusion and believe that people from different backgrounds can contribute equally towards the growth of the mission! That is something that stood out to me 
+
+mission - work collaboratively, improve patient outcomes
+core values - integrity, accountability, people and performance
 
 5. What interests you about healthcare software?
 
@@ -73,19 +76,14 @@ I am currently at a point in my masters that I would be done with more than half
 - I believe I have a strong foundation in building and deploying microservices, building CICD pipelines (keeping security in mind)
 - Currently I am building more towards AI agents and automations, learning more on tech like langchain, lang-graph, RAG, n8n etc.
 
-14. 
+8. What are your strengths and weakness?
 
-
-
-
-
+- Strength - communication skills, ability to learn something quickly
+- Weaknesses - usually unable to say no to someone easily
 
 Questions to ask them:
 - what sort of project might I start on? and what does the video interview stage cover?
 - 
-
-
-
 
 
 Hi! I'm Aniket, currently in my 3rd semester pursuing my Master's in Computer Science with a specialization in AI at the University of Freiburg
