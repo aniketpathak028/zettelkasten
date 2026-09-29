@@ -12,7 +12,9 @@ description: '"Untitled"'
 
 1. Tell me about yourself.
 
-Ans: I am currently doing my masters in Computer Science at the University of Freiburg with a specialization in AI. Before that I spent nearly 2 years working full time at Nokia as a Software Engineer, building and deploying microservices in Java and Python mostly. Working at Nokia, I had the opportunity to learn how scalable applications are built and deployed into production, as I was part of a team which developed a web based application that was used by telecom customers like Vodafone, SingTel, Verizon etc. However I had a desire to pursue higher studies, hence I came here to Germany to do my masters and currently I am starting my 3rd semester and I also work part-time as a research assistant at the university where I write simple bash and python scripts to automate manual tasks and help troubleshoot technical issues.
+Ans: I am currently doing my masters in Computer Science at the University of Freiburg with a specialization in AI. Before that I spent nearly 2 years working full time at Nokia as a Software Engineer, building and deploying microservices in Java and Python mostly. Working at Nokia, I had the opportunity to learn how scalable applications are built and deployed into production, as I was part of a team which developed a web based application that was used by telecom customers like Vodafone, SingTel, Verizon, T-Mobile, AT&T etc. However I had a desire to pursue higher studies, hence I came here to Germany to do my masters and currently I am starting my 3rd semester and I also work part-time as a research assistant at the university where I write simple bash and python scripts to automate manual tasks and help troubleshoot technical issues.
+
+Nokia skils - GitLab CI, Jenkins CICD, Azure, GCP, Java spring boot microservices, Python FastAPI microservices
 
 2. Why Stryker?
 
@@ -67,7 +69,7 @@ I am currently at a point in my masters that I would be done with more than half
 
 12. Go project and Azure CICD project
 
-- Go Project - it is a simple implementation of a forward proxy which is nothing but an intermediate web server that sits between the client and the internet which intersects every browser request sent to the internet, in the process of this intersection we store the connection request, its metadata and also the content received in local cache so that when an user re-sends the same request we simply load the stored content instead of making a new request which reduces our response time. The hardest part in the project was to 
+- Go Project - it is a simple implementation of a forward proxy which is nothing but an intermediate web server that sits between the client and the internet which intersects every browser request sent to the internet, in the process of this intersection we store the connection request, its metadata and also the content received in local cache so that when an user re-sends the same request we simply load the stored content instead of making a new request which reduces our response time. The hardest part in the project was to parse an https request
 
 - Azure [CICD](https://zet.aniketpathak.me/0-Index/learning-CICD-with-Azure-DevOps) project - it is a simple project where I deployed a simple voting app (containing microservices written using python, .NET and nodejs) into AKS - Azure K8s cluster using Azure DevOps following the principles of CICD and devsecops. I think the hardest part in the project was the 
 
@@ -100,7 +102,14 @@ During a modernization project to upgrade a core microservice from legacy Java 5
 While inspecting the codebase, I discovered an anti-pattern: instead of executing indexed database queries, the legacy service was fetching entire dataset tables into application memory and filtering them in Java. I refactored the data access layer to delegate filtering directly to optimized database queries and utilized modern Java 17 streaming features, which brought search latency down to under a second (0.6s / 0.6ms)—significantly reducing API response times on high-traffic endpoints.
 
 
-We tried to include sec checks directly into the CI pipeline instead of tackling it at the end, for IAC i structured the HCL scripts to provision AKS clusters, networking, and container registries. We always tored state files in remote backends with state locking to prevent concurrent modification conflicts, using separate environment cofiguration for development and production
+We tried to include sec checks directly into the CI pipeline instead of tackling it at the end, 
+
+- IAC with Terraform - I structured the HCL scripts to provision AKS clusters, networking, and container registries. We always tored state files in remote backends with state locking to prevent concurrent modification conflicts, using separate environment cofiguration for development and production
+- Git - precommit hooks, gitleaks
+- Secure Container - non root user, .dockerignore, multistage builds, distroless image
+- Secrets and SAST scanning - Before building container images, automated static code analysis was done using SonarQube to detect coding malpractices, or code smells that could lead to vulnerabilities - sql injection, hardcoded secrets, insecure ssl/tsl
+- SCA - software composition analysis that scans dependencies and matches versions against known CVEs ex- Trivy
+- DAST - dynamic application security testing we used OWASP-ZAP
 
 
 
