@@ -20,6 +20,8 @@ Nokia skils - GitLab CI, Jenkins CICD, Azure, GCP, Java spring boot microservice
 
 Ans: As I understand Stryker builds medical technologies that directly effects millions of patient worldwide and I would love to be a part of such an impact even if I could make a small contribution that would mean a lot to me. Also I have learned that the RnD team at Stryker work on AI and Automation and since I have a solid foundation in building and shipping software and currently my masters is focussed towards AI, I would love to learn more on how AI and automation could be used in the industry as that would be my natural career trajectory in the future.  
 
+1 project
+
 3. Why this internship and why cloud and software engineering?
 
 Cloud and automation are where my strongest experience is, from Nokia and my research assistant job. This role adds AI agents and prototyping, which are exactly what I'm studying and want to apply in practice. I want to see how these things work in a real R&D team, not just in coursework
