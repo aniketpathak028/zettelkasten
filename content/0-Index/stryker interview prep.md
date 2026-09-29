@@ -114,6 +114,8 @@ We tried to include sec checks directly into the CI pipeline instead of tackling
 - DAST - dynamic application security testing we used OWASP-ZAP
 
 
+elk stack
+
 
 
 
