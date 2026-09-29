@@ -119,6 +119,35 @@ elk stack
 
 
 
+
+
+### Video Interview Round preparation
+
+- Introduction:
+
+	First of all thank you for giving me the opportunity to introduce myself, I am Aniket and I originally come from India from a city called Kolkata. I am currently pursuing my masters in CS at the University of Freiburg with a specializing in AI.
+	
+	Before that I worked with Nokia for 2 years as a Software Engineer where I mostly built microservices using Java and Python and deployed them to cloud platforms like GCP and Azure. I was also responsible for building CI/CD pipelines using GitLab CI-CD and Azure DevOps while keeping security in mind. I was part of a team that was building a web app for telecom clients like Vodafone, SingTel, Verizon, T-Mobiles and more. However I had a desire to pursue higher studies, hence I came here to Germany to do my masters and currently I am starting my 3rd semester and I also work part-time as a research assistant at the university where I write simple bash and python scripts to automate manual tasks and help troubleshoot technical issues. Apart from tech I really like to travel and experience new places and cultures.
+
+- Walk me through a CI/CD pipeline you've built, and specifically where security checks live in it.
+
+
+- DevOps vs. DevSecOps, and where you've applied it?
+	
+	DevOps is about automating build, test and deploy so releases are fast and repeatable. DevSecOps folds security into that same pipeline instead of treating it as a separate gate at the end, so vulnerabilities get caught early, while the code is still in the developer's context. At Nokia, we followed certain DevSecOps practices like we had gitleaks to prevent accidental commits of secret files, sonarqube to scan the codebase for vulnerabilities, and trivy to scan the image for os and dependency related vulnerabilities.
+
+- Securing a container image before production?
+
+	A few things I'd check: start from a minimal, trusted base image rather than a full OS image, scan the image for known vulnerabilities before it's pushed, don't bake secrets into the image or the Dockerfile, and run the container with least privilege, not as root.
+
+
+- GitOps with ArgoCD — why not push deployments directly?
+
+	With ArgoCD, the desired state lives in Git, and ArgoCD continuously syncs the cluster to match it. That gives you an audit trail of every change through commit history, an easy rollback by reverting a commit, and no one needs direct write access to the cluster, which reduces the attack surface. In my project, this replaced a scripted deploy and cut deployment time to 180 seconds.
+
+- 
+
+
 ## Links:
 
 202609191618
