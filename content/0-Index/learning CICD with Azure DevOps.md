@@ -500,8 +500,148 @@ Here is a complete Architecture Diagram for this entire project that I created u
 ### Automating with Terraform
 
 let's automate the AKS creation using terraform
+### main.tf
+
+```bash
+terraform {
+  required_version = ">= 1.5.0"
+
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 3.100"
+    }
+  }
+}
+
+provider "azurerm" {
+  features {}
+}
+
+resource "azurerm_resource_group" "main" {
+  name     = var.resource_group_name
+  location = var.location
+}
+
+resource "azurerm_container_registry" "acr" {
+  name                = var.acr_name # must be globally unique, alphanumeric only
+  resource_group_name = azurerm_resource_group.main.name
+  location            = azurerm_resource_group.main.location
+  sku                 = "Basic"
+  admin_enabled       = false # avoid static admin credentials; AKS auth uses managed identity below
+}
 
 
+resource "azurerm_kubernetes_cluster" "aks" {
+  name                = var.aks_cluster_name
+  location            = azurerm_resource_group.main.location
+  resource_group_name = azurerm_resource_group.main.name
+  dns_prefix          = var.dns_prefix
+
+  default_node_pool {
+    name       = "system"
+    node_count = var.node_count
+    vm_size    = var.node_vm_size
+  }
+
+  identity {
+    type = "SystemAssigned"
+  }
+
+  network_profile {
+    network_plugin = "azure"
+    network_policy = "azure" # basic network policy support; tighten with NetworkPolicy manifests later
+  }
+
+  tags = {
+    environment = var.environment
+  }
+}
+
+
+resource "azurerm_role_assignment" "aks_acr_pull" {
+  principal_id                    = azurerm_kubernetes_cluster.aks.kubelet_identity[0].object_id
+  role_definition_name            = "AcrPull"
+  scope                           = azurerm_container_registry.acr.id
+  skip_service_principal_aad_check = true
+}
+```
+
+### outputs.tf
+
+```shell
+output "resource_group_name" {
+  value = azurerm_resource_group.main.name
+}
+
+output "aks_cluster_name" {
+  value = azurerm_kubernetes_cluster.aks.name
+}
+
+output "acr_login_server" {
+  description = "Use this as the 'containerRegistry' value in your Azure Pipelines YAML"
+  value       = azurerm_container_registry.acr.login_server
+}
+
+output "get_credentials_command" {
+  description = "Run this to configure kubectl against the new cluster"
+  value       = "az aks get-credentials --name ${azurerm_kubernetes_cluster.aks.name} --resource-group ${azurerm_resource_group.main.name}"
+}
+```
+
+### inputs.tf 
+
+variables must be defined as per the configuration
+
+```shell
+variable "resource_group_name" {
+  description = "Name of the Azure resource group"
+  type        = string
+  default     = "voting-app-rg"
+}
+
+variable "location" {
+  description = "Azure region"
+  type        = string
+  default     = "germanywestcentral"
+}
+
+variable "acr_name" {
+  description = "Globally unique name for the Azure Container Registry (alphanumeric only, no dashes)"
+  type        = string
+  default     = "votingappacr"
+}
+
+variable "aks_cluster_name" {
+  description = "Name of the AKS cluster"
+  type        = string
+  default     = "voting-app-aks"
+}
+
+variable "dns_prefix" {
+  description = "DNS prefix for the AKS cluster"
+  type        = string
+  default     = "votingapp"
+}
+
+variable "node_count" {
+  description = "Number of nodes in the default node pool"
+  type        = number
+  default     = 1
+}
+
+variable "node_vm_size" {
+  description = "VM size for the default node pool"
+  type        = string
+  default     = "Standard_B2s" 
+}
+
+variable "environment" {
+  description = "Environment tag"
+  type        = string
+  default     = "dev"
+}
+```
 
 ~aniket
 ## Links:
