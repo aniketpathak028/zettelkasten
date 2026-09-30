@@ -172,9 +172,35 @@ We tried to include sec checks directly into the CI pipeline instead of tackling
 
 
 
+### Rewritten STAR (about 60-75 seconds spoken)
 
+**Situation:**  
+"One of our microservices was taking noticeably longer than the others to go through the deployment pipeline, [and it was starting to hold up releases / a teammate flagged it, whichever is true]."
 
+**Task:**  
+"I was asked to dig into why, since nothing looked obviously broken, no failing tests, no errors, just slow."
 
+**Action:**  
+"I went through the pipeline stage by stage and found the build stage was the bottleneck. When I looked at the Dockerfile, the image being produced was much larger than it needed to be. It was a multi-stage build, and the final runtime stage was still using a full JDK base image instead of a JRE, so it was carrying the whole compiler and dev tooling into the image we actually shipped, tools the running app never uses. I switched the runtime stage to a JRE base image and rebuilt it to confirm the app still ran correctly."
+
+**Result:**  
+"[The image size dropped from X to Y, and pipeline/build time dropped by Z / deploy time improved noticeably]. It was a small change, but it made that whole service's pipeline meaningfully faster, and it also meant we were shipping a smaller, leaner image to production."
+
+### Two fixes I made, and why
+
+1. **Cut "probably it was some mistake by some developer."** Speculating about blame or intent, especially about a colleague, reads badly in an interview and adds nothing. State the technical fact (JDK instead of JRE in the runtime stage) and move on.
+2. **You need a real number for Result.** Right now the story ends on "the pipeline became fast," which is vague. Even a rough estimate (image went from ~800MB to ~250MB, or build time dropped by X minutes) makes this land far better. Fill this in with the real figures if you remember them.
+
+### Cross-questions to expect
+
+1. **"How did you know the build stage specifically was the bottleneck, not another stage?"** — Be ready to say what you looked at: pipeline logs, per-stage timing, or `docker history`/image size inspection.
+2. **"What's the actual size difference between a JDK and JRE base image?"** — Know roughly that a JDK image is meaningfully larger since it bundles the compiler and dev tools the running app doesn't need.
+3. **"Could there have been a reason someone chose JDK on purpose?"** — Sometimes JDK is kept if a tool needs `javac` or `jps` at runtime for diagnostics. Say you checked this wasn't the case here before switching, or admit if you didn't explicitly check.
+4. **"Did you verify nothing broke after switching to JRE?"** — Have a real answer: did you run it locally, run the test suite, or just redeploy and watch? "I just changed it and it happened to work" is a weaker answer than "I ran it and checked before merging."
+5. **"How much did deploy time actually improve?"** — This is almost certain if you don't state a number upfront, so it's better to lead with it.
+6. **"Was this in a multi-stage Dockerfile you inherited, or one you wrote?"** — Be precise about whether this was your own service or one you were newly debugging, since it changes the story slightly.
+7. **"How did you prevent this from recurring across other services?"** — A strong close would be something like checking other services for the same pattern, or flagging it in a review, even if it was a one-off fix.
+8. **"Was 'deploy' here the CI pipeline, or the actual Kubernetes rollout?"** — Your wording mixes "deployed" and "pipeline." Be precise: was the slowness in building/pushing the image, or in the cluster pulling and starting a large image? These are related but different, and a DevSecOps interviewer may probe exactly where the time was lost.
 
 
 
