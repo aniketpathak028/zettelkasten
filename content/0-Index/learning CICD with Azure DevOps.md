@@ -136,8 +136,39 @@ stages:
         command: 'build'
         Dockerfile: 'vote/Dockerfile'
         tags: '$(tag)'
+        
+- stage: SCA
+	displayName: 'SCA - Trivy Image Scan'
+	dependsOn: Build
+	condition: succeeded()
+	jobs:
+	- job: TrivyScan
+		displayName: 'Trivy Vulnerability Scan'
+		steps:
+		- script: |
+			set -e
+			if ! command -v trivy &> /dev/null; then
+			sudo apt-get update && sudo apt-get install -y wget apt-transport-https gnupg lsb-release
+			wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+			echo "deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main" | sudo tee -a /etc/apt/sources.list.d/trivy.list
+			sudo apt-get update && sudo apt-get install -y trivy
+			fi
+			
+			# Scan the locally built image (built in the previous stage, same agent/pool)
+			# --exit-code 1 makes Trivy return non-zero -> fails this pipeline step
+			trivy image \
+			--severity $(trivySeverityGate) \
+			--exit-code 1 \
+			--ignore-unfixed \
+			--format table \
+			$(containerRegistry)/$(imageRepository):$(tag)
+		- displayName: 'Run Trivy scan (fails on HIGH/CRITICAL)'      
+        
+
 - stage: Push
   displayName: Push 
+  dependsOn: SCA
+  condition: succeeded()
   jobs:
   - job: Push
     displayName: Push
@@ -464,6 +495,13 @@ Woohooo! We have successfully created an entire CI/CD pipeline that checks for a
 Here is a complete Architecture Diagram for this entire project that I created using eraser.io!
 
 ![[architecture diagram voting app.png]]
+
+
+### Automating with Terraform
+
+let's automate the AKS creation using terraform
+
+
 
 ~aniket
 ## Links:

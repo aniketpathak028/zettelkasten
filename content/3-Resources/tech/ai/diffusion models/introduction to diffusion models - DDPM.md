@@ -1,6 +1,6 @@
 ---
 title: Introduction to DDPM
-draft: false
+draft: true
 tags:
   - ddpm
 date: 2026-09-25

@@ -1,6 +1,6 @@
 ---
 title: devsecops
-draft: false
+draft: true
 tags:
   - devsecops
 date: 2026-09-27
