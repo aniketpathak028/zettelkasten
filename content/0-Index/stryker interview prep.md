@@ -131,6 +131,22 @@ elk stack
 
 - Walk me through a CI/CD pipeline you've built, and specifically where security checks live in it.
 
+	So for one of my personal projects, I built a full CI/CD pipeline on Azure DevOps for a microservices app, and I deployed it to AKS using ArgoCD, so it's a GitOps setup.
+	
+	Security checks are spread across a few points, not just one place at the end.
+	
+	First, before anything is even built, I run a SonarQube scan on the code. That catches basic issues, code smells, some vulnerability patterns, and I've set it up to also flag things like hardcoded secrets in the code.
+	
+	Then I build the Docker image. Here I tried to keep it secure by design, so I used a multi-stage build, a distroless base image so there's no shell or package manager sitting inside the container, and I run the container as a non-root user.
+	
+	After the image is built, but before it's pushed anywhere, I run Trivy on it. That checks for known vulnerabilities in the OS packages and dependencies inside the image. And I've set it so if it finds anything high or critical, the pipeline actually fails right there, it doesn't just report it and move on.
+	
+	Only after that does the image get pushed to the container registry, and then a script updates the Kubernetes manifest, which is what triggers ArgoCD to pick up the change and deploy it.
+	
+	And then, once it's actually running, I run a DAST scan using OWASP ZAP against the live app, so that's checking for things you can only catch once it's deployed, like SQL injection or other issues that show up at runtime.
+	
+	So the way I think about it is, security isn't one gate at the end, it's checked at three different stages, before the build, after the build but before it's shipped, and after it's actually live.
+
 
 - DevOps vs. DevSecOps, and where you've applied it?
 	
@@ -145,7 +161,32 @@ elk stack
 
 	With ArgoCD, the desired state lives in Git, and ArgoCD continuously syncs the cluster to match it. That gives you an audit trail of every change through commit history, an easy rollback by reverting a commit, and no one needs direct write access to the cluster, which reduces the attack surface. In my project, this replaced a scripted deploy and cut deployment time to 180 seconds.
 
-- 
+### Situational, reliability-focused
+
+**9. Error rates spike right after an ArgoCD sync. First five minutes?**  
+
+First, confirm it's actually the deploy and not something else happening at the same time, by checking the timing against the sync. If it's the deploy, I'd roll back immediately, since ArgoCD makes that fast, a Git revert and it re-syncs, rather than trying to debug live in production. Once it's stable, I'd look at logs and the diff from the last known-good commit to find the root cause, then fix it properly in a branch before redeploying.
+
+**10. You find a vulnerability in a dependency the week before release. What do you do?**  
+
+First, assess severity and exploitability, not all vulnerabilities are equally urgent. If it's serious, I'd flag it to the team immediately rather than sitting on it, check if a patched version exists and how much it would touch, and if a full fix isn't safe that close to release, look at whether the vulnerable code path is even reachable or needs a mitigation instead. I'd rather delay or ship with a documented, low-risk gap than hide the issue to hit a date, especially in healthcare software.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Links:
