@@ -80,6 +80,8 @@ variables:
   containerRegistry: '<CONTAINER_REGISTRY_NAME>.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/result/Dockerfile'
   tag: '$(Build.BuildId)'
+  sonarProjectKey: 'voting-app-vote'
+  trivySeverityGate: 'HIGH, CRITICAL' # Fail the pipeline if Trivy finds vulnerabilities at or above this severity
 
 # this is an Azure VM which runs this pipeline - needs to be precreated
 pool:
@@ -87,6 +89,39 @@ pool:
 
 
 stages:
+- stage: SAST
+  displayName: 'SAST - SonarQube'
+  jobs:
+	- job: SonarScan
+	displayName: 'SonarQube Analysis'
+	steps:
+		- task: SonarQubePrepare@5
+		inputs:
+			SonarQube: 'SonarQubeServiceConnection' # Service connection you create in Project Settings
+			scannerMode: 'CLI'
+			configMode: 'manual'
+			cliProjectKey: '$(sonarProjectKey)'
+			cliProjectName: 'vote-service'
+			cliSources: 'vote'
+			extraProperties: |
+			sonar.exclusions=**/tests/**,**/node_modules/**
+			# Secrets detection: enable the SonarQube secrets ruleset (Community plugin or built-in
+			# depending on edition) via the quality profile assigned to this project - not automatic
+			# by default, confirm your quality profile includes the "Secrets" rules category.
+			
+			- task: SonarQubeAnalyze@5
+			
+			displayName: 'Run SonarQube Scan'
+			
+			- task: SonarQubePublish@5
+			displayName: 'Publish Quality Gate Result'
+			
+			inputs:
+			pollingTimeoutSec: '300'
+	
+	# This task fails the pipeline automatically if the Quality Gate fails -
+	# configure the Quality Gate thresholds (bugs, vulnerabilities, hotspots) in SonarQube itself.
+
 - stage: Build
   displayName: Build 
   jobs:

@@ -85,14 +85,7 @@ I am currently at a point in my masters that I would be done with more than half
 
 Questions to ask them:
 - what sort of project might I start on? and what does the video interview stage cover?
-- 
 
-
-Hi! I'm Aniket, currently in my 3rd semester pursuing my Master's in Computer Science with a specialization in AI at the University of Freiburg
-
-Prior to my Master's, I spent two years as a Software Engineer at Nokia, where I built cloud-native backend microservices in Java Spring Boot and Python for global platforms serving clients like Vodafone and Verizon. Alongside backend development, I focused heavily on DevOps automating CI/CD deployment pipelines using GitLab and Azure DevOps, and provisioning infrastructure with Terraform and Kubernetes. At Freiburg, I also work part-time as a Research Assistant writing Python and Bash automation tools for workflow efficiency.
-
-What really drew me to the Cloud Applications & Software Engineering internship at Stryker in Freiburg is the team's focus on cloud platforms, developer tooling, and AI integration. I'm excited about the opportunity to apply my background in microservices, CI/CD pipelines, and AI to build reliable R&D tools that advance healthcare software
 
 
 STAR based answers:
@@ -112,14 +105,6 @@ We tried to include sec checks directly into the CI pipeline instead of tackling
 - Secrets and SAST scanning - Before building container images, automated static code analysis was done using SonarQube to detect coding malpractices, or code smells that could lead to vulnerabilities - sql injection, hardcoded secrets, insecure ssl/tsl
 - SCA - software composition analysis that scans dependencies and matches versions against known CVEs ex- Trivy
 - DAST - dynamic application security testing we used OWASP-ZAP
-
-
-elk stack
-
-
-
-
-
 
 ### Video Interview Round preparation
 
@@ -150,7 +135,7 @@ elk stack
 
 - DevOps vs. DevSecOps, and where you've applied it?
 	
-	DevOps is about automating build, test and deploy so releases are fast and repeatable. DevSecOps folds security into that same pipeline instead of treating it as a separate gate at the end, so vulnerabilities get caught early, while the code is still in the developer's context. At Nokia, we followed certain DevSecOps practices like we had gitleaks to prevent accidental commits of secret files, sonarqube to scan the codebase for vulnerabilities, and trivy to scan the image for os and dependency related vulnerabilities.
+	DevOps is about automating build, test and deploy so releases are fast and repeatable. DevSecOps folds security into that same pipeline instead of treating it as a separate gate at the end, so vulnerabilities get caught early, while the code is still in the developer's context. At Nokia, we followed certain DevSecOps practices for example we had gitleaks to prevent accidental commits of secret files, sonarqube server in the pipeline to scan the codebase for vulnerabilities, and trivy to scan the image for os and dependency related vulnerabilities.
 
 - Securing a container image before production?
 
@@ -163,16 +148,20 @@ elk stack
 
 ### Situational, reliability-focused
 
-**9. Error rates spike right after an ArgoCD sync. First five minutes?**  
+- **Error rates spike right after an ArgoCD sync. First five minutes?**  
 
-First, confirm it's actually the deploy and not something else happening at the same time, by checking the timing against the sync. If it's the deploy, I'd roll back immediately, since ArgoCD makes that fast, a Git revert and it re-syncs, rather than trying to debug live in production. Once it's stable, I'd look at logs and the diff from the last known-good commit to find the root cause, then fix it properly in a branch before redeploying.
+	First, confirm it's actually the deploy and not something else happening at the same time, by checking the timing against the sync. If it's the deploy, I'd roll back immediately, since ArgoCD makes that fast, a Git revert and it re-syncs, rather than trying to debug live in production. Once it's stable, I'd look at logs and the diff from the last known-good commit to find the root cause, then fix it properly in a branch before redeploying.
 
-**10. You find a vulnerability in a dependency the week before release. What do you do?**  
+- **You find a vulnerability in a dependency the week before release. What do you do?**  
 
-First, assess severity and exploitability, not all vulnerabilities are equally urgent. If it's serious, I'd flag it to the team immediately rather than sitting on it, check if a patched version exists and how much it would touch, and if a full fix isn't safe that close to release, look at whether the vulnerable code path is even reachable or needs a mitigation instead. I'd rather delay or ship with a documented, low-risk gap than hide the issue to hit a date, especially in healthcare software.
+	First, assess severity and exploitability, not all vulnerabilities are equally urgent. If it's serious, I'd flag it to the team immediately rather than sitting on it, check if a patched version exists and how much it would touch, and if a full fix isn't safe that close to release, look at whether the vulnerable code path is even reachable or needs a mitigation instead. I'd rather delay or ship with a documented, low-risk gap than hide the issue to hit a date, especially in healthcare software.
 
 
+- STAR answer
 
+	we were working on a web application that would server our telecom clients in managing their network devices such as nodes, ports, etc. most of our app was built using java spring boot microservice, we used docker to containerize these services and store the images in Azure container registry, gitlab ci to continuously track the repository for any change, the moment a developer pushed any changes, the pipeline would be triggered creating a new image which was detected by argocd and the image was updated in the k8s cluster in aks
+	
+	one certain microservice had a search device feature which was written in java 5 and had a search latency of 1-2s we were trying to uprgade it to latest java17 using java8 features, and I was responsible for the migration, while migrating the code i observed that the code loaded all the db entries into the memory and tried to search for the specific device instead of directly querying the db. i implemented the improved logic and the latency then reduced to 0.6ms
 
 
 
