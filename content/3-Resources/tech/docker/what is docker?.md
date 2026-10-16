@@ -9,6 +9,8 @@ description: learn the fundamentals of docker
 ---
 # What is Docker?
 
+https://github.com/piyushsachdeva/CKA-2024/tree/main/Resources/Day01
+
 Docker is a tool that implements containerization and helps us create containers, manage them, store and share them!
 
 - an application for developing, shipping and running applications in containers, simplifies the process of container management!
