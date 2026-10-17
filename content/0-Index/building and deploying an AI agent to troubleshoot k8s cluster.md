@@ -13,18 +13,17 @@ description: building, deploying, governing and scaling AI agents for k8s cluste
 ---
 # building and deploying an AI agent to troubleshoot k8s cluster
 
-
 ### 1. prototype vs production
 
 Day-1: The prototype
 
 - we can simply create a k8s-agent by using a coding agent and connecting it with a k8s mcp server and it can help us on day-1 with simple troubleshooting tasks but the real problem arises when we try to deploy this agent into production
 
-![[Pasted image 20261017131028.png]]
+![[Pasted image 20261017131028.png|554]]
 
 Challenges:
 
-![[Pasted image 20261017131238.png|477]]
+![[Pasted image 20261017131238.png|385]]
 
 we can simply create an agent using langchain, langgraph, MCP etc but is it safe to deploy it into production? No because prototype != production
 - trust -> can we really trust it in production? We are going to use a feature called **Agent Evaluation** to tackle this!
@@ -42,6 +41,56 @@ We are going to build an AI agent to troubleshoot a k8s cluster which is a very 
 - Agent CLI has a bunch of skills that can help build several features for our Agent 
 
 ![[Pasted image 20261017134651.png]]
+
+Step-1: configuring application default credentials
+https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/start/gcp-auth
+
+follow the simple steps in the above blog to configure application default credentials and then paste this command in your terminal and continue (this will call gemini api directly from your terminal to ensure the connection is successful):
+
+```
+bash <(curl -sSL https://storage.googleapis.com/cloud-samples-data/adc/setup_adc.sh)
+```
+
+Step-2: choosing a coding agent 
+
+for this project we choose google's antigravity - https://antigravity.google/download
+
+```bash
+curl -fsSL https://antigravity.google/cli/install.sh | bash
+```
+
+install antigravity cli and run "agy" to start it
+
+![[Pasted image 20261017144741.png]]
+
+Step-3: setting up Agent cli 
+
+we use google agent-cli for this - https://google.github.io/agents-cli/
+
+```bash
+uvx google-agents-cli setup
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
