@@ -71,10 +71,18 @@ we use google agent-cli for this - https://google.github.io/agents-cli/
 uvx google-agents-cli setup
 ```
 
+so following these steps we configured gemini adk, set up a coding agent and also an agent cli
 
+The main difference between the Coding Agent and the Agent CLI is that the coding agent writes the code as instructed using prompts while the agent cli has the skills prepackaged that can be used by the coding agent to interact with Google's ADK
 
+![[Pasted image 20261017184503.png]]
 
+These are the 7 skills present in the Agent CLI:
+- workflow, scaffold, adk-code, eval, deploy, publish and observability
 
+Now let's prompt the agent to build our k8s agent with the following prompt:
+
+"Build a simple Kubernetes investigation agent in python that takes logs as input to perform investigation. Post investigation it should provide a detailed analysis with supporting evidences"
 
 
 
