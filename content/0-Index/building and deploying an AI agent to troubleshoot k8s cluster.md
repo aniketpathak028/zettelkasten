@@ -84,8 +84,16 @@ Now let's prompt the agent to build our k8s agent with the following prompt:
 
 "Build a simple Kubernetes investigation agent in python that takes logs as input to perform investigation. Post investigation it should provide a detailed analysis with supporting evidences"
 
+![[Pasted image 20261017210210.png]]
+![[Pasted image 20261017210239.png]]
+
+as we can see the agent was successfully build by our coding agent using the Gemini ADK skills so it can perform the following:
+![[Pasted image 20261017210456.png]]
 
 
+
+
+now let's connect it to a real k8s production server
 
 
 
