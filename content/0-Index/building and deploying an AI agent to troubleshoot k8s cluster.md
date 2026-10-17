@@ -88,12 +88,14 @@ Now let's prompt the agent to build our k8s agent with the following prompt:
 ![[Pasted image 20261017210239.png]]
 
 as we can see the agent was successfully build by our coding agent using the Gemini ADK skills so it can perform the following:
+
+![[Pasted image 20261017213133.png]]
+
 ![[Pasted image 20261017210456.png]]
 
+now let's connect it to a real k8s production server so that it can do much more:
 
-
-
-now let's connect it to a real k8s production server
+![[Pasted image 20261017213231.png]]
 
 
 
