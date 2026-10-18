@@ -8,10 +8,10 @@ tags:
 date: 2025-08-21
 description: what is containerd and why is it needed?
 ---
-# Containerd
+# ContainerD
 
 - simply put it is a container runtime, that lets docker run containers 
-- althought it is a part of docker but
+- although it is a part of docker but
 - it is also a separate project
 - member of CNCF
 - can install containerD alone without docker

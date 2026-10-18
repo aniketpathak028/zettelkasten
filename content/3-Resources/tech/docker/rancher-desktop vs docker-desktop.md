@@ -11,7 +11,7 @@ description: what is the difference between rancher and docker desktop?
 # rancher-desktop vs docker-desktop
 ### things to know:
 
-- rancher-desktop uses [[containerd]] as its container runtime by default, even docker-desktop uses containerd!
+- rancher-desktop and docker-desktop use [[containerd]] as its container runtime by default!
 - however, it provides a compatible docker api meaning we can use the standard docker cli to interact with rancher's container management
 - to use docker cli set container engine as dockerd (moby) in settings
 - the point to note is DOCKER_HOST env should point to Rancher's docker socket.

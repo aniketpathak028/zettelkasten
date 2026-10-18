@@ -21,7 +21,7 @@ Docker is a tool that implements containerization and helps us create containers
 
 ### architecture of docker
 
-![[architecture of docker.png|612]]
+![[Pasted image 20261018223543.png]]
 
 ### lifecycle of docker containers
 
@@ -37,7 +37,7 @@ Docker is a tool that implements containerization and helps us create containers
 
 more understanding of docker - https://github.com/iam-veeramalla/Docker-Zero-to-Hero
 
-### dockerd
+### dockerD
 - docker daemon listens for Docker API requests and manages Docker objects such as images, containers, networks, and volumes. A daemon can also communicate with other daemons to manage Docker services
 
 Docker client --> Docker API --> Docker Daemon 
@@ -63,7 +63,7 @@ sudo usermod -aG docker ubuntu # grant access to your user to run the command
 ```
 
 
-### commands
+### common docker commands
 
 ```shell
 docker ps # list running containers
