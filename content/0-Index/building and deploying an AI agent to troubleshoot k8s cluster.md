@@ -106,13 +106,6 @@ now let's connect it to a real k8s production server so that it can do much more
 
 
 
-
-
-
-
-
-
-
 ## Links:
 
 202610171137
