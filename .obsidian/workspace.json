@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "building and deploying an AI agent to troubleshoot k8s cluster"
             }
+          },
+          {
+            "id": "4d75d5245272547f",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.14.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.14.4"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -185,7 +198,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0f5eca85766e0b1b",
+  "active": "4d75d5245272547f",
   "lastOpenFiles": [
     "content/assets/Pasted image 20261017213231.png",
     "content/assets/Pasted image 20261017213133.png",
