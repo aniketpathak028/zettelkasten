@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/uni/digital health/week-1.md",
+                "file": "content/3-Resources/tech/docker/multi-stage builds in docker.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "week-1"
+              "title": "multi-stage builds in docker"
             }
           }
         ]
@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "7d24a31d29b9d0b6",
@@ -186,14 +187,14 @@
   },
   "active": "0f5eca85766e0b1b",
   "lastOpenFiles": [
+    "content/3-Resources/tech/docker/what is docker?.md",
+    "content/3-Resources/uni/digital health/week-1.md",
     "content/3-Resources/uni/adl/similarity learning.md",
     "content/3-Resources/uni/adl/self-supervised learning and foundation models.md",
     "content/3-Resources/uni/adl/neural scene representations and world models.md",
     "content/3-Resources/uni/adl/introduction.md",
     "content/3-Resources/uni/adl/graph neural networks.md",
     "content/3-Resources/uni/adl/generative models.md",
-    "content/3-Resources/uni/digital health/week-1.md",
-    "content/3-Resources/tech/docker/what is docker?.md",
     "content/3-Resources/uni/digital health",
     "content/0-Index/containerization.md",
     "content/assets/Pasted image 20261018223543.png",
