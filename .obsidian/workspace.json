@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/3-Resources/tech/docker/multi-stage builds in docker.md",
+                "file": "content/3-Resources/tech/devops/docker/what is docker?.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "multi-stage builds in docker"
+              "title": "what is docker?"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "7d24a31d29b9d0b6",
@@ -187,7 +186,12 @@
   },
   "active": "0f5eca85766e0b1b",
   "lastOpenFiles": [
-    "content/3-Resources/tech/docker/what is docker?.md",
+    "content/3-Resources/tech/devops/cicd/cicd with jenkins.md",
+    "content/3-Resources/tech/devops/cicd/CICD with gitlab.md",
+    "content/3-Resources/tech/devops/yaml.md",
+    "content/3-Resources/tech/devops/devsecops.md",
+    "content/3-Resources/tech/devops/docker/what is docker?.md",
+    "content/3-Resources/tech/devops/docker/multi-stage builds in docker.md",
     "content/3-Resources/uni/digital health/week-1.md",
     "content/3-Resources/uni/adl/similarity learning.md",
     "content/3-Resources/uni/adl/self-supervised learning and foundation models.md",
@@ -198,9 +202,9 @@
     "content/3-Resources/uni/digital health",
     "content/0-Index/containerization.md",
     "content/assets/Pasted image 20261018223543.png",
-    "content/3-Resources/tech/docker/rancher-desktop vs docker-desktop.md",
-    "content/3-Resources/tech/docker/cli-nerdctl.md",
-    "content/3-Resources/tech/docker/containerd.md",
+    "content/3-Resources/tech/devops/docker/rancher-desktop vs docker-desktop.md",
+    "content/3-Resources/tech/devops/docker/cli-nerdctl.md",
+    "content/3-Resources/tech/devops/docker/containerd.md",
     "content/0-Index/building and deploying an AI agent to troubleshoot k8s cluster.md",
     "content/assets/Pasted image 20261017213231.png",
     "content/assets/Pasted image 20261017213133.png",
@@ -211,19 +215,14 @@
     "content/assets/Pasted image 20261017144741.png",
     "content/assets/Pasted image 20261017134651.png",
     "content/assets/Pasted image 20261017131238.png",
-    "content/3-Resources/tech/k8s/RBAC.md",
-    "content/3-Resources/tech/k8s/pod.md",
-    "content/3-Resources/tech/k8s/rancher-desktop.md",
-    "content/3-Resources/tech/k8s/persistent volumes.md",
-    "content/3-Resources/tech/k8s/most asked k8s interview qns.md",
-    "content/3-Resources/tech/k8s/kubernetes.md",
-    "content/3-Resources/tech/k8s/k8s storage.md",
-    "content/3-Resources/tech/k8s/k8s architecture.md",
-    "content/3-Resources/tech/docker/dockerhub.md",
-    "content/3-Resources/tech/docker/docker storage.md",
-    "content/3-Resources/tech/docker/containers.md",
-    "content/3-Resources/tech/docker/cli-ctr.md",
-    "content/3-Resources/tech/docker/cli-crictrl.md",
+    "content/3-Resources/tech/devops/k8s/RBAC.md",
+    "content/3-Resources/tech/devops/k8s/pod.md",
+    "content/3-Resources/tech/devops/k8s/rancher-desktop.md",
+    "content/3-Resources/tech/devops/k8s/persistent volumes.md",
+    "content/3-Resources/tech/devops/k8s/most asked k8s interview qns.md",
+    "content/3-Resources/tech/devops/k8s/kubernetes.md",
+    "content/3-Resources/tech/devops/k8s/k8s storage.md",
+    "content/3-Resources/tech/devops/k8s/k8s architecture.md",
     "content/3-Resources/tech/ai/flow models",
     "content/3-Resources/diffusion models",
     "content/3-Resources/tech/ai/agentic ai",
