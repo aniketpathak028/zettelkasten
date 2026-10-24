@@ -37,16 +37,51 @@ description: efficiency
 	- model
 
 1. data efficiency
-	- cost
-	- rarity
-	- privacy 
-	- prospective studies are slow and expensive
+	- why data is scarce in health?
+		- cost
+		- rarity
+		- privacy 
+		- prospective studies are slow and expensive
 
 	- how to measure data efficiency:
 		- performance achieved per unit of training data, we can measure it using the learning curve 
 		- sample complexity - the smallest n that reaches a target performance
 		- ALC - area under learning curve rewards early gains, high if you learn fast from few samples
 	
+	- methods to stretch limited data:
+		- few-shot learning - transfer learning or meta learning
+		- synthetic data - using GANs and diffusion models 
+		- data augmentation - rotations, crops, intensity ex CutMix
+
+	- few shot learning - adapt a pretrained model with a few examples rather than training from scratch
+	- MAML - model agnostic meta learning finds a starting point (initial weights) from which any new task is learnable in few steps using few examples
+	- synthetic data - generate new scans you cannot collect using diffusion models ex- MAISI with paired labels
+
+	- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Links:
 
